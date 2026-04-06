@@ -1,0 +1,60 @@
+{
+  "title": "Solos HUD: Reverse Engineering & Redesign",
+  "date": "2026-03-22",
+  "category": "HARDWARE & SOFTWARE",
+  "description": "Reverse engineering Solos smart glasses to build custom apps, followed by a complete hardware redesign and custom 3D-printed housing for enhanced portability and battery life.",
+  "githubLink": "",
+  "stlFile": "/projects/solos-hud/solos_upgrade_kit_complete.stl",
+  "media": [
+    {
+      "type": "video",
+      "url": "/projects/solos-hud/20260307_191253.mp4"
+    },
+    {
+      "type": "image",
+      "url": "/projects/solos-hud/20260326_235103.jpg"
+    },
+    {
+      "type": "image",
+      "url": "/projects/solos-hud/20260322_152058.jpg"
+    },
+    {
+      "type": "image",
+      "url": "/projects/solos-hud/20260322_134747.jpg"
+    },
+    {
+      "type": "image",
+      "url": "/projects/solos-hud/20260321_233341.jpg"
+    },
+    {
+      "type": "image",
+      "url": "/projects/solos-hud/20260321_151956.jpg"
+    },
+    {
+      "type": "image",
+      "url": "/projects/solos-hud/20260308_222410.jpg"
+    },
+    {
+      "type": "image",
+      "url": "/projects/solos-hud/20260326_211227.jpg"
+    },
+    {
+      "type": "image",
+      "url": "/projects/solos-hud/Scan20260321162306 _001 (1).jpg"
+    },
+    {
+      "type": "image",
+      "url": "/projects/solos-hud/Screenshot_20260303_035858_Facebook.jpg"
+    }
+  ],
+  "assets": [
+    {
+      "name": "Download 3D Model (STL)",
+      "url": "/projects/solos-hud/solos_upgrade_kit_complete.stl"
+    },
+    {
+      "name": "Download Android App (APK)",
+      "url": "/projects/solos-hud/Solos_april_6_2026.apk"
+    }
+  ]
+}

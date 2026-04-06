@@ -12,12 +12,12 @@ export const metadata = {
 const themeScript = `
   (function() {
     try {
-      var storedTheme = localStorage.getItem('theme');
-      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
-        document.documentElement.setAttribute('data-theme', 'dark');
+      var stored = localStorage.getItem('theme');
+      if (stored === 'dark' || stored === 'light') {
+        document.documentElement.setAttribute('data-theme', stored);
       } else {
-        document.documentElement.setAttribute('data-theme', 'light');
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
       }
     } catch (e) {}
   })();

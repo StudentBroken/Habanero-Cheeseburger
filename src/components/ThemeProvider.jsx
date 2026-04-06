@@ -1,5 +1,5 @@
 "use client";
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React, { createContext, useContext, useLayoutEffect, useState } from 'react';
 
 const ThemeContext = createContext({
   theme: 'light',
@@ -11,27 +11,22 @@ export const useTheme = () => useContext(ThemeContext);
 export default function ThemeProvider({ children }) {
   const [theme, setTheme] = useState('light');
 
-  useEffect(() => {
-    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
-    setTheme(currentTheme);
+  useLayoutEffect(() => {
+    const current = document.documentElement.getAttribute('data-theme') || 'light';
+    setTheme(current);
 
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        if (mutation.attributeName === 'data-theme') {
-          setTheme(document.documentElement.getAttribute('data-theme'));
-        }
-      });
+    const observer = new MutationObserver(() => {
+      setTheme(document.documentElement.getAttribute('data-theme') || 'light');
     });
-
-    observer.observe(document.documentElement, { attributes: true });
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
     return () => observer.disconnect();
   }, []);
 
   const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-    localStorage.setItem('theme', newTheme);
-    document.documentElement.setAttribute('data-theme', newTheme);
+    const next = theme === 'light' ? 'dark' : 'light';
+    setTheme(next);
+    localStorage.setItem('theme', next);
+    document.documentElement.setAttribute('data-theme', next);
   };
 
   return (
