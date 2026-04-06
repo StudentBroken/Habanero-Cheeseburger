@@ -1,0 +1,8 @@
+{
+  "title": "Smart Mirror Base",
+  "date": "2024-05-10",
+  "category": "PHYSICAL",
+  "description": "A 3D printed base for an interactive smart mirror powered by a Raspberry Pi.",
+  "githubLink": "https://github.com/example/smart-mirror",
+  "stlFile": "/stl/smart_mirror_base.stl"
+}

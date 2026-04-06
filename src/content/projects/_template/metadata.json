@@ -1,0 +1,28 @@
+{
+  "title": "Your Project Title",
+  "date": "2024-05-15",
+  "category": "HARDWARE & SOFTWARE",
+  "description": "A short summary of your hybrid hardware/software project.",
+  "githubLink": "https://github.com/...",
+  "stlFile": "/stl/your_model.stl",
+  "media": [
+    {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=1200&auto=format&fit=crop"
+    },
+    {
+      "type": "video",
+      "url": "https://www.w3schools.com/html/mov_bbb.mp4"
+    }
+  ],
+  "assets": [
+    {
+      "name": "Download STL",
+      "url": "/stl/your_model.stl"
+    },
+    {
+      "name": "Download APK",
+      "url": "/apks/your_app.apk"
+    }
+  ]
+}
