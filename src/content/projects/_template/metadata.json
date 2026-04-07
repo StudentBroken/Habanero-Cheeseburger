@@ -4,7 +4,8 @@
   "category": "HARDWARE & SOFTWARE",
   "description": "A short summary of your hybrid hardware/software project.",
   "githubLink": "https://github.com/...",
-  "stlFile": "/stl/your_model.stl",
+  "thumbnail": "/projects/your_project/cover_image.jpg",
+  "modelFile": "/projects/your_project/model.obj",
   "media": [
     {
       "type": "image",
@@ -20,12 +21,14 @@
   ],
   "assets": [
     {
-      "name": "Download STL",
-      "url": "/stl/your_model.stl"
+      "name": "Download Firmware",
+      "url": "/projects/your_project/firmware.bin",
+      "description": "Compiled binary for direct flashing"
     },
     {
       "name": "Download APK",
-      "url": "/apks/your_app.apk"
+      "url": "/projects/your_project/app.apk",
+      "description": "Android companion App"
     }
   ]
 }

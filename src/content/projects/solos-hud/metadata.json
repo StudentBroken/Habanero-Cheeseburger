@@ -3,6 +3,7 @@
   "date": "2026-03-22",
   "category": "HARDWARE & SOFTWARE",
   "description": "Reverse engineering Solos smart glasses to build custom apps, followed by a complete hardware redesign and custom 3D-printed housing for enhanced portability and battery life.",
+  "thumbnail": "/projects/solos-hud/20260326_235103.jpg",
   "githubLink": "",
   "stlFile": "/projects/solos-hud/solos_upgrade_kit_complete.stl",
   "media": [

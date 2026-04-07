@@ -4,11 +4,33 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Stage } from '@react-three/drei';
 import { useLoader } from '@react-three/fiber';
 import { STLLoader } from 'three/examples/jsm/loaders/STLLoader';
+import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
+import * as THREE from 'three';
 
 function Model({ url }) {
-  const geom = useLoader(STLLoader, url);
+  const extension = url.split('.').pop().toLowerCase();
+  const Loader = extension === 'obj' ? OBJLoader : STLLoader;
+  const geomOrGroup = useLoader(Loader, url);
+
+  const objGroup = React.useMemo(() => {
+    if (extension === 'obj') {
+      const cloned = geomOrGroup.clone();
+      cloned.traverse((child) => {
+        if (child.isMesh) {
+          child.material = new THREE.MeshStandardMaterial({ color: "#0ea5e9" });
+        }
+      });
+      return cloned;
+    }
+    return null;
+  }, [geomOrGroup, extension]);
+
+  if (extension === 'obj') {
+    return <primitive object={objGroup} />;
+  }
+
   return (
-    <mesh geometry={geom}>
+    <mesh geometry={geomOrGroup}>
       <meshStandardMaterial color="#0ea5e9" attach="material" />
     </mesh>
   );

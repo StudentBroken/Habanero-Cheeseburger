@@ -5,15 +5,20 @@ import { Sun, Moon } from 'lucide-react';
 
 export default function ThemeToggle() {
   const { theme, toggleTheme } = useTheme();
+  const isDark = theme === 'dark';
 
   return (
-    <button 
-      onClick={toggleTheme} 
-      className="tech-button" 
-      style={{ padding: '8px', borderRadius: '50%', width: '40px', height: '40px' }}
-      aria-label="Toggle theme"
-    >
-      {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
-    </button>
+    <div className="theme-switch">
+      <span className="theme-switch__label">{isDark ? 'DARK' : 'LIGHT'}</span>
+      <button
+        onClick={toggleTheme}
+        className={`theme-switch__track ${isDark ? 'theme-switch__track--active' : ''}`}
+        aria-label="Toggle theme"
+      >
+        <div className={`theme-switch__knob ${isDark ? 'theme-switch__knob--right' : ''}`}>
+          {isDark ? <Moon size={12} /> : <Sun size={12} />}
+        </div>
+      </button>
+    </div>
   );
 }

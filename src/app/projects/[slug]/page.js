@@ -18,7 +18,8 @@ export default async function ProjectPage({ params }) {
   const { slug } = resolvedParams;
   const projectData = getProjectData(slug);
 
-  const hasBottomSection = projectData.stlFile || projectData.githubLink || (projectData.assets && projectData.assets.length > 0);
+  const modelFilePath = projectData.modelFile || projectData.stlFile;
+  const hasBottomSection = modelFilePath || projectData.githubLink || (projectData.assets && projectData.assets.length > 0);
 
   return (
     <main>
@@ -57,10 +58,10 @@ export default async function ProjectPage({ params }) {
 
         {hasBottomSection && (
           <div style={{ marginTop: '3rem', paddingTop: '2rem', borderTop: '1px solid var(--accent-border)' }}>
-            {projectData.stlFile && (
+            {modelFilePath && (
               <>
                 <h2 style={{ fontSize: '1.4rem', marginBottom: '1rem', color: 'var(--text-primary)' }}>3D Model</h2>
-                <STLViewer url={projectData.stlFile} />
+                <STLViewer url={modelFilePath} />
               </>
             )}
 
@@ -74,9 +75,16 @@ export default async function ProjectPage({ params }) {
                     </a>
                   )}
                   {projectData.assets && projectData.assets.map((asset, index) => (
-                    <a key={index} href={asset.url} download target="_blank" rel="noreferrer" className="tech-button">
-                      <Download size={17} /> {asset.name}
-                    </a>
+                    <div key={index} style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem', alignItems: 'flex-start' }}>
+                      <a href={asset.url} download target="_blank" rel="noreferrer" className="tech-button">
+                        <Download size={17} /> {asset.name}
+                      </a>
+                      {asset.description && (
+                        <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', maxWidth: '200px', lineHeight: '1.4' }}>
+                          {asset.description}
+                        </span>
+                      )}
+                    </div>
                   ))}
                 </div>
               </>

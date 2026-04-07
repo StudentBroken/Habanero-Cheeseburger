@@ -8,7 +8,7 @@ This guide is for anyone (human or AI) adding a new project to this site. Follow
 
 1. Create `src/content/projects/<slug>/metadata.json` — use the schema below.
 2. Create `src/content/projects/<slug>/content.md` — follow the writing rules below.
-3. Place all media files in `public/projects/<slug>/` and reference them with that path in `metadata.json`.
+3. Source all raw project assets (pictures, videos, apks, stls) from the `dump/` folder in the project root. Move or copy them into `public/projects/<slug>/` and reference them with that path in `metadata.json`.
 4. The folder name **must not** start with `_`. Folders starting with `_` are ignored by the site.
 5. Do not modify any file outside `src/content/projects/<slug>/` and `public/projects/<slug>/`.
 6. Verify: `metadata.json` must be valid JSON. Run it through a linter before finishing.
@@ -46,7 +46,8 @@ Full schema with every supported field:
   "category": "HARDWARE",
   "description": "One or two sentences shown on the project card. No markdown.",
   "githubLink": "",
-  "stlFile": "/projects/my-project/model.stl",
+  "thumbnail": "/projects/my-project/photo.jpg",
+  "modelFile": "/projects/my-project/model.obj",
   "media": [
     {
       "type": "image",
@@ -61,8 +62,16 @@ Full schema with every supported field:
     }
   ],
   "assets": [
-    { "name": "Download STL", "url": "/projects/my-project/model.stl" },
-    { "name": "Download APK", "url": "/projects/my-project/app.apk" }
+    { 
+      "name": "Download Firmware", 
+      "url": "/projects/my-project/firmware.bin",
+      "description": "Pre-compiled binary for direct flashing"
+    },
+    { 
+      "name": "Download APK", 
+      "url": "/projects/my-project/app.apk",
+      "description": "Android companion app"
+    }
   ]
 }
 ```
@@ -76,9 +85,10 @@ Full schema with every supported field:
 | `category` | yes | All caps, short. Examples: `HARDWARE`, `SOFTWARE`, `HARDWARE & SOFTWARE`, `3D PRINT`, `EMBEDDED`. |
 | `description` | yes | Plain prose, no markdown, no bullets, no emojis. End with a period. |
 | `githubLink` | yes | Empty string `""` if no public repo. |
-| `stlFile` | no | Path to the primary STL for the 3D viewer. Omit the key entirely if there is no model. |
+| `thumbnail` | no | Path to the image used as the cover on the project card in the grid. If omitted, falls back to the first image in `media`. |
+| `modelFile` | no | Path to the 3D model for the viewer. Supports `.stl` and `.obj`. (Legacy `stlFile` key is also supported). |
 | `media` | yes | At least one item. Each item requires `type` and `url`. See media rules below. |
-| `assets` | no | Download links shown at page bottom. Only include files worth downloading. |
+| `assets` | no | Download links shown at page bottom. Used for `.bin`, `.hex`, `.pdf`, `.zip`, etc. Each item requires `name`, `url`, and preferably a small `description`. |
 
 ### Media item fields
 
@@ -91,7 +101,7 @@ Full schema with every supported field:
 
 Caption ordering recommendation: put the most useful caption on the first item so it is immediately visible.
 
-All file paths are relative to the Next.js `public/` directory. Place files in `public/projects/<slug>/`.
+All file paths are relative to the Next.js `public/` directory. Find your pictures, videos, apks, and stls in the root `dump/` folder, and place them in `public/projects/<slug>/`.
 
 ---
 
@@ -138,7 +148,7 @@ There is no minimum or maximum, but aim to cover what is interesting and skip wh
 
 - **Images:** JPG or PNG, any resolution. The carousel crops them to a square, so center the subject.
 - **Video:** MP4, H.264. Keep files under 50 MB if possible. The carousel plays videos muted and looped; include a normal-speed demo clip rather than a time-lapse if the motion matters.
-- **STL:** Binary STL preferred. The 3D viewer renders it with a flat cyan material and orbit controls.
-- **Other assets:** APKs, ZIPs, PDFs — anything worth downloading goes in `assets` in metadata.json and in `public/projects/<slug>/`.
+- **3D Models:** The `modelFile` viewer handles binary/ASCII `.stl` or `.obj` files.
+- **Other assets:** `.bin`, `.hex`, APKs, PDFs, etc. — any file that doesn't need a dedicated viewer should go in `assets` as a download button with a short description.
 
-Place all media in `public/projects/<slug>/` and reference them with that path in metadata.json.
+Find all raw source media and assets in the root `dump/` folder. Place copies of them in `public/projects/<slug>/` and reference them with that path in metadata.json.
