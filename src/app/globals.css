@@ -1545,6 +1545,15 @@ p { text-shadow: var(--text-shadow-raised); }
   .print-only  { display: block !important; }
   .no-print    { display: none !important; }
 
+  /* Kill all animations and transitions so the print engine doesn't hang */
+  *, *::before, *::after {
+    animation-duration:        0s !important;
+    animation-delay:           0s !important;
+    transition-duration:       0s !important;
+    transition-delay:          0s !important;
+    will-change:               auto !important;
+  }
+
   /* ── Page setup ── */
   @page {
     size: A4 portrait;

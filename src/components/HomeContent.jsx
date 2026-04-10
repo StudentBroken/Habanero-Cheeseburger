@@ -32,6 +32,7 @@ export default function HomeContent({ projects }) {
   const [hoveredProject, setHoveredProject] = useState(null);
   const [stickyVisible, setStickyVisible] = useState(false);
   const [isTouch, setIsTouch] = useState(false);
+  const [isPrinting, setIsPrinting] = useState(false);
 
   const konamiIdx = useRef(0);
   const typedBuf = useRef('');
@@ -231,6 +232,45 @@ export default function HomeContent({ projects }) {
 
   const cycleNavQuip = () =>
     setNavQuipIdx(i => (i + 1) % NAV_QUIPS.length);
+
+  // Stop the rAF dock-animation before the browser renders the print preview
+  useEffect(() => {
+    const onBeforePrint = () => {
+      if (rafRef.current) {
+        cancelAnimationFrame(rafRef.current);
+        rafRef.current = null;
+      }
+    };
+    window.addEventListener('beforeprint', onBeforePrint);
+    return () => window.removeEventListener('beforeprint', onBeforePrint);
+  }, []);
+
+  const handlePrint = useCallback(async () => {
+    setIsPrinting(true);
+
+    // Cancel the animation loop so it doesn't block the print renderer
+    if (rafRef.current) {
+      cancelAnimationFrame(rafRef.current);
+      rafRef.current = null;
+    }
+
+    // Force every lazy image to start loading now
+    const imgs = Array.from(document.querySelectorAll('img'));
+    imgs.forEach(img => { img.loading = 'eager'; });
+
+    // Wait for any image that isn't already complete
+    const pending = imgs
+      .filter(img => !img.complete)
+      .map(img => new Promise(resolve => {
+        img.addEventListener('load',  resolve, { once: true });
+        img.addEventListener('error', resolve, { once: true });
+      }));
+
+    if (pending.length > 0) await Promise.all(pending);
+
+    setIsPrinting(false);
+    window.print();
+  }, []);
 
   return (
     <>
@@ -501,11 +541,14 @@ export default function HomeContent({ projects }) {
         <div className="no-print pdf-export-bar">
           <button
             className="mg-btn mg-btn--accent pdf-export-btn"
-            onClick={() => window.print()}
+            onClick={handlePrint}
+            disabled={isPrinting}
             aria-label={isFr ? 'Télécharger en PDF' : 'Download as PDF'}
           >
             <Printer size={18} />
-            {isFr ? 'Télécharger en PDF' : 'Download as PDF'}
+            {isPrinting
+              ? (isFr ? 'Chargement des images…' : 'Loading images…')
+              : (isFr ? 'Télécharger en PDF' : 'Download as PDF')}
           </button>
           <p className="pdf-export-hint">
             {isFr
