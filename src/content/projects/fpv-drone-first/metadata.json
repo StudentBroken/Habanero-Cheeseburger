@@ -1,0 +1,52 @@
+{
+  "title": "First Designed FPV Drone",
+  "date": "2025-03-30",
+  "category": "HARDWARE",
+  "description": "First personally designed FPV quadcopter, built on a PLA frame using salvaged parts from a $20 marketplace kit. Made one test flight, never freestyled — the PLA was too flexible to hold up.",
+  "githubLink": "",
+  "thumbnail": "/projects/fpv-drone-first/overview.jpg",
+  "media": [
+    {
+      "type": "image",
+      "url": "/projects/fpv-drone-first/overview.jpg",
+      "alt": "First designed FPV drone",
+      "caption": "First design — PLA frame, scrap parts"
+    },
+    {
+      "type": "image",
+      "url": "/projects/fpv-drone-first/frame-assembly.jpg",
+      "alt": "Frame assembly with flying wing guts",
+      "caption": "Frame assembly"
+    },
+    {
+      "type": "image",
+      "url": "/projects/fpv-drone-first/fc-stack.jpg",
+      "alt": "Flight controller stack",
+      "caption": "FC stack"
+    },
+    {
+      "type": "image",
+      "url": "/projects/fpv-drone-first/mcu.jpg",
+      "alt": "Microcontroller unit",
+      "caption": "MCU"
+    },
+    {
+      "type": "image",
+      "url": "/projects/fpv-drone-first/front-view.jpg",
+      "alt": "Front view of the PLA drone",
+      "caption": "Front view"
+    },
+    {
+      "type": "image",
+      "url": "/projects/fpv-drone-first/top-view.jpg",
+      "alt": "Top-down view of PLA drone",
+      "caption": "Top-down"
+    },
+    {
+      "type": "video",
+      "url": "/projects/fpv-drone-first/test-flight.mp4",
+      "caption": "Test flight"
+    }
+  ],
+  "tier": 3
+}

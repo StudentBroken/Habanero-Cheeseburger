@@ -96,12 +96,21 @@ export default function MediaCarousel({ media }) {
       });
     };
 
+    const handleWheel = (e) => {
+      if (Math.abs(e.deltaY) >= Math.abs(e.deltaX)) {
+        e.preventDefault();
+        window.scrollBy({ top: e.deltaY });
+      }
+    };
+
     el.addEventListener('scroll', handleScroll, { passive: true });
+    el.addEventListener('wheel', handleWheel, { passive: false });
     window.addEventListener('resize', handleResize);
 
     return () => {
       clearTimeout(to);
       el.removeEventListener('scroll', handleScroll);
+      el.removeEventListener('wheel', handleWheel);
       window.removeEventListener('resize', handleResize);
     };
   }, [getMetrics, updateFocus]);
@@ -134,7 +143,7 @@ export default function MediaCarousel({ media }) {
 
   return (
     <div style={{
-      '--item-width': 'clamp(240px, 38vw, 580px)',
+      '--item-width': 'clamp(260px, 60vw, 580px)',
       position: 'relative',
       width: '100vw',
       margin: '0 0 3rem calc(50% - 50vw)',
@@ -154,6 +163,7 @@ export default function MediaCarousel({ media }) {
           alignItems: 'center',
           padding: `1rem calc(50vw - (var(--item-width) / 2))`,
           WebkitOverflowScrolling: 'touch',
+          touchAction: 'pan-x',
         }}
       >
         {displayMedia.map((item, index) => {
@@ -226,7 +236,7 @@ export default function MediaCarousel({ media }) {
 
       <button
         onClick={() => scroll('left')}
-        className="tech-button"
+        className="tech-button carousel-nav-btn"
         style={{ ...buttonStyle, left: '1.5rem' }}
         aria-label="Previous"
       >
@@ -234,7 +244,7 @@ export default function MediaCarousel({ media }) {
       </button>
       <button
         onClick={() => scroll('right')}
-        className="tech-button"
+        className="tech-button carousel-nav-btn"
         style={{ ...buttonStyle, right: '1.5rem' }}
         aria-label="Next"
       >

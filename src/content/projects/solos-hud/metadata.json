@@ -4,58 +4,80 @@
   "category": "HARDWARE & SOFTWARE",
   "description": "Reverse engineering Solos smart glasses to build custom apps, followed by a complete hardware redesign and custom 3D-printed housing for enhanced portability and battery life.",
   "thumbnail": "/projects/solos-hud/20260326_235103.jpg",
-  "githubLink": "",
-  "stlFile": "/projects/solos-hud/solos_upgrade_kit_complete.stl",
+  "githubLink": "https://github.com/StudentBroken/solos-hud",
+  "modelFile": "/projects/solos-hud/solos_upgrade_kit_complete.stl",
   "media": [
     {
       "type": "video",
-      "url": "/projects/solos-hud/20260307_191253.mp4"
+      "url": "/projects/solos-hud/20260307_191253.mp4",
+      "caption": "Showcase of original glasses unpowered"
     },
     {
       "type": "image",
-      "url": "/projects/solos-hud/20260326_235103.jpg"
+      "url": "/projects/solos-hud/20260326_235103.jpg",
+      "alt": "Completed custom 3D printed housing",
+      "caption": "Completed custom housing"
     },
     {
       "type": "image",
-      "url": "/projects/solos-hud/20260322_152058.jpg"
+      "url": "/projects/solos-hud/20260322_152058.jpg",
+      "alt": "Assembly process of the custom frame",
+      "caption": "Assembly process"
     },
     {
       "type": "image",
-      "url": "/projects/solos-hud/20260322_134747.jpg"
+      "url": "/projects/solos-hud/20260322_134747.jpg",
+      "alt": "Display assembly mount",
+      "caption": "Display assembly mount"
     },
     {
       "type": "image",
-      "url": "/projects/solos-hud/20260321_233341.jpg"
+      "url": "/projects/solos-hud/20260321_233341.jpg",
+      "alt": "Fitting components into the new housing",
+      "caption": "Fitting components"
     },
     {
       "type": "image",
-      "url": "/projects/solos-hud/20260321_151956.jpg"
+      "url": "/projects/solos-hud/20260321_151956.jpg",
+      "alt": "Test fitting multiple prototypes",
+      "caption": "Test fitting multiple prototypes"
     },
     {
       "type": "image",
-      "url": "/projects/solos-hud/20260308_222410.jpg"
+      "url": "/projects/solos-hud/20260308_222410.jpg",
+      "alt": "Custom companion app",
+      "caption": "Custom companion app"
     },
     {
       "type": "image",
-      "url": "/projects/solos-hud/20260326_211227.jpg"
+      "url": "/projects/solos-hud/20260326_211227.jpg",
+      "alt": "First run with pacer app",
+      "caption": "First run with pacer app"
     },
     {
       "type": "image",
-      "url": "/projects/solos-hud/Scan20260321162306 _001 (1).jpg"
+      "url": "/projects/solos-hud/Scan20260321162306 _001 (1).jpg",
+      "alt": "2D scan of original frame for reference",
+      "caption": "2D scan for CAD reference"
     },
     {
       "type": "image",
-      "url": "/projects/solos-hud/Screenshot_20260303_035858_Facebook.jpg"
+      "url": "/projects/solos-hud/Screenshot_20260303_035858_Facebook.jpg",
+      "alt": "Acquiring the glasses",
+      "caption": "Initial acquisition"
     }
   ],
   "assets": [
     {
       "name": "Download 3D Model (STL)",
-      "url": "/projects/solos-hud/solos_upgrade_kit_complete.stl"
+      "url": "/projects/solos-hud/solos_upgrade_kit_complete.stl",
+      "description": "Custom housing STL files for printing"
     },
     {
       "name": "Download Android App (APK)",
-      "url": "/projects/solos-hud/Solos_april_6_2026.apk"
+      "url": "/projects/solos-hud/Solos_april_6_2026.apk",
+      "description": "Custom companion app for VESC & Weather"
     }
-  ]
+  ],
+  "tier": 1
 }

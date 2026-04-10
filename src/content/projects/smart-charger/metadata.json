@@ -1,0 +1,29 @@
+{
+  "title": "Smart Ebike Charger",
+  "date": "2025-06-18",
+  "category": "HARDWARE & SOFTWARE",
+  "description": "ESP32-based 24V charger for an ebike that cuts off at 4.15V per cell instead of 4.2V to extend battery longevity. WiFi-enabled with an OLED charge progress bar and LDO heatsink.",
+  "githubLink": "",
+  "thumbnail": "/projects/smart-charger/overview.jpg",
+  "media": [
+    {
+      "type": "image",
+      "url": "/projects/smart-charger/overview.jpg",
+      "alt": "Smart ebike charger overview",
+      "caption": "24V smart charger — 4.15V cutoff"
+    },
+    {
+      "type": "image",
+      "url": "/projects/smart-charger/oled.jpg",
+      "alt": "OLED showing charge progress bar",
+      "caption": "OLED charge bar"
+    },
+    {
+      "type": "image",
+      "url": "/projects/smart-charger/overview-2.jpg",
+      "alt": "Alternate view of smart charger",
+      "caption": "Alternate view"
+    }
+  ],
+  "tier": 1
+}

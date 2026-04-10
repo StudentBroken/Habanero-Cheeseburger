@@ -1,0 +1,17 @@
+{
+  "title": "Electric Skateboard",
+  "date": "2021-08-15",
+  "category": "HARDWARE",
+  "description": "Fan-powered electric skateboard built on a shoestring budget using a cheap Amazon ESC, motor, and a 3S LiPo. A propeller and printed fan shroud replace a conventional belt or hub drive.",
+  "githubLink": "",
+  "thumbnail": "/projects/eskateboard/overview.jpg",
+  "media": [
+    {
+      "type": "image",
+      "url": "/projects/eskateboard/overview.jpg",
+      "alt": "The electric fan-powered skateboard",
+      "caption": "Fan-driven electric skateboard — late summer 2021"
+    }
+  ],
+  "tier": 3
+}

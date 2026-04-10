@@ -25,14 +25,16 @@ function Model({ url }) {
     return null;
   }, [geomOrGroup, extension]);
 
-  if (extension === 'obj') {
-    return <primitive object={objGroup} />;
-  }
-
   return (
-    <mesh geometry={geomOrGroup}>
-      <meshStandardMaterial color="#0ea5e9" attach="material" />
-    </mesh>
+    <group rotation={[-Math.PI / 2, 0, 0]}>
+      {extension === 'obj' ? (
+        <primitive object={objGroup} />
+      ) : (
+        <mesh geometry={geomOrGroup}>
+          <meshStandardMaterial color="#0ea5e9" attach="material" />
+        </mesh>
+      )}
+    </group>
   );
 }
 

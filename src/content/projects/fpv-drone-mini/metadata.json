@@ -1,0 +1,41 @@
+{
+  "title": "Finger-Sized FPV Drone",
+  "date": "2025-07-30",
+  "category": "HARDWARE",
+  "description": "The smallest possible FPV build — fingertip-sized with custom 3D designed propeller guards so it can land without the props striking the ground. Crashed and lost.",
+  "githubLink": "",
+  "thumbnail": "/projects/fpv-drone-mini/overview.jpg",
+  "media": [
+    {
+      "type": "image",
+      "url": "/projects/fpv-drone-mini/overview.jpg",
+      "alt": "Finger-sized FPV drone",
+      "caption": "Smallest possible FPV build"
+    },
+    {
+      "type": "image",
+      "url": "/projects/fpv-drone-mini/with-guards.jpg",
+      "alt": "Drone with custom propeller guards",
+      "caption": "Custom 3D designed prop guards"
+    },
+    {
+      "type": "image",
+      "url": "/projects/fpv-drone-mini/with-minifigure.jpg",
+      "alt": "Drone beside a LEGO minifigure for scale",
+      "caption": "Scale reference"
+    },
+    {
+      "type": "image",
+      "url": "/projects/fpv-drone-mini/size-comparison.jpg",
+      "alt": "Size comparison",
+      "caption": "Size comparison"
+    },
+    {
+      "type": "image",
+      "url": "/projects/fpv-drone-mini/other-view.jpg",
+      "alt": "Alternate angle",
+      "caption": "Alternate angle"
+    }
+  ],
+  "tier": 3
+}

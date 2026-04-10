@@ -1,0 +1,40 @@
+{
+  "title": "5-Inch FPV Drone",
+  "date": "2025-09-14",
+  "category": "HARDWARE",
+  "description": "Full 5-inch FPV freestyle build on a $500 budget including the DJI O3 air unit, with custom 3D printed TPU mounts for the FC and VTX stack.",
+  "githubLink": "",
+  "thumbnail": "/projects/fpv-drone-5inch/assembled.jpg",
+  "media": [
+    {
+      "type": "image",
+      "url": "/projects/fpv-drone-5inch/assembled.jpg",
+      "alt": "Fully assembled 5-inch FPV drone",
+      "caption": "Fully assembled — DJI O3, TPU mounts"
+    },
+    {
+      "type": "image",
+      "url": "/projects/fpv-drone-5inch/overview.jpg",
+      "alt": "5-inch FPV drone overview",
+      "caption": "Overview"
+    },
+    {
+      "type": "image",
+      "url": "/projects/fpv-drone-5inch/cable-routing.jpg",
+      "alt": "Cable routing with FC, VTX and TPU mounts",
+      "caption": "Cable routing + custom TPU mounts"
+    },
+    {
+      "type": "image",
+      "url": "/projects/fpv-drone-5inch/build.jpg",
+      "alt": "Building the 5-inch drone",
+      "caption": "Build phase"
+    },
+    {
+      "type": "video",
+      "url": "/projects/fpv-drone-5inch/firmware-flash.mp4",
+      "caption": "Flashing the firmware"
+    }
+  ],
+  "tier": 2
+}

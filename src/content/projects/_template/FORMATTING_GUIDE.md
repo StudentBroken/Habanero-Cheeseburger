@@ -61,6 +61,10 @@ Full schema with every supported field:
       "caption": "Optional label overlaid on this video when it is focused in the carousel"
     }
   ],
+  "links": [
+    { "type": "github", "url": "https://github.com/you/repo", "label": "View Source" },
+    { "type": "website", "url": "https://example.com", "label": "Live Demo" }
+  ],
   "assets": [
     { 
       "name": "Download Firmware", 
@@ -88,6 +92,7 @@ Full schema with every supported field:
 | `thumbnail` | no | Path to the image used as the cover on the project card in the grid. If omitted, falls back to the first image in `media`. |
 | `modelFile` | no | Path to the 3D model for the viewer. Supports `.stl` and `.obj`. (Legacy `stlFile` key is also supported). |
 | `media` | yes | At least one item. Each item requires `type` and `url`. See media rules below. |
+| `links` | no | External link buttons shown at page bottom. Use for GitHub repos, live demos, docs, etc. Each item requires `type` and `url`. `type: "github"` renders a GitHub icon; anything else renders a generic external-link icon. `label` is optional (defaults to `"View on GitHub"` or `"Open Link"`). |
 | `assets` | no | Download links shown at page bottom. Used for `.bin`, `.hex`, `.pdf`, `.zip`, etc. Each item requires `name`, `url`, and preferably a small `description`. |
 
 ### Media item fields

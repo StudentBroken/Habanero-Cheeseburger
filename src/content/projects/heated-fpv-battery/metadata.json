@@ -1,0 +1,48 @@
+{
+  "title": "Heated FPV Battery",
+  "date": "2026-01-30",
+  "category": "HARDWARE",
+  "description": "An ESP32-C3 powered active heating system to maintain FPV battery temperatures in extreme -30°C winter conditions.",
+  "githubLink": "",
+  "thumbnail": "/projects/heated-fpv-battery/fully-assembled.jpg",
+  "media": [
+    {
+      "type": "image",
+      "url": "/projects/heated-fpv-battery/fully-assembled.jpg",
+      "alt": "Fully assembled heated FPV battery",
+      "caption": "Fully assembled and flying at an optimal 30°C."
+    },
+    {
+      "type": "image",
+      "url": "/projects/heated-fpv-battery/testing-temperature.jpg",
+      "alt": "Testing the temperature regulation",
+      "caption": "Verifying the bang-bang algorithm and thermal stability."
+    },
+    {
+      "type": "image",
+      "url": "/projects/heated-fpv-battery/half-assembled.jpg",
+      "alt": "Half assembled battery components",
+      "caption": "Working out the layout before final assembly."
+    },
+    {
+      "type": "image",
+      "url": "/projects/heated-fpv-battery/esp32-ntc-buck.jpg",
+      "alt": "The ESP32, NTC and both buck converters",
+      "caption": "The ESP32-C3 microcontroller, BMS NTC thermistor, and buck converters."
+    },
+    {
+      "type": "image",
+      "url": "/projects/heated-fpv-battery/wiring-bucks.jpg",
+      "alt": "Wiring the buck converters",
+      "caption": "Wiring up the dual 5V regulators to run logic and the nichrome coil."
+    }
+  ],
+  "assets": [
+    {
+      "name": "Download Firmware",
+      "url": "/projects/heated-fpv-battery/firmware.zip",
+      "description": "PlatformIO project for the ESP32-C3 web interface and temp control."
+    }
+  ],
+  "tier": 2
+}

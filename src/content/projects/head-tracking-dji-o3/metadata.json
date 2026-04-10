@@ -1,0 +1,44 @@
+{
+  "title": "Head Tracking DJI O3 Air Unit",
+  "date": "2024-10-18",
+  "category": "HARDWARE & SOFTWARE",
+  "description": "A 2-axis head tracking system for the DJI Goggles 3 and O3 air unit using an MPU module and ESP32 C3 Superminis.",
+  "githubLink": "",
+  "thumbnail": "/projects/head-tracking-dji-o3/close-up.jpg",
+  "modelFile": "/projects/head-tracking-dji-o3/o3-gimbal-full-set.stl",
+  "media": [
+    {
+      "type": "image",
+      "url": "/projects/head-tracking-dji-o3/close-up.jpg",
+      "caption": "Fully assembled 2-axis mechanism"
+    },
+    {
+      "type": "video",
+      "url": "/projects/head-tracking-dji-o3/demo-integrated.mp4",
+      "caption": "Integrated test with DJI Goggles 3"
+    },
+    {
+      "type": "image",
+      "url": "/projects/head-tracking-dji-o3/close-up-other-side.jpg",
+      "caption": "Alternative mounting view"
+    },
+    {
+      "type": "image",
+      "url": "/projects/head-tracking-dji-o3/close-up-table.jpg",
+      "caption": "Bench test and assembly"
+    },
+    {
+      "type": "video",
+      "url": "/projects/head-tracking-dji-o3/demo-bare-modules.mp4",
+      "caption": "Bare module testing without DJI components"
+    }
+  ],
+  "assets": [
+    {
+      "name": "Download STL",
+      "url": "/projects/head-tracking-dji-o3/o3-gimbal-full-set.stl",
+      "description": "3D printed motion system and enclosure"
+    }
+  ],
+  "tier": 1
+}

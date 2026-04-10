@@ -1,34 +1,35 @@
 {
   "title": "Your Project Title",
-  "date": "2024-05-15",
+  "date": "2026-01-01",
   "category": "HARDWARE & SOFTWARE",
-  "description": "A short summary of your hybrid hardware/software project.",
+  "description": "A short, plain text summary of the project. Keep it one or two sentences.",
+  "thumbnail": "/projects/your-project/cover_image.jpg",
   "githubLink": "https://github.com/...",
-  "thumbnail": "/projects/your_project/cover_image.jpg",
-  "modelFile": "/projects/your_project/model.obj",
+  "modelFile": "/projects/your-project/model.stl",
   "media": [
     {
       "type": "image",
-      "url": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=1200&auto=format&fit=crop",
+      "url": "/projects/your-project/photo1.jpg",
       "alt": "Brief description of what is shown",
       "caption": "Optional label shown as an overlay when this item is focused"
     },
     {
       "type": "video",
-      "url": "https://www.w3schools.com/html/mov_bbb.mp4",
+      "url": "/projects/your-project/demo.mp4",
       "caption": "Optional label shown as an overlay when this video is focused"
     }
   ],
   "assets": [
     {
       "name": "Download Firmware",
-      "url": "/projects/your_project/firmware.bin",
+      "url": "/projects/your-project/firmware.bin",
       "description": "Compiled binary for direct flashing"
     },
     {
-      "name": "Download APK",
-      "url": "/projects/your_project/app.apk",
-      "description": "Android companion App"
+      "name": "Download STL",
+      "url": "/projects/your-project/housing.stl",
+      "description": "3D printed housing files"
     }
-  ]
+  ],
+  "tier": 2
 }

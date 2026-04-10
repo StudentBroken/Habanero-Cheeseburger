@@ -1,0 +1,41 @@
+{
+  "title": "Custom RC Flying Wing",
+  "date": "2025-02-24",
+  "category": "HARDWARE & SOFTWARE",
+  "description": "Fully custom RC flying wing with a scratch-built controller board translating ELRS CRSF signals to SBUS for the servos via an ESP32. Never flew — lives in the project drawer waiting for its moment.",
+  "githubLink": "",
+  "thumbnail": "/projects/rc-wing/overview.jpg",
+  "media": [
+    {
+      "type": "image",
+      "url": "/projects/rc-wing/overview.jpg",
+      "alt": "Full RC flying wing system",
+      "caption": "Full system — FC, VTX, 2x 2g servos, ESP32"
+    },
+    {
+      "type": "image",
+      "url": "/projects/rc-wing/controller-front.jpg",
+      "alt": "Controller board front view",
+      "caption": "Controller board — front"
+    },
+    {
+      "type": "image",
+      "url": "/projects/rc-wing/controller-wiring.jpg",
+      "alt": "Controller board wiring skeleton",
+      "caption": "ESP32 + ELRS CRSF to SBUS translation"
+    },
+    {
+      "type": "image",
+      "url": "/projects/rc-wing/controller-upper.jpg",
+      "alt": "Controller board upper view",
+      "caption": "Upper view — FC, camera, servos, VTX"
+    },
+    {
+      "type": "image",
+      "url": "/projects/rc-wing/top-view.jpg",
+      "alt": "Top-down view of flying wing",
+      "caption": "Top-down"
+    }
+  ],
+  "tier": 2
+}

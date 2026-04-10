@@ -1,0 +1,21 @@
+{
+  "title": "Remote Firework Detonator",
+  "date": "2025-08-29",
+  "category": "HARDWARE",
+  "description": "A remote and timed detonator for a firework rocket built in 30 minutes using an ESP32 C3, a relay, and a custom match igniter.",
+  "githubLink": "",
+  "thumbnail": "/projects/firework-detonator/hardware-setup.jpg",
+  "media": [
+    {
+      "type": "image",
+      "url": "/projects/firework-detonator/hardware-setup.jpg",
+      "caption": "Hardware setup with ESP32 C3, relay, and buck converter"
+    },
+    {
+      "type": "video",
+      "url": "/projects/firework-detonator/detonator-demo.mp4",
+      "caption": "Testing the timed detonation functionality"
+    }
+  ],
+  "tier": 3
+}

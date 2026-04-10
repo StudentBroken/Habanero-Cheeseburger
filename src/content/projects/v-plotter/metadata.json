@@ -1,0 +1,55 @@
+{
+  "title": "V Plotter: V-Bot",
+  "date": "2026-02-15",
+  "category": "HARDWARE & SOFTWARE",
+  "description": "A portable, dual-stepper V Plotter capable of drawing on large boards, featuring a web interface and modular crab-inspired gondola.",
+  "thumbnail": "/projects/v-plotter/on-the-whiteboard-close-up,-powered-on.jpg",
+  "githubLink": "https://github.com/StudentBroken/v-bot",
+  "modelFile": "/projects/v-plotter/V-bot-complete.stl",
+  "media": [
+    {
+      "type": "image",
+      "url": "/projects/v-plotter/running,-on-the-wall-testing-cartesian-movements.jpg",
+      "alt": "V plotter running on a wall testing cartesian movements",
+      "caption": "Testing cartesian movements on the wall"
+    },
+    {
+      "type": "image",
+      "url": "/projects/v-plotter/on-the-whiteboard-close-up,-powered-on.jpg",
+      "alt": "Close up of the V plotter on a whiteboard powered on",
+      "caption": "Powered on via USB-C PD and mounted on a whiteboard"
+    },
+    {
+      "type": "image",
+      "url": "/projects/v-plotter/close-up-almost-fully-assebled.jpg",
+      "alt": "Close up of the gondola almost fully assembled",
+      "caption": "Crab-inspired gondola assembly with googly eyes"
+    },
+    {
+      "type": "image",
+      "url": "/projects/v-plotter/layout-of-the-electronics.jpg",
+      "alt": "Layout of the electronics inside the v plotter",
+      "caption": "Internal electronics layout featuring ESP32-S3 and stepper drivers"
+    },
+    {
+      "type": "image",
+      "url": "/projects/v-plotter/stepper-drivers-close-up.jpg",
+      "alt": "Close up of the stepper drivers",
+      "caption": "A4988 stepper drivers with a small cooling fan"
+    },
+    {
+      "type": "image",
+      "url": "/projects/v-plotter/blown-a4988-driver.jpg",
+      "alt": "Image of a blown A4988 stepper driver",
+      "caption": "The aftermath of a blown stepper driver during testing"
+    }
+  ],
+  "assets": [
+    {
+      "name": "Download 3D Model (STL)",
+      "url": "/projects/v-plotter/V-bot-complete.stl",
+      "description": "V-Bot 3D components for printing"
+    }
+  ],
+  "tier": 1
+}

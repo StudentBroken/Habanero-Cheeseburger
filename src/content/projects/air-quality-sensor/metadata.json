@@ -1,0 +1,53 @@
+{
+  "title": "Air Quality Sensor",
+  "date": "2025-01-21",
+  "category": "HARDWARE & SOFTWARE",
+  "description": "ESP32-based sensor logging PM2.5, VOCs, temperature, and humidity, with an OLED readout and an Adafruit MQTT dashboard. Enclosure uses a cheap IKEA part as the structural base.",
+  "githubLink": "",
+  "thumbnail": "/projects/air-quality-sensor/assembled.jpg",
+  "media": [
+    {
+      "type": "image",
+      "url": "/projects/air-quality-sensor/assembled.jpg",
+      "alt": "Completed air quality sensor",
+      "caption": "PM2.5 + VOC + temp + humidity"
+    },
+    {
+      "type": "image",
+      "url": "/projects/air-quality-sensor/oled-prototype.jpg",
+      "alt": "Prototype with OLED screen",
+      "caption": "Prototype OLED readout"
+    },
+    {
+      "type": "image",
+      "url": "/projects/air-quality-sensor/build.jpg",
+      "alt": "Building the air quality sensor",
+      "caption": "Build"
+    },
+    {
+      "type": "image",
+      "url": "/projects/air-quality-sensor/build-2.jpg",
+      "alt": "Alternate build view",
+      "caption": "Build — alternate angle"
+    },
+    {
+      "type": "image",
+      "url": "/projects/air-quality-sensor/guts.jpg",
+      "alt": "All components laid out",
+      "caption": "Full internals"
+    },
+    {
+      "type": "image",
+      "url": "/projects/air-quality-sensor/guts-held.jpg",
+      "alt": "Holding the sensor guts",
+      "caption": "Guts in hand"
+    },
+    {
+      "type": "image",
+      "url": "/projects/air-quality-sensor/cover.jpg",
+      "alt": "3D printed cover on IKEA base",
+      "caption": "IKEA base + 3D printed cover"
+    }
+  ],
+  "tier": 2
+}

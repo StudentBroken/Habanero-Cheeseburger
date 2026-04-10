@@ -1,0 +1,35 @@
+{
+  "title": "ESP32 Eraser — v2",
+  "date": "2025-01-16",
+  "category": "HARDWARE & SOFTWARE",
+  "description": "Redesigned eraser with BLE replacing the ESPNow+USB relay chain of v1. Slimmer profile with a dedicated 3D printed enclosure and better-fitting eraser shell.",
+  "githubLink": "",
+  "thumbnail": "/projects/eraser-v2/overview.jpg",
+  "media": [
+    {
+      "type": "image",
+      "url": "/projects/eraser-v2/overview.jpg",
+      "alt": "ESP32 eraser v2 assembled",
+      "caption": "v2 — BLE, cleaner enclosure"
+    },
+    {
+      "type": "image",
+      "url": "/projects/eraser-v2/guts.jpg",
+      "alt": "ESP32 S3 Xiao Sense, battery and switch",
+      "caption": "ESP32 S3 Xiao Sense + battery"
+    },
+    {
+      "type": "image",
+      "url": "/projects/eraser-v2/disassembled.jpg",
+      "alt": "v2 disassembled clear inside view",
+      "caption": "Disassembled"
+    },
+    {
+      "type": "image",
+      "url": "/projects/eraser-v2/expanded.jpg",
+      "alt": "Expanded view of v2 internals",
+      "caption": "Expanded view"
+    }
+  ],
+  "tier": 2
+}

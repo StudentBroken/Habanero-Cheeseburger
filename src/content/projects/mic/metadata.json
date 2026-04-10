@@ -1,0 +1,17 @@
+{
+  "title": "Headset Microphone Mod",
+  "date": "2023-11-20",
+  "category": "HARDWARE",
+  "description": "A small microphone MacGyvered onto an existing headset to get dramatically clearer in-game audio without buying a new headset.",
+  "githubLink": "",
+  "thumbnail": "/projects/mic/overview.jpg",
+  "media": [
+    {
+      "type": "image",
+      "url": "/projects/mic/overview.jpg",
+      "alt": "The modded headset microphone",
+      "caption": "Modded mic"
+    }
+  ],
+  "tier": 3
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Desk Build",
+  "date": "2023-10-15",
+  "category": "HARDWARE",
+  "description": "Custom desk built from scratch with $60 and a drill. Still standing.",
+  "githubLink": "",
+  "thumbnail": "/projects/desk-setup/overview.jpg",
+  "media": [
+    {
+      "type": "image",
+      "url": "/projects/desk-setup/overview.jpg",
+      "alt": "Completed desk",
+      "caption": "Final desk"
+    },
+    {
+      "type": "image",
+      "url": "/projects/desk-setup/build.jpg",
+      "alt": "Desk during construction",
+      "caption": "Build phase"
+    },
+    {
+      "type": "image",
+      "url": "/projects/desk-setup/setup.jpg",
+      "alt": "Desk setup with equipment",
+      "caption": "Full setup"
+    }
+  ],
+  "tier": 3
+}

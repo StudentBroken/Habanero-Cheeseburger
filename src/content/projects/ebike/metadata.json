@@ -1,0 +1,17 @@
+{
+  "title": "Ebike 48V to USB-C PD Adapter",
+  "date": "2025-04-15",
+  "category": "HARDWARE",
+  "description": "Step-down adapter that taps the ebike's 48V battery and outputs USB-C Power Delivery, turning the bike into a mobile charger.",
+  "githubLink": "",
+  "thumbnail": "/projects/ebike/overview.jpg",
+  "media": [
+    {
+      "type": "image",
+      "url": "/projects/ebike/overview.jpg",
+      "alt": "Ebike 48V to USB-C PD adapter",
+      "caption": "48V → USB-C PD"
+    }
+  ],
+  "tier": 3
+}

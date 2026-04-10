@@ -1,0 +1,40 @@
+{
+  "title": "Water Sprayer FPV Drone",
+  "date": "2026-04-02",
+  "category": "HARDWARE",
+  "description": "A mini FPV drone modified with a custom 3D-printed and salvaged syringe water pump system for a game of Senior Assassin.",
+  "githubLink": "",
+  "thumbnail": "/projects/water-sprayer-fpv-drone/20260331_230726.jpg",
+  "media": [
+    {
+      "type": "image",
+      "url": "/projects/water-sprayer-fpv-drone/20260331_230726.jpg",
+      "alt": "Drone water sprayer prototype",
+      "caption": "First build: Replaced blown MCU"
+    },
+    {
+      "type": "image",
+      "url": "/projects/water-sprayer-fpv-drone/20260401_204140.jpg",
+      "alt": "Drone water sprayer build process",
+      "caption": "Build progress"
+    },
+    {
+      "type": "image",
+      "url": "/projects/water-sprayer-fpv-drone/20260401_204146.jpg",
+      "alt": "Drone water sprayer details",
+      "caption": "Detailed view"
+    },
+    {
+      "type": "video",
+      "url": "/projects/water-sprayer-fpv-drone/20260402_203106.mp4",
+      "caption": "Testing the water sprayer"
+    },
+    {
+      "type": "video",
+      "url": "/projects/water-sprayer-fpv-drone/20260402_215309.mp4",
+      "caption": "Controller button upgrade"
+    }
+  ],
+  "assets": [],
+  "tier": 2
+}

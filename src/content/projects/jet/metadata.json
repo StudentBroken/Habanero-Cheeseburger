@@ -1,0 +1,33 @@
+{
+  "title": "DIY Electric Turbojet",
+  "date": "2023-11-12",
+  "category": "HARDWARE",
+  "description": "An attempt to build a functional turbojet using an electric turbocharger — a BLDC motor spinning a custom-designed turbine to force air into a combustion chamber. It failed, loudly.",
+  "githubLink": "",
+  "thumbnail": "/projects/jet/design.jpg",
+  "media": [
+    {
+      "type": "image",
+      "url": "/projects/jet/design.jpg",
+      "alt": "Jet design sketch",
+      "caption": "Initial design"
+    },
+    {
+      "type": "image",
+      "url": "/projects/jet/build.jpg",
+      "alt": "Jet physical build",
+      "caption": "Physical build"
+    },
+    {
+      "type": "video",
+      "url": "/projects/jet/test-1.mp4",
+      "caption": "Test run 1"
+    },
+    {
+      "type": "video",
+      "url": "/projects/jet/test-2.mp4",
+      "caption": "Test run 2"
+    }
+  ],
+  "tier": 3
+}

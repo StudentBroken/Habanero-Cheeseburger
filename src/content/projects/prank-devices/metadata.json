@@ -1,0 +1,23 @@
+{
+  "title": "April Fools ESP32 Prank Devices",
+  "date": "2025-04-01",
+  "category": "HARDWARE & SOFTWARE",
+  "description": "Fleet of ESP32 prank devices deployed on April Fools using ESPNow — the first time deep sleep was used to extend battery life. Came with 3D printed fake AirPods as decoy props.",
+  "githubLink": "",
+  "thumbnail": "/projects/prank-devices/overview.jpg",
+  "media": [
+    {
+      "type": "image",
+      "url": "/projects/prank-devices/overview.jpg",
+      "alt": "April fools prank devices with fake AirPods",
+      "caption": "Prank fleet — April 1, 2025"
+    },
+    {
+      "type": "image",
+      "url": "/projects/prank-devices/device.jpg",
+      "alt": "ESP32 ESPNow prank device",
+      "caption": "ESPNow + deep sleep device"
+    }
+  ],
+  "tier": 2
+}

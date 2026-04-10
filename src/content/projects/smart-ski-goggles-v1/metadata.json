@@ -1,0 +1,21 @@
+{
+  "title": "Smart Ski Goggles V1",
+  "date": "2023-12-10",
+  "category": "HARDWARE",
+  "description": "A smart ski goggle prototype built in one day that uses internal reflections to display the time.",
+  "githubLink": "",
+  "thumbnail": "/projects/smart-ski-goggles-v1/goggles-view.jpg",
+  "media": [
+    {
+      "type": "image",
+      "url": "/projects/smart-ski-goggles-v1/goggles-view.jpg",
+      "caption": "Smart ski goggles HUD reflection"
+    },
+    {
+      "type": "video",
+      "url": "/projects/smart-ski-goggles-v1/goggles-demo.mp4",
+      "caption": "Video demo of the heads-up display"
+    }
+  ],
+  "tier": 2
+}

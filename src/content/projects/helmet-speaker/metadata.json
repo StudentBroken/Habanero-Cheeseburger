@@ -1,0 +1,29 @@
+{
+  "title": "Ski Helmet Speaker",
+  "date": "2024-12-15",
+  "category": "HARDWARE",
+  "description": "Custom speakers built to fit flush inside the earcups of a ski helmet, completely hidden from the outside.",
+  "githubLink": "",
+  "thumbnail": "/projects/helmet-speaker/side.jpg",
+  "media": [
+    {
+      "type": "image",
+      "url": "/projects/helmet-speaker/side.jpg",
+      "alt": "Helmet speaker side view",
+      "caption": "Side profile"
+    },
+    {
+      "type": "image",
+      "url": "/projects/helmet-speaker/overview.jpg",
+      "alt": "Helmet speaker overview",
+      "caption": "Overview"
+    },
+    {
+      "type": "image",
+      "url": "/projects/helmet-speaker/front.jpg",
+      "alt": "Helmet speaker front view",
+      "caption": "Front"
+    }
+  ],
+  "tier": 3
+}

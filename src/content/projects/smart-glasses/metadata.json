@@ -1,0 +1,29 @@
+{
+  "title": "Smart Glasses for the Blind",
+  "date": "2025-03-31",
+  "category": "HARDWARE",
+  "description": "Glasses fitted with an ultrasonic sensor and speaker that beep to warn visually impaired people of nearby obstacles.",
+  "githubLink": "",
+  "thumbnail": "/projects/smart-glasses/overview.jpg",
+  "media": [
+    {
+      "type": "image",
+      "url": "/projects/smart-glasses/overview.jpg",
+      "alt": "Smart blind glasses overview",
+      "caption": "Ultrasonic sensor + beeping speaker"
+    },
+    {
+      "type": "image",
+      "url": "/projects/smart-glasses/top-view.jpg",
+      "alt": "Top-down view of the glasses",
+      "caption": "Top view"
+    },
+    {
+      "type": "image",
+      "url": "/projects/smart-glasses/front-view.jpg",
+      "alt": "Front view of the blind glasses",
+      "caption": "Front — upside down"
+    }
+  ],
+  "tier": 2
+}

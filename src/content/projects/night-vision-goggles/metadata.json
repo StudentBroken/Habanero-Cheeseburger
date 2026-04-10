@@ -1,0 +1,17 @@
+{
+  "title": "Night Vision Goggles",
+  "date": "2024-12-09",
+  "category": "HARDWARE",
+  "description": "DIY night vision goggles with a high-power IR illuminator and a dual-battery system for extended runtime.",
+  "githubLink": "",
+  "thumbnail": "/projects/night-vision-goggles/overview.jpg",
+  "media": [
+    {
+      "type": "image",
+      "url": "/projects/night-vision-goggles/overview.jpg",
+      "alt": "DIY night vision goggles with IR illuminator",
+      "caption": "High-power IR illuminator, dual battery"
+    }
+  ],
+  "tier": 2
+}

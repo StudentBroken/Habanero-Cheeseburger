@@ -1,0 +1,29 @@
+{
+  "title": "3D Printed RC F1 Car",
+  "date": "2024-12-21",
+  "category": "HARDWARE",
+  "description": "Fully 3D printed RC F1 car running brushed motors and ESC gifted from a friend, with FlySky radio control. First project to use TPU and bearings in a 3D print.",
+  "githubLink": "",
+  "thumbnail": "/projects/rc-f1-car/overview.jpg",
+  "media": [
+    {
+      "type": "image",
+      "url": "/projects/rc-f1-car/overview.jpg",
+      "alt": "3D printed F1 car overview",
+      "caption": "Fully assembled"
+    },
+    {
+      "type": "image",
+      "url": "/projects/rc-f1-car/front.webp",
+      "alt": "Front view of the F1 car",
+      "caption": "Front view"
+    },
+    {
+      "type": "image",
+      "url": "/projects/rc-f1-car/on-wall.jpg",
+      "alt": "F1 car mounted on wall display",
+      "caption": "Wall display"
+    }
+  ],
+  "tier": 3
+}

@@ -1,0 +1,33 @@
+{
+  "title": "Static Electricity Generator",
+  "date": "2025-03-19",
+  "category": "HARDWARE",
+  "description": "High-voltage static electricity generator using a voltage multiplier and AC HV circuit, repurposed as a wearable negative ion generator with a ground plane touching the floor.",
+  "githubLink": "",
+  "thumbnail": "/projects/static-electricity-generator/overview.jpg",
+  "media": [
+    {
+      "type": "image",
+      "url": "/projects/static-electricity-generator/overview.jpg",
+      "alt": "Static electricity generator circuit",
+      "caption": "Voltage multiplier + AC HV circuit"
+    },
+    {
+      "type": "image",
+      "url": "/projects/static-electricity-generator/circuit.jpg",
+      "alt": "Voltage multiplier close-up",
+      "caption": "Multiplier detail"
+    },
+    {
+      "type": "video",
+      "url": "/projects/static-electricity-generator/test.mp4",
+      "caption": "High voltage test"
+    },
+    {
+      "type": "video",
+      "url": "/projects/static-electricity-generator/negative-ion-test.mp4",
+      "caption": "Negative ion generator test"
+    }
+  ],
+  "tier": 2
+}

@@ -1,0 +1,35 @@
+{
+  "title": "BLE Macropad — v2",
+  "date": "2025-01-10",
+  "category": "HARDWARE & SOFTWARE",
+  "description": "Second iteration of the BLE macropad, adding an OLED display and a potentiometer knob for volume or scroll control.",
+  "githubLink": "",
+  "thumbnail": "/projects/macropad-v2/overview.jpg",
+  "media": [
+    {
+      "type": "image",
+      "url": "/projects/macropad-v2/overview.jpg",
+      "alt": "BLE macropad v2 fully assembled",
+      "caption": "v2 — OLED + knob"
+    },
+    {
+      "type": "image",
+      "url": "/projects/macropad-v2/oled-knob.jpg",
+      "alt": "OLED screen and potentiometer knob",
+      "caption": "OLED and knob detail"
+    },
+    {
+      "type": "image",
+      "url": "/projects/macropad-v2/assembled.jpg",
+      "alt": "Fully assembled macropad v2",
+      "caption": "Assembled"
+    },
+    {
+      "type": "image",
+      "url": "/projects/macropad-v2/side-wiring.jpg",
+      "alt": "Side view showing wiring",
+      "caption": "Wiring side profile"
+    }
+  ],
+  "tier": 2
+}

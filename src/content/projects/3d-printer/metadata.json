@@ -1,0 +1,16 @@
+{
+  "title": "Custom Ender 3 — Klipper Build",
+  "date": "2023-03-15",
+  "category": "HARDWARE & SOFTWARE",
+  "description": "A fully rebuilt Ender 3 running Klipper with a direct drive extruder and PEI sheet. Started on a Raspberry Pi Zero 2W, migrated to a Pi 4 after persistent crashes. Still the main printer.",
+  "githubLink": "",
+  "thumbnail": "/projects/3d-printer/printer-demo.mp4",
+  "media": [
+    {
+      "type": "video",
+      "url": "/projects/3d-printer/printer-demo.mp4",
+      "caption": "Running at speed"
+    }
+  ],
+  "tier": 2
+}

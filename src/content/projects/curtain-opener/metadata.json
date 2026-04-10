@@ -1,0 +1,17 @@
+{
+  "title": "Automatic Curtain Opener",
+  "date": "2025-01-28",
+  "category": "HARDWARE",
+  "description": "Morning curtain automation built by hacking a smart plug. Worked flawlessly every day for two months before the mount gave up and it fell off.",
+  "githubLink": "",
+  "thumbnail": "/projects/curtain-opener/overview.jpg",
+  "media": [
+    {
+      "type": "image",
+      "url": "/projects/curtain-opener/overview.jpg",
+      "alt": "Automatic curtain opener installed",
+      "caption": "Hacked smart plug curtain opener"
+    }
+  ],
+  "tier": 3
+}

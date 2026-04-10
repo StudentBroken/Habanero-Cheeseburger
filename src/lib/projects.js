@@ -28,12 +28,16 @@ export function getSortedProjectsData() {
 export function getProjectData(slug) {
   const fullPath = path.join(projectsDirectory, slug, 'metadata.json');
   const contentPath = path.join(projectsDirectory, slug, 'content.md');
+  const contentFrPath = path.join(projectsDirectory, slug, 'content_fr.md');
+  
   const metadata = JSON.parse(fs.readFileSync(fullPath, 'utf8'));
   const content = fs.existsSync(contentPath) ? fs.readFileSync(contentPath, 'utf8') : '';
+  const contentFr = fs.existsSync(contentFrPath) ? fs.readFileSync(contentFrPath, 'utf8') : '';
   
   return {
     slug,
     content,
+    contentFr,
     ...metadata,
   };
 }
