@@ -6,6 +6,7 @@ import ThemeToggle from './ThemeToggle';
 import LangToggle from './LangToggle';
 import { useLang } from './LangProvider';
 import { getAge } from '@/lib/age';
+import { generatePrintHTML, compressProjectImages } from '@/lib/printTemplate';
 
 const KONAMI = [
   'ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown',
@@ -246,31 +247,45 @@ export default function HomeContent({ projects }) {
   }, []);
 
   const handlePrint = useCallback(async () => {
-    setIsPrinting(true);
-
-    // Cancel the animation loop so it doesn't block the print renderer
-    if (rafRef.current) {
-      cancelAnimationFrame(rafRef.current);
-      rafRef.current = null;
+    // window.open must be the very first call — popup blockers only allow it
+    // within a synchronous user-gesture frame (before any await).
+    const pw = window.open('', '_blank');
+    if (!pw) {
+      window.print();   // popup blocked — fall back to page print
+      return;
     }
 
-    // Force every lazy image to start loading now
-    const imgs = Array.from(document.querySelectorAll('img'));
-    imgs.forEach(img => { img.loading = 'eager'; });
+    setIsPrinting(true);
 
-    // Wait for any image that isn't already complete
-    const pending = imgs
-      .filter(img => !img.complete)
-      .map(img => new Promise(resolve => {
-        img.addEventListener('load',  resolve, { once: true });
-        img.addEventListener('error', resolve, { once: true });
-      }));
+    // Show a loading placeholder in the new tab while we compress images
+    pw.document.write(
+      '<!DOCTYPE html><html><head><meta charset="UTF-8"></head>' +
+      '<body style="font-family:sans-serif;padding:3rem;background:#fff;color:#1a2233">' +
+      `<p style="font-size:1.1rem;font-weight:700;color:#f97316">` +
+      `${isFr ? 'Compression des images…' : 'Compressing images…'}</p>` +
+      `<p style="font-size:.85rem;color:#9aa5b4;margin-top:.5rem">` +
+      `${isFr ? 'Cela prend quelques secondes.' : 'This takes a few seconds.'}` +
+      '</p></body></html>'
+    );
 
-    if (pending.length > 0) await Promise.all(pending);
+    // Compress every thumbnail to ~480 px WebP 60 % — runs in parallel
+    const imageCache = await compressProjectImages(projects);
 
-    setIsPrinting(false);
-    window.print();
-  }, []);
+    // Generate and write the final, self-contained HTML
+    const html = generatePrintHTML({ projects, isFr, imageCache });
+    pw.document.open();
+    pw.document.write(html);
+    pw.document.close();
+
+    // Auto-trigger the print dialog once the tab is ready.
+    // Images are now embedded as data-URLs so the load event fires quickly.
+    const done = () => { pw.focus(); pw.print(); setIsPrinting(false); };
+    if (pw.document.readyState === 'complete') {
+      done();
+    } else {
+      pw.addEventListener('load', done, { once: true });
+    }
+  }, [projects, isFr]);
 
   return (
     <>

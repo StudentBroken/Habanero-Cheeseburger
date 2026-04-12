@@ -13,5 +13,6 @@
       "caption": "Modded mic"
     }
   ],
-  "tier": 3
+  "tier": 3,
+  "hidden": true
 }

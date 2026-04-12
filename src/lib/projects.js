@@ -13,6 +13,7 @@ export function getSortedProjectsData() {
     if (!fs.existsSync(fullPath)) return null;
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const metadata = JSON.parse(fileContents);
+    if (metadata.hidden) return null;
     return {
       id,
       ...metadata,
