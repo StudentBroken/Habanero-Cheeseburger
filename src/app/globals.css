@@ -160,6 +160,7 @@ body {
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 a { color: inherit; text-decoration: none; }
@@ -1316,6 +1317,8 @@ p { text-shadow: var(--text-shadow-raised); }
   transform: translateY(-100%);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform;
+  /* Prevent the off-screen element from intercepting touches on iOS */
+  pointer-events: none;
 }
 
 [data-theme="dark"] .sticky-timeline {
@@ -1328,6 +1331,7 @@ p { text-shadow: var(--text-shadow-raised); }
 
 .sticky-timeline--visible {
   transform: translateY(0);
+  pointer-events: auto;
 }
 
 /* Rail + dots row */
@@ -1425,11 +1429,24 @@ p { text-shadow: var(--text-shadow-raised); }
     justify-content: flex-end;
     width: 100%;
     margin-bottom: 0.75rem;
+    /* Sit above any absolutely-positioned children of header-centered */
+    z-index: 20;
   }
 
   /* Less top padding since controls are now in flow */
   .header-centered {
     padding-top: 0.75rem;
+  }
+
+  /* Expand toggle tap targets — iOS recommends ≥44px */
+  .theme-switch__track {
+    position: relative;
+  }
+  .theme-switch__track::before {
+    content: '';
+    position: absolute;
+    /* 10px top/bottom + 6px left/right invisible tap extension */
+    inset: -10px -6px;
   }
 }
 
@@ -1450,54 +1467,50 @@ p { text-shadow: var(--text-shadow-raised); }
    MOBILE BODY CLEARANCE — float-nav sits at bottom on mobile
    ================================================================ */
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   body {
-    padding-bottom: 80px;
+    padding-bottom: 120px;
+  }
+  .mobile-hide {
+    display: none !important;
   }
 }
 
 /* ================================================================
-   MOBILE FIXES — carousel, timeline, sticky bar
+   MOBILE FIXES — carousel, timeline, nav, decals
    ================================================================ */
 
-/* Bigger touch targets on carousel nav buttons */
 @media (max-width: 768px) {
-  /* Carousel arrows — hide on mobile; users swipe natively */
-  .carousel-nav-btn {
-    display: none;
-  }
+  /* Carousel arrows — hide; users swipe natively */
+  .carousel-nav-btn { display: none; }
 
-  /* Sticky timeline — hide info row on very small screens to save space */
-  .sticky-timeline__info {
-    display: none;
-  }
-  .sticky-timeline {
-    padding: 8px clamp(0.5rem, 2vw, 1.5rem) 10px;
-  }
+  /* Hide the full timeline section — too mouse-dependent for touch */
+  #section-timeline { display: none; }
 
-  /* Timeline display: reduce padding */
-  .htimeline-display-title {
-    padding: 8px 16px;
-  }
+  /* Hide the TML nav button since the section no longer exists on mobile */
+  .float-nav-btn--tml { display: none; }
+
+  /* Sticky timeline: hide text row, tighten padding */
+  .sticky-timeline__info { display: none; }
+  .sticky-timeline { padding: 8px clamp(0.5rem, 2vw, 1.5rem) 10px; }
+
+  /* Project page decals: these use calc() offsets that overflow on any phone.
+     Hide them all — the home page decals are fine at smaller sizes. */
+  .title-container--project .decal { display: none; }
+
+  /* Timeline display title: reduce padding (still used in @media print) */
+  .htimeline-display-title { padding: 8px 16px; }
 }
 
 @media (max-width: 480px) {
-  /* Header title smaller on tiny screens so decals don't clip */
-  .title-righteous {
-    font-size: clamp(2rem, 10vw, 3rem);
-  }
+  /* Header title: slightly smaller so it doesn't crowd decals */
+  .title-righteous { font-size: clamp(2rem, 10vw, 3rem); }
 
-  /* Decals: pull them closer so they don't escape viewport */
+  /* Home-page decals: pull closer so they don't escape viewport */
   .decal-1 { left: -2%; }
   .decal-2 { right: -2%; }
   .decal-3 { right: -6%; }
   .decal-4 { left: -4%; }
-
-  /* Project page title decals */
-  .title-container--project .decal-1 { left: -1rem; }
-  .title-container--project .decal-2 { right: -1rem; }
-  .title-container--project .decal-3 { right: -1.5rem; }
-  .title-container--project .decal-4 { left: -1.5rem; }
 }
 
 /* ================================================================

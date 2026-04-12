@@ -247,44 +247,43 @@ export default function HomeContent({ projects }) {
   }, []);
 
   const handlePrint = useCallback(async () => {
-    // window.open must be the very first call — popup blockers only allow it
-    // within a synchronous user-gesture frame (before any await).
-    const pw = window.open('', '_blank');
-    if (!pw) {
-      window.print();   // popup blocked — fall back to page print
-      return;
-    }
-
     setIsPrinting(true);
 
-    // Show a loading placeholder in the new tab while we compress images
-    pw.document.write(
-      '<!DOCTYPE html><html><head><meta charset="UTF-8"></head>' +
-      '<body style="font-family:sans-serif;padding:3rem;background:#fff;color:#1a2233">' +
-      `<p style="font-size:1.1rem;font-weight:700;color:#f97316">` +
-      `${isFr ? 'Compression des images…' : 'Compressing images…'}</p>` +
-      `<p style="font-size:.85rem;color:#9aa5b4;margin-top:.5rem">` +
-      `${isFr ? 'Cela prend quelques secondes.' : 'This takes a few seconds.'}` +
-      '</p></body></html>'
-    );
-
-    // Compress every thumbnail to ~480 px WebP 60 % — runs in parallel
+    // Compress every thumbnail to ~480 px WebP 60% — runs in parallel
     const imageCache = await compressProjectImages(projects);
-
-    // Generate and write the final, self-contained HTML
     const html = generatePrintHTML({ projects, isFr, imageCache });
-    pw.document.open();
-    pw.document.write(html);
-    pw.document.close();
 
-    // Auto-trigger the print dialog once the tab is ready.
-    // Images are now embedded as data-URLs so the load event fires quickly.
-    const done = () => { pw.focus(); pw.print(); setIsPrinting(false); };
-    if (pw.document.readyState === 'complete') {
-      done();
-    } else {
-      pw.addEventListener('load', done, { once: true });
-    }
+    setIsPrinting(false);
+
+    // Use a hidden, full-viewport iframe instead of window.open().
+    // window.open is blocked by iOS Safari and most mobile browsers;
+    // an iframe created from the current page is always allowed.
+    const iframe = document.createElement('iframe');
+    iframe.setAttribute('aria-hidden', 'true');
+    // Full viewport but off-screen: content renders at correct width, user sees nothing
+    iframe.style.cssText =
+      'position:fixed;top:-9999px;left:-9999px;width:100%;height:100%;border:none;';
+    document.body.appendChild(iframe);
+
+    const doc = iframe.contentDocument || iframe.contentWindow.document;
+    doc.open();
+    doc.write(html);
+    doc.close();
+
+    // Give the browser a tick to process the written document, then print
+    setTimeout(() => {
+      try {
+        iframe.contentWindow.focus();
+        iframe.contentWindow.print();
+      } catch {
+        window.print(); // last-resort fallback
+      }
+
+      // afterprint fires when the user dismisses the dialog
+      const cleanup = () => iframe.remove();
+      iframe.contentWindow.addEventListener('afterprint', cleanup, { once: true });
+      setTimeout(cleanup, 120_000); // safety: remove after 2 min max
+    }, 300);
   }, [projects, isFr]);
 
   return (
@@ -330,7 +329,7 @@ export default function HomeContent({ projects }) {
       )}
 
       {/* ── Sticky mini-timeline ──────────────────────────────────── */}
-      <div className={`sticky-timeline${stickyVisible ? ' sticky-timeline--visible' : ''}`}>
+      <div className={`sticky-timeline${stickyVisible ? ' sticky-timeline--visible' : ''} mobile-hide`}>
         <div className="sticky-timeline__track">
           <div className="sticky-timeline__rail-line" />
           {sortedProjects.map((project) => (
@@ -359,8 +358,9 @@ export default function HomeContent({ projects }) {
           {NAV_QUIPS[navQuipIdx]}
         </button>
         <button className="float-nav-btn" onClick={() => scrollTo('anchor-top')}>TOP</button>
-        <button className="float-nav-btn" onClick={() => scrollTo('section-timeline')}>TML</button>
+        <button className="float-nav-btn float-nav-btn--tml" onClick={() => scrollTo('section-timeline')}>TML</button>
         <button className="float-nav-btn" onClick={() => scrollTo('section-projects')}>PRJ</button>
+        <button className="float-nav-btn" onClick={() => scrollTo('section-pdf')}>PDF</button>
       </nav>
 
       <main className="container" style={{ padding: 'clamp(1.5rem, 4vw, 3rem) 0 clamp(2rem, 5vw, 4rem)' }}>
@@ -402,14 +402,14 @@ export default function HomeContent({ projects }) {
           </p>
         </header>
 
-        <section id="section-timeline" style={{ marginBottom: '4rem' }}>
+        <section id="section-timeline" style={{ marginBottom: '4rem' }} className="mobile-hide">
           <div className="section-header">
             <h2>{isFr ? 'Chronologie' : 'Timeline'}</h2>
             <span className="section-header__comment">{isFr ? '// LOG DE FABRICATION CHRONOLOGIQUE' : '// CHRONOLOGICAL BUILD LOG'}</span>
           </div>
 
           {/* Interactive timeline — visible on screen, hidden in print */}
-          <div className="no-print">
+          <div className="no-print mobile-hide">
             <div style={{ textAlign: 'center', marginBottom: '1rem' }}>
               <span className="htimeline-display-date">
                 <strong>{hoveredProject ? getAge(hoveredProject.date, isFr) : getAge(null, isFr)}</strong>
@@ -553,7 +553,7 @@ export default function HomeContent({ projects }) {
         </section>
 
         {/* ── PDF / Print export button ── */}
-        <div className="no-print pdf-export-bar">
+        <div id="section-pdf" className="no-print pdf-export-bar">
           <button
             className="mg-btn mg-btn--accent pdf-export-btn"
             onClick={handlePrint}
