@@ -1,30 +1,66 @@
 # Your Project Title
 
-One-paragraph summary of what this project is, why it was built, and what problem it solves.
+One paragraph: what is this, why was it built, what does it do. Keep it factual and direct.
 
-## Design & Inspiration
+## Project Overview
 
-Detail the initial idea, where the inspiration came from, and the core goal or design phase.
+Describe the objective. What problem does this solve? What were the constraints (time, budget, size)?
 
-## Hardware & Electronics
+![First photo of the project](/projects/your-project/photo1.jpg)
+*Caption: what is shown in this image*
 
-Describe the physical build, 3D printing, electronics layout, and component choices.
+## Hardware Architecture
 
-## Software & Logic
+Describe the physical build — enclosure, PCB, motors, sensors, power rail, wiring. Include key component choices and why.
 
-Explain the code, firmware, protocols, or web interfaces developed for the project.
+- **Microcontroller / SBC**: e.g. ESP32-S3 — reason for choosing it
+- **Power**: e.g. 3S LiPo, USB-C PD, BEC — voltage rails and distribution
+- **Actuators / Sensors**: list key components
+
+![Internal layout or electronics photo](/projects/your-project/electronics.jpg)
+*Caption: internal layout / component placement*
+
+## Software & Firmware
+
+Explain the code. What language/framework? What does the firmware do? Any notable algorithms, protocols, or web interfaces?
+
+```
+Key logic or pseudocode if useful
+```
+
+## 3D Design & Fabrication
+
+If applicable: how was the enclosure or frame designed? What CAD tool was used (Onshape, Tinkercad, Fusion)? How long did it take to print?
+
+![CAD screenshot or print photo](/projects/your-project/cad.jpg)
+*Caption: CAD model / print in progress*
+
+## Bill of Materials (BOM)
+
+List parts and costs.
+
+- **Part name**: $X.XX — source / notes
+- **Part name**: $X.XX — source / notes
+
+**Total System Cost**: ~$XX.XX
 
 ## Challenges & Lessons Learned
 
-List any roadblocks encountered, how they were overcome, and notes for future improvements.
+What went wrong? What would you change in the next version?
 
-- **Challenge 1** — Brief explanation and solution.
-- **Challenge 2** — Brief explanation and solution.
+- **Challenge** — what happened, how it was resolved.
+- **Next steps** — what a v2 would improve.
 
-<!-- 
+<!--
 INSTRUCTIONS FOR CREATING A NEW PROJECT:
-1. Duplicate this `_template` folder and rename it to your project's slug (e.g., `my-project`). Note: the site will automatically detect and build folders that do not start with `_`.
-2. Source all raw project assets (pictures, videos, apks, stls) from the `dump/` folder. Copy them into `public/projects/<slug>/` and reference them with that local path in `metadata.json`. Do not use external HTTP URLs for media.
-3. Update `metadata.json` with the project details.
-4. Fill out this `content.md` with your deep-dive walkthrough. Follow the formatting guide (no emojis, professional tone).
+1. Duplicate this `_template` folder and rename it to your project slug (e.g., `my-project`).
+   Folders starting with `_` are ignored — rename it to activate it.
+2. Place all media (photos, videos, STLs, APKs) in `public/projects/<slug>/`.
+   Source them from the root `dump/` folder.
+3. Fill out `metadata.json` — see comments in that file for every field.
+4. Fill out this `content.md`. Delete sections you don't need. Add sections if needed.
+5. To insert an image inline between paragraphs:
+   ![Alt text](/projects/your-project/photo.jpg)
+   *Caption shown below the image*
+   The line below the image (wrapped in *asterisks*) renders as a caption.
 -->

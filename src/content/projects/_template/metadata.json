@@ -2,10 +2,11 @@
   "title": "Your Project Title",
   "date": "2026-01-01",
   "category": "HARDWARE & SOFTWARE",
+  "subcategory": null,
   "description": "A short, plain text summary of the project. Keep it one or two sentences.",
   "thumbnail": "/projects/your-project/cover_image.jpg",
-  "githubLink": "https://github.com/...",
-  "modelFile": "/projects/your-project/model.stl",
+  "githubLink": null,
+  "modelFile": null,
   "media": [
     {
       "type": "image",
@@ -19,9 +20,27 @@
       "caption": "Optional label shown as an overlay when this video is focused"
     }
   ],
+  "links": [
+    {
+      "label": "View on Onshape",
+      "url": "https://cad.onshape.com/documents/..."
+    },
+    {
+      "label": "View on Tinkercad",
+      "url": "https://www.tinkercad.com/things/..."
+    },
+    {
+      "label": "Adafruit Guide",
+      "url": "https://learn.adafruit.com/..."
+    },
+    {
+      "label": "Product Page",
+      "url": "https://..."
+    }
+  ],
   "assets": [
     {
-      "name": "Download Firmware",
+      "name": "Download Firmware (.bin)",
       "url": "/projects/your-project/firmware.bin",
       "description": "Compiled binary for direct flashing"
     },
@@ -29,6 +48,11 @@
       "name": "Download STL",
       "url": "/projects/your-project/housing.stl",
       "description": "3D printed housing files"
+    },
+    {
+      "name": "Download APK",
+      "url": "/projects/your-project/app.apk",
+      "description": "Android companion app"
     }
   ],
   "tier": 2

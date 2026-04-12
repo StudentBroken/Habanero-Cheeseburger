@@ -2,6 +2,7 @@
   "title": "First Designed FPV Drone",
   "date": "2025-03-30",
   "category": "HARDWARE",
+  "subcategory": "FPV Drone",
   "description": "First personally designed FPV quadcopter, built on a PLA frame using salvaged parts from a $20 marketplace kit. Made one test flight, never freestyled — the PLA was too flexible to hold up.",
   "githubLink": "",
   "thumbnail": "/projects/fpv-drone-first/overview.jpg",

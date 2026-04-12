@@ -40,6 +40,11 @@ export default function ProjectContent({ projectData }) {
             <span className="glass-panel" style={{ padding: '3px 12px', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.05em', borderRadius: '4px' }}>
               {isFr ? (projectData.categoryFr || projectData.category) : projectData.category}
             </span>
+            {projectData.subcategory && (
+              <span style={{ fontFamily: 'var(--font-mono, monospace)', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.08em', color: 'var(--accent-orange)', textTransform: 'uppercase' }}>
+                {isFr ? (projectData.subcategoryFr || projectData.subcategory) : projectData.subcategory}
+              </span>
+            )}
             <span style={{ fontSize: '0.9rem' }}>{projectData.date}</span>
             <span style={{ fontFamily: 'var(--font-mono, monospace)', fontSize: '0.78rem', color: 'var(--accent-orange)', letterSpacing: '0.08em', opacity: 0.9 }}>
               {getAge(projectData.date, isFr)}

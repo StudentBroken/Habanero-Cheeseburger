@@ -2,6 +2,7 @@
   "title": "ESP32 Eraser — v2",
   "date": "2025-01-16",
   "category": "HARDWARE & SOFTWARE",
+  "subcategory": "ESP Eraser",
   "description": "Redesigned eraser with BLE replacing the ESPNow+USB relay chain of v1. Slimmer profile with a dedicated 3D printed enclosure and better-fitting eraser shell.",
   "githubLink": "",
   "thumbnail": "/projects/eraser-v2/overview.jpg",
@@ -31,5 +32,6 @@
       "caption": "Expanded view"
     }
   ],
-  "tier": 2
+  "tier": 2,
+  "hidden": true
 }

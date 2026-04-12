@@ -2,6 +2,7 @@
   "title": "ESP32 Eraser — 2026",
   "date": "2026-01-15",
   "category": "HARDWARE & SOFTWARE",
+  "subcategory": "ESP Eraser",
   "description": "The slimmest eraser yet — nearly indistinguishable from a real one at arm's length. Uses Firebase for fire-and-forget transmission and deep sleep to stretch a 70%-smaller battery to the same runtime.",
   "githubLink": "",
   "thumbnail": "/projects/eraser-2026/assembled.jpg",
@@ -37,5 +38,6 @@
       "caption": "Alternate inside angle"
     }
   ],
-  "tier": 1
+  "tier": 1,
+  "hidden": true
 }

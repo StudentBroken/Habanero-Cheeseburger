@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Link from 'next/link';
 import { Printer } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
@@ -50,6 +50,22 @@ export default function HomeContent({ projects }) {
   const titleRef  = useRef(null);
 
   const sortedProjects = [...projects].sort((a, b) => new Date(a.date) - new Date(b.date));
+
+  // Pre-compute series: collect ALL builds across every tier per subcategory.
+  // Each series card is shown exactly once, in the lowest-numbered (highest-quality) tier.
+  const seriesMap = new Map(); // subcategory name → { allProjects, displayTier }
+  for (const p of projects) { // projects is already newest-first
+    if (!p.subcategory) continue;
+    if (!seriesMap.has(p.subcategory)) {
+      seriesMap.set(p.subcategory, { allProjects: [], displayTier: p.tier });
+    }
+    const s = seriesMap.get(p.subcategory);
+    s.allProjects.push(p);
+    if (p.tier < s.displayTier) s.displayTier = p.tier;
+  }
+
+  const subcategoryToSlug = (name) =>
+    name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
 
   const formatMonthYear = (dateStr) => {
     const d = new Date(dateStr + 'T12:00:00');
@@ -495,57 +511,130 @@ export default function HomeContent({ projects }) {
           ].map(({ tier, label, comment }) => {
             const tierProjects = projects.filter(p => p.tier === tier);
             if (!tierProjects.length) return null;
+
+            // Build card list for this tier.
+            // Series: show once, in the displayTier; skip their individual cards entirely.
+            // Singletons: show normally in date order.
+            const seenSubcats = new Set();
+            const cards = [];
+            for (const p of tierProjects) {
+              if (p.subcategory) {
+                const s = seriesMap.get(p.subcategory);
+                if (s.displayTier === tier && !seenSubcats.has(p.subcategory)) {
+                  seenSubcats.add(p.subcategory);
+                  const name = isFr ? (p.subcategoryFr || p.subcategory) : p.subcategory;
+                  // latest = newest project across all tiers (allProjects is newest-first)
+                  const latest = s.allProjects[0];
+                  cards.push({ type: 'series', latest, allProjects: s.allProjects, name });
+                }
+                // else: skip — either wrong tier or already added
+              } else {
+                cards.push({ type: 'single', project: p });
+              }
+            }
+
+            const gridStyle = {
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 320px), 1fr))',
+              gap: 'clamp(1rem, 3vw, 2rem)',
+            };
+
             return (
               <div key={tier} className="print-tier-section" style={{ marginBottom: tier < 3 ? '4rem' : 0 }}>
                 <div className="section-header">
                   <h2>{label}</h2>
                   <span className="section-header__comment">{comment}</span>
                 </div>
-                <div className="project-grid" style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 320px), 1fr))',
-                  gap: 'clamp(1rem, 3vw, 2rem)',
-                }}>
-                  {tierProjects.map(project => (
-                    <Link
-                      key={project.id}
-                      href={`/projects/${project.id}`}
-                      className="project-card"
-                      onMouseEnter={() => setHoveredProject(project)}
-                      onMouseLeave={() => setHoveredProject(null)}
-                    >
-                      {project.thumbnail ? (
-                        <div className="project-card__thumb">
-                          <img src={project.thumbnail} alt={project.title} loading="lazy" />
-                          <div className="project-card__thumb-overlay" />
-                        </div>
-                      ) : project.media?.find(m => m.type === 'image') ? (
-                        <div className="project-card__thumb">
-                          <img src={project.media.find(m => m.type === 'image').url} alt={project.title} loading="lazy" />
-                          <div className="project-card__thumb-overlay" />
-                        </div>
-                      ) : (
-                        <div className="project-card__thumb-placeholder">🔧</div>
-                      )}
+                <div className="project-grid" style={gridStyle}>
+                  {cards.map((card) => {
+                    if (card.type === 'series') {
+                      const { latest, allProjects, name } = card;
+                      const thumb = latest.thumbnail || latest.media?.find(m => m.type === 'image')?.url;
+                      const slug = subcategoryToSlug(latest.subcategory);
+                      const oldest = allProjects[allProjects.length - 1];
+                      return (
+                        <Link
+                          key={`series-${name}`}
+                          href={`/series/${slug}`}
+                          className="project-card series-card"
+                          onMouseEnter={() => setHoveredProject(latest)}
+                          onMouseLeave={() => setHoveredProject(null)}
+                        >
+                          <div className="project-card__thumb">
+                            {thumb ? (
+                              <>
+                                <img src={thumb} alt={name} loading="lazy" />
+                                <div className="project-card__thumb-overlay" />
+                              </>
+                            ) : (
+                              <div className="project-card__thumb-placeholder">🔧</div>
+                            )}
+                            <div className="series-badge">
+                              {isFr ? 'Série' : 'Series'} · {allProjects.length}
+                            </div>
+                          </div>
+                          <div className="project-card__body">
+                            <span className="project-card__category" style={{ color: 'var(--accent-orange)' }}>
+                              {isFr ? (latest.categoryFr || latest.category) : latest.category}
+                            </span>
+                            <h3 className="project-card__title">{name}</h3>
+                            <p className="project-card__desc" style={{ marginBottom: '0.75rem' }}>
+                              {allProjects.length} {isFr ? 'itérations' : 'builds'} &mdash;{' '}
+                              {isFr
+                                ? `de ${oldest.date} à ${latest.date}`
+                                : `${oldest.date} → ${latest.date}`}
+                            </p>
+                            <div className="project-card__action">
+                              <span className="mg-btn mg-btn--accent mg-btn--wide" style={{ borderColor: 'var(--accent-orange)', color: 'var(--accent-orange)' }}>
+                                {isFr ? `Explorer les ${allProjects.length} versions →` : `Explore all ${allProjects.length} builds →`}
+                              </span>
+                            </div>
+                          </div>
+                        </Link>
+                      );
+                    }
 
-                      <div className="project-card__body">
-                        <span className="project-card__category">{isFr ? (project.categoryFr || project.category) : project.category}</span>
-                        <h3 className="project-card__title">{isFr ? (project.titleFr || project.title) : project.title}</h3>
-                        <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.6rem', flexWrap: 'wrap', marginBottom: '0.75rem' }}>
-                          <span className="project-card__date" style={{ marginBottom: 0 }}>{project.date}</span>
-                          <span style={{ fontFamily: 'var(--font-mono, monospace)', fontSize: '0.72rem', color: 'var(--accent-orange)', letterSpacing: '0.04em', opacity: 0.9 }}>
-                            {getAge(project.date, isFr)}
-                          </span>
+                    const { project } = card;
+                    return (
+                      <Link
+                        key={project.id}
+                        href={`/projects/${project.id}`}
+                        className="project-card"
+                        onMouseEnter={() => setHoveredProject(project)}
+                        onMouseLeave={() => setHoveredProject(null)}
+                      >
+                        {project.thumbnail ? (
+                          <div className="project-card__thumb">
+                            <img src={project.thumbnail} alt={project.title} loading="lazy" />
+                            <div className="project-card__thumb-overlay" />
+                          </div>
+                        ) : project.media?.find(m => m.type === 'image') ? (
+                          <div className="project-card__thumb">
+                            <img src={project.media.find(m => m.type === 'image').url} alt={project.title} loading="lazy" />
+                            <div className="project-card__thumb-overlay" />
+                          </div>
+                        ) : (
+                          <div className="project-card__thumb-placeholder">🔧</div>
+                        )}
+                        <div className="project-card__body">
+                          <span className="project-card__category">{isFr ? (project.categoryFr || project.category) : project.category}</span>
+                          <h3 className="project-card__title">{isFr ? (project.titleFr || project.title) : project.title}</h3>
+                          <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.6rem', flexWrap: 'wrap', marginBottom: '0.75rem' }}>
+                            <span className="project-card__date" style={{ marginBottom: 0 }}>{project.date}</span>
+                            <span style={{ fontFamily: 'var(--font-mono, monospace)', fontSize: '0.72rem', color: 'var(--accent-orange)', letterSpacing: '0.04em', opacity: 0.9 }}>
+                              {getAge(project.date, isFr)}
+                            </span>
+                          </div>
+                          <p className="project-card__desc">{isFr ? (project.descriptionFr || project.description) : project.description}</p>
+                          <div className="project-card__action">
+                            <span className="mg-btn mg-btn--accent mg-btn--wide">
+                              {isFr ? 'Explorer le Projet →' : 'Explore Project →'}
+                            </span>
+                          </div>
                         </div>
-                        <p className="project-card__desc">{isFr ? (project.descriptionFr || project.description) : project.description}</p>
-                        <div className="project-card__action">
-                          <span className="mg-btn mg-btn--accent mg-btn--wide">
-                            {isFr ? 'Explorer le Projet →' : 'Explore Project →'}
-                          </span>
-                        </div>
-                      </div>
-                    </Link>
-                  ))}
+                      </Link>
+                    );
+                  })}
                 </div>
               </div>
             );

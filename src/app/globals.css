@@ -484,6 +484,34 @@ p { text-shadow: var(--text-shadow-raised); }
   50% { opacity: 0.5; box-shadow: 0 0 10px var(--accent-glow); }
 }
 
+/* Series card — a project-card variant representing a multi-build series */
+.series-card {
+  border-color: color-mix(in srgb, var(--accent-orange) 40%, transparent);
+}
+
+.series-card:hover {
+  border-color: var(--accent-orange);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent-orange) 60%, transparent),
+              0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.series-badge {
+  position: absolute;
+  top: 0.65rem;
+  right: 0.65rem;
+  background: var(--accent-orange);
+  color: #000;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  padding: 3px 8px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  z-index: 1;
+  pointer-events: none;
+}
+
 .project-card__title {
   font-size: clamp(1.1rem, 2.5vw, 1.35rem);
   font-weight: 800;
@@ -1073,6 +1101,25 @@ p { text-shadow: var(--text-shadow-raised); }
   border: none;
   padding: 0;
   font-size: 0.9rem;
+}
+
+.markdown-content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1.5em auto;
+  border: 1px solid var(--accent-border);
+}
+
+.markdown-content img + em {
+  display: block;
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  margin-top: -1em;
+  margin-bottom: 1.5em;
+  font-style: normal;
 }
 
 /* ================================================================

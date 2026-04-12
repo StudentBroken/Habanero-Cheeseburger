@@ -26,6 +26,38 @@ export function getSortedProjectsData() {
   });
 }
 
+export function subcategoryToSlug(name) {
+  return name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+}
+
+export function getAllSeriesSlugs() {
+  const projects = getSortedProjectsData();
+  const seen = new Set();
+  return projects
+    .filter(p => p.subcategory)
+    .filter(p => {
+      const slug = subcategoryToSlug(p.subcategory);
+      if (seen.has(slug)) return false;
+      seen.add(slug);
+      return true;
+    })
+    .map(p => ({ slug: subcategoryToSlug(p.subcategory) }));
+}
+
+export function getSeriesData(slug) {
+  const projects = getSortedProjectsData();
+  const seriesProjects = projects.filter(
+    p => p.subcategory && subcategoryToSlug(p.subcategory) === slug
+  );
+  if (!seriesProjects.length) return null;
+  return {
+    name: seriesProjects[0].subcategory,
+    nameFr: seriesProjects[0].subcategoryFr || null,
+    slug,
+    projects: seriesProjects, // newest first
+  };
+}
+
 export function getProjectData(slug) {
   const fullPath = path.join(projectsDirectory, slug, 'metadata.json');
   const contentPath = path.join(projectsDirectory, slug, 'content.md');

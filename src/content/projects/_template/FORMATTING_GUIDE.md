@@ -44,6 +44,7 @@ Full schema with every supported field:
   "title": "Short, descriptive title",
   "date": "YYYY-MM-DD",
   "category": "HARDWARE",
+  "subcategory": null,
   "description": "One or two sentences shown on the project card. No markdown.",
   "githubLink": "",
   "thumbnail": "/projects/my-project/photo.jpg",
@@ -62,21 +63,30 @@ Full schema with every supported field:
     }
   ],
   "links": [
-    { "type": "github", "url": "https://github.com/you/repo", "label": "View Source" },
-    { "type": "website", "url": "https://example.com", "label": "Live Demo" }
+    { "label": "View on GitHub",   "url": "https://github.com/you/repo" },
+    { "label": "View on Onshape",  "url": "https://cad.onshape.com/documents/..." },
+    { "label": "View on Tinkercad","url": "https://www.tinkercad.com/things/..." },
+    { "label": "Adafruit Guide",   "url": "https://learn.adafruit.com/..." },
+    { "label": "Product Page",     "url": "https://..." }
   ],
   "assets": [
     { 
-      "name": "Download Firmware", 
+      "name": "Download Firmware (.bin)", 
       "url": "/projects/my-project/firmware.bin",
       "description": "Pre-compiled binary for direct flashing"
+    },
+    { 
+      "name": "Download STL", 
+      "url": "/projects/my-project/housing.stl",
+      "description": "3D printed housing files"
     },
     { 
       "name": "Download APK", 
       "url": "/projects/my-project/app.apk",
       "description": "Android companion app"
     }
-  ]
+  ],
+  "tier": 2
 }
 ```
 
@@ -87,13 +97,15 @@ Full schema with every supported field:
 | `title` | yes | Title case, no trailing punctuation. Colons OK for subtitles. |
 | `date` | yes | ISO `YYYY-MM-DD`. Use completion date or last meaningful update. |
 | `category` | yes | All caps, short. Examples: `HARDWARE`, `SOFTWARE`, `HARDWARE & SOFTWARE`, `3D PRINT`, `EMBEDDED`. |
+| `subcategory` | no | Groups this project with related builds (e.g. `"ESP Eraser"`, `"FPV Drone"`). All projects sharing the same string are shown as a single collapsible series card on the home page, linking to `/series/<slug>`. Use `null` if this project stands alone. |
 | `description` | yes | Plain prose, no markdown, no bullets, no emojis. End with a period. |
-| `githubLink` | yes | Empty string `""` if no public repo. |
+| `githubLink` | no | Full URL or `null`. Shortcut for the most common external link. |
 | `thumbnail` | no | Path to the image used as the cover on the project card in the grid. If omitted, falls back to the first image in `media`. |
-| `modelFile` | no | Path to the 3D model for the viewer. Supports `.stl` and `.obj`. (Legacy `stlFile` key is also supported). |
+| `modelFile` | no | Path to the 3D model for the viewer. Supports `.stl` and `.obj`. |
 | `media` | yes | At least one item. Each item requires `type` and `url`. See media rules below. |
-| `links` | no | External link buttons shown at page bottom. Use for GitHub repos, live demos, docs, etc. Each item requires `type` and `url`. `type: "github"` renders a GitHub icon; anything else renders a generic external-link icon. `label` is optional (defaults to `"View on GitHub"` or `"Open Link"`). |
-| `assets` | no | Download links shown at page bottom. Used for `.bin`, `.hex`, `.pdf`, `.zip`, etc. Each item requires `name`, `url`, and preferably a small `description`. |
+| `links` | no | External link buttons shown at page bottom. Each item needs `label` and `url`. Use for Onshape, Tinkercad, Adafruit guides, product pages, or any URL that isn't a downloadable file. |
+| `assets` | no | Download buttons shown at page bottom. Each item needs `name`, `url`, and a short `description`. Use for `.bin`, `.hex`, `.stl`, `.apk`, `.pdf`, `.zip`, etc. |
+| `tier` | yes | `1` = Flagship (production-grade), `2` = R&D / prototypes, `3` = Weekend hacks. |
 
 ### Media item fields
 
@@ -146,6 +158,25 @@ More detail if a section is large enough to warrant it.
 ### Length
 
 There is no minimum or maximum, but aim to cover what is interesting and skip what is routine. A project with one novel technique can be covered in 300 words. A multi-phase project may need 700. Do not pad.
+
+### Inserting images inline between paragraphs
+
+Place standard Markdown image syntax anywhere in the text. The line immediately after (wrapped in `*asterisks*`) renders as a caption below the image:
+
+```markdown
+Some explanatory paragraph.
+
+![Alt text describing what is shown](/projects/my-project/photo.jpg)
+*Caption text displayed below the image*
+
+Next paragraph continues here.
+```
+
+Rules:
+- The image path must start with `/projects/` (served from `public/`).
+- The `*caption*` line is optional but recommended.
+- Do not wrap images in links or add HTML — plain Markdown only.
+- These inline images are separate from the top-of-page media carousel. Use the carousel for the main gallery; use inline images only when a visual is essential to understanding a specific point in the text.
 
 ---
 

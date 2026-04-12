@@ -2,6 +2,7 @@
   "title": "3-Inch FPV Drone",
   "date": "2025-10-09",
   "category": "HARDWARE",
+  "subcategory": "FPV Drone",
   "description": "3-inch FPV build on a Baby Ape carbon fiber frame, running the same FC as a Cinelog 20 with a MacGyvered DJI O3 air unit on custom 3D printed standoffs. Built in two hours.",
   "githubLink": "",
   "thumbnail": "/projects/fpv-drone-3inch/overview.jpg",

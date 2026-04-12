@@ -2,6 +2,7 @@
   "title": "BLE Macropad — v1",
   "date": "2025-01-06",
   "category": "HARDWARE & SOFTWARE",
+  "subcategory": "BLE Macropad",
   "description": "Wireless BLE macropad built around an ESP32 S3, with a web interface for remapping keys. Used daily for browser navigation and Blender shortcuts.",
   "githubLink": "",
   "thumbnail": "/projects/macropad-v1/inside.jpg",

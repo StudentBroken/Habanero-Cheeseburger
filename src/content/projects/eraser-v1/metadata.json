@@ -2,6 +2,7 @@
   "title": "ESP32 Eraser — v1",
   "date": "2024-10-19",
   "category": "HARDWARE & SOFTWARE",
+  "subcategory": "ESP Eraser",
   "description": "A disguised ESP32 Xiao Sense Cam hidden inside an eraser. It captures images, sends them to GPT-4o via API, and relays the response as audio through a hidden earpiece — first version of the system.",
   "githubLink": "",
   "thumbnail": "/projects/eraser-v1/overview.jpg",
@@ -31,5 +32,6 @@
       "caption": "Guts — ESP32 Xiao Sense Cam"
     }
   ],
-  "tier": 2
+  "tier": 2,
+  "hidden": true
 }

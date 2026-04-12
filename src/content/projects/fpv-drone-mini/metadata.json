@@ -2,6 +2,7 @@
   "title": "Finger-Sized FPV Drone",
   "date": "2025-07-30",
   "category": "HARDWARE",
+  "subcategory": "FPV Drone",
   "description": "The smallest possible FPV build — fingertip-sized with custom 3D designed propeller guards so it can land without the props striking the ground. Crashed and lost.",
   "githubLink": "",
   "thumbnail": "/projects/fpv-drone-mini/overview.jpg",

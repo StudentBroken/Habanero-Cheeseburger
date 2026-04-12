@@ -2,6 +2,7 @@
   "title": "5-Inch FPV Drone",
   "date": "2025-09-14",
   "category": "HARDWARE",
+  "subcategory": "FPV Drone",
   "description": "Full 5-inch FPV freestyle build on a $500 budget including the DJI O3 air unit, with custom 3D printed TPU mounts for the FC and VTX stack.",
   "githubLink": "",
   "thumbnail": "/projects/fpv-drone-5inch/assembled.jpg",

@@ -2,6 +2,7 @@
   "title": "Electric Underwater Scooter (v1)",
   "date": "2025-06-28",
   "category": "HARDWARE",
+  "subcategory": "Underwater Scooter",
   "description": "A low-cost, custom 3D-printed electric underwater scooter using 2x 3S 21700 batteries, capable of up to 3 km/h.",
   "thumbnail": "/projects/underwater-scooter-v1/scooter-1.jpg",
   "githubLink": "",
