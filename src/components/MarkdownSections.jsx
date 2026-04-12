@@ -1,5 +1,8 @@
 "use client";
 import ReactMarkdown from 'react-markdown';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+import remarkGfm from 'remark-gfm';
 import { useLang } from './LangProvider';
 
 export default function MarkdownSections({ content, contentFr }) {
@@ -27,7 +30,12 @@ export default function MarkdownSections({ content, contentFr }) {
           className="glass-panel markdown-content markdown-section"
           style={{ padding: 'clamp(1.25rem, 3vw, 1.75rem) clamp(1.25rem, 3vw, 2rem)' }}
         >
-          <ReactMarkdown>{section}</ReactMarkdown>
+          <ReactMarkdown 
+            remarkPlugins={[remarkMath, remarkGfm]} 
+            rehypePlugins={[rehypeKatex]}
+          >
+            {section}
+          </ReactMarkdown>
         </div>
       ))}
     </div>

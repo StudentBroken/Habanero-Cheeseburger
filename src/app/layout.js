@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+import "katex/dist/katex.min.css";
 import ThemeProvider from "@/components/ThemeProvider";
 import LangProvider from "@/components/LangProvider";
 

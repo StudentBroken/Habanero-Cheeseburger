@@ -55,7 +55,9 @@ Le système utilise un "Homing Sans Capteur" en exploitant le modèle FK :
 
 ### 5. Résolution & Conversion en Pas
 Les longueurs linéaires ($mm$) sont converties en pas moteurs discrets :
+
 $$\text{Pas} = \text{Longueur (mm)} \times \text{Pas Par mm}$$
+
 La géométrie suspendue étant non linéaire, le contrôleur exécute ces calculs à haute fréquence pendant le déplacement pour garantir des mouvements rectilignes vectorisés.
 
 ## Liste des Composants (BOM) et Optimisation Économique

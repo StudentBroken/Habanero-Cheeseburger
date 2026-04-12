@@ -55,7 +55,9 @@ The system uses "Sensorless Homing" by utilizing the FK model:
 
 ### 5. Resolution & Step Conversion
 Linear lengths ($mm$) are converted to discrete motor steps:
+
 $$\text{Steps} = \text{Length (mm)} \times \text{Steps Per mm}$$
+
 Because the suspended geometry is non-linear, the controller executes these calculations at high frequency during flight to ensure vectorized straight-line movements.
 
 ## Bill of Materials (BOM) & Economic Optimization
