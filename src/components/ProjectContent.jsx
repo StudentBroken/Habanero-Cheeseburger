@@ -111,7 +111,7 @@ export default function ProjectContent({ projectData }) {
           fontFamily: 'var(--font-mono, monospace)',
           fontSize: '0.72rem',
           letterSpacing: '0.1em',
-          color: 'var(--text-muted)',
+          color: 'var(--text-secondary)',
           opacity: 0.55,
           textAlign: 'right',
         }}>

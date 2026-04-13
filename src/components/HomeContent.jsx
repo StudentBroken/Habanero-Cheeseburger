@@ -670,11 +670,8 @@ export default function HomeContent({ projects }) {
                         <div className="project-card__body">
                           <span className="project-card__category">{isFr ? (project.categoryFr || project.category) : project.category}</span>
                           <h3 className="project-card__title">{isFr ? (project.titleFr || project.title) : project.title}</h3>
-                          <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.6rem', flexWrap: 'wrap', marginBottom: '0.75rem' }}>
+                          <div style={{ marginBottom: '0.75rem' }}>
                             <span className="project-card__date" style={{ marginBottom: 0 }}>{project.date}</span>
-                            <span style={{ fontFamily: 'var(--font-mono, monospace)', fontSize: '0.72rem', color: 'var(--accent-orange)', letterSpacing: '0.04em', opacity: 0.9 }}>
-                              {getAge(project.date, isFr)}
-                            </span>
                           </div>
                           <p className="project-card__desc">{isFr ? (project.descriptionFr || project.description) : project.description}</p>
                           <div className="project-card__action">

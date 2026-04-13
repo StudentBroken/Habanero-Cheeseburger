@@ -621,7 +621,7 @@ p { text-shadow: var(--text-shadow-raised); }
 .htimeline__group-desc {
   font-family: 'Fira Code', monospace;
   font-size: 0.5rem;
-  color: var(--text-muted);
+  color: var(--text-secondary);
   letter-spacing: 0.04em;
   line-height: 1;
   opacity: 0.6;
