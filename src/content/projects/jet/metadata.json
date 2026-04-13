@@ -19,6 +19,14 @@
     },
     {
       "type": "image",
+      "url": "/projects/jet/main_overview.jpg",
+      "alt": "Jet showing main test",
+      "altFr": "Réacteur en action",
+      "caption": "Main test",
+      "captionFr": "Essai principal"
+    },
+    {
+      "type": "image",
       "url": "/projects/jet/build.jpg",
       "alt": "Jet physical build",
       "altFr": "Construction physique du réacteur",
