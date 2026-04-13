@@ -1,8 +1,11 @@
 {
   "title": "Solos HUD: Reverse Engineering & Redesign",
+  "titleFr": "Solos HUD : Rétro-ingénierie & Redesign",
   "date": "2026-03-22",
   "category": "HARDWARE & SOFTWARE",
+  "categoryFr": "MATÉRIEL & LOGICIEL",
   "description": "Reverse engineering Solos smart glasses to build custom apps, followed by a complete hardware redesign and custom 3D-printed housing for enhanced portability and battery life.",
+  "descriptionFr": "Rétro-ingénierie des lunettes intelligentes Solos pour créer des applications personnalisées, suivie d'une refonte complète du matériel et d'un boîtier imprimé en 3D pour une portabilité et une autonomie accrues.",
   "thumbnail": "/projects/solos-hud/20260326_235103.jpg",
   "githubLink": "https://github.com/StudentBroken/solos-hud",
   "modelFile": "/projects/solos-hud/solos_upgrade_kit_complete.stl",
@@ -10,61 +13,80 @@
     {
       "type": "video",
       "url": "/projects/solos-hud/20260307_191253.mp4",
-      "caption": "Showcase of original glasses unpowered"
+      "caption": "Showcase of original glasses unpowered",
+      "captionFr": "Présentation des lunettes d'origine hors tension"
     },
     {
       "type": "image",
       "url": "/projects/solos-hud/20260326_235103.jpg",
       "alt": "Completed custom 3D printed housing",
-      "caption": "Completed custom housing"
+      "altFr": "Boîtier personnalisé imprimé en 3D terminé",
+      "caption": "Completed custom housing",
+      "captionFr": "Boîtier personnalisé terminé"
     },
     {
       "type": "image",
       "url": "/projects/solos-hud/20260322_152058.jpg",
       "alt": "Assembly process of the custom frame",
-      "caption": "Assembly process"
+      "altFr": "Processus d'assemblage du cadre personnalisé",
+      "caption": "Assembly process",
+      "captionFr": "Processus d'assemblage"
     },
     {
       "type": "image",
       "url": "/projects/solos-hud/20260322_134747.jpg",
       "alt": "Display assembly mount",
-      "caption": "Display assembly mount"
+      "altFr": "Support de l'assemblage de l'écran",
+      "caption": "Display assembly mount",
+      "captionFr": "Support de l'écran"
     },
     {
       "type": "image",
       "url": "/projects/solos-hud/20260321_233341.jpg",
       "alt": "Fitting components into the new housing",
-      "caption": "Fitting components"
+      "altFr": "Installation des composants dans le nouveau boîtier",
+      "caption": "Fitting components",
+      "captionFr": "Installation des composants"
     },
     {
       "type": "image",
       "url": "/projects/solos-hud/20260321_151956.jpg",
       "alt": "Test fitting multiple prototypes",
-      "caption": "Test fitting multiple prototypes"
+      "altFr": "Test d'ajustement de plusieurs prototypes",
+      "caption": "Test fitting multiple prototypes",
+      "captionFr": "Test d'ajustement de prototypes"
     },
     {
       "type": "image",
       "url": "/projects/solos-hud/20260308_222410.jpg",
       "alt": "Custom companion app",
-      "caption": "Custom companion app"
+      "altFr": "Application compagnon personnalisée",
+      "caption": "Custom companion app",
+      "captionFr": "Application compagnon personnalisée"
     },
     {
       "type": "image",
       "url": "/projects/solos-hud/20260326_211227.jpg",
       "alt": "First run with pacer app",
-      "caption": "First run with pacer app"
+      "altFr": "Première utilisation avec l'application de course",
+      "caption": "First run with pacer app",
+      "captionFr": "Premier test de course"
     },
     {
       "type": "image",
       "url": "/projects/solos-hud/Scan20260321162306 _001 (1).jpg",
       "alt": "2D scan of original frame for reference",
-      "caption": "2D scan for CAD reference"
+      "altFr": "Scan 2D du cadre d'origine pour référence",
+      "caption": "2D scan for CAD reference",
+      "captionFr": "Scan 2D pour référence CAD"
     },
     {
       "type": "image",
       "url": "/projects/solos-hud/Screenshot_20260303_035858_Facebook.jpg",
       "alt": "Acquiring the glasses",
-      "caption": "Initial acquisition"
+      "altFr": "Acquisition des lunettes",
+      "caption": "Initial acquisition",
+      "captionFr": "Acquisition initiale"
     }
   ],
   "assets": [

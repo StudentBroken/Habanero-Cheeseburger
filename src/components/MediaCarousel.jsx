@@ -1,10 +1,13 @@
 "use client";
 import React, { useRef, useEffect, useState, useCallback } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useLang } from './LangProvider';
 
 const GAP = 32;
 
 export default function MediaCarousel({ media }) {
+  const { lang } = useLang();
+  const isFr = lang === 'fr';
   const scrollRef = useRef(null);
   const itemRef = useRef(null);
   const [focusedIndex, setFocusedIndex] = useState(0);
@@ -205,12 +208,12 @@ export default function MediaCarousel({ media }) {
               ) : (
                 <img
                   src={item.url}
-                  alt={item.alt || `Media ${(index % len) + 1}`}
+                  alt={(isFr && item.altFr) ? item.altFr : (item.alt || `Media ${(index % len) + 1}`)}
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   draggable={false}
                 />
               )}
-              {item.caption && isFocused && (
+              {(item.caption || item.captionFr) && isFocused && (
                 <div style={{
                   position: 'absolute',
                   bottom: 0,
@@ -226,7 +229,7 @@ export default function MediaCarousel({ media }) {
                   pointerEvents: 'none',
                   zIndex: 5,
                 }}>
-                  {item.caption}
+                  {(isFr && item.captionFr) ? item.captionFr : item.caption}
                 </div>
               )}
             </div>

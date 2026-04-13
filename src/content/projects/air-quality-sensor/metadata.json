@@ -1,8 +1,11 @@
 {
   "title": "Air Quality Sensor",
+  "titleFr": "Capteur de Qualité de l'Air",
   "date": "2025-01-21",
   "category": "HARDWARE & SOFTWARE",
+  "categoryFr": "MATÉRIEL & LOGICIEL",
   "description": "ESP32-based sensor logging PM2.5, VOCs, temperature, and humidity, with an OLED readout and an Adafruit MQTT dashboard. Enclosure uses a cheap IKEA part as the structural base.",
+  "descriptionFr": "Capteur basé sur ESP32 enregistrant les PM2.5, les COV, la température et l'humidité, avec un affichage OLED et un tableau de bord Adafruit MQTT. Le boîtier utilise une pièce IKEA bon marché comme base structurelle.",
   "githubLink": "",
   "thumbnail": "/projects/air-quality-sensor/assembled.jpg",
   "media": [
@@ -10,43 +13,57 @@
       "type": "image",
       "url": "/projects/air-quality-sensor/assembled.jpg",
       "alt": "Completed air quality sensor",
-      "caption": "PM2.5 + VOC + temp + humidity"
+      "altFr": "Capteur de qualité de l'air terminé",
+      "caption": "PM2.5 + VOC + temp + humidity",
+      "captionFr": "PM2.5 + COV + temp + humidité"
     },
     {
       "type": "image",
       "url": "/projects/air-quality-sensor/oled-prototype.jpg",
       "alt": "Prototype with OLED screen",
-      "caption": "Prototype OLED readout"
+      "altFr": "Prototype avec écran OLED",
+      "caption": "Prototype OLED readout",
+      "captionFr": "Affichage OLED du prototype"
     },
     {
       "type": "image",
       "url": "/projects/air-quality-sensor/build.jpg",
       "alt": "Building the air quality sensor",
-      "caption": "Build"
+      "altFr": "Construction du capteur de qualité de l'air",
+      "caption": "Build",
+      "captionFr": "Version finie"
     },
     {
       "type": "image",
       "url": "/projects/air-quality-sensor/build-2.jpg",
       "alt": "Alternate build view",
-      "caption": "Build — alternate angle"
+      "altFr": "Vue alternative de la construction",
+      "caption": "Build — alternate angle",
+      "captionFr": "Version finie — angle alternatif"
     },
     {
       "type": "image",
       "url": "/projects/air-quality-sensor/guts.jpg",
       "alt": "All components laid out",
-      "caption": "Full internals"
+      "altFr": "Tous les composants disposés",
+      "caption": "Full internals",
+      "captionFr": "Composants internes complets"
     },
     {
       "type": "image",
       "url": "/projects/air-quality-sensor/guts-held.jpg",
       "alt": "Holding the sensor guts",
-      "caption": "Guts in hand"
+      "altFr": "Tenue des composants du capteur",
+      "caption": "Guts in hand",
+      "captionFr": "Composants en main"
     },
     {
       "type": "image",
       "url": "/projects/air-quality-sensor/cover.jpg",
       "alt": "3D printed cover on IKEA base",
-      "caption": "IKEA base + 3D printed cover"
+      "altFr": "Couvercle imprimé en 3D sur base IKEA",
+      "caption": "IKEA base + 3D printed cover",
+      "captionFr": "Base IKEA + couvercle imprimé en 3D"
     }
   ],
   "tier": 2

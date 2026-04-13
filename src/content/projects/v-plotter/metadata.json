@@ -1,8 +1,11 @@
 {
   "title": "V Plotter: V-Bot",
+  "titleFr": "Traceur en V : V-Bot",
   "date": "2026-02-15",
   "category": "HARDWARE & SOFTWARE",
+  "categoryFr": "MATÉRIEL & LOGICIEL",
   "description": "A portable, dual-stepper V Plotter capable of drawing on large boards, featuring a web interface and modular crab-inspired gondola.",
+  "descriptionFr": "Un traceur en V portable à double moteur pas à pas capable de dessiner sur de grands tableaux, doté d'une interface web et d'une nacelle modulaire inspirée d'un crabe.",
   "thumbnail": "/projects/v-plotter/on-the-whiteboard-close-up,-powered-on.jpg",
   "githubLink": "https://github.com/StudentBroken/v-bot",
   "modelFile": "/projects/v-plotter/V-bot-complete.stl",
@@ -11,37 +14,49 @@
       "type": "image",
       "url": "/projects/v-plotter/running,-on-the-wall-testing-cartesian-movements.jpg",
       "alt": "V plotter running on a wall testing cartesian movements",
-      "caption": "Testing cartesian movements on the wall"
+      "altFr": "Traceur en V en fonctionnement testant des mouvements cartésiens sur un mur",
+      "caption": "Testing cartesian movements on the wall",
+      "captionFr": "Test des mouvements cartésiens sur le mur"
     },
     {
       "type": "image",
       "url": "/projects/v-plotter/on-the-whiteboard-close-up,-powered-on.jpg",
       "alt": "Close up of the V plotter on a whiteboard powered on",
-      "caption": "Powered on via USB-C PD and mounted on a whiteboard"
+      "altFr": "Gros plan du traceur en V allumé sur un tableau blanc",
+      "caption": "Powered on via USB-C PD and mounted on a whiteboard",
+      "captionFr": "Alimenté via USB-C PD et monté sur un tableau blanc"
     },
     {
       "type": "image",
       "url": "/projects/v-plotter/close-up-almost-fully-assebled.jpg",
       "alt": "Close up of the gondola almost fully assembled",
-      "caption": "Crab-inspired gondola assembly with googly eyes"
+      "altFr": "Gros plan de la nacelle presque entièrement assemblée",
+      "caption": "Crab-inspired gondola assembly with googly eyes",
+      "captionFr": "Assemblage de la nacelle inspirée d'un crabe avec des yeux mobiles"
     },
     {
       "type": "image",
       "url": "/projects/v-plotter/layout-of-the-electronics.jpg",
       "alt": "Layout of the electronics inside the v plotter",
-      "caption": "Internal electronics layout featuring ESP32-S3 and stepper drivers"
+      "altFr": "Disposition de l'électronique à l'intérieur du traceur en V",
+      "caption": "Internal electronics layout featuring ESP32-S3 and stepper drivers",
+      "captionFr": "Disposition de l'électronique interne avec ESP32-S3 et pilotes de moteurs pas à pas"
     },
     {
       "type": "image",
       "url": "/projects/v-plotter/stepper-drivers-close-up.jpg",
       "alt": "Close up of the stepper drivers",
-      "caption": "A4988 stepper drivers with a small cooling fan"
+      "altFr": "Gros plan des pilotes de moteurs pas à pas",
+      "caption": "A4988 stepper drivers with a small cooling fan",
+      "captionFr": "Pilotes A4988 avec un petit ventilateur de refroidissement"
     },
     {
       "type": "image",
       "url": "/projects/v-plotter/blown-a4988-driver.jpg",
       "alt": "Image of a blown A4988 stepper driver",
-      "caption": "The aftermath of a blown stepper driver during testing"
+      "altFr": "Image d'un pilote A4988 grillé",
+      "caption": "The aftermath of a blown stepper driver during testing",
+      "captionFr": "Les conséquences d'un pilote grillé lors des tests"
     }
   ],
   "assets": [

@@ -1,8 +1,11 @@
 {
   "title": "Custom RC Flying Wing",
+  "titleFr": "Aile Volante RC Personnalisée",
   "date": "2025-02-24",
   "category": "HARDWARE & SOFTWARE",
+  "categoryFr": "MATÉRIEL & LOGICIEL",
   "description": "Fully custom RC flying wing with a scratch-built controller board translating ELRS CRSF signals to SBUS for the servos via an ESP32. Never flew — lives in the project drawer waiting for its moment.",
+  "descriptionFr": "Aile volante RC entièrement personnalisée avec une carte contrôleur fabriquée de zéro traduisant les signaux ELRS CRSF en SBUS pour les servos via un ESP32. N'a jamais volé — attend son moment dans le tiroir à projets.",
   "githubLink": "",
   "thumbnail": "/projects/rc-wing/overview.jpg",
   "media": [
@@ -10,31 +13,41 @@
       "type": "image",
       "url": "/projects/rc-wing/overview.jpg",
       "alt": "Full RC flying wing system",
-      "caption": "Full system — FC, VTX, 2x 2g servos, ESP32"
+      "altFr": "Système complet d'aile volante RC",
+      "caption": "Full system — FC, VTX, 2x 2g servos, ESP32",
+      "captionFr": "Système complet — FC, VTX, 2 servos de 2g, ESP32"
     },
     {
       "type": "image",
       "url": "/projects/rc-wing/controller-front.jpg",
       "alt": "Controller board front view",
-      "caption": "Controller board — front"
+      "altFr": "Vue frontale de la carte contrôleur",
+      "caption": "Controller board — front",
+      "captionFr": "Carte contrôleur — face"
     },
     {
       "type": "image",
       "url": "/projects/rc-wing/controller-wiring.jpg",
       "alt": "Controller board wiring skeleton",
-      "caption": "ESP32 + ELRS CRSF to SBUS translation"
+      "altFr": "Squelette du câblage de la carte contrôleur",
+      "caption": "ESP32 + ELRS CRSF to SBUS translation",
+      "captionFr": "ESP32 + traduction ELRS CRSF vers SBUS"
     },
     {
       "type": "image",
       "url": "/projects/rc-wing/controller-upper.jpg",
       "alt": "Controller board upper view",
-      "caption": "Upper view — FC, camera, servos, VTX"
+      "altFr": "Vue supérieure de la carte contrôleur",
+      "caption": "Upper view — FC, camera, servos, VTX",
+      "captionFr": "Vue supérieure — FC, caméra, servos, VTX"
     },
     {
       "type": "image",
       "url": "/projects/rc-wing/top-view.jpg",
       "alt": "Top-down view of flying wing",
-      "caption": "Top-down"
+      "altFr": "Vue de dessus de l'aile volante",
+      "caption": "Top-down",
+      "captionFr": "Vue de dessus"
     }
   ],
   "tier": 2

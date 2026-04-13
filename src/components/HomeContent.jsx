@@ -14,17 +14,24 @@ const KONAMI = [
   'b', 'a',
 ];
 
-const NAV_QUIPS = [
-  'NAV',
-  '// NOT A NAV',
-  '// A PAPERCLIP',
-  '// IMPROVISING',
-  'NAV',
-];
-
 export default function HomeContent({ projects }) {
   const { lang } = useLang();
   const isFr = lang === 'fr';
+
+  const NAV_QUIPS = isFr ? [
+    'NAV',
+    '// PAS UN NAV',
+    '// UN TROMBONE',
+    '// IMPROVISATION',
+    'NAV',
+  ] : [
+    'NAV',
+    '// NOT A NAV',
+    '// A PAPERCLIP',
+    '// IMPROVISING',
+    'NAV',
+  ];
+
 
   const [showKonami, setShowKonami] = useState(false);
   const [macgyverMode, setMacgyverMode] = useState(false);

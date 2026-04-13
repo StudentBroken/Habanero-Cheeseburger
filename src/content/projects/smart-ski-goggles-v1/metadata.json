@@ -1,20 +1,27 @@
 {
   "title": "Smart Ski Goggles V1",
+  "titleFr": "Lunettes de Ski Intelligentes V1",
   "date": "2023-12-10",
   "category": "HARDWARE",
+  "categoryFr": "MATÉRIEL",
   "description": "A smart ski goggle prototype built in one day that uses internal reflections to display the time.",
+  "descriptionFr": "Un prototype de lunettes de ski intelligentes construit en un jour qui utilise les réflexions internes pour afficher l'heure.",
   "githubLink": "",
   "thumbnail": "/projects/smart-ski-goggles-v1/goggles-view.jpg",
   "media": [
     {
       "type": "image",
       "url": "/projects/smart-ski-goggles-v1/goggles-view.jpg",
-      "caption": "Smart ski goggles HUD reflection"
+      "alt": "Smart ski goggles HUD reflection",
+      "altFr": "Réflexion du HUD dans les lunettes de ski intelligentes",
+      "caption": "Smart ski goggles HUD reflection",
+      "captionFr": "Réflexion du HUD dans les lunettes"
     },
     {
       "type": "video",
       "url": "/projects/smart-ski-goggles-v1/goggles-demo.mp4",
-      "caption": "Video demo of the heads-up display"
+      "caption": "Video demo of the heads-up display",
+      "captionFr": "Démo vidéo de l'affichage tête haute"
     }
   ],
   "tier": 2

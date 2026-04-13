@@ -1,9 +1,13 @@
 {
   "title": "BLE Macropad — v2",
+  "titleFr": "Macropad BLE — v2",
   "date": "2025-01-10",
   "category": "HARDWARE & SOFTWARE",
+  "categoryFr": "MATÉRIEL & LOGICIEL",
   "subcategory": "BLE Macropad",
+  "subcategoryFr": "Macropad BLE",
   "description": "Second iteration of the BLE macropad, adding an OLED display and a potentiometer knob for volume or scroll control.",
+  "descriptionFr": "Seconde itération du macropad BLE, ajoutant un écran OLED et un potentiomètre pour le contrôle du volume ou du défilement.",
   "githubLink": "",
   "thumbnail": "/projects/macropad-v2/overview.jpg",
   "media": [
@@ -11,25 +15,33 @@
       "type": "image",
       "url": "/projects/macropad-v2/overview.jpg",
       "alt": "BLE macropad v2 fully assembled",
-      "caption": "v2 — OLED + knob"
+      "altFr": "Macropad BLE v2 entièrement assemblé",
+      "caption": "v2 — OLED + knob",
+      "captionFr": "v2 — OLED + potentiomètre"
     },
     {
       "type": "image",
       "url": "/projects/macropad-v2/oled-knob.jpg",
       "alt": "OLED screen and potentiometer knob",
-      "caption": "OLED and knob detail"
+      "altFr": "Écran OLED et bouton de potentiomètre",
+      "caption": "OLED and knob detail",
+      "captionFr": "Détail de l'OLED et du bouton"
     },
     {
       "type": "image",
       "url": "/projects/macropad-v2/assembled.jpg",
       "alt": "Fully assembled macropad v2",
-      "caption": "Assembled"
+      "altFr": "Macropad v2 entièrement assemblé",
+      "caption": "Assembled",
+      "captionFr": "Assemblé"
     },
     {
       "type": "image",
       "url": "/projects/macropad-v2/side-wiring.jpg",
       "alt": "Side view showing wiring",
-      "caption": "Wiring side profile"
+      "altFr": "Vue latérale montrant le câblage",
+      "caption": "Wiring side profile",
+      "captionFr": "Profil du câblage latéral"
     }
   ],
   "tier": 2

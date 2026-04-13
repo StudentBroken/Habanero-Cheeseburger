@@ -1,8 +1,11 @@
 {
   "title": "Desk Build",
+  "titleFr": "Construction d'un Bureau",
   "date": "2023-10-15",
   "category": "HARDWARE",
+  "categoryFr": "MATÉRIEL",
   "description": "Custom desk built from scratch with $60 and a drill. Still standing.",
+  "descriptionFr": "Bureau personnalisé construit de zéro avec 60 $ et une perceuse. Tient toujours debout.",
   "githubLink": "",
   "thumbnail": "/projects/desk-setup/overview.jpg",
   "media": [
@@ -10,19 +13,25 @@
       "type": "image",
       "url": "/projects/desk-setup/overview.jpg",
       "alt": "Completed desk",
-      "caption": "Final desk"
+      "altFr": "Bureau terminé",
+      "caption": "Final desk",
+      "captionFr": "Bureau final"
     },
     {
       "type": "image",
       "url": "/projects/desk-setup/build.jpg",
       "alt": "Desk during construction",
-      "caption": "Build phase"
+      "altFr": "Bureau pendant la construction",
+      "caption": "Build phase",
+      "captionFr": "Phase de construction"
     },
     {
       "type": "image",
       "url": "/projects/desk-setup/setup.jpg",
       "alt": "Desk setup with equipment",
-      "caption": "Full setup"
+      "altFr": "Configuration du bureau avec équipement",
+      "caption": "Full setup",
+      "captionFr": "Installation complète"
     }
   ],
   "tier": 3

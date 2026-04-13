@@ -1,9 +1,13 @@
 {
   "title": "Finger-Sized FPV Drone",
+  "titleFr": "Drone FPV de la Taille d'un Doigt",
   "date": "2025-07-30",
   "category": "HARDWARE",
+  "categoryFr": "MATÉRIEL",
   "subcategory": "FPV Drone",
+  "subcategoryFr": "Drone FPV",
   "description": "The smallest possible FPV build — fingertip-sized with custom 3D designed propeller guards so it can land without the props striking the ground. Crashed and lost.",
+  "descriptionFr": "La plus petite construction FPV possible — de la taille d'un bout de doigt avec des protections d'hélices personnalisées imprimées en 3D pour qu'il puisse atterrir sans que les hélices ne touchent le sol. S'est écrasé et a été perdu.",
   "githubLink": "",
   "thumbnail": "/projects/fpv-drone-mini/overview.jpg",
   "media": [
@@ -11,31 +15,41 @@
       "type": "image",
       "url": "/projects/fpv-drone-mini/overview.jpg",
       "alt": "Finger-sized FPV drone",
-      "caption": "Smallest possible FPV build"
+      "altFr": "Drone FPV de la taille d'un doigt",
+      "caption": "Smallest possible FPV build",
+      "captionFr": "Plus petite construction FPV possible"
     },
     {
       "type": "image",
       "url": "/projects/fpv-drone-mini/with-guards.jpg",
       "alt": "Drone with custom propeller guards",
-      "caption": "Custom 3D designed prop guards"
+      "altFr": "Drone avec protections d'hélices personnalisées",
+      "caption": "Custom 3D designed prop guards",
+      "captionFr": "Protections d'hélices conçues en 3D sur mesure"
     },
     {
       "type": "image",
       "url": "/projects/fpv-drone-mini/with-minifigure.jpg",
       "alt": "Drone beside a LEGO minifigure for scale",
-      "caption": "Scale reference"
+      "altFr": "Drone à côté d'une figurine LEGO pour l'échelle",
+      "caption": "Scale reference",
+      "captionFr": "Référence d'échelle"
     },
     {
       "type": "image",
       "url": "/projects/fpv-drone-mini/size-comparison.jpg",
       "alt": "Size comparison",
-      "caption": "Size comparison"
+      "altFr": "Comparaison de taille",
+      "caption": "Size comparison",
+      "captionFr": "Comparaison de taille"
     },
     {
       "type": "image",
       "url": "/projects/fpv-drone-mini/other-view.jpg",
       "alt": "Alternate angle",
-      "caption": "Alternate angle"
+      "altFr": "Angle alternatif",
+      "caption": "Alternate angle",
+      "captionFr": "Angle alternatif"
     }
   ],
   "tier": 3

@@ -1,8 +1,11 @@
 {
   "title": "Automatic Curtain Opener",
+  "titleFr": "Ouvre-Rideau Automatique",
   "date": "2025-01-28",
   "category": "HARDWARE",
+  "categoryFr": "MATÉRIEL",
   "description": "Morning curtain automation built by hacking a smart plug. Worked flawlessly every day for two months before the mount gave up and it fell off.",
+  "descriptionFr": "Automatisation matinale des rideaux construite en modifiant une prise intelligente. A fonctionné sans faille tous les jours pendant deux mois avant que le support ne lâche et qu'il ne tombe.",
   "githubLink": "",
   "thumbnail": "/projects/curtain-opener/overview.jpg",
   "media": [
@@ -10,7 +13,9 @@
       "type": "image",
       "url": "/projects/curtain-opener/overview.jpg",
       "alt": "Automatic curtain opener installed",
-      "caption": "Hacked smart plug curtain opener"
+      "altFr": "Ouvre-rideau automatique installé",
+      "caption": "Hacked smart plug curtain opener",
+      "captionFr": "Ouvre-rideau à partir d'une prise intelligente modifiée"
     }
   ],
   "tier": 3

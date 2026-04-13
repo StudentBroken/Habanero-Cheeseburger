@@ -1,8 +1,11 @@
 {
   "title": "Smart Glasses for the Blind",
+  "titleFr": "Lunettes Intelligentes pour Non-Voyants",
   "date": "2025-03-31",
   "category": "HARDWARE",
+  "categoryFr": "MATÉRIEL",
   "description": "Glasses fitted with an ultrasonic sensor and speaker that beep to warn visually impaired people of nearby obstacles.",
+  "descriptionFr": "Lunettes équipées d'un capteur à ultrasons et d'un haut-parleur qui émettent des bips pour avertir les personnes malvoyantes des obstacles à proximité.",
   "githubLink": "",
   "thumbnail": "/projects/smart-glasses/overview.jpg",
   "media": [
@@ -10,19 +13,25 @@
       "type": "image",
       "url": "/projects/smart-glasses/overview.jpg",
       "alt": "Smart blind glasses overview",
-      "caption": "Ultrasonic sensor + beeping speaker"
+      "altFr": "Vue d'ensemble des lunettes intelligentes pour non-voyants",
+      "caption": "Ultrasonic sensor + beeping speaker",
+      "captionFr": "Capteur à ultrasons + haut-parleur d'avertissement"
     },
     {
       "type": "image",
       "url": "/projects/smart-glasses/top-view.jpg",
       "alt": "Top-down view of the glasses",
-      "caption": "Top view"
+      "altFr": "Vue de dessus des lunettes",
+      "caption": "Top view",
+      "captionFr": "Vue de dessus"
     },
     {
       "type": "image",
       "url": "/projects/smart-glasses/front-view.jpg",
       "alt": "Front view of the blind glasses",
-      "caption": "Front — upside down"
+      "altFr": "Vue frontale des lunettes pour non-voyants",
+      "caption": "Front — upside down",
+      "captionFr": "Face — à l'envers"
     }
   ],
   "tier": 2

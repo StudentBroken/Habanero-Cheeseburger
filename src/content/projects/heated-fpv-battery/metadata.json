@@ -1,8 +1,11 @@
 {
   "title": "Heated FPV Battery",
+  "titleFr": "Batterie FPV Chauffée",
   "date": "2026-01-30",
   "category": "HARDWARE",
+  "categoryFr": "MATÉRIEL",
   "description": "An ESP32-C3 powered active heating system to maintain FPV battery temperatures in extreme -30°C winter conditions.",
+  "descriptionFr": "Un système de chauffage actif alimenté par ESP32-C3 pour maintenir les températures des batteries FPV dans des conditions hivernales extrêmes de -30°C.",
   "githubLink": "",
   "thumbnail": "/projects/heated-fpv-battery/fully-assembled.jpg",
   "media": [
@@ -10,31 +13,41 @@
       "type": "image",
       "url": "/projects/heated-fpv-battery/fully-assembled.jpg",
       "alt": "Fully assembled heated FPV battery",
-      "caption": "Fully assembled and flying at an optimal 30°C."
+      "altFr": "Batterie FPV chauffée entièrement assemblée",
+      "caption": "Fully assembled and flying at an optimal 30°C.",
+      "captionFr": "Entièrement assemblée et volant à une température optimale de 30°C."
     },
     {
       "type": "image",
       "url": "/projects/heated-fpv-battery/testing-temperature.jpg",
       "alt": "Testing the temperature regulation",
-      "caption": "Verifying the bang-bang algorithm and thermal stability."
+      "altFr": "Test de la régulation de température",
+      "caption": "Verifying the bang-bang algorithm and thermal stability.",
+      "captionFr": "Vérification de l'algorithme bang-bang et de la stabilité thermique."
     },
     {
       "type": "image",
       "url": "/projects/heated-fpv-battery/half-assembled.jpg",
       "alt": "Half assembled battery components",
-      "caption": "Working out the layout before final assembly."
+      "altFr": "Composants de la batterie à moitié assemblés",
+      "caption": "Working out the layout before final assembly.",
+      "captionFr": "Élaboration de la disposition avant l'assemblage final."
     },
     {
       "type": "image",
       "url": "/projects/heated-fpv-battery/esp32-ntc-buck.jpg",
       "alt": "The ESP32, NTC and both buck converters",
-      "caption": "The ESP32-C3 microcontroller, BMS NTC thermistor, and buck converters."
+      "altFr": "L'ESP32, la NTC et les deux convertisseurs buck",
+      "caption": "The ESP32-C3 microcontroller, BMS NTC thermistor, and buck converters.",
+      "captionFr": "Le microcontrôleur ESP32-C3, la thermistance NTC du BMS et les convertisseurs buck."
     },
     {
       "type": "image",
       "url": "/projects/heated-fpv-battery/wiring-bucks.jpg",
       "alt": "Wiring the buck converters",
-      "caption": "Wiring up the dual 5V regulators to run logic and the nichrome coil."
+      "altFr": "Câblage des convertisseurs buck",
+      "caption": "Wiring up the dual 5V regulators to run logic and the nichrome coil.",
+      "captionFr": "Câblage des deux régulateurs 5V pour alimenter la logique et la bobine nichrome."
     }
   ],
   "assets": [

@@ -1,6 +1,6 @@
 # Chargeur Intelligent pour Ebike
 
-L'ebike roule sur un pack custom 12S bâti à partir de deux packs LiPo 6S en série. Le seul chargeur disponible était une unité LiHV 6S — conçue pour pousser les cellules à 4.35V chacune (26.1V pour un pack 6S) au lieu du maximum LiPo standard de 4.2V par cellule (25.2V). Faire rouler un chargeur LiHV sur des cellules LiPo standard risque la surcharge, le gonflement et éventuellement la défaillance des cellules.
+L'ebike roule sur un pack custom 12S bâti à partir de deux packs LiPo 6S en série. Le seul chargeur disponible était l'unité LiHV 6S qui venait originellement avec un skateboard électrique Leafboard Gen 1 — la même planche dont le moteur a ensuite été récupéré pour l'ebike v1 et le scooter sous-marin v1. Ce chargeur est conçu pour pousser les cellules à 4.35V chacune (26.1V pour un pack 6S) au lieu du maximum LiPo standard de 4.2V par cellule (25.2V). Faire rouler un chargeur LiHV sur des cellules LiPo standard risque la surcharge, le gonflement et éventuellement la défaillance des cellules.
 
 La solution était un contrôleur de coupure à relais qui intercepte la sortie du chargeur et la déconnecte au bon moment.
 
@@ -19,6 +19,23 @@ L'écran OLED (128×64, SSD1306 via I2C) affiche une barre de progression de cha
 ## Interface Web
 
 Au démarrage, le dispositif se connecte au WiFi et démarre un serveur HTTP. L'OLED affiche l'IP pour que tu puisses y naviguer depuis n'importe quel appareil sur le réseau. Le tableau de bord se met à jour toutes les 2 secondes avec la tension en direct, le pourcentage, l'état du relais et la progression de la minuterie de maintien. Des boutons manuels ON/OFF du relais permettent de bypasser la logique automatique. Tous les paramètres — tension de coupure, tension minimale, seuil sans charge, temps de maintien, coefficients de calibration, valeurs R1/R2, nombre d'échantillons et nombre de cellules — sont configurables depuis le formulaire de paramètres et persistés dans la NVS pour survivre aux redémarrages.
+
+## Liste des Composants (BOM)
+
+Les prix sont des estimations AliExpress; l'ESP32-C3 a été acheté pour 1 $.
+
+| Composant | Coût Unitaire |
+|---|---|
+| ESP32-C3 Super Mini | 1.00 $ |
+| Module OLED 0.96" SSD1306 (I2C) | 1.10 $ |
+| Régulateur LDO 5V L7805CV | 0.45 $ |
+| Module relais 5V monocanal | 1.00 $ |
+| Transistor NPN (2N5551) | 0.05 $ |
+| Résistances — 3× (2× diviseur de tension, 1× base transistor) | 0.02 $ |
+| Condensateurs électrolytiques — 2× | 1.00 $ |
+| Fil 22AWG (courtes longueurs) | 0.50 $ |
+| Paire de connecteurs XT60 | 0.75 $ |
+| **Total** | **~5.00 $** |
 
 ## Machine à États
 

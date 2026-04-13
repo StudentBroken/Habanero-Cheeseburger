@@ -1,8 +1,11 @@
 {
   "title": "Ski Helmet Speaker",
+  "titleFr": "Haut-parleur de Casque de Ski",
   "date": "2024-12-15",
   "category": "HARDWARE",
+  "categoryFr": "MATÉRIEL",
   "description": "Custom speakers built to fit flush inside the earcups of a ski helmet, completely hidden from the outside.",
+  "descriptionFr": "Haut-parleurs personnalisés conçus pour s'intégrer parfaitement à l'intérieur des oreillettes d'un casque de ski, complètement invisibles de l'extérieur.",
   "githubLink": "",
   "thumbnail": "/projects/helmet-speaker/side.jpg",
   "media": [
@@ -10,19 +13,25 @@
       "type": "image",
       "url": "/projects/helmet-speaker/side.jpg",
       "alt": "Helmet speaker side view",
-      "caption": "Side profile"
+      "altFr": "Vue latérale du haut-parleur de casque",
+      "caption": "Side profile",
+      "captionFr": "Profil latéral"
     },
     {
       "type": "image",
       "url": "/projects/helmet-speaker/overview.jpg",
       "alt": "Helmet speaker overview",
-      "caption": "Overview"
+      "altFr": "Vue d'ensemble du haut-parleur de casque",
+      "caption": "Overview",
+      "captionFr": "Vue d'ensemble"
     },
     {
       "type": "image",
       "url": "/projects/helmet-speaker/front.jpg",
       "alt": "Helmet speaker front view",
-      "caption": "Front"
+      "altFr": "Vue frontale du haut-parleur de casque",
+      "caption": "Front",
+      "captionFr": "Face"
     }
   ],
   "tier": 3

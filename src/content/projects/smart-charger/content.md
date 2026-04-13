@@ -1,6 +1,6 @@
 # Smart Ebike Charger
 
-The ebike runs on a custom 12S pack built from two 6S LiPo packs in series. The only charger available was a 6S LiHV unit — which is designed to push cells to 4.35V each (26.1V for a 6S pack) rather than the standard LiPo maximum of 4.2V per cell (25.2V). Running a LiHV charger on standard LiPo cells risks overcharge, puffing, and eventual cell failure.
+The ebike runs on a custom 12S pack built from two 6S LiPo packs in series. The only charger available was the 6S LiHV unit that originally shipped with a Leafboard Gen 1 electric skateboard — the same board whose motor was later salvaged for the ebike v1 and the underwater scooter v1. That charger is designed to push cells to 4.35V each (26.1V for a 6S pack) rather than the standard LiPo maximum of 4.2V per cell (25.2V). Running a LiHV charger on standard LiPo cells risks overcharge, puffing, and eventual cell failure.
 
 The solution was a relay-based cutoff controller that intercepts the charger output and disconnects it at the right moment.
 
@@ -19,6 +19,23 @@ The OLED (128×64, SSD1306 over I2C) shows a charge progress bar, pack voltage, 
 ## Web Interface
 
 On boot the device connects to WiFi and starts an HTTP server. The OLED shows the IP so you can navigate to it from any device on the network. The dashboard updates every 2 seconds with live voltage, percentage, relay state, and hold timer progress. Manual relay ON/OFF buttons let you override the automatic logic. All parameters — cutoff voltage, minimum voltage, no-load threshold, hold time, calibration coefficients, R1/R2 values, number of samples, and cell count — are configurable from the settings form and persisted to NVS so they survive reboots.
+
+## Bill of Materials
+
+Prices are AliExpress estimates; the ESP32-C3 was bought for $1.
+
+| Component | Unit Cost |
+|---|---|
+| ESP32-C3 Super Mini | $1.00 |
+| SSD1306 0.96" OLED module (I2C) | $1.10 |
+| L7805CV 5V LDO regulator | $0.45 |
+| 5V single-channel relay module | $1.00 |
+| NPN transistor (2N5551) | $0.05 |
+| Resistors — 3× (2× voltage divider, 1× transistor base) | $0.02 |
+| Electrolytic capacitors — 2× | $1.00 |
+| 22AWG wire (short lengths) | $0.50 |
+| XT60 connector pair | $0.75 |
+| **Total** | **~$5.00** |
 
 ## State Machine
 

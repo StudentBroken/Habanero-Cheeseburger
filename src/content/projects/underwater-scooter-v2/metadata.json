@@ -1,9 +1,13 @@
 {
   "title": "Electric Underwater Scooter (v2)",
+  "titleFr": "Scooter Sous-Marin Électrique (v2)",
   "date": "2025-07-02",
   "category": "HARDWARE & SOFTWARE",
+  "categoryFr": "MATÉRIEL & LOGICIEL",
   "subcategory": "Underwater Scooter",
+  "subcategoryFr": "Scooter Sous-Marin",
   "description": "A brushless upgrade to the v1 scooter using a salvaged 5065 skateboard motor, waterproof ESC, and ESP32-C3, achieving double the speed and more than double the power at minimal cost.",
+  "descriptionFr": "Une mise à niveau brushless du scooter v1 utilisant un moteur de skateboard 5065 récupéré, un ESC étanche et un ESP32-C3, doublant la vitesse et quadruplant la puissance à un coût minimal.",
   "thumbnail": "/projects/underwater-scooter-v2/scooter-overview.jpg",
   "githubLink": null,
   "modelFile": "/projects/underwater-scooter-v2/underwater-scooter-v2.stl",
@@ -12,31 +16,41 @@
       "type": "image",
       "url": "/projects/underwater-scooter-v2/scooter-overview.jpg",
       "alt": "Main overview of the completed v2 underwater scooter",
-      "caption": "Completed v2 build"
+      "altFr": "Vue d'ensemble du scooter sous-marin v2 terminé",
+      "caption": "Completed v2 build",
+      "captionFr": "Version v2 terminée"
     },
     {
       "type": "image",
       "url": "/projects/underwater-scooter-v2/scooter-motor.jpg",
       "alt": "Propeller and 5065 hub motor with ESC inside the tube",
-      "caption": "5065 hub motor — ESC hidden inside the tube"
+      "altFr": "Hélice et moteur 5065 avec ESC à l'intérieur du tube",
+      "caption": "5065 hub motor — ESC hidden inside the tube",
+      "captionFr": "Moteur 5065 — ESC caché à l'intérieur du tube"
     },
     {
       "type": "image",
       "url": "/projects/underwater-scooter-v2/scooter-inside.jpg",
       "alt": "Interior view showing wiring",
-      "caption": "Inside wiring"
+      "altFr": "Vue intérieure montrant le câblage",
+      "caption": "Inside wiring",
+      "captionFr": "Câblage intérieur"
     },
     {
       "type": "image",
       "url": "/projects/underwater-scooter-v2/scooter-esp32.jpg",
       "alt": "Potted ESP32-C3 with RGB LED visible",
-      "caption": "ESP32-C3 potted in liquid electrical tape"
+      "altFr": "ESP32-C3 scellé avec LED RGB visible",
+      "caption": "ESP32-C3 potted in liquid electrical tape",
+      "captionFr": "ESP32-C3 scellé dans du ruban électrique liquide"
     },
     {
       "type": "image",
       "url": "/projects/underwater-scooter-v2/scooter-switch.jpg",
       "alt": "Inside view showing the control switch",
-      "caption": "Hold to run, double-press to cycle power modes"
+      "altFr": "Vue intérieure montrant l'interrupteur de contrôle",
+      "caption": "Hold to run, double-press to cycle power modes",
+      "captionFr": "Maintenir pour avancer, double-pression pour changer de mode"
     }
   ],
   "assets": [

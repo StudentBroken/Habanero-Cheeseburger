@@ -1,8 +1,11 @@
 {
   "title": "FPV Gel Blaster Drone",
+  "titleFr": "Drone FPV Gel Blaster",
   "date": "2025-05-10",
   "category": "HARDWARE",
+  "categoryFr": "MATÉRIEL",
   "description": "6-inch analog FPV drone rigged to carry and fire a gel blaster, combining FPV freestyle hardware with a combat payload.",
+  "descriptionFr": "Drone FPV analogique de 6 pouces équipé pour transporter et tirer avec un gel blaster, combinant le matériel de freestyle FPV avec une charge utile de combat.",
   "githubLink": "",
   "thumbnail": "/projects/fpv-gel-blaster/overview.jpg",
   "media": [
@@ -10,13 +13,17 @@
       "type": "image",
       "url": "/projects/fpv-gel-blaster/overview.jpg",
       "alt": "FPV gel blaster drone overview",
-      "caption": "6-inch analog FPV + gel blaster"
+      "altFr": "Vue d'ensemble du drone FPV gel blaster",
+      "caption": "6-inch analog FPV + gel blaster",
+      "captionFr": "FPV analogique 6 pouces + gel blaster"
     },
     {
       "type": "image",
       "url": "/projects/fpv-gel-blaster/expanded.jpg",
       "alt": "Gel blaster drone expanded view",
-      "caption": "Expanded — payload mount detail"
+      "altFr": "Vue étendue du drone gel blaster",
+      "caption": "Expanded — payload mount detail",
+      "captionFr": "Étendu — détail du support de la charge utile"
     }
   ],
   "tier": 2

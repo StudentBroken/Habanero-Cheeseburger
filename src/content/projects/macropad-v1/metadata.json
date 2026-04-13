@@ -1,9 +1,13 @@
 {
   "title": "BLE Macropad — v1",
+  "titleFr": "Macropad BLE — v1",
   "date": "2025-01-06",
   "category": "HARDWARE & SOFTWARE",
+  "categoryFr": "MATÉRIEL & LOGICIEL",
   "subcategory": "BLE Macropad",
+  "subcategoryFr": "Macropad BLE",
   "description": "Wireless BLE macropad built around an ESP32 S3, with a web interface for remapping keys. Used daily for browser navigation and Blender shortcuts.",
+  "descriptionFr": "Macropad BLE sans fil construit autour d'un ESP32-S3, avec une interface web pour réassigner les touches. Utilisé quotidiennement pour la navigation web et les raccourcis Blender.",
   "githubLink": "",
   "thumbnail": "/projects/macropad-v1/inside.jpg",
   "media": [
@@ -11,13 +15,17 @@
       "type": "image",
       "url": "/projects/macropad-v1/inside.jpg",
       "alt": "Inside the macropad v1",
-      "caption": "ESP32 S3 inside"
+      "altFr": "Intérieur du macropad v1",
+      "caption": "ESP32 S3 inside",
+      "captionFr": "ESP32-S3 à l'intérieur"
     },
     {
       "type": "image",
       "url": "/projects/macropad-v1/web-interface.jpg",
       "alt": "Web interface for key customization",
-      "caption": "Web key configurator"
+      "altFr": "Interface web pour la personnalisation des touches",
+      "caption": "Web key configurator",
+      "captionFr": "Configurateur de touches web"
     }
   ],
   "tier": 2

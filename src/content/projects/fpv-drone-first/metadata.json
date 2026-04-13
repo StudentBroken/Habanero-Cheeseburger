@@ -1,9 +1,13 @@
 {
   "title": "First Designed FPV Drone",
+  "titleFr": "Premier Drone FPV Conçu",
   "date": "2025-03-30",
   "category": "HARDWARE",
+  "categoryFr": "MATÉRIEL",
   "subcategory": "FPV Drone",
+  "subcategoryFr": "Drone FPV",
   "description": "First personally designed FPV quadcopter, built on a PLA frame using salvaged parts from a $20 marketplace kit. Made one test flight, never freestyled — the PLA was too flexible to hold up.",
+  "descriptionFr": "Premier quadricoptère FPV conçu personnellement, construit sur un châssis en PLA utilisant des pièces récupérées d'un kit à 20 $ acheté d'occasion. A effectué un vol d'essai, mais n'a jamais fait de freestyle — le PLA était trop flexible pour tenir le coup.",
   "githubLink": "",
   "thumbnail": "/projects/fpv-drone-first/overview.jpg",
   "media": [
@@ -11,42 +15,55 @@
       "type": "image",
       "url": "/projects/fpv-drone-first/overview.jpg",
       "alt": "First designed FPV drone",
-      "caption": "First design — PLA frame, scrap parts"
+      "altFr": "Premier drone FPV conçu",
+      "caption": "First design — PLA frame, scrap parts",
+      "captionFr": "Premier design — châssis en PLA, pièces de récupération"
     },
     {
       "type": "image",
       "url": "/projects/fpv-drone-first/frame-assembly.jpg",
       "alt": "Frame assembly with flying wing guts",
-      "caption": "Frame assembly"
+      "altFr": "Assemblage du châssis avec les entrailles d'une aile volante",
+      "caption": "Frame assembly",
+      "captionFr": "Assemblage du châssis"
     },
     {
       "type": "image",
       "url": "/projects/fpv-drone-first/fc-stack.jpg",
       "alt": "Flight controller stack",
-      "caption": "FC stack"
+      "altFr": "Pile du contrôleur de vol",
+      "caption": "FC stack",
+      "captionFr": "Empilement FC"
     },
     {
       "type": "image",
       "url": "/projects/fpv-drone-first/mcu.jpg",
       "alt": "Microcontroller unit",
-      "caption": "MCU"
+      "altFr": "Unité microcontrôleur",
+      "caption": "MCU",
+      "captionFr": "MCU"
     },
     {
       "type": "image",
       "url": "/projects/fpv-drone-first/front-view.jpg",
       "alt": "Front view of the PLA drone",
-      "caption": "Front view"
+      "altFr": "Vue frontale du drone en PLA",
+      "caption": "Front view",
+      "captionFr": "Vue frontale"
     },
     {
       "type": "image",
       "url": "/projects/fpv-drone-first/top-view.jpg",
       "alt": "Top-down view of PLA drone",
-      "caption": "Top-down"
+      "altFr": "Vue de dessus du drone en PLA",
+      "caption": "Top-down",
+      "captionFr": "Vue de dessus"
     },
     {
       "type": "video",
       "url": "/projects/fpv-drone-first/test-flight.mp4",
-      "caption": "Test flight"
+      "caption": "Test flight",
+      "captionFr": "Vol d'essai"
     }
   ],
   "tier": 3

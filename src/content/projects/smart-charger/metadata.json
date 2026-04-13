@@ -1,8 +1,11 @@
 {
   "title": "Smart Ebike Charger",
+  "titleFr": "Chargeur d'Ebike Intelligent",
   "date": "2025-06-18",
   "category": "HARDWARE & SOFTWARE",
+  "categoryFr": "MATÉRIEL & LOGICIEL",
   "description": "ESP32-based smart charger for a custom 6S ebike battery pack, designed to safely use a LiHV charger on standard LiPo cells by cutting off at a timed voltage threshold that accounts for IR drop. WiFi-enabled with live web dashboard and OLED display.",
+  "descriptionFr": "Chargeur intelligent basé sur ESP32 pour un pack batterie d'ebike 6S personnalisé, conçu pour utiliser en toute sécurité un chargeur LiHV sur des cellules LiPo standard en coupant à un seuil de tension temporisé tenant compte de la chute de tension interne. Compatible WiFi avec tableau de bord web en direct et écran OLED.",
   "githubLink": "",
   "thumbnail": "/projects/smart-charger/overview.jpg",
   "media": [
@@ -10,19 +13,57 @@
       "type": "image",
       "url": "/projects/smart-charger/overview.jpg",
       "alt": "Smart ebike charger overview",
-      "caption": "24V smart charger — 4.15V cutoff"
-    },
-    {
-      "type": "image",
-      "url": "/projects/smart-charger/oled.jpg",
-      "alt": "OLED showing charge progress bar",
-      "caption": "OLED charge bar"
+      "altFr": "Vue d'ensemble du chargeur d'ebike intelligent",
+      "caption": "Completed build",
+      "captionFr": "Version terminée"
     },
     {
       "type": "image",
       "url": "/projects/smart-charger/overview-2.jpg",
       "alt": "Alternate view of smart charger",
-      "caption": "Alternate view"
+      "altFr": "Vue alternative du chargeur intelligent",
+      "caption": "Alternate view",
+      "captionFr": "Vue alternative"
+    },
+    {
+      "type": "image",
+      "url": "/projects/smart-charger/electronics-top.jpg",
+      "alt": "Top-down closeup of the electronics",
+      "altFr": "Gros plan de l'électronique de dessus",
+      "caption": "Electronics — top view",
+      "captionFr": "Électronique — vue de dessus"
+    },
+    {
+      "type": "image",
+      "url": "/projects/smart-charger/electronics-side.jpg",
+      "alt": "Side closeup of the electronics",
+      "altFr": "Gros plan de l'électronique de côté",
+      "caption": "Electronics — side view",
+      "captionFr": "Électronique — vue de côté"
+    },
+    {
+      "type": "image",
+      "url": "/projects/smart-charger/oled.jpg",
+      "alt": "OLED showing charge progress bar and IP address",
+      "altFr": "OLED affichant la barre de progression de charge et l'adresse IP",
+      "caption": "OLED: progress bar, voltage, status, IP",
+      "captionFr": "OLED : barre de progression, tension, statut, IP"
+    },
+    {
+      "type": "image",
+      "url": "/projects/smart-charger/webapp-top.jpg",
+      "alt": "Web dashboard top — live status and relay controls",
+      "altFr": "Haut du tableau de bord web — statut en direct et contrôles de relais",
+      "caption": "Web dashboard — live status",
+      "captionFr": "Tableau de bord web — statut en direct"
+    },
+    {
+      "type": "image",
+      "url": "/projects/smart-charger/webapp-bottom.jpg",
+      "alt": "Web dashboard bottom — settings form",
+      "altFr": "Bas du tableau de bord web — formulaire de réglages",
+      "caption": "Web dashboard — settings",
+      "captionFr": "Tableau de bord web — réglages"
     }
   ],
   "assets": [

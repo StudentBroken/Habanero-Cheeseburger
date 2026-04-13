@@ -1528,8 +1528,8 @@ p { text-shadow: var(--text-shadow-raised); }
    ================================================================ */
 
 @media (max-width: 768px) {
-  /* Carousel arrows — hide; users swipe natively */
-  .carousel-nav-btn { display: none; }
+  /* Carousel arrows — visible on mobile for explicit navigation */
+  .carousel-nav-btn { display: flex; }
 
   /* Hide the full timeline section — too mouse-dependent for touch */
   #section-timeline { display: none; }

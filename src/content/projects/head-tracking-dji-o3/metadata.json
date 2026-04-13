@@ -10,27 +10,38 @@
     {
       "type": "image",
       "url": "/projects/head-tracking-dji-o3/close-up.jpg",
-      "caption": "Fully assembled 2-axis mechanism"
+      "alt": "Fully assembled 2-axis head tracking mechanism",
+      "altFr": "Mécanisme de suivi de tête à 2 axes entièrement assemblé",
+      "caption": "Fully assembled 2-axis mechanism",
+      "captionFr": "Mécanisme à 2 axes terminé"
     },
     {
       "type": "video",
       "url": "/projects/head-tracking-dji-o3/demo-integrated.mp4",
-      "caption": "Integrated test with DJI Goggles 3"
+      "caption": "Integrated test with DJI Goggles 3",
+      "captionFr": "Test intégré avec les lunettes DJI Goggles 3"
     },
     {
       "type": "image",
       "url": "/projects/head-tracking-dji-o3/close-up-other-side.jpg",
-      "caption": "Alternative mounting view"
+      "alt": "Alternative mounting view of head tracker",
+      "altFr": "Vue alternative du montage du suiveur de tête",
+      "caption": "Alternative mounting view",
+      "captionFr": "Vue alternative du montage"
     },
     {
       "type": "image",
       "url": "/projects/head-tracking-dji-o3/close-up-table.jpg",
-      "caption": "Bench test and assembly"
+      "alt": "Bench test and assembly on table",
+      "altFr": "Test sur banc et assemblage sur table",
+      "caption": "Bench test and assembly",
+      "captionFr": "Test sur banc et assemblage"
     },
     {
       "type": "video",
       "url": "/projects/head-tracking-dji-o3/demo-bare-modules.mp4",
-      "caption": "Bare module testing without DJI components"
+      "caption": "Bare module testing without DJI components",
+      "captionFr": "Test des modules nus sans composants DJI"
     }
   ],
   "assets": [

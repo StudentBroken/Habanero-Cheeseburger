@@ -1,8 +1,11 @@
 {
   "title": "DIY Electric Turbojet",
+  "titleFr": "Turbo-réacteur Électrique DIY",
   "date": "2023-11-12",
   "category": "HARDWARE",
+  "categoryFr": "MATÉRIEL",
   "description": "An attempt to build a functional turbojet using an electric turbocharger — a BLDC motor spinning a custom-designed turbine to force air into a combustion chamber. It failed, loudly.",
+  "descriptionFr": "Tentative de construction d'un turbo-réacteur fonctionnel utilisant un turbocompresseur électrique — un moteur BLDC faisant tourner une turbine sur mesure pour forcer l'air dans une chambre de combustion. Ce fut un échec, bruyant.",
   "githubLink": "",
   "thumbnail": "/projects/jet/design.jpg",
   "media": [
@@ -10,23 +13,29 @@
       "type": "image",
       "url": "/projects/jet/design.jpg",
       "alt": "Jet design sketch",
-      "caption": "Initial design"
+      "altFr": "Croquis de conception du réacteur",
+      "caption": "Initial design",
+      "captionFr": "Conception initiale"
     },
     {
       "type": "image",
       "url": "/projects/jet/build.jpg",
       "alt": "Jet physical build",
-      "caption": "Physical build"
+      "altFr": "Construction physique du réacteur",
+      "caption": "Physical build",
+      "captionFr": "Construction physique"
     },
     {
       "type": "video",
       "url": "/projects/jet/test-1.mp4",
-      "caption": "Test run 1"
+      "caption": "Test run 1",
+      "captionFr": "Premier essai"
     },
     {
       "type": "video",
       "url": "/projects/jet/test-2.mp4",
-      "caption": "Test run 2"
+      "caption": "Test run 2",
+      "captionFr": "Second essai"
     }
   ],
   "tier": 3

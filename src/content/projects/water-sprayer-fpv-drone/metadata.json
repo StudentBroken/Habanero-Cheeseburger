@@ -1,8 +1,11 @@
 {
   "title": "Water Sprayer FPV Drone",
+  "titleFr": "Drone FPV Pulvérisateur d'Eau",
   "date": "2026-04-02",
   "category": "HARDWARE",
+  "categoryFr": "MATÉRIEL",
   "description": "A mini FPV drone modified with a custom 3D-printed and salvaged syringe water pump system for a game of Senior Assassin.",
+  "descriptionFr": "Un mini drone FPV modifié avec un système de pompe à eau à seringue personnalisé, imprimé en 3D et récupéré, pour une partie de Senior Assassin.",
   "githubLink": "",
   "thumbnail": "/projects/water-sprayer-fpv-drone/20260331_230726.jpg",
   "media": [
@@ -10,29 +13,37 @@
       "type": "image",
       "url": "/projects/water-sprayer-fpv-drone/20260331_230726.jpg",
       "alt": "Drone water sprayer prototype",
-      "caption": "First build: Replaced blown MCU"
+      "altFr": "Prototype de drone pulvérisateur d'eau",
+      "caption": "First build: Replaced blown MCU",
+      "captionFr": "Première version : MCU grillé remplacé"
     },
     {
       "type": "image",
       "url": "/projects/water-sprayer-fpv-drone/20260401_204140.jpg",
       "alt": "Drone water sprayer build process",
-      "caption": "Build progress"
+      "altFr": "Processus de construction du drone pulvérisateur d'eau",
+      "caption": "Build progress",
+      "captionFr": "Progrès de la construction"
     },
     {
       "type": "image",
       "url": "/projects/water-sprayer-fpv-drone/20260401_204146.jpg",
       "alt": "Drone water sprayer details",
-      "caption": "Detailed view"
+      "altFr": "Détails du drone pulvérisateur d'eau",
+      "caption": "Detailed view",
+      "captionFr": "Vue détaillée"
     },
     {
       "type": "video",
       "url": "/projects/water-sprayer-fpv-drone/20260402_203106.mp4",
-      "caption": "Testing the water sprayer"
+      "caption": "Testing the water sprayer",
+      "captionFr": "Test du pulvérisateur d'eau"
     },
     {
       "type": "video",
       "url": "/projects/water-sprayer-fpv-drone/20260402_215309.mp4",
-      "caption": "Controller button upgrade"
+      "caption": "Controller button upgrade",
+      "captionFr": "Mise à niveau du bouton de la télécommande"
     }
   ],
   "assets": [],

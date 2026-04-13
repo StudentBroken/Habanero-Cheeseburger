@@ -87,18 +87,18 @@ export default function ProjectContent({ projectData }) {
                   {projectData.links && projectData.links.map((link, index) => (
                     <div key={index} style={{ display: 'flex', flexDirection: 'column', gap: '0.3rem' }}>
                       <a href={link.url} target="_blank" rel="noreferrer" className="tech-button" style={{ alignSelf: 'flex-start' }}>
-                        <ExternalLink size={17} /> {link.label || (link.type === 'github' ? (isFr ? 'Voir sur GitHub' : 'View on GitHub') : (isFr ? 'Ouvrir le lien' : 'Open Link'))}
+                        <ExternalLink size={17} /> {isFr ? (link.labelFr || link.label) : link.label || (link.type === 'github' ? (isFr ? 'Voir sur GitHub' : 'View on GitHub') : (isFr ? 'Ouvrir le lien' : 'Open Link'))}
                       </a>
                     </div>
                   ))}
                   {projectData.assets && projectData.assets.map((asset, index) => (
                     <div key={index} style={{ display: 'flex', flexDirection: 'column', gap: '0.3rem' }}>
                       <a href={asset.url} download target="_blank" rel="noreferrer" className="tech-button" style={{ alignSelf: 'flex-start' }}>
-                        <Download size={17} /> {asset.name}
+                        <Download size={17} /> {isFr ? (asset.nameFr || asset.name) : asset.name}
                       </a>
-                      {asset.description && (
+                      {(isFr ? (asset.descriptionFr || asset.description) : asset.description) && (
                         <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', lineHeight: '1.4' }}>
-                          {asset.description}
+                          {isFr ? (asset.descriptionFr || asset.description) : asset.description}
                         </span>
                       )}
                     </div>
