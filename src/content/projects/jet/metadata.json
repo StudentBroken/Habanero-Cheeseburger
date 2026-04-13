@@ -7,7 +7,7 @@
   "description": "An attempt to build a functional turbojet using an electric turbocharger — a BLDC motor spinning a custom-designed turbine to force air into a combustion chamber. It failed, loudly.",
   "descriptionFr": "Tentative de construction d'un turbo-réacteur fonctionnel utilisant un turbocompresseur électrique — un moteur BLDC faisant tourner une turbine sur mesure pour forcer l'air dans une chambre de combustion. Ce fut un échec, bruyant.",
   "githubLink": "",
-  "thumbnail": "/projects/jet/design.jpg",
+  "thumbnail": "/projects/jet/main_overview.jpeg",
   "media": [
     {
       "type": "image",
