@@ -8,12 +8,12 @@
   "subcategoryFr": "Scooter Sous-Marin",
   "description": "A low-cost, custom 3D-printed electric underwater scooter using 2x 3S 21700 batteries, capable of up to 3 km/h.",
   "descriptionFr": "Un prototype de scooter sous-marin électrique à bas prix imprimé en 3D utilisant 2 batteries 3S 21700, capable d'atteindre 3 km/h.",
-  "thumbnail": "/projects/underwater-scooter-v1/scooter-1.jpg",
+  "thumbnail": "/projects/underwater-scooter-v1/scooter-1.webp",
   "githubLink": "",
   "media": [
     {
       "type": "image",
-      "url": "/projects/underwater-scooter-v1/scooter-1.jpg",
+      "url": "/projects/underwater-scooter-v1/scooter-1.webp",
       "alt": "Underwater scooter build",
       "altFr": "Construction du scooter sous-marin",
       "caption": "The completed v1 electric underwater scooter.",
@@ -21,13 +21,13 @@
     },
     {
       "type": "video",
-      "url": "/projects/underwater-scooter-v1/scooter-demo.mp4",
+      "url": "/projects/underwater-scooter-v1/scooter-demo.webm",
       "caption": "Testing the propulsion and speed underwater.",
       "captionFr": "Test de la propulsion et de la vitesse sous l'eau."
     },
     {
       "type": "image",
-      "url": "/projects/underwater-scooter-v1/scooter-2.jpg",
+      "url": "/projects/underwater-scooter-v1/scooter-2.webp",
       "alt": "Underwater scooter alternate view",
       "altFr": "Vue alternative du scooter sous-marin",
       "caption": "A closer look at the 3D-printed chassis.",

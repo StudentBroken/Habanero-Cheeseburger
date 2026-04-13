@@ -9,11 +9,11 @@
   "description": "The smallest possible FPV build — fingertip-sized with custom 3D designed propeller guards so it can land without the props striking the ground. Crashed and lost.",
   "descriptionFr": "La plus petite construction FPV possible — de la taille d'un bout de doigt avec des protections d'hélices personnalisées imprimées en 3D pour qu'il puisse atterrir sans que les hélices ne touchent le sol. S'est écrasé et a été perdu.",
   "githubLink": "",
-  "thumbnail": "/projects/fpv-drone-mini/overview.jpg",
+  "thumbnail": "/projects/fpv-drone-mini/overview.webp",
   "media": [
     {
       "type": "image",
-      "url": "/projects/fpv-drone-mini/overview.jpg",
+      "url": "/projects/fpv-drone-mini/overview.webp",
       "alt": "Finger-sized FPV drone",
       "altFr": "Drone FPV de la taille d'un doigt",
       "caption": "Smallest possible FPV build",
@@ -21,7 +21,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/fpv-drone-mini/with-guards.jpg",
+      "url": "/projects/fpv-drone-mini/with-guards.webp",
       "alt": "Drone with custom propeller guards",
       "altFr": "Drone avec protections d'hélices personnalisées",
       "caption": "Custom 3D designed prop guards",
@@ -29,7 +29,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/fpv-drone-mini/with-minifigure.jpg",
+      "url": "/projects/fpv-drone-mini/with-minifigure.webp",
       "alt": "Drone beside a LEGO minifigure for scale",
       "altFr": "Drone à côté d'une figurine LEGO pour l'échelle",
       "caption": "Scale reference",
@@ -37,7 +37,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/fpv-drone-mini/size-comparison.jpg",
+      "url": "/projects/fpv-drone-mini/size-comparison.webp",
       "alt": "Size comparison",
       "altFr": "Comparaison de taille",
       "caption": "Size comparison",
@@ -45,7 +45,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/fpv-drone-mini/other-view.jpg",
+      "url": "/projects/fpv-drone-mini/other-view.webp",
       "alt": "Alternate angle",
       "altFr": "Angle alternatif",
       "caption": "Alternate angle",

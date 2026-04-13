@@ -7,11 +7,11 @@
   "description": "A smart ski goggle prototype built in one day that uses internal reflections to display the time.",
   "descriptionFr": "Un prototype de lunettes de ski intelligentes construit en un jour qui utilise les réflexions internes pour afficher l'heure.",
   "githubLink": "",
-  "thumbnail": "/projects/smart-ski-goggles-v1/goggles-view.jpg",
+  "thumbnail": "/projects/smart-ski-goggles-v1/goggles-view.webp",
   "media": [
     {
       "type": "image",
-      "url": "/projects/smart-ski-goggles-v1/goggles-view.jpg",
+      "url": "/projects/smart-ski-goggles-v1/goggles-view.webp",
       "alt": "Smart ski goggles HUD reflection",
       "altFr": "Réflexion du HUD dans les lunettes de ski intelligentes",
       "caption": "Smart ski goggles HUD reflection",
@@ -19,7 +19,7 @@
     },
     {
       "type": "video",
-      "url": "/projects/smart-ski-goggles-v1/goggles-demo.mp4",
+      "url": "/projects/smart-ski-goggles-v1/goggles-demo.webm",
       "caption": "Video demo of the heads-up display",
       "captionFr": "Démo vidéo de l'affichage tête haute"
     }

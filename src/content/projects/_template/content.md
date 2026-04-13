@@ -6,7 +6,7 @@ One paragraph: what is this, why was it built, what does it do. Keep it factual 
 
 Describe the objective. What problem does this solve? What were the constraints (time, budget, size)?
 
-![First photo of the project](/projects/your-project/photo1.jpg)
+![First photo of the project](/projects/your-project/photo1.webp)
 *Caption: what is shown in this image*
 
 ## Hardware Architecture
@@ -17,7 +17,7 @@ Describe the physical build — enclosure, PCB, motors, sensors, power rail, wir
 - **Power**: e.g. 3S LiPo, USB-C PD, BEC — voltage rails and distribution
 - **Actuators / Sensors**: list key components
 
-![Internal layout or electronics photo](/projects/your-project/electronics.jpg)
+![Internal layout or electronics photo](/projects/your-project/electronics.webp)
 *Caption: internal layout / component placement*
 
 ## Software & Firmware
@@ -32,7 +32,7 @@ Key logic or pseudocode if useful
 
 If applicable: how was the enclosure or frame designed? What CAD tool was used (Onshape, Tinkercad, Fusion)? How long did it take to print?
 
-![CAD screenshot or print photo](/projects/your-project/cad.jpg)
+![CAD screenshot or print photo](/projects/your-project/cad.webp)
 *Caption: CAD model / print in progress*
 
 ## Bill of Materials (BOM)
@@ -60,7 +60,7 @@ INSTRUCTIONS FOR CREATING A NEW PROJECT:
 3. Fill out `metadata.json` — see comments in that file for every field.
 4. Fill out this `content.md`. Delete sections you don't need. Add sections if needed.
 5. To insert an image inline between paragraphs:
-   ![Alt text](/projects/your-project/photo.jpg)
+   ![Alt text](/projects/your-project/photo.webp)
    *Caption shown below the image*
    The line below the image (wrapped in *asterisks*) renders as a caption.
 -->

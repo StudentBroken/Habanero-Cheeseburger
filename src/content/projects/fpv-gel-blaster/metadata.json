@@ -7,11 +7,11 @@
   "description": "6-inch analog FPV drone rigged to carry and fire a gel blaster, combining FPV freestyle hardware with a combat payload.",
   "descriptionFr": "Drone FPV analogique de 6 pouces équipé pour transporter et tirer avec un gel blaster, combinant le matériel de freestyle FPV avec une charge utile de combat.",
   "githubLink": "",
-  "thumbnail": "/projects/fpv-gel-blaster/overview.jpg",
+  "thumbnail": "/projects/fpv-gel-blaster/overview.webp",
   "media": [
     {
       "type": "image",
-      "url": "/projects/fpv-gel-blaster/overview.jpg",
+      "url": "/projects/fpv-gel-blaster/overview.webp",
       "alt": "FPV gel blaster drone overview",
       "altFr": "Vue d'ensemble du drone FPV gel blaster",
       "caption": "6-inch analog FPV + gel blaster",
@@ -19,7 +19,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/fpv-gel-blaster/expanded.jpg",
+      "url": "/projects/fpv-gel-blaster/expanded.webp",
       "alt": "Gel blaster drone expanded view",
       "altFr": "Vue étendue du drone gel blaster",
       "caption": "Expanded — payload mount detail",

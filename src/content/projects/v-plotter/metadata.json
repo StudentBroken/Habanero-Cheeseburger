@@ -6,13 +6,13 @@
   "categoryFr": "MATÉRIEL & LOGICIEL",
   "description": "A portable, dual-stepper V Plotter capable of drawing on large boards, featuring a web interface and modular crab-inspired gondola.",
   "descriptionFr": "Un traceur en V portable à double moteur pas à pas capable de dessiner sur de grands tableaux, doté d'une interface web et d'une nacelle modulaire inspirée d'un crabe.",
-  "thumbnail": "/projects/v-plotter/on-the-whiteboard-close-up,-powered-on.jpg",
+  "thumbnail": "/projects/v-plotter/on-the-whiteboard-close-up,-powered-on.webp",
   "githubLink": "https://github.com/StudentBroken/v-bot",
   "modelFile": "/projects/v-plotter/V-bot-complete.stl",
   "media": [
     {
       "type": "image",
-      "url": "/projects/v-plotter/running,-on-the-wall-testing-cartesian-movements.jpg",
+      "url": "/projects/v-plotter/running,-on-the-wall-testing-cartesian-movements.webp",
       "alt": "V plotter running on a wall testing cartesian movements",
       "altFr": "Traceur en V en fonctionnement testant des mouvements cartésiens sur un mur",
       "caption": "Testing cartesian movements on the wall",
@@ -20,7 +20,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/v-plotter/on-the-whiteboard-close-up,-powered-on.jpg",
+      "url": "/projects/v-plotter/on-the-whiteboard-close-up,-powered-on.webp",
       "alt": "Close up of the V plotter on a whiteboard powered on",
       "altFr": "Gros plan du traceur en V allumé sur un tableau blanc",
       "caption": "Powered on via USB-C PD and mounted on a whiteboard",
@@ -28,7 +28,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/v-plotter/close-up-almost-fully-assebled.jpg",
+      "url": "/projects/v-plotter/close-up-almost-fully-assebled.webp",
       "alt": "Close up of the gondola almost fully assembled",
       "altFr": "Gros plan de la nacelle presque entièrement assemblée",
       "caption": "Crab-inspired gondola assembly with googly eyes",
@@ -36,7 +36,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/v-plotter/layout-of-the-electronics.jpg",
+      "url": "/projects/v-plotter/layout-of-the-electronics.webp",
       "alt": "Layout of the electronics inside the v plotter",
       "altFr": "Disposition de l'électronique à l'intérieur du traceur en V",
       "caption": "Internal electronics layout featuring ESP32-S3 and stepper drivers",
@@ -44,7 +44,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/v-plotter/stepper-drivers-close-up.jpg",
+      "url": "/projects/v-plotter/stepper-drivers-close-up.webp",
       "alt": "Close up of the stepper drivers",
       "altFr": "Gros plan des pilotes de moteurs pas à pas",
       "caption": "A4988 stepper drivers with a small cooling fan",
@@ -52,7 +52,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/v-plotter/blown-a4988-driver.jpg",
+      "url": "/projects/v-plotter/blown-a4988-driver.webp",
       "alt": "Image of a blown A4988 stepper driver",
       "altFr": "Image d'un pilote A4988 grillé",
       "caption": "The aftermath of a blown stepper driver during testing",

@@ -7,11 +7,11 @@
   "description": "Fan-powered electric skateboard built on a shoestring budget using a cheap Amazon ESC, motor, and a 3S LiPo. A propeller and printed fan shroud replace a conventional belt or hub drive.",
   "descriptionFr": "Skateboard électrique propulsé par hélice, construit avec un budget serré utilisant un ESC bon marché d'Amazon, un moteur et une LiPo 3S. Une hélice et un carénage imprimé en 3D remplacent l'entraînement conventionnel par courroie ou moyeu.",
   "githubLink": "",
-  "thumbnail": "/projects/eskateboard/overview.jpg",
+  "thumbnail": "/projects/eskateboard/overview.webp",
   "media": [
     {
       "type": "image",
-      "url": "/projects/eskateboard/overview.jpg",
+      "url": "/projects/eskateboard/overview.webp",
       "alt": "The electric fan-powered skateboard",
       "altFr": "Le skateboard électrique propulsé par hélice",
       "caption": "Fan-driven electric skateboard — late summer 2021",

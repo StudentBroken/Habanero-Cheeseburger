@@ -4,11 +4,11 @@
   "category": "HARDWARE",
   "description": "A small microphone MacGyvered onto an existing headset to get dramatically clearer in-game audio without buying a new headset.",
   "githubLink": "",
-  "thumbnail": "/projects/mic/overview.jpg",
+  "thumbnail": "/projects/mic/overview.webp",
   "media": [
     {
       "type": "image",
-      "url": "/projects/mic/overview.jpg",
+      "url": "/projects/mic/overview.webp",
       "alt": "The modded headset microphone",
       "caption": "Modded mic"
     }

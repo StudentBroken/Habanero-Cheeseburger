@@ -7,11 +7,11 @@
   "description": "Custom desk built from scratch with $60 and a drill. Still standing.",
   "descriptionFr": "Bureau personnalisé construit de zéro avec 60 $ et une perceuse. Tient toujours debout.",
   "githubLink": "",
-  "thumbnail": "/projects/desk-setup/overview.jpg",
+  "thumbnail": "/projects/desk-setup/overview.webp",
   "media": [
     {
       "type": "image",
-      "url": "/projects/desk-setup/overview.jpg",
+      "url": "/projects/desk-setup/overview.webp",
       "alt": "Completed desk",
       "altFr": "Bureau terminé",
       "caption": "Final desk",
@@ -19,7 +19,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/desk-setup/build.jpg",
+      "url": "/projects/desk-setup/build.webp",
       "alt": "Desk during construction",
       "altFr": "Bureau pendant la construction",
       "caption": "Build phase",
@@ -27,7 +27,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/desk-setup/setup.jpg",
+      "url": "/projects/desk-setup/setup.webp",
       "alt": "Desk setup with equipment",
       "altFr": "Configuration du bureau avec équipement",
       "caption": "Full setup",

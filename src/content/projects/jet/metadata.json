@@ -7,11 +7,11 @@
   "description": "An attempt to build a functional turbojet using an electric turbocharger — a BLDC motor spinning a custom-designed turbine to force air into a combustion chamber. It failed, loudly.",
   "descriptionFr": "Tentative de construction d'un turbo-réacteur fonctionnel utilisant un turbocompresseur électrique — un moteur BLDC faisant tourner une turbine sur mesure pour forcer l'air dans une chambre de combustion. Ce fut un échec, bruyant.",
   "githubLink": "",
-  "thumbnail": "/projects/jet/main_overview.jpeg",
+  "thumbnail": "/projects/jet/main_overview.webp",
   "media": [
     {
       "type": "image",
-      "url": "/projects/jet/design.jpg",
+      "url": "/projects/jet/design.webp",
       "alt": "Jet design sketch",
       "altFr": "Croquis de conception du réacteur",
       "caption": "Initial design",
@@ -19,7 +19,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/jet/main_overview.jpeg",
+      "url": "/projects/jet/main_overview.webp",
       "alt": "Jet showing main test",
       "altFr": "Réacteur en action",
       "caption": "Main test",
@@ -27,7 +27,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/jet/build.jpg",
+      "url": "/projects/jet/build.webp",
       "alt": "Jet physical build",
       "altFr": "Construction physique du réacteur",
       "caption": "Physical build",
@@ -35,13 +35,13 @@
     },
     {
       "type": "video",
-      "url": "/projects/jet/test-1.mp4",
+      "url": "/projects/jet/test-1.webm",
       "caption": "Test run 1",
       "captionFr": "Premier essai"
     },
     {
       "type": "video",
-      "url": "/projects/jet/test-2.mp4",
+      "url": "/projects/jet/test-2.webm",
       "caption": "Test run 2",
       "captionFr": "Second essai"
     }

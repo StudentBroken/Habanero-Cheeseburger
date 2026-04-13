@@ -7,11 +7,11 @@
   "description": "Fully 3D printed RC F1 car running brushed motors and ESC gifted from a friend, with FlySky radio control. First project to use TPU and bearings in a 3D print.",
   "descriptionFr": "Voiture de F1 RC entièrement imprimée en 3D fonctionnant avec des moteurs à balais et un ESC offert par un ami, avec radiocommande FlySky. Premier projet à utiliser du TPU et des roulements dans une impression 3D.",
   "githubLink": "",
-  "thumbnail": "/projects/rc-f1-car/overview.jpg",
+  "thumbnail": "/projects/rc-f1-car/overview.webp",
   "media": [
     {
       "type": "image",
-      "url": "/projects/rc-f1-car/overview.jpg",
+      "url": "/projects/rc-f1-car/overview.webp",
       "alt": "3D printed F1 car overview",
       "altFr": "Vue d'ensemble de la voiture de F1 imprimée en 3D",
       "caption": "Fully assembled",
@@ -27,7 +27,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/rc-f1-car/on-wall.jpg",
+      "url": "/projects/rc-f1-car/on-wall.webp",
       "alt": "F1 car mounted on wall display",
       "altFr": "Voiture de F1 montée sur un support mural",
       "caption": "Wall display",

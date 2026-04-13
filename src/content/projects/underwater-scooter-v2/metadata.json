@@ -8,13 +8,13 @@
   "subcategoryFr": "Scooter Sous-Marin",
   "description": "A brushless upgrade to the v1 scooter using a salvaged 5065 skateboard motor, waterproof ESC, and ESP32-C3, achieving double the speed and more than double the power at minimal cost.",
   "descriptionFr": "Une mise à niveau brushless du scooter v1 utilisant un moteur de skateboard 5065 récupéré, un ESC étanche et un ESP32-C3, doublant la vitesse et quadruplant la puissance à un coût minimal.",
-  "thumbnail": "/projects/underwater-scooter-v2/scooter-overview.jpg",
+  "thumbnail": "/projects/underwater-scooter-v2/scooter-overview.webp",
   "githubLink": null,
   "modelFile": "/projects/underwater-scooter-v2/underwater-scooter-v2.stl",
   "media": [
     {
       "type": "image",
-      "url": "/projects/underwater-scooter-v2/scooter-overview.jpg",
+      "url": "/projects/underwater-scooter-v2/scooter-overview.webp",
       "alt": "Main overview of the completed v2 underwater scooter",
       "altFr": "Vue d'ensemble du scooter sous-marin v2 terminé",
       "caption": "Completed v2 build",
@@ -22,7 +22,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/underwater-scooter-v2/scooter-motor.jpg",
+      "url": "/projects/underwater-scooter-v2/scooter-motor.webp",
       "alt": "Propeller and 5065 hub motor with ESC inside the tube",
       "altFr": "Hélice et moteur 5065 avec ESC à l'intérieur du tube",
       "caption": "5065 hub motor — ESC hidden inside the tube",
@@ -30,7 +30,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/underwater-scooter-v2/scooter-inside.jpg",
+      "url": "/projects/underwater-scooter-v2/scooter-inside.webp",
       "alt": "Interior view showing wiring",
       "altFr": "Vue intérieure montrant le câblage",
       "caption": "Inside wiring",
@@ -38,7 +38,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/underwater-scooter-v2/scooter-esp32.jpg",
+      "url": "/projects/underwater-scooter-v2/scooter-esp32.webp",
       "alt": "Potted ESP32-C3 with RGB LED visible",
       "altFr": "ESP32-C3 scellé avec LED RGB visible",
       "caption": "ESP32-C3 potted in liquid electrical tape",
@@ -46,7 +46,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/underwater-scooter-v2/scooter-switch.jpg",
+      "url": "/projects/underwater-scooter-v2/scooter-switch.webp",
       "alt": "Inside view showing the control switch",
       "altFr": "Vue intérieure montrant l'interrupteur de contrôle",
       "caption": "Hold to run, double-press to cycle power modes",

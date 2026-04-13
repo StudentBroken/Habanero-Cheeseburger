@@ -4,12 +4,12 @@
   "category": "HARDWARE & SOFTWARE",
   "description": "A 2-axis head tracking system for the DJI Goggles 3 and O3 air unit using an MPU module and ESP32 C3 Superminis.",
   "githubLink": "",
-  "thumbnail": "/projects/head-tracking-dji-o3/close-up.jpg",
+  "thumbnail": "/projects/head-tracking-dji-o3/close-up.webp",
   "modelFile": "/projects/head-tracking-dji-o3/o3-gimbal-full-set.stl",
   "media": [
     {
       "type": "image",
-      "url": "/projects/head-tracking-dji-o3/close-up.jpg",
+      "url": "/projects/head-tracking-dji-o3/close-up.webp",
       "alt": "Fully assembled 2-axis head tracking mechanism",
       "altFr": "Mécanisme de suivi de tête à 2 axes entièrement assemblé",
       "caption": "Fully assembled 2-axis mechanism",
@@ -17,13 +17,13 @@
     },
     {
       "type": "video",
-      "url": "/projects/head-tracking-dji-o3/demo-integrated.mp4",
+      "url": "/projects/head-tracking-dji-o3/demo-integrated.webm",
       "caption": "Integrated test with DJI Goggles 3",
       "captionFr": "Test intégré avec les lunettes DJI Goggles 3"
     },
     {
       "type": "image",
-      "url": "/projects/head-tracking-dji-o3/close-up-other-side.jpg",
+      "url": "/projects/head-tracking-dji-o3/close-up-other-side.webp",
       "alt": "Alternative mounting view of head tracker",
       "altFr": "Vue alternative du montage du suiveur de tête",
       "caption": "Alternative mounting view",
@@ -31,7 +31,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/head-tracking-dji-o3/close-up-table.jpg",
+      "url": "/projects/head-tracking-dji-o3/close-up-table.webp",
       "alt": "Bench test and assembly on table",
       "altFr": "Test sur banc et assemblage sur table",
       "caption": "Bench test and assembly",
@@ -39,7 +39,7 @@
     },
     {
       "type": "video",
-      "url": "/projects/head-tracking-dji-o3/demo-bare-modules.mp4",
+      "url": "/projects/head-tracking-dji-o3/demo-bare-modules.webm",
       "caption": "Bare module testing without DJI components",
       "captionFr": "Test des modules nus sans composants DJI"
     }

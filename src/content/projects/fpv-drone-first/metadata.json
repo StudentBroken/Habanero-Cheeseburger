@@ -9,11 +9,11 @@
   "description": "First personally designed FPV quadcopter, built on a PLA frame using salvaged parts from a $20 marketplace kit. Made one test flight, never freestyled — the PLA was too flexible to hold up.",
   "descriptionFr": "Premier quadricoptère FPV conçu personnellement, construit sur un châssis en PLA utilisant des pièces récupérées d'un kit à 20 $ acheté d'occasion. A effectué un vol d'essai, mais n'a jamais fait de freestyle — le PLA était trop flexible pour tenir le coup.",
   "githubLink": "",
-  "thumbnail": "/projects/fpv-drone-first/overview.jpg",
+  "thumbnail": "/projects/fpv-drone-first/overview.webp",
   "media": [
     {
       "type": "image",
-      "url": "/projects/fpv-drone-first/overview.jpg",
+      "url": "/projects/fpv-drone-first/overview.webp",
       "alt": "First designed FPV drone",
       "altFr": "Premier drone FPV conçu",
       "caption": "First design — PLA frame, scrap parts",
@@ -21,7 +21,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/fpv-drone-first/frame-assembly.jpg",
+      "url": "/projects/fpv-drone-first/frame-assembly.webp",
       "alt": "Frame assembly with flying wing guts",
       "altFr": "Assemblage du châssis avec les entrailles d'une aile volante",
       "caption": "Frame assembly",
@@ -29,7 +29,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/fpv-drone-first/fc-stack.jpg",
+      "url": "/projects/fpv-drone-first/fc-stack.webp",
       "alt": "Flight controller stack",
       "altFr": "Pile du contrôleur de vol",
       "caption": "FC stack",
@@ -37,7 +37,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/fpv-drone-first/mcu.jpg",
+      "url": "/projects/fpv-drone-first/mcu.webp",
       "alt": "Microcontroller unit",
       "altFr": "Unité microcontrôleur",
       "caption": "MCU",
@@ -45,7 +45,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/fpv-drone-first/front-view.jpg",
+      "url": "/projects/fpv-drone-first/front-view.webp",
       "alt": "Front view of the PLA drone",
       "altFr": "Vue frontale du drone en PLA",
       "caption": "Front view",
@@ -53,7 +53,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/fpv-drone-first/top-view.jpg",
+      "url": "/projects/fpv-drone-first/top-view.webp",
       "alt": "Top-down view of PLA drone",
       "altFr": "Vue de dessus du drone en PLA",
       "caption": "Top-down",
@@ -61,7 +61,7 @@
     },
     {
       "type": "video",
-      "url": "/projects/fpv-drone-first/test-flight.mp4",
+      "url": "/projects/fpv-drone-first/test-flight.webm",
       "caption": "Test flight",
       "captionFr": "Vol d'essai"
     }

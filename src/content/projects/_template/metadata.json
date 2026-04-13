@@ -4,19 +4,19 @@
   "category": "HARDWARE & SOFTWARE",
   "subcategory": null,
   "description": "A short, plain text summary of the project. Keep it one or two sentences.",
-  "thumbnail": "/projects/your-project/cover_image.jpg",
+  "thumbnail": "/projects/your-project/cover_image.webp",
   "githubLink": null,
   "modelFile": null,
   "media": [
     {
       "type": "image",
-      "url": "/projects/your-project/photo1.jpg",
+      "url": "/projects/your-project/photo1.webp",
       "alt": "Brief description of what is shown",
       "caption": "Optional label shown as an overlay when this item is focused"
     },
     {
       "type": "video",
-      "url": "/projects/your-project/demo.mp4",
+      "url": "/projects/your-project/demo.webm",
       "caption": "Optional label shown as an overlay when this video is focused"
     }
   ],

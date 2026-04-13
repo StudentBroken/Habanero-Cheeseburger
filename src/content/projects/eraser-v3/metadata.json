@@ -5,17 +5,17 @@
   "subcategory": "ESP Eraser",
   "description": "Third eraser revision with a cleaner internal layout, USB-C charging, a dedicated switch cutout, and MQTT replacing the separate relay ESP32. First version to sleep between transmissions.",
   "githubLink": "",
-  "thumbnail": "/projects/eraser-v3/overview.jpg",
+  "thumbnail": "/projects/eraser-v3/overview.webp",
   "media": [
     {
       "type": "image",
-      "url": "/projects/eraser-v3/overview.jpg",
+      "url": "/projects/eraser-v3/overview.webp",
       "alt": "ESP32 eraser v3 fully assembled",
       "caption": "v3 — USB-C, MQTT, sleep between sends"
     },
     {
       "type": "image",
-      "url": "/projects/eraser-v3/back.jpg",
+      "url": "/projects/eraser-v3/back.webp",
       "alt": "Back view of eraser v3",
       "caption": "Back — USB-C port + switch"
     }

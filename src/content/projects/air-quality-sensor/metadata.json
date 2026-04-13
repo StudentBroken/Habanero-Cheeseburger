@@ -7,11 +7,11 @@
   "description": "ESP32-based sensor logging PM2.5, VOCs, temperature, and humidity, with an OLED readout and an Adafruit MQTT dashboard. Enclosure uses a cheap IKEA part as the structural base.",
   "descriptionFr": "Capteur basé sur ESP32 enregistrant les PM2.5, les COV, la température et l'humidité, avec un affichage OLED et un tableau de bord Adafruit MQTT. Le boîtier utilise une pièce IKEA bon marché comme base structurelle.",
   "githubLink": "",
-  "thumbnail": "/projects/air-quality-sensor/assembled.jpg",
+  "thumbnail": "/projects/air-quality-sensor/assembled.webp",
   "media": [
     {
       "type": "image",
-      "url": "/projects/air-quality-sensor/assembled.jpg",
+      "url": "/projects/air-quality-sensor/assembled.webp",
       "alt": "Completed air quality sensor",
       "altFr": "Capteur de qualité de l'air terminé",
       "caption": "PM2.5 + VOC + temp + humidity",
@@ -19,7 +19,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/air-quality-sensor/oled-prototype.jpg",
+      "url": "/projects/air-quality-sensor/oled-prototype.webp",
       "alt": "Prototype with OLED screen",
       "altFr": "Prototype avec écran OLED",
       "caption": "Prototype OLED readout",
@@ -27,7 +27,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/air-quality-sensor/build.jpg",
+      "url": "/projects/air-quality-sensor/build.webp",
       "alt": "Building the air quality sensor",
       "altFr": "Construction du capteur de qualité de l'air",
       "caption": "Build",
@@ -35,7 +35,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/air-quality-sensor/build-2.jpg",
+      "url": "/projects/air-quality-sensor/build-2.webp",
       "alt": "Alternate build view",
       "altFr": "Vue alternative de la construction",
       "caption": "Build — alternate angle",
@@ -43,7 +43,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/air-quality-sensor/guts.jpg",
+      "url": "/projects/air-quality-sensor/guts.webp",
       "alt": "All components laid out",
       "altFr": "Tous les composants disposés",
       "caption": "Full internals",
@@ -51,7 +51,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/air-quality-sensor/guts-held.jpg",
+      "url": "/projects/air-quality-sensor/guts-held.webp",
       "alt": "Holding the sensor guts",
       "altFr": "Tenue des composants du capteur",
       "caption": "Guts in hand",
@@ -59,7 +59,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/air-quality-sensor/cover.jpg",
+      "url": "/projects/air-quality-sensor/cover.webp",
       "alt": "3D printed cover on IKEA base",
       "altFr": "Couvercle imprimé en 3D sur base IKEA",
       "caption": "IKEA base + 3D printed cover",

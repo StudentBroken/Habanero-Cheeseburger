@@ -7,11 +7,11 @@
   "description": "An ESP32-C3 powered active heating system to maintain FPV battery temperatures in extreme -30°C winter conditions.",
   "descriptionFr": "Un système de chauffage actif alimenté par ESP32-C3 pour maintenir les températures des batteries FPV dans des conditions hivernales extrêmes de -30°C.",
   "githubLink": "",
-  "thumbnail": "/projects/heated-fpv-battery/fully-assembled.jpg",
+  "thumbnail": "/projects/heated-fpv-battery/fully-assembled.webp",
   "media": [
     {
       "type": "image",
-      "url": "/projects/heated-fpv-battery/fully-assembled.jpg",
+      "url": "/projects/heated-fpv-battery/fully-assembled.webp",
       "alt": "Fully assembled heated FPV battery",
       "altFr": "Batterie FPV chauffée entièrement assemblée",
       "caption": "Fully assembled and flying at an optimal 30°C.",
@@ -19,7 +19,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/heated-fpv-battery/testing-temperature.jpg",
+      "url": "/projects/heated-fpv-battery/testing-temperature.webp",
       "alt": "Testing the temperature regulation",
       "altFr": "Test de la régulation de température",
       "caption": "Verifying the bang-bang algorithm and thermal stability.",
@@ -27,7 +27,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/heated-fpv-battery/half-assembled.jpg",
+      "url": "/projects/heated-fpv-battery/half-assembled.webp",
       "alt": "Half assembled battery components",
       "altFr": "Composants de la batterie à moitié assemblés",
       "caption": "Working out the layout before final assembly.",
@@ -35,7 +35,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/heated-fpv-battery/esp32-ntc-buck.jpg",
+      "url": "/projects/heated-fpv-battery/esp32-ntc-buck.webp",
       "alt": "The ESP32, NTC and both buck converters",
       "altFr": "L'ESP32, la NTC et les deux convertisseurs buck",
       "caption": "The ESP32-C3 microcontroller, BMS NTC thermistor, and buck converters.",
@@ -43,7 +43,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/heated-fpv-battery/wiring-bucks.jpg",
+      "url": "/projects/heated-fpv-battery/wiring-bucks.webp",
       "alt": "Wiring the buck converters",
       "altFr": "Câblage des convertisseurs buck",
       "caption": "Wiring up the dual 5V regulators to run logic and the nichrome coil.",

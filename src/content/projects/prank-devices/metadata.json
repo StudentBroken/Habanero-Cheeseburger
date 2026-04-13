@@ -7,11 +7,11 @@
   "description": "Fleet of ESP32 prank devices deployed on April Fools using ESPNow — the first time deep sleep was used to extend battery life. Came with 3D printed fake AirPods as decoy props.",
   "descriptionFr": "Flotte d'appareils de farce ESP32 déployée pour le poisson d'avril utilisant ESPNow — première utilisation du mode sommeil profond pour prolonger l'autonomie. Accompagné de faux AirPods imprimés en 3D comme leurres.",
   "githubLink": "",
-  "thumbnail": "/projects/prank-devices/overview.jpg",
+  "thumbnail": "/projects/prank-devices/overview.webp",
   "media": [
     {
       "type": "image",
-      "url": "/projects/prank-devices/overview.jpg",
+      "url": "/projects/prank-devices/overview.webp",
       "alt": "April fools prank devices with fake AirPods",
       "altFr": "Appareils de farce pour le poisson d'avril avec faux AirPods",
       "caption": "Prank fleet — April 1, 2025",
@@ -19,7 +19,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/prank-devices/device.jpg",
+      "url": "/projects/prank-devices/device.webp",
       "alt": "ESP32 ESPNow prank device",
       "altFr": "Appareil de farce ESP32 utilisant ESPNow",
       "caption": "ESPNow + deep sleep device",

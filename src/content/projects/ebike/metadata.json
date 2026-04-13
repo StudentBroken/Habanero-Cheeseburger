@@ -7,11 +7,11 @@
   "description": "Step-down adapter that taps the ebike's 48V battery and outputs USB-C Power Delivery, turning the bike into a mobile charger.",
   "descriptionFr": "Adaptateur abaisseur de tension qui exploite la batterie 48V du vélo électrique et fournit une sortie USB-C Power Delivery, transformant le vélo en chargeur mobile.",
   "githubLink": "",
-  "thumbnail": "/projects/ebike/overview.jpg",
+  "thumbnail": "/projects/ebike/overview.webp",
   "media": [
     {
       "type": "image",
-      "url": "/projects/ebike/overview.jpg",
+      "url": "/projects/ebike/overview.webp",
       "alt": "Ebike 48V to USB-C PD adapter",
       "altFr": "Adaptateur Ebike 48V vers USB-C PD",
       "caption": "48V → USB-C PD",

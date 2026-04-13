@@ -7,11 +7,11 @@
   "description": "Custom speakers built to fit flush inside the earcups of a ski helmet, completely hidden from the outside.",
   "descriptionFr": "Haut-parleurs personnalisés conçus pour s'intégrer parfaitement à l'intérieur des oreillettes d'un casque de ski, complètement invisibles de l'extérieur.",
   "githubLink": "",
-  "thumbnail": "/projects/helmet-speaker/side.jpg",
+  "thumbnail": "/projects/helmet-speaker/side.webp",
   "media": [
     {
       "type": "image",
-      "url": "/projects/helmet-speaker/side.jpg",
+      "url": "/projects/helmet-speaker/side.webp",
       "alt": "Helmet speaker side view",
       "altFr": "Vue latérale du haut-parleur de casque",
       "caption": "Side profile",
@@ -19,7 +19,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/helmet-speaker/overview.jpg",
+      "url": "/projects/helmet-speaker/overview.webp",
       "alt": "Helmet speaker overview",
       "altFr": "Vue d'ensemble du haut-parleur de casque",
       "caption": "Overview",
@@ -27,7 +27,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/helmet-speaker/front.jpg",
+      "url": "/projects/helmet-speaker/front.webp",
       "alt": "Helmet speaker front view",
       "altFr": "Vue frontale du haut-parleur de casque",
       "caption": "Front",

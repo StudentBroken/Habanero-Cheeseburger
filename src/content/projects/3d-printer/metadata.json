@@ -7,11 +7,11 @@
   "description": "A fully rebuilt Ender 3 running Klipper with a direct drive extruder and PEI sheet. Started on a Raspberry Pi Zero 2W, migrated to a Pi 4 after persistent crashes. Still the main printer.",
   "descriptionFr": "Une Ender 3 entièrement reconstruite tournant sous Klipper avec un extrudeur direct drive et un plateau PEI. A commencé sur un Raspberry Pi Zero 2W, puis migré vers un Pi 4 après des plantages persistants. Toujours l'imprimante principale.",
   "githubLink": "",
-  "thumbnail": "/projects/3d-printer/printer-demo.mp4",
+  "thumbnail": "/projects/3d-printer/printer-demo.webm",
   "media": [
     {
       "type": "video",
-      "url": "/projects/3d-printer/printer-demo.mp4",
+      "url": "/projects/3d-printer/printer-demo.webm",
       "caption": "Running at speed",
       "captionFr": "Fonctionnement à grande vitesse"
     }

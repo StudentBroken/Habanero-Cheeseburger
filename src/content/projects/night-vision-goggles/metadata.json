@@ -7,11 +7,11 @@
   "description": "DIY night vision goggles with a high-power IR illuminator and a dual-battery system for extended runtime.",
   "descriptionFr": "Lunettes de vision nocturne DIY avec un illuminateur IR haute puissance et un système à double batterie pour une autonomie prolongée.",
   "githubLink": "",
-  "thumbnail": "/projects/night-vision-goggles/overview.jpg",
+  "thumbnail": "/projects/night-vision-goggles/overview.webp",
   "media": [
     {
       "type": "image",
-      "url": "/projects/night-vision-goggles/overview.jpg",
+      "url": "/projects/night-vision-goggles/overview.webp",
       "alt": "DIY night vision goggles with IR illuminator",
       "altFr": "Lunettes de vision nocturne DIY avec illuminateur IR",
       "caption": "High-power IR illuminator, dual battery",

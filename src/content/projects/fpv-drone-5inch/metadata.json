@@ -9,11 +9,11 @@
   "description": "Full 5-inch FPV freestyle build on a $500 budget including the DJI O3 air unit, with custom 3D printed TPU mounts for the FC and VTX stack.",
   "descriptionFr": "Build freestyle FPV complet de 5 pouces avec un budget de 500 $, incluant l'unité aérienne DJI O3, avec des supports en TPU imprimés en 3D personnalisés pour le FC et le VTX.",
   "githubLink": "",
-  "thumbnail": "/projects/fpv-drone-5inch/assembled.jpg",
+  "thumbnail": "/projects/fpv-drone-5inch/assembled.webp",
   "media": [
     {
       "type": "image",
-      "url": "/projects/fpv-drone-5inch/assembled.jpg",
+      "url": "/projects/fpv-drone-5inch/assembled.webp",
       "alt": "Fully assembled 5-inch FPV drone",
       "altFr": "Drone FPV 5 pouces entièrement assemblé",
       "caption": "Fully assembled — DJI O3, TPU mounts",
@@ -21,7 +21,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/fpv-drone-5inch/overview.jpg",
+      "url": "/projects/fpv-drone-5inch/overview.webp",
       "alt": "5-inch FPV drone overview",
       "altFr": "Vue d'ensemble du drone FPV 5 pouces",
       "caption": "Overview",
@@ -29,7 +29,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/fpv-drone-5inch/cable-routing.jpg",
+      "url": "/projects/fpv-drone-5inch/cable-routing.webp",
       "alt": "Cable routing with FC, VTX and TPU mounts",
       "altFr": "Routage des câbles avec FC, VTX et supports en TPU",
       "caption": "Cable routing + custom TPU mounts",
@@ -37,7 +37,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/fpv-drone-5inch/build.jpg",
+      "url": "/projects/fpv-drone-5inch/build.webp",
       "alt": "Building the 5-inch drone",
       "altFr": "Construction du drone 5 pouces",
       "caption": "Build phase",
@@ -45,7 +45,7 @@
     },
     {
       "type": "video",
-      "url": "/projects/fpv-drone-5inch/firmware-flash.mp4",
+      "url": "/projects/fpv-drone-5inch/firmware-flash.webm",
       "caption": "Flashing the firmware",
       "captionFr": "Flashage du micrologiciel"
     }

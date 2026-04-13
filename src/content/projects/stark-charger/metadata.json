@@ -7,11 +7,11 @@
   "description": "Compact 3D printed enclosure for the Stark Varg electric motorbike charger, designed from scratch in Onshape by measuring the original unit. Abandoned — the Ender 5 available at the time couldn't print it reliably.",
   "descriptionFr": "Boîtier compact imprimé en 3D pour le chargeur de la moto électrique Stark Varg, conçu de zéro sur Onshape en mesurant l'unité d'origine. Abandonné — l'Ender 5 disponible à l'époque ne pouvait pas l'imprimer de manière fiable.",
   "githubLink": "",
-  "thumbnail": "/projects/stark-charger/measuring.jpg",
+  "thumbnail": "/projects/stark-charger/measuring.webp",
   "media": [
     {
       "type": "image",
-      "url": "/projects/stark-charger/measuring.jpg",
+      "url": "/projects/stark-charger/measuring.webp",
       "alt": "Measuring the Stark Varg charger dimensions",
       "altFr": "Mesure des dimensions du chargeur Stark Varg",
       "caption": "Measuring for Onshape model",
@@ -19,7 +19,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/stark-charger/measuring-2.jpg",
+      "url": "/projects/stark-charger/measuring-2.webp",
       "alt": "Alternate measurement view",
       "altFr": "Vue alternative des mesures",
       "caption": "Dimensions — alternate angle",
@@ -27,13 +27,13 @@
     },
     {
       "type": "video",
-      "url": "/projects/stark-charger/3d-model.mp4",
+      "url": "/projects/stark-charger/3d-model.webm",
       "caption": "Onshape model — compact case",
       "captionFr": "Modèle Onshape — boîtier compact"
     },
     {
       "type": "video",
-      "url": "/projects/stark-charger/charger-box.mp4",
+      "url": "/projects/stark-charger/charger-box.webm",
       "caption": "Charger box overview",
       "captionFr": "Vue d'ensemble du boîtier de chargeur"
     }

@@ -7,11 +7,11 @@
   "description": "Morning curtain automation built by hacking a smart plug. Worked flawlessly every day for two months before the mount gave up and it fell off.",
   "descriptionFr": "Automatisation matinale des rideaux construite en modifiant une prise intelligente. A fonctionné sans faille tous les jours pendant deux mois avant que le support ne lâche et qu'il ne tombe.",
   "githubLink": "",
-  "thumbnail": "/projects/curtain-opener/overview.jpg",
+  "thumbnail": "/projects/curtain-opener/overview.webp",
   "media": [
     {
       "type": "image",
-      "url": "/projects/curtain-opener/overview.jpg",
+      "url": "/projects/curtain-opener/overview.webp",
       "alt": "Automatic curtain opener installed",
       "altFr": "Ouvre-rideau automatique installé",
       "caption": "Hacked smart plug curtain opener",

@@ -9,11 +9,11 @@
   "description": "3-inch FPV build on a Baby Ape carbon fiber frame, running the same FC as a Cinelog 20 with a MacGyvered DJI O3 air unit on custom 3D printed standoffs. Built in two hours.",
   "descriptionFr": "Build FPV de 3 pouces sur un châssis en fibre de carbone Baby Ape, utilisant le même FC qu'un Cinelog 20 avec une unité aérienne DJI O3 « MacGyverée » sur des entretoises personnalisées imprimées en 3D. Construit en deux heures.",
   "githubLink": "",
-  "thumbnail": "/projects/fpv-drone-3inch/overview.jpg",
+  "thumbnail": "/projects/fpv-drone-3inch/overview.webp",
   "media": [
     {
       "type": "image",
-      "url": "/projects/fpv-drone-3inch/overview.jpg",
+      "url": "/projects/fpv-drone-3inch/overview.webp",
       "alt": "3-inch FPV drone overview",
       "altFr": "Vue d'ensemble du drone FPV 3 pouces",
       "caption": "Baby Ape CF frame — DJI O3 MacGyvered on",
@@ -21,7 +21,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/fpv-drone-3inch/front.jpg",
+      "url": "/projects/fpv-drone-3inch/front.webp",
       "alt": "Front view of 3-inch drone",
       "altFr": "Vue frontale du drone 3 pouces",
       "caption": "Front",
@@ -29,7 +29,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/fpv-drone-3inch/side.jpg",
+      "url": "/projects/fpv-drone-3inch/side.webp",
       "alt": "Side view of 3-inch drone",
       "altFr": "Vue latérale du drone 3 pouces",
       "caption": "Side",

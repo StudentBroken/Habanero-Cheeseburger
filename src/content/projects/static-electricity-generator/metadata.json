@@ -7,11 +7,11 @@
   "description": "High-voltage static electricity generator using a voltage multiplier and AC HV circuit, repurposed as a wearable negative ion generator with a ground plane touching the floor.",
   "descriptionFr": "Générateur d'électricité statique haute tension utilisant un multiplicateur de tension et un circuit AC HV, reconverti en générateur d'ions négatifs portable avec un plan de masse touchant le sol.",
   "githubLink": "",
-  "thumbnail": "/projects/static-electricity-generator/overview.jpg",
+  "thumbnail": "/projects/static-electricity-generator/overview.webp",
   "media": [
     {
       "type": "image",
-      "url": "/projects/static-electricity-generator/overview.jpg",
+      "url": "/projects/static-electricity-generator/overview.webp",
       "alt": "Static electricity generator circuit",
       "altFr": "Circuit du générateur d'électricité statique",
       "caption": "Voltage multiplier + AC HV circuit",
@@ -19,7 +19,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/static-electricity-generator/circuit.jpg",
+      "url": "/projects/static-electricity-generator/circuit.webp",
       "alt": "Voltage multiplier close-up",
       "altFr": "Gros plan du multiplicateur de tension",
       "caption": "Multiplier detail",
@@ -27,13 +27,13 @@
     },
     {
       "type": "video",
-      "url": "/projects/static-electricity-generator/test.mp4",
+      "url": "/projects/static-electricity-generator/test.webm",
       "caption": "High voltage test",
       "captionFr": "Test haute tension"
     },
     {
       "type": "video",
-      "url": "/projects/static-electricity-generator/negative-ion-test.mp4",
+      "url": "/projects/static-electricity-generator/negative-ion-test.webm",
       "caption": "Negative ion generator test",
       "captionFr": "Test du générateur d'ions négatifs"
     }

@@ -5,29 +5,29 @@
   "subcategory": "ESP Eraser",
   "description": "A disguised ESP32 Xiao Sense Cam hidden inside an eraser. It captures images, sends them to GPT-4o via API, and relays the response as audio through a hidden earpiece — first version of the system.",
   "githubLink": "",
-  "thumbnail": "/projects/eraser-v1/overview.jpg",
+  "thumbnail": "/projects/eraser-v1/overview.webp",
   "media": [
     {
       "type": "image",
-      "url": "/projects/eraser-v1/overview.jpg",
+      "url": "/projects/eraser-v1/overview.webp",
       "alt": "ESP32 eraser v1 exterior",
       "caption": "Looks like a normal eraser"
     },
     {
       "type": "image",
-      "url": "/projects/eraser-v1/front.jpg",
+      "url": "/projects/eraser-v1/front.webp",
       "alt": "Front of the original eraser",
       "caption": "Front view"
     },
     {
       "type": "image",
-      "url": "/projects/eraser-v1/inside.jpg",
+      "url": "/projects/eraser-v1/inside.webp",
       "alt": "Inside the eraser v1",
       "caption": "Internal layout"
     },
     {
       "type": "image",
-      "url": "/projects/eraser-v1/inside-2.jpg",
+      "url": "/projects/eraser-v1/inside-2.webp",
       "alt": "Alternate inside view",
       "caption": "Guts — ESP32 Xiao Sense Cam"
     }

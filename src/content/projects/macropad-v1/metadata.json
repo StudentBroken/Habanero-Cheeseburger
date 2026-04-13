@@ -9,11 +9,11 @@
   "description": "Wireless BLE macropad built around an ESP32 S3, with a web interface for remapping keys. Used daily for browser navigation and Blender shortcuts.",
   "descriptionFr": "Macropad BLE sans fil construit autour d'un ESP32-S3, avec une interface web pour réassigner les touches. Utilisé quotidiennement pour la navigation web et les raccourcis Blender.",
   "githubLink": "",
-  "thumbnail": "/projects/macropad-v1/inside.jpg",
+  "thumbnail": "/projects/macropad-v1/inside.webp",
   "media": [
     {
       "type": "image",
-      "url": "/projects/macropad-v1/inside.jpg",
+      "url": "/projects/macropad-v1/inside.webp",
       "alt": "Inside the macropad v1",
       "altFr": "Intérieur du macropad v1",
       "caption": "ESP32 S3 inside",
@@ -21,7 +21,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/macropad-v1/web-interface.jpg",
+      "url": "/projects/macropad-v1/web-interface.webp",
       "alt": "Web interface for key customization",
       "altFr": "Interface web pour la personnalisation des touches",
       "caption": "Web key configurator",
