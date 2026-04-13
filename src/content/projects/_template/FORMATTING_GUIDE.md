@@ -182,9 +182,19 @@ Rules:
 
 ## Media
 
-- **Images:** JPG or PNG, any resolution. The carousel crops them to a square, so center the subject.
+- **Images:** Convert all images to WebP before placing them in `public/projects/<slug>/`. Resize to a maximum of 720 px on the longest side. Keep quality around 80%. Do not place raw JPGs or PNGs from `dump/` directly; always convert first. Suggested command (requires `cwebp` or `ffmpeg`):
+  ```
+  # cwebp (single file)
+  cwebp -q 80 -resize 720 0 photo.jpg -o photo.webp
+
+  # ffmpeg (batch, folder)
+  for f in dump/*.jpg dump/*.png; do
+    ffmpeg -i "$f" -vf "scale='min(720,iw):-1'" -quality 80 "public/projects/<slug>/$(basename "${f%.*}").webp"
+  done
+  ```
+  Update all `url` values in `metadata.json` to end in `.webp` accordingly.
 - **Video:** MP4, H.264. Keep files under 50 MB if possible. The carousel plays videos muted and looped; include a normal-speed demo clip rather than a time-lapse if the motion matters.
 - **3D Models:** The `modelFile` viewer handles binary/ASCII `.stl` or `.obj` files.
 - **Other assets:** `.bin`, `.hex`, APKs, PDFs, etc. — any file that doesn't need a dedicated viewer should go in `assets` as a download button with a short description.
 
-Find all raw source media and assets in the root `dump/` folder. Place copies of them in `public/projects/<slug>/` and reference them with that path in metadata.json.
+Find all raw source media and assets in the root `dump/` folder. Convert images to WebP (see above), then place files in `public/projects/<slug>/` and reference them with that path in metadata.json.
