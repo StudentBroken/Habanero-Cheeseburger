@@ -5,7 +5,7 @@ import { Printer } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 import LangToggle from './LangToggle';
 import { useLang } from './LangProvider';
-import { getAge } from '@/lib/age';
+import { getAge, BIRTH_DATE } from '@/lib/age';
 import { generatePrintHTML, compressProjectImages } from '@/lib/printTemplate';
 
 const KONAMI = [
@@ -49,6 +49,7 @@ export default function HomeContent({ projects }) {
   const isDragging = useRef(false);
   const dragStart = useRef({ x: 0, scroll: 0 });
   const nodeRefs  = useRef([]);
+  const itemRefs  = useRef([]);
   const wgtCur    = useRef([]);
   const wgtTgt    = useRef([]);
   const rafRef    = useRef(null);
@@ -57,6 +58,41 @@ export default function HomeContent({ projects }) {
   const titleRef  = useRef(null);
 
   const sortedProjects = [...projects].sort((a, b) => new Date(a.date) - new Date(b.date));
+
+  // Age-group helpers
+  function getAgeAtDate(dateStr) {
+    const d = new Date(dateStr + 'T12:00:00');
+    let age = d.getFullYear() - BIRTH_DATE.getFullYear();
+    const m = d.getMonth() - BIRTH_DATE.getMonth();
+    if (m < 0 || (m === 0 && d.getDate() < BIRTH_DATE.getDate())) age--;
+    return age;
+  }
+
+  const GROUP_INFO = {
+    14: { en: 'Early builds',        fr: 'Premiers projets'    },
+    15: { en: 'Systems & firmware',  fr: 'Systèmes & firmware'  },
+    16: { en: 'Integrated hardware', fr: 'Hardware intégré'     },
+    17: { en: 'Current',             fr: 'En cours'             },
+  };
+
+  // Group sortedProjects by age (preserving chronological order within each group)
+  const groupMap = new Map();
+  for (const p of sortedProjects) {
+    const age = getAgeAtDate(p.date);
+    if (!groupMap.has(age)) groupMap.set(age, []);
+    groupMap.get(age).push(p);
+  }
+  const timelineGroups = [...groupMap.entries()]
+    .sort((a, b) => a[0] - b[0])
+    .map(([age, projs]) => ({
+      age,
+      label: isFr ? `${age} ans` : `${age} y/o`,
+      description: GROUP_INFO[age]?.[isFr ? 'fr' : 'en'] ?? '',
+      projects: projs,
+    }));
+
+  // Flat index map so nodeRefs / itemRefs can be addressed by sortedProjects index
+  const projectFlatIndex = new Map(sortedProjects.map((p, i) => [p.id, i]));
 
   // Pre-compute series: collect ALL builds across every tier per subcategory.
   // Each series card is shown exactly once, in the lowest-numbered (highest-quality) tier.
@@ -187,9 +223,14 @@ export default function HomeContent({ projects }) {
         wgtCur.current[i] += (wgtTgt.current[i] - wgtCur.current[i]) * DOCK_LERP;
 
         const node2 = nodeRefs.current[i];
+        const item2 = itemRefs.current[i];
         if (node2) {
           const t = wgtCur.current[i];
-          node2.style.transform = `scale(${1 + (DOCK_SCALE - 1) * t})`;
+          // Scale the parent Link element so the pointer hit area matches the visual dot size
+          if (item2) {
+            item2.style.transform = `scale(${1 + (DOCK_SCALE - 1) * t})`;
+            item2.style.zIndex    = t > 0.05 ? String(Math.round(1 + t * 20)) : '1';
+          }
           const [r, g, b] = isDark
             ? [Math.round(83  + (56  - 83)  * t), Math.round(88  + (189 - 88)  * t), Math.round(96  + (248 - 96)  * t)]
             : [Math.round(185 + (14  - 185) * t), Math.round(194 + (165 - 194) * t), Math.round(207 + (233 - 207) * t)];
@@ -412,17 +453,6 @@ export default function HomeContent({ projects }) {
           <p className="hero-subtitle">
             {isFr ? "Une archive numérique des projets que j'ai bâtis." : "A digital archive of projects I've built."}
           </p>
-          <p style={{
-            fontFamily: 'var(--font-mono, monospace)',
-            fontSize: '0.78rem',
-            letterSpacing: '0.1em',
-            color: 'var(--accent-cyan)',
-            opacity: 0.65,
-            marginTop: '0.5rem',
-            textShadow: 'var(--text-shadow-raised)',
-          }}>
-            {getAge(null, isFr)}
-          </p>
         </header>
 
         <section id="section-timeline" style={{ marginBottom: '4rem' }} className="mobile-hide">
@@ -448,22 +478,39 @@ export default function HomeContent({ projects }) {
                 className="htimeline__scroll hide-scrollbar"
                 onMouseDown={onMouseDown}
               >
-                {sortedProjects.map((project, i) => (
-                  <Link
-                    key={project.id}
-                    href={`/projects/${project.id}`}
-                    className="htimeline__item"
-                    onMouseEnter={() => setHoveredProject(project)}
-                    onMouseLeave={() => setHoveredProject(null)}
-                    onTouchStart={() => setHoveredProject(project)}
+                {timelineGroups.map(group => (
+                  <div
+                    key={group.age}
+                    className="htimeline__group"
+                    style={{ flex: Math.max(group.projects.length, 3) }}
                   >
-                    <div
-                      className="htimeline__node"
-                      ref={el => { nodeRefs.current[i] = el; }}
-                    />
-                  </Link>
+                    <div className="htimeline__group-header">
+                      <span className="htimeline__group-age">{group.label}</span>
+                      <span className="htimeline__group-desc">{group.description}</span>
+                    </div>
+                    <div className="htimeline__group-dots">
+                      {group.projects.map(project => {
+                        const idx = projectFlatIndex.get(project.id);
+                        return (
+                          <Link
+                            key={project.id}
+                            href={`/projects/${project.id}`}
+                            className="htimeline__item"
+                            ref={el => { itemRefs.current[idx] = el; }}
+                            onMouseEnter={() => setHoveredProject(project)}
+                            onMouseLeave={() => setHoveredProject(null)}
+                            onTouchStart={() => setHoveredProject(project)}
+                          >
+                            <div
+                              className="htimeline__node"
+                              ref={el => { nodeRefs.current[idx] = el; }}
+                            />
+                          </Link>
+                        );
+                      })}
+                    </div>
+                  </div>
                 ))}
-                <div style={{ minWidth: '4rem', flexShrink: 0 }} />
               </div>
             </div>
 
@@ -571,7 +618,6 @@ export default function HomeContent({ projects }) {
                             {thumb ? (
                               <>
                                 <img src={thumb} alt={name} loading="lazy" />
-                                <div className="project-card__thumb-overlay" />
                               </>
                             ) : (
                               <div className="project-card__thumb-placeholder">🔧</div>
@@ -613,12 +659,10 @@ export default function HomeContent({ projects }) {
                         {project.thumbnail ? (
                           <div className="project-card__thumb">
                             <img src={project.thumbnail} alt={project.title} loading="lazy" />
-                            <div className="project-card__thumb-overlay" />
                           </div>
                         ) : project.media?.find(m => m.type === 'image') ? (
                           <div className="project-card__thumb">
                             <img src={project.media.find(m => m.type === 'image').url} alt={project.title} loading="lazy" />
-                            <div className="project-card__thumb-overlay" />
                           </div>
                         ) : (
                           <div className="project-card__thumb-placeholder">🔧</div>

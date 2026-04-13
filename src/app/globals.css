@@ -438,15 +438,6 @@ p { text-shadow: var(--text-shadow-raised); }
   transform: scale(1.06);
 }
 
-.project-card__thumb-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 60%;
-  background: linear-gradient(to top, var(--bg-panel) 0%, transparent 100%);
-  pointer-events: none;
-}
 
 .project-card__body {
   padding: 1.25rem 1.5rem 1.5rem;
@@ -566,8 +557,7 @@ p { text-shadow: var(--text-shadow-raised); }
 
 .htimeline__scroll {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  align-items: stretch;
   gap: 0;
   overflow-x: auto;
   overflow-y: hidden;
@@ -597,6 +587,53 @@ p { text-shadow: var(--text-shadow-raised); }
   pointer-events: none;
 }
 
+/* Age group section */
+.htimeline__group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-width: 72px;
+  border-left: 1px dashed var(--panel-border);
+}
+.htimeline__group:first-child {
+  border-left: none;
+}
+
+.htimeline__group-header {
+  position: absolute;
+  top: 5px;
+  left: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  pointer-events: none;
+  z-index: 3;
+}
+.htimeline__group-age {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.58rem;
+  font-weight: 700;
+  color: var(--accent-cyan);
+  letter-spacing: 0.08em;
+  line-height: 1;
+  opacity: 0.85;
+}
+.htimeline__group-desc {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.5rem;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  line-height: 1;
+  opacity: 0.6;
+}
+
+.htimeline__group-dots {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
 /* Event marker */
 .htimeline__item {
   flex: 1;
@@ -609,6 +646,8 @@ p { text-shadow: var(--text-shadow-raised); }
   z-index: 1;
   outline: none;
   -webkit-tap-highlight-color: transparent;
+  transform-origin: center;
+  will-change: transform;
 }
 
 /* The dot itself — size and color driven entirely by rAF */

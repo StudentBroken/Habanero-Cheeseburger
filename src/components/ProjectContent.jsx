@@ -46,9 +46,6 @@ export default function ProjectContent({ projectData }) {
               </span>
             )}
             <span style={{ fontSize: '0.9rem' }}>{projectData.date}</span>
-            <span style={{ fontFamily: 'var(--font-mono, monospace)', fontSize: '0.78rem', color: 'var(--accent-orange)', letterSpacing: '0.08em', opacity: 0.9 }}>
-              {getAge(projectData.date, isFr)}
-            </span>
           </div>
         </header>
       </div>
@@ -108,6 +105,20 @@ export default function ProjectContent({ projectData }) {
             )}
           </div>
         )}
+
+        <p style={{
+          marginTop: '3rem',
+          fontFamily: 'var(--font-mono, monospace)',
+          fontSize: '0.72rem',
+          letterSpacing: '0.1em',
+          color: 'var(--text-muted)',
+          opacity: 0.55,
+          textAlign: 'right',
+        }}>
+          {isFr
+            ? `Construit à ${getAge(projectData.date, isFr)}`
+            : `Built at ${getAge(projectData.date, isFr)}`}
+        </p>
       </div>
     </main>
   );

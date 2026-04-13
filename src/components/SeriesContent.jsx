@@ -80,12 +80,10 @@ export default function SeriesContent({ seriesData }) {
               {project.thumbnail ? (
                 <div className="project-card__thumb">
                   <img src={project.thumbnail} alt={project.title} loading="lazy" />
-                  <div className="project-card__thumb-overlay" />
                 </div>
               ) : project.media?.find(m => m.type === 'image') ? (
                 <div className="project-card__thumb">
                   <img src={project.media.find(m => m.type === 'image').url} alt={project.title} loading="lazy" />
-                  <div className="project-card__thumb-overlay" />
                 </div>
               ) : (
                 <div className="project-card__thumb-placeholder">🔧</div>
