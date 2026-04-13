@@ -1,19 +1,49 @@
 # Système de Suivi de Tête pour DJI O3 Air Unit
 
-Ce projet est un système de suivi de tête (head tracking) à deux axes, fait sur mesure pour les lunettes DJI Goggles 3 et une unité O3 Air. L'idée est partie du fait que j'avais cet équipement DJI à ma disposition et je voulais faire un gimbal de head tracking complètement fonctionnel de A à Z.
+Ce projet est un système de suivi de tête à deux axes bâti pour les DJI Goggles 3 et l'O3 Air Unit. Deux ESP32-C3 communiquent via ESP-NOW — un sur les lunettes qui lit l'orientation de la tête, et un sur le drone qui pilote les servos.
 
-## Quincaillerie Électronique
+Le design mécanique a été esquissé pendant un examen de maths. Le prof n'était pas content.
 
-La base matérielle repose sur un système de mouvement à deux axes avec un boîtier que j'ai modélisé et imprimé en 3D moi-même pour ce build.
+## Quincaillerie
 
-- **Suivi de Mouvement** — Un module MPU capte tous les mouvements de la tête de l'utilisateur en temps réel.
-- **Microcontrôleurs** — Deux ESP32 C3 Superminis s'occupent de la logique. L'un est monté sur les lunettes comme transmetteur, et l'autre est sur la bébelle téléguidée comme receveur.
-- **Moteurs** — Deux servomoteurs gèrent les axes de *pan* et *tilt* du gimbal.
-- **Alimentation** — Un petit *buck converter* (régulateur de tension) permet de rouler le système sur des batteries allant de 2S à 6S sans tout faire sauter.
-- **Système Vidéo** — L'unité DJI O3 Air Unit agit comme caméra principale et transmetteur vidéo.
+Le gimbal est conçu sur mesure et imprimé en 3D, logeant deux micro-servos pour le *pan* et le *tilt*. Un *buck converter* accepte une entrée de batterie 2S à 6S pour rouler sur ce qui alimente déjà l'aéronef.
 
-## Logiciel Informatique
+- **Côté lunettes** — ESP32-C3 + IMU MPU6050
+- **Côté drone** — ESP32-C3 + deux micro-servos (*pan* sur pin 7, *tilt* sur pin 6)
 
-Le logiciel informatique utilise le protocole ESP-NOW pour faire jaser les deux ESP32 C3 Superminis ensemble. Ça donne un délai super bas (low latency), ce qui est crissement important pour qu'un système de suivi de tête réponde de façon naturelle et ne donne pas mal au cœur.
+## Liste des Composants (BOM)
 
-Le transmetteur lit les données du MPU, calcule les angles nécessaires pour le *pan* et le *tilt*, puis pitche ces coordonées-là via ESP-NOW. L'autre ESP32 C3 prend ces commandes et les transforme en signaux PWM ultra précis pour driver les deux servomoteurs du mouvement à deux axes.
+L'O3 Air Unit DJI n'est pas inclus — il est partagé avec les builds de drones FPV.
+
+| Composant | Coût |
+|---|---|
+| ESP32-C3 Super Mini × 2 | 2.00 $ |
+| Module gyro/accéléromètre MPU6050 | 3.00 $ |
+| Micro-servos × 2 (pan + tilt) | 5.00 $ |
+| Buck converter à découpage | 1.00 $ |
+| Petit ventilateur de refroidissement | 2.00 $ |
+| Pièces imprimées en 3D (PLA) | 3.00 $ |
+| Divers (fils, connecteurs, visserie) | 1.00 $ |
+| **Total** | **17.00 $** |
+
+## Firmware du Transmetteur
+
+L'ESP32 côté lunettes utilise le DMP (Digital Motion Processor) intégré du MPU6050 pour calculer les angles yaw/pitch/roll à partir de quaternions, ce qui évite la dérive qui vient de l'intégration des données brutes du gyroscope. Au démarrage, il exécute une routine d'auto-calibration : il collecte 200 paquets DMP au repos et fait la moyenne du yaw et du pitch pour calculer des offsets, ce qui permet au gimbal de se centrer automatiquement peu importe la position des lunettes à l'allumage.
+
+Seulement le yaw et le pitch sont transmis — le roll est ignoré puisque le gimbal n'a pas d'axe de roll. Chaque paquet est une structure `secure_message` qui transporte les deux angles, un numéro de séquence incrémentiel et un *checksum*. Le receveur utilise les deux pour rejeter les paquets dupliqués, hors séquence ou corrompus.
+
+## Firmware du Receveur
+
+L'ESP32 côté drone reçoit les paquets ESP-NOW, valide le *checksum* et le numéro de séquence, puis mappe les angles en largeurs d'impulsion servo. Le yaw mappe vers ±90° de *pan*, le pitch mappe vers ±45° de *tilt*. Une zone morte d'entrée de 0.5° empêche les servos de chasser autour du centre quand la tête est immobile.
+
+Le mouvement des servos est lissé avec un filtre exponentiel (α = 0.07), ce qui élimine les à-coups qui viennent des paliers d'angles discrets et rend le mouvement du gimbal proportionnel à la vitesse de mouvement de la tête. Si aucun paquet valide n'arrive pendant 1.5 seconde, les servos retournent automatiquement au centre — ce qui fait qu'une perte de lien ne laisse pas la caméra pointer vers le sol.
+
+Le receveur pilote les servos directement sans passer par le contrôleur de vol ni le protocole MSP, ce qui garde le chemin de contrôle court et la latence basse.
+
+## Dérive du Gyroscope & Calibration
+
+La première approche utilisait les données brutes du gyroscope — intégrer la vitesse angulaire dans le temps pour estimer l'orientation. Le problème c'est que les gyroscopes accumulent de petites erreurs à chaque lecture, et ces erreurs s'additionnent. Après quelques minutes d'utilisation, le gimbal dérivait lentement de son centre même avec la tête parfaitement immobile, ce qui rend le système inutilisable pour un vol soutenu.
+
+La solution est le DMP intégré du MPU6050, qui fusionne les données du gyroscope et de l'accéléromètre en une représentation quaternion de l'orientation. L'accéléromètre fournit une référence gravitationnelle absolue qui corrige constamment la dérive du gyroscope, donc l'estimation de l'angle reste stable dans le temps sans dériver.
+
+La calibration est un problème à part. Chaque unité MPU6050 a son propre biais de fabrication sur chaque axe — la lecture "zéro" au repos n'est jamais vraiment zéro. Le firmware gère ça en deux couches : des offsets matériels codés en dur pour le chip spécifique, et une auto-calibration logicielle à chaque démarrage qui mesure l'angle au repos et le soustrait. Ça fait que le gimbal n'a pas besoin d'être dans une position particulière à l'allumage pour se centrer correctement.

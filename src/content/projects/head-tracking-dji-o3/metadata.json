@@ -49,6 +49,16 @@
       "name": "Download STL",
       "url": "/projects/head-tracking-dji-o3/o3-gimbal-full-set.stl",
       "description": "3D printed motion system and enclosure"
+    },
+    {
+      "name": "Firmware — Transmitter (.ino)",
+      "url": "/projects/head-tracking-dji-o3/Gyro-z-x-no-y.ino",
+      "description": "Goggles-side ESP32: MPU6050 DMP, auto-calibration, ESP-NOW secure packet transmit (yaw + pitch)"
+    },
+    {
+      "name": "Firmware — Gimbal Receiver (.ino)",
+      "url": "/projects/head-tracking-dji-o3/Gimbal_no_msp.ino",
+      "description": "Drone-side ESP32: ESP-NOW receive, checksum validation, exponential smoothing, pan/tilt servo control with failsafe recentering"
     }
   ],
   "tier": 1
