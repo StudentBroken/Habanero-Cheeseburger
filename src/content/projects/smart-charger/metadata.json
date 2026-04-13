@@ -2,7 +2,7 @@
   "title": "Smart Ebike Charger",
   "date": "2025-06-18",
   "category": "HARDWARE & SOFTWARE",
-  "description": "ESP32-based 24V charger for an ebike that cuts off at 4.15V per cell instead of 4.2V to extend battery longevity. WiFi-enabled with an OLED charge progress bar and LDO heatsink.",
+  "description": "ESP32-based smart charger for a custom 6S ebike battery pack, designed to safely use a LiHV charger on standard LiPo cells by cutting off at a timed voltage threshold that accounts for IR drop. WiFi-enabled with live web dashboard and OLED display.",
   "githubLink": "",
   "thumbnail": "/projects/smart-charger/overview.jpg",
   "media": [
@@ -23,6 +23,13 @@
       "url": "/projects/smart-charger/overview-2.jpg",
       "alt": "Alternate view of smart charger",
       "caption": "Alternate view"
+    }
+  ],
+  "assets": [
+    {
+      "name": "Download Firmware (.ino)",
+      "url": "/projects/smart-charger/smartcharger.ino",
+      "description": "Arduino sketch for the ESP32-C3: relay cutoff logic, hold timer, voltage calibration, web dashboard, NVS settings persistence"
     }
   ],
   "tier": 1
