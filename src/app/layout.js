@@ -35,9 +35,19 @@ const initScript = `
 `;
 
 export default function RootLayout({ children }) {
+  const siteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Habanero Cheeseburger",
+    "description": "A digital hub for maker projects and hardware builds.",
+  };
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="index, follow" />
+        <script type="application/ld+json">{JSON.stringify(siteSchema)}</script>
         <Script id="theme-lang-init" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: initScript }} />
       </head>
       <body className={inter.className}>

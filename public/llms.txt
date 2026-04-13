@@ -1,0 +1,54 @@
+Habanero Cheeseburger - LLM Table of Contents
+
+Home
+/
+
+Projects
+- /projects/3d-printer
+- /projects/air-quality-sensor
+- /projects/curtain-opener
+- /projects/desk-setup
+- /projects/ebike
+- /projects/eraser-2026
+- /projects/eraser-v1
+- /projects/eraser-v2
+- /projects/eraser-v3
+- /projects/eskateboard
+- /projects/firework-detonator
+- /projects/fpv-drone-3inch
+- /projects/fpv-drone-5inch
+- /projects/fpv-drone-first
+- /projects/fpv-drone-mini
+- /projects/fpv-gel-blaster
+- /projects/head-tracking-dji-o3
+- /projects/heated-fpv-battery
+- /projects/helmet-speaker
+- /projects/jet
+- /projects/macropad-v1
+- /projects/macropad-v2
+- /projects/mic
+- /projects/night-vision-goggles
+- /projects/prank-devices
+- /projects/rc-f1-car
+- /projects/rc-wing
+- /projects/smart-charger
+- /projects/smart-glasses
+- /projects/smart-ski-goggles-v1
+- /projects/solos-hud
+- /projects/stark-charger
+- /projects/static-electricity-generator
+- /projects/underwater-scooter-v1
+- /projects/underwater-scooter-v2
+- /projects/v-plotter
+- /projects/water-sprayer-fpv-drone
+
+Series
+- /series/esp-eraser
+- /series/fpv-drone
+- /series/ble-macropad
+- /series/underwater-scooter
+
+Notes
+- Series pages are available under /series/<slug>
+- Project details are available under /projects/<slug>
+- Robots and crawling rules are in /robots.txt

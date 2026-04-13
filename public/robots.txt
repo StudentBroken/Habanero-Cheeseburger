@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Explicitly permit common AI indexing bots
+User-agent: OpenAI
+Allow: /
+
+User-agent: Perplexity
+Allow: /
