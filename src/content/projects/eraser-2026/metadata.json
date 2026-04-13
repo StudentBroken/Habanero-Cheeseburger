@@ -39,5 +39,6 @@
     }
   ],
   "tier": 1,
-  "hidden": true
+  "hidden": true,
+  "thumbnailSmall": "/projects/eraser-2026/assembled-480.webp"
 }

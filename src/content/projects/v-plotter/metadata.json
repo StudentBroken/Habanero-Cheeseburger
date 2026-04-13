@@ -66,5 +66,6 @@
       "description": "V-Bot 3D components for printing"
     }
   ],
-  "tier": 1
+  "tier": 1,
+  "thumbnailSmall": "/projects/v-plotter/on-the-whiteboard-close-up,-powered-on-480.webp"
 }

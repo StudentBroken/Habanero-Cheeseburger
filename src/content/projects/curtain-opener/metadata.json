@@ -18,5 +18,6 @@
       "captionFr": "Ouvre-rideau à partir d'une prise intelligente modifiée"
     }
   ],
-  "tier": 3
+  "tier": 3,
+  "thumbnailSmall": "/projects/curtain-opener/overview-480.webp"
 }

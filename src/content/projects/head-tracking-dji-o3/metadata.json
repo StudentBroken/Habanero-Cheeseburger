@@ -61,5 +61,6 @@
       "description": "Drone-side ESP32: ESP-NOW receive, checksum validation, exponential smoothing, pan/tilt servo control with failsafe recentering"
     }
   ],
-  "tier": 1
+  "tier": 1,
+  "thumbnailSmall": "/projects/head-tracking-dji-o3/close-up-480.webp"
 }

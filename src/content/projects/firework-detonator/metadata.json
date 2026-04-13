@@ -24,5 +24,6 @@
       "captionFr": "Test de la fonctionnalité de détonation temporisée"
     }
   ],
-  "tier": 3
+  "tier": 3,
+  "thumbnailSmall": "/projects/firework-detonator/hardware-setup-480.webp"
 }

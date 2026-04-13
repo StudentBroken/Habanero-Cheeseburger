@@ -28,5 +28,6 @@
       "captionFr": "Configurateur de touches web"
     }
   ],
-  "tier": 2
+  "tier": 2,
+  "thumbnailSmall": "/projects/macropad-v1/inside-480.webp"
 }

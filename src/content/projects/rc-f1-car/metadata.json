@@ -34,5 +34,6 @@
       "captionFr": "Support mural"
     }
   ],
-  "tier": 3
+  "tier": 3,
+  "thumbnailSmall": "/projects/rc-f1-car/overview-480.webp"
 }

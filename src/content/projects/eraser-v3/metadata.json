@@ -21,5 +21,6 @@
     }
   ],
   "tier": 2,
-  "hidden": true
+  "hidden": true,
+  "thumbnailSmall": "/projects/eraser-v3/overview-480.webp"
 }

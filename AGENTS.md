@@ -36,7 +36,8 @@ Every field an agent may need to set:
 | `category` | All-caps string shown as a badge (e.g. `HARDWARE`, `HARDWARE & SOFTWARE`) |
 | `subcategory` | Series name or `null` |
 | `description` | Plain text, 1–2 sentences, no markdown |
-| `thumbnail` | Path under `public/` — fallback to first media image if absent |
+| `thumbnail` | 720p WebP path under `public/` — fallback to first media image if absent |
+| `thumbnailSmall` | 480p WebP duplicate of `thumbnail`. Name: `photo.webp` → `photo-480.webp`. Generate alongside `thumbnail` for every new project. Omit only if `thumbnail` is a video. |
 | `githubLink` | URL or `null` |
 | `modelFile` | `.stl` / `.obj` path for the 3D viewer, or `null` |
 | `media` | Array of `{type, url, alt?, caption?}` for the carousel |
@@ -50,7 +51,7 @@ Every field an agent may need to set:
 Sections split on `## ` headings — each becomes a separate glass-panel card on the project page. Images can be inserted inline between paragraphs:
 
 ```markdown
-![Alt text](/projects/slug/photo.jpg)
+![Alt text](/projects/slug/photo.webp)
 *Caption shown below the image*
 ```
 

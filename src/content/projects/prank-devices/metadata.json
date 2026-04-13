@@ -26,5 +26,6 @@
       "captionFr": "Appareil ESPNow + mode sommeil profond"
     }
   ],
-  "tier": 2
+  "tier": 2,
+  "thumbnailSmall": "/projects/prank-devices/overview-480.webp"
 }

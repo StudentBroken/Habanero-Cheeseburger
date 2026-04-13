@@ -57,5 +57,6 @@
       "description": "PlatformIO project for the ESP32-C3 web interface and temp control."
     }
   ],
-  "tier": 2
+  "tier": 2,
+  "thumbnailSmall": "/projects/heated-fpv-battery/fully-assembled-480.webp"
 }

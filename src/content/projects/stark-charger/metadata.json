@@ -38,5 +38,6 @@
       "captionFr": "Vue d'ensemble du boîtier de chargeur"
     }
   ],
-  "tier": 3
+  "tier": 3,
+  "thumbnailSmall": "/projects/stark-charger/measuring-480.webp"
 }

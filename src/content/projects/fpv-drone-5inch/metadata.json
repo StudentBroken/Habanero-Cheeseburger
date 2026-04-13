@@ -50,5 +50,6 @@
       "captionFr": "Flashage du micrologiciel"
     }
   ],
-  "tier": 2
+  "tier": 2,
+  "thumbnailSmall": "/projects/fpv-drone-5inch/assembled-480.webp"
 }

@@ -44,5 +44,6 @@
       "captionFr": "Profil du câblage latéral"
     }
   ],
-  "tier": 2
+  "tier": 2,
+  "thumbnailSmall": "/projects/macropad-v2/overview-480.webp"
 }

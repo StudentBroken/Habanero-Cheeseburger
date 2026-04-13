@@ -52,5 +52,6 @@
       "captionFr": "Angle alternatif"
     }
   ],
-  "tier": 3
+  "tier": 3,
+  "thumbnailSmall": "/projects/fpv-drone-mini/overview-480.webp"
 }

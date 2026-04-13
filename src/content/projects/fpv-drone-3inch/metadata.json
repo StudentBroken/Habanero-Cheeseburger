@@ -36,5 +36,6 @@
       "captionFr": "Vue latérale"
     }
   ],
-  "tier": 2
+  "tier": 2,
+  "thumbnailSmall": "/projects/fpv-drone-3inch/overview-480.webp"
 }

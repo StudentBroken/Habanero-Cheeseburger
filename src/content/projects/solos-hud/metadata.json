@@ -101,5 +101,6 @@
       "description": "Custom companion app for VESC & Weather"
     }
   ],
-  "tier": 1
+  "tier": 1,
+  "thumbnailSmall": "/projects/solos-hud/20260326_235103-480.webp"
 }

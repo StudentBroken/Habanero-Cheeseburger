@@ -66,5 +66,6 @@
       "captionFr": "Vol d'essai"
     }
   ],
-  "tier": 3
+  "tier": 3,
+  "thumbnailSmall": "/projects/fpv-drone-first/overview-480.webp"
 }

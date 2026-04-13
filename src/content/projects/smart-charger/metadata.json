@@ -73,5 +73,6 @@
       "description": "Arduino sketch for the ESP32-C3: relay cutoff logic, hold timer, voltage calibration, web dashboard, NVS settings persistence"
     }
   ],
-  "tier": 1
+  "tier": 1,
+  "thumbnailSmall": "/projects/smart-charger/overview-480.webp"
 }

@@ -34,5 +34,6 @@
       "captionFr": "Face — à l'envers"
     }
   ],
-  "tier": 2
+  "tier": 2,
+  "thumbnailSmall": "/projects/smart-glasses/overview-480.webp"
 }

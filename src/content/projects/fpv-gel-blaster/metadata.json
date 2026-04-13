@@ -26,5 +26,6 @@
       "captionFr": "Étendu — détail du support de la charge utile"
     }
   ],
-  "tier": 2
+  "tier": 2,
+  "thumbnailSmall": "/projects/fpv-gel-blaster/overview-480.webp"
 }

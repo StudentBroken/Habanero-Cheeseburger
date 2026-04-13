@@ -50,5 +50,6 @@
       "captionFr": "Vue de dessus"
     }
   ],
-  "tier": 2
+  "tier": 2,
+  "thumbnailSmall": "/projects/rc-wing/overview-480.webp"
 }

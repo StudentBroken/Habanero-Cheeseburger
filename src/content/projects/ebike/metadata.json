@@ -18,5 +18,6 @@
       "captionFr": "48V → USB-C PD"
     }
   ],
-  "tier": 3
+  "tier": 3,
+  "thumbnailSmall": "/projects/ebike/overview-480.webp"
 }

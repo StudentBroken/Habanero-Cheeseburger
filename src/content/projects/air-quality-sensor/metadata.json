@@ -66,5 +66,6 @@
       "captionFr": "Base IKEA + couvercle imprimé en 3D"
     }
   ],
-  "tier": 2
+  "tier": 2,
+  "thumbnailSmall": "/projects/air-quality-sensor/assembled-480.webp"
 }

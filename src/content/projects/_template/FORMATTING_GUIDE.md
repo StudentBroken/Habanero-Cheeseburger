@@ -47,7 +47,8 @@ Full schema with every supported field:
   "subcategory": null,
   "description": "One or two sentences shown on the project card. No markdown.",
   "githubLink": "",
-  "thumbnail": "/projects/my-project/photo.jpg",
+  "thumbnail": "/projects/my-project/photo.webp",
+  "thumbnailSmall": "/projects/my-project/photo-480.webp",
   "modelFile": "/projects/my-project/model.obj",
   "media": [
     {
@@ -100,7 +101,8 @@ Full schema with every supported field:
 | `subcategory` | no | Groups this project with related builds (e.g. `"ESP Eraser"`, `"FPV Drone"`). All projects sharing the same string are shown as a single collapsible series card on the home page, linking to `/series/<slug>`. Use `null` if this project stands alone. |
 | `description` | yes | Plain prose, no markdown, no bullets, no emojis. End with a period. |
 | `githubLink` | no | Full URL or `null`. Shortcut for the most common external link. |
-| `thumbnail` | no | Path to the image used as the cover on the project card in the grid. If omitted, falls back to the first image in `media`. |
+| `thumbnail` | no | Path to the 720p WebP image used as the cover on the project card in the grid. If omitted, falls back to the first image in `media`. |
+| `thumbnailSmall` | no | Path to the 480p WebP duplicate of `thumbnail`, used for low-bandwidth / small-card rendering. Name it by appending `-480` to the thumbnail stem: `photo.webp` → `photo-480.webp`. Generate it alongside `thumbnail` whenever a new project is added. If the thumbnail is a video (`.webm`) this field is omitted. |
 | `modelFile` | no | Path to the 3D model for the viewer. Supports `.stl` and `.obj`. |
 | `media` | yes | At least one item. Each item requires `type` and `url`. See media rules below. |
 | `links` | no | External link buttons shown at page bottom. Each item needs `label` and `url`. Use for Onshape, Tinkercad, Adafruit guides, product pages, or any URL that isn't a downloadable file. |

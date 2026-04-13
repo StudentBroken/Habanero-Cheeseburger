@@ -24,5 +24,6 @@
       "captionFr": "Démo vidéo de l'affichage tête haute"
     }
   ],
-  "tier": 2
+  "tier": 2,
+  "thumbnailSmall": "/projects/smart-ski-goggles-v1/goggles-view-480.webp"
 }

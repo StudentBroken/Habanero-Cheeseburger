@@ -35,5 +35,6 @@
     }
   ],
   "assets": [],
-  "tier": 3
+  "tier": 3,
+  "thumbnailSmall": "/projects/underwater-scooter-v1/scooter-1-480.webp"
 }

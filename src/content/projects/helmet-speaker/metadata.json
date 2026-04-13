@@ -34,5 +34,6 @@
       "captionFr": "Face"
     }
   ],
-  "tier": 3
+  "tier": 3,
+  "thumbnailSmall": "/projects/helmet-speaker/side-480.webp"
 }

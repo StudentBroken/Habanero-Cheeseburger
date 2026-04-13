@@ -14,5 +14,6 @@
     }
   ],
   "tier": 3,
-  "hidden": true
+  "hidden": true,
+  "thumbnailSmall": "/projects/mic/overview-480.webp"
 }

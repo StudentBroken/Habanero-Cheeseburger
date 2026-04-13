@@ -38,5 +38,6 @@
       "captionFr": "Test du générateur d'ions négatifs"
     }
   ],
-  "tier": 2
+  "tier": 2,
+  "thumbnailSmall": "/projects/static-electricity-generator/overview-480.webp"
 }
