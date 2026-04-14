@@ -67,10 +67,7 @@ export default function GlobalPage() {
     if (p.links && p.links.length > 0) {
       block += `External Links: ${p.links.map(l => `${l.label} (${l.url})`).join(', ')}\n`;
     }
-    block += `\n[CONTENT (EN)]\n${p.content || 'N/A'}\n`;
-    if (p.contentFr) {
-      block += `\n[CONTENT (FR)]\n${p.contentFr}\n`;
-    }
+    block += `\n[CONTENT]\n${p.content || 'N/A'}\n`;
     block += `\n---\n\n`;
     return block;
   };
