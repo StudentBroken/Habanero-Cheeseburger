@@ -1,10 +1,12 @@
-# First Designed FPV Multirotor
+# My First FPV Drone Design
 
-## Initial Design
-The objective was the architecture and fabrication of a custom quadcopter chassis using fused deposition modeling (FDM). The design utilized PLA (Polylactic Acid) as the primary structural material, housing salvaged logic and propulsion systems from a baseline 2S unit.
+## The Goal
+I wanted to design my own drone frame and 3D print it instead of buying a carbon fiber one. I used PLA plastic and salvaged the motors and flight controller from a small 2S drone I already had.
 
-## Performance Analysis
-The structural integrity of the PLA chassis proved inadequate for high-dynamic flight. The material's low tensile strength and inherent flexibility resulted in significant arm oscillation and resonant vibration during motor load. While the system achieved basic lift-off, stable freestyle maneuvers were precluded by the frame's lack of rigidity.
+## Why it didn't work
+It flew, but it was a vibrating mess. 
+- **Flexibility**: The 3D-printed arms were too bendy. When the motors spun up, the whole frame would wobble and vibrate, making it almost impossible to control.
+- **Strength**: PLA is fine for desk toys, but it’s not stiff enough for a drone frame that needs to handle high-speed turns.
 
 ## Lessons Learned
-Polylactic acid is fundamentally unsuitable for high-performance multirotor chassis. This project confirmed that aeronautical structural components require high-modulus materials, such as carbon fiber composites, to minimize elastic deformation under torque. This data set informed the immediate transition to carbon-fiber-based 3-inch and 5-inch platforms.
+Don't use PLA for drone frames. This project proved that if you want a drone that actually flies well, you need the rigidity of carbon fiber. It was a failure in terms of flight performance, but it’s what pushed me to start building the carbon fiber 3-inch and 5-inch quads you see elsewhere in this portfolio.

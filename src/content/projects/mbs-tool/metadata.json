@@ -1,0 +1,48 @@
+{
+  "title": "MBS — Student Grade Tracker",
+  "titleFr": "MBS — Outil de Suivi de Notes",
+  "date": "2025-11-15",
+  "category": "SOFTWARE",
+  "categoryFr": "LOGICIEL",
+  "description": "A collaborative grade tracking and ranking platform for Quebec secondary students — first real team project, first GitHub repo, and a full GDPR-compliant data pipeline built with vanilla JS and a Google Sheets backend.",
+  "descriptionFr": "Une plateforme collaborative de suivi et classement de notes pour les élèves du secondaire québécois — premier vrai projet en équipe, premier dépôt GitHub, avec un pipeline de données conforme au RGPD bâti en JS vanilla et un backend Google Sheets.",
+  "githubLink": "https://github.com/StudentBroken/studentbroken.github.io",
+  "thumbnail": "/projects/mbs-tool/mbs-main-data.webp",
+  "thumbnailSmall": "/projects/mbs-tool/mbs-main-data-480.webp",
+  "modelFile": null,
+  "media": [
+    {
+      "type": "image",
+      "url": "/projects/mbs-tool/mbs-main-data.webp",
+      "alt": "MBS Main data entry page",
+      "altFr": "MBS Page principale de saisie de données",
+      "caption": "Primary interface for pasting and parsing grade portal data.",
+      "captionFr": "Interface principale pour coller et analyser les données du portail."
+    },
+    {
+      "type": "image",
+      "url": "/projects/mbs-tool/mbs-performance.webp",
+      "alt": "Performance statistics dashboard",
+      "altFr": "Tableau de bord des statistiques de performance",
+      "caption": "Interactive dashboard showing grade trends and competency breakdowns.",
+      "captionFr": "Tableau de bord interactif affichant les tendances des notes."
+    },
+    {
+      "type": "image",
+      "url": "/projects/mbs-tool/mbs-new-data.webp",
+      "alt": "Direct data entry without login",
+      "altFr": "Saisie de données directe sans connexion",
+      "caption": "Secure, local-first onboarding process with No-Login data entry.",
+      "captionFr": "Processus d'intégration sécurisé et local sans connexion."
+    }
+  ],
+  "links": [
+    {
+      "label": "Live Site",
+      "labelFr": "Site en ligne",
+      "url": "https://studentbroken.github.io"
+    }
+  ],
+  "assets": [],
+  "tier": 1
+}

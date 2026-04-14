@@ -1,13 +1,12 @@
-# Module de Conversion de Tension Haute Puissance : 48V vers USB-C PD
+# Chargeur USB-C pour Vélo Électrique (48V)
 
-## Objectif de Design
+## L'Idée
+Les vélos électriques ont des batteries massives, mais la plupart n'ont pas de moyen de charger un téléphone. Je voulais construire un chargeur qui se branche directement sur la batterie 48V du vélo pour fournir une charge USB-C rapide à mon téléphone ou mon ordinateur pendant que je roule.
 
-L'objectif était d'ingénier un module d'interface haute tension pour tirer sur une architecture de batterie LEV nominale de 48V, fournissant une alimentation USB-C Power Delivery régulée pour les électroniques auxiliaires de terrain.
+## Comment ça marche
+J'ai utilisé un convertisseur "buck" haute tension qui peut supporter l'entrée 48V-54V de la batterie principale.
+- **Power Delivery** : Il comprend un contrôleur USB-C PD pour qu'il puisse communiquer avec les appareils et fournir n'importe quelle tension de 5V à 20V selon ce qui est branché.
+- **Efficacité** : Le convertisseur est très efficace, donc il n'affecte pratiquement pas l'autonomie du vélo.
 
-## Architecture du Système
-
-Le convertisseur utilise un étage de régulation *buck* haute efficacité adapté aux transitoires d'entrée 48V+. Un IC contrôleur USB-C PD dédié gère le protocole de négociation, permettant au système de communiquer avec les appareils connectés et de délivrer la puissance selon leurs profils de tension et ampérage spécifiques (plage 5V-20V).
-
-## Résultat Opérationnel
-
-Le module valide avec succès la batterie du vélo comme nœud de stockage d'énergie mobile haute capacité. Le système assure une charge pleine vitesse pour les appareils mobiles en transit, facilitant l'utilisation d'électroniques auxiliaires à haute consommation (GPS/télémétrie) sans compromettre significativement l'état de charge de la batterie de propulsion principale.
+## Résultat du Build
+Ça fonctionne parfaitement. Je peux maintenant charger mon téléphone à pleine vitesse en utilisant la batterie principale du vélo. C'est essentiellement une batterie externe de 700 Wh sur roues.

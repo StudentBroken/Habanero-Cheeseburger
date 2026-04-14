@@ -1,13 +1,13 @@
-# Turbojet Électrique DIY
+# Turbojet Électrique DIY (L'Échec)
 
-## Design Initial
+## L'Idée
+J'ai essayé de construire un petit moteur à réaction en utilisant un mélange de puissance électrique et de vrai carburant. J'ai utilisé un moteur de drone haute vitesse pour faire tourner une turbine imprimée en 3D (impeller) afin de pousser l'air dans une chambre de combustion en acier. L'idée était de vaporiser du carburant, de l'allumer et d'obtenir de la poussée.
 
-L'objectif était d'ingénier un turbojet fonctionnel en utilisant une approche hybride électrique-combustion. Le design utilisait un moteur BLDC haute KV pour driver une turbine imprimée en 3D, agissant comme compresseur pour forcer l'air haute vitesse dans une chambre de combustion en acier, avec le carburant livré via un seul tube injecteur céramique.
-
-## Ce Qui S'Est Passé
-
-Le système a subi une défaillance thermique rapide et catastrophique lors des tests. Le boîtier extérieur en PLA ne pouvait pas résister à la chaleur ambiante du cycle de combustion, et le tube injecteur céramique s'est fracturé à cause du choc thermique extrême. Sans étanchéité précise ni chemise de refroidissement active, la chambre construite à la main ne pouvait pas stabiliser la pression — ce qui a résulté en une combustion incontrôlée (chaleur, bruit et fumée) plutôt qu'une poussée dirigée soutenue.
+## Le Désastre
+Ça n'a pas marché du tout.
+- **Fusion** : Les pièces en plastique imprimées en 3D ont fondu presque instantanément sous la chaleur du feu.
+- **Choc Thermique** : Le tube en céramique que j'ai utilisé pour vaporiser le carburant s'est brisé parce qu'il est devenu trop chaud trop vite.
+- **Pas de Poussée** : Au lieu d'un rugissement de puissance, j'ai juste eu beaucoup de fumée, des bruits inquiétants et un feu qui ne voulait pas rester à l'intérieur du moteur.
 
 ## Leçons Apprises
-
-Les thermoplastiques de loisir et le métal non étanche sont fondamentalement incompatibles avec la dynamique thermique d'un moteur à réaction. Ce projet a mis en évidence l'énorme fossé entre la dynamique des fluides théorique et les dures réalités de la science des matériaux. Atteindre une poussée soutenue nécessite des alliages haute température, un usinage précis pour l'étanchéité de pression et une gestion thermique calculée. Le projet a été mis en veille après deux tests qui ont fourni des données de défaillance concluantes.
+Le plastique et les moteurs à réaction ne font pas bon ménage. C'était une expérience intéressante, mais elle a prouvé que la construction d'un vrai moteur à réaction nécessite de bien meilleurs matériaux (comme des alliages haute température) et un usinage beaucoup plus précis que ce que j'avais dans mon garage. J'ai mis ce projet de côté jusqu'à ce que j'aie un meilleur moyen de gérer la chaleur.

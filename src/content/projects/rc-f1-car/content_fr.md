@@ -1,23 +1,18 @@
-# Analyse Cinématique : Plateforme RC Formule 1 Imprimée en 3D
+# Voiture RC F1 Imprimée en 3D
 
-## Objectif Technique
+## L'Objectif
+Je voulais construire une voiture télécommandée fonctionnelle qui ressemble à une Formule 1, en utilisant uniquement des pièces imprimées en 3D et quelques composants électroniques bon marché. Le défi principal était de s'assurer que les pièces mobiles (comme les moyeux de roues) soient assez précises pour tourner sans casser.
 
-L'objectif était l'ingénierie d'une plateforme de course télécommandée (RC) fonctionnelle utilisant la modélisation par dépôt de matière fondue (FDM) multi-matériaux. Le projet s'est concentré sur l'obtention de tolérances mécaniques précises pour l'intégration de roulements et l'exécution de composants structurels haute dynamique en TPU.
+## Matériaux et Construction
+J'ai utilisé deux types de plastique différents pour rendre la voiture à la fois rigide et durable :
+- **Châssis** : Imprimé en PLA standard pour la rigidité.
+- **Suspension et Pneus** : Imprimés en TPU (un plastique flexible, semblable à du caoutchouc). Cela agit comme un système de suspension intégré pour amortir les chocs.
+- **Roulements** : J'ai utilisé de vrais roulements en acier inoxydable pressés directement dans les pièces en plastique. Il a fallu quelques impressions de test pour obtenir le bon ajustement pour qu'ils ne tombent pas.
 
-## Ingénierie Structurelle & Matériaux
+## Électronique
+- **Moteurs** : Récupérés sur une vieille voiture RC que je n'utilisais plus.
+- **Télécommande** : Un émetteur radio FlySky standard.
+- **Pneus** : Pneus TPU personnalisés qui offrent une adhérence étonnamment bonne sur les sols plats.
 
-L'architecture du châssis utilisait une approche multi-matériaux pour équilibrer rigidité et résilience aux impacts :
-
-- **Châssis Principal & Aérodynamique** : PLA haute rigidité, modélisé pour une densité de composants optimale et une fidélité aérodynamique.
-- **Interfaces Cinématiques** : Intégration de roulements en acier inoxydable *press-fit* dans des hubs imprimés en 3D. Cela nécessitait une série d'impressions de calibration de tolérance pour atteindre un ajustement d'interférence parfait.
-- **Suspension Passive** : Composants TPU imprimés custom. C'était la première validation opérationnelle du TPU pour l'amortissement vibratoire structurel dans ce portfolio.
-
-## Spécification Matérielle
-
-- **Propulsion** : Moteurs brushed et ESC salvagés d'une plateforme donneuse auxiliaire.
-- **Lien de Contrôle** : Système radio FlySky 2.4GHz.
-- **Assemblage de Roues** : Pneus TPU profilés custom avec hubs de roulement intégrés.
-
-## Évaluation Opérationnelle
-
-La plateforme a validé avec succès la méthodologie *design-for-press-fit* et la viabilité du TPU pour les composants mécaniques haute stress. La voiture reste fonctionnelle et sert de pièce d'exposition principale pour l'intégration structurelle multi-matériaux. Les insights mécaniques acquis sur les tolérances de matériaux ont été portés avec succès vers des builds de multirotor et de prothèses plus complexes.
+## Résultat
+La voiture fonctionne très bien et est étonnamment rapide. Elle a survécu à plusieurs crashs pendant les tests grâce aux pièces flexibles en TPU. Ce projet a été ma première véritable plongée dans l'impression 3D multi-matériaux et la fabrication de pièces qui s'emboîtent parfaitement.

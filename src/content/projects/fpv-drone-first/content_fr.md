@@ -1,13 +1,12 @@
-# Premier Multirotor FPV Conçu
+# Mon Premier Design de Drone FPV
 
-## Design Initial
+## L'Objectif
+Je voulais concevoir mon propre châssis de drone et l'imprimer en 3D au lieu d'en acheter un en fibre de carbone. J'ai utilisé du plastique PLA et j'ai récupéré les moteurs et le contrôleur de vol d'un petit drone 2S que j'avais déjà.
 
-L'objectif était l'architecture et la fabrication d'un châssis de quadcopter custom en utilisant la modélisation par dépôt de matière fondue (FDM). Le design utilisait du PLA comme matériau structurel principal, logeant des systèmes de logique et de propulsion salvagés d'une unité 2S de base.
-
-## Analyse de Performance
-
-L'intégrité structurelle du châssis PLA s'est avérée inadéquate pour le vol dynamique. La faible résistance à la traction du matériau et sa flexibilité inhérente ont résulté en une oscillation significative des bras et des vibrations résonnantes sous charge moteur. Bien que le système ait atteint le décollage de base, les manœuvres freestyle stables étaient exclues par le manque de rigidité du châssis.
+## Pourquoi ça n'a pas marché
+Il a volé, mais c'était un désordre de vibrations.
+- **Flexibilité** : Les bras imprimés en 3D étaient trop souples. Quand les moteurs montaient en régime, tout le châssis tremblait et vibrait, ce qui le rendait presque impossible à contrôler.
+- **Solidité** : Le PLA est bien pour des gadgets de bureau, mais il n'est pas assez rigide pour un châssis de drone qui doit supporter des virages à haute vitesse.
 
 ## Leçons Apprises
-
-L'acide polylactique est fondamentalement inadapté aux châssis multirotor haute performance. Ce projet a confirmé que les composants structurels aéronautiques nécessitent des matériaux à haut module, comme les composites en fibre de carbone, pour minimiser la déformation élastique sous couple. Ces données ont informé la transition immédiate vers des plateformes 3 et 5 pouces à base de fibre de carbone.
+N'utilisez pas de PLA pour les châssis de drones. Ce projet a prouvé que si vous voulez un drone qui vole vraiment bien, vous avez besoin de la rigidité de la fibre de carbone. C'était un échec en termes de performance de vol, mais c'est ce qui m'a poussé à commencer à construire les quads de 3 et 5 pouces en fibre de carbone que vous voyez ailleurs dans ce portfolio.

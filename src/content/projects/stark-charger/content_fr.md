@@ -1,17 +1,16 @@
-# Boîtier de Chargeur EV Aftermarket : Stark Varg
+# Boîtier de Chargeur Stark Varg (L'Échec)
 
-## Objectif de Design
+## L'Idée
+Le chargeur d'origine de la moto électrique Stark Varg est un peu encombrant. Je voulais concevoir et imprimer en 3D un boîtier plus compact et robuste pour qu'il soit plus facile à emmener sur la piste.
 
-L'objectif était de faire l'ingénierie inverse et de fabriquer un boîtier de remplacement compact et haute durabilité pour l'unité de charge de la moto électrique Stark Varg. Le design priorisait l'efficacité volumétrique et une robustesse de terrain améliorée comparée au boîtier OEM.
+## Le Design
+J'ai modélisé le nouveau boîtier de zéro dans Onshape. J'ai soigneusement mesuré le chargeur d'origine pour m'assurer que tous les ports et évents s'alignaient parfaitement. Sur l'écran, le design avait l'air super.
 
-## CAD & Modélisation
+## Ce qui s'est mal passé
+J'ai essayé d'imprimer les pièces sur mon Ender 5, mais elles étaient juste trop grandes et complexes pour cette imprimante.
+- **Gauchissement (Warping)** : Comme les pièces étaient très grandes, les coins ont commencé à se décoller du plateau (warping) pendant la longue impression.
+- **Ajustement** : Les dimensions étaient légèrement faussées à cause du rétrécissement du plastique, donc les composants internes ne rentraient pas dans le nouveau boîtier.
+- **Résultat** : J'ai dû arrêter le projet. Il s'avère qu'il faut une bien meilleure imprimante 3D, fermée, pour gérer des pièces de cette taille sans qu'elles ne se déforment.
 
-Le boîtier a été modélisé de zéro dans Onshape. Toutes les criticités dimensionnelles ont été capturées par mesure directe de l'unité OEM, assurant un alignement précis pour la ventilation thermique et les ports d'interface électrique.
-
-## Analyse de Défaillance de Fabrication
-
-Malgré la maturité du modèle CAD, la fabrication a été infructueuse lors de la phase de prototypage initiale.
-
-- **Cause Racine** : La plateforme FDM Ender 5 utilisée pour le build présentait une inexactitude dimensionnelle significative et un gauchissement thermique lors des sections haute tolérance de l'impression grand format.
-- **Résultat** : Les composants imprimés n'ont pas réussi à atteindre les tolérances d'assemblage requises, entraînant la suspension du projet.
-- **Conclusion** : L'architecture numérique est solide; cependant, l'exécution réussie nécessite un nœud de fabrication capable d'une plus grande stabilité dimensionnelle et d'un meilleur contrôle de l'environnement thermique (chambre de build fermée).
+## Leçons Apprises
+Le CAD est la partie facile — la fabrication est là où les choses deviennent sérieuses. J'ai appris que pour de grandes pièces fonctionnelles, on ne peut pas juste appuyer sur "imprimer" et s'attendre à ce que ça marche sur une imprimante de loisir basique. J'ai gardé les modèles 3D, mais j'attendrai d'avoir accès à une imprimante de qualité professionnelle avant de réessayer.

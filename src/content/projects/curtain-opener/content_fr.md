@@ -1,16 +1,12 @@
-# Système d'Actionnement de Rideau Automatisé
+# Ouvre-rideau Intelligent (DIY)
 
-## Architecture
+## Comment ça marche
+C'était un petit hack rapide pour automatiser mes rideaux le matin. J'ai utilisé une prise intelligente bon marché comme "cerveau". Je l'ai ouverte et j'ai recâblé la sortie logique vers un ensemble moteur qui tire sur le cordon du rideau selon un horaire défini.
 
-Le système utilise une prise intelligente commerciale modifiée comme nœud principal de distribution d'énergie et de timing. La sortie contrôlée par logique a été réutilisée pour driver un assemblage électromécanique conçu pour fournir le couple nécessaire au déploiement matinal du rideau via le cordon de traction standard.
+## La Défaillance
+Ça a fonctionné parfaitement pendant environ deux mois, jusqu'à ce que tout tombe du mur.
+- **Ce qui s'est passé** : J'ai utilisé du ruban adhésif double face pour fixer le moteur au mur. La traction quotidienne sur le cordon était trop forte pour l'adhésif.
+- **Résultat** : Le moteur a arraché le ruban, est tombé et s'est cassé.
 
-## Analyse Structurelle & Défaillance
-
-Le système a démontré une logique opérationnelle sans faille pendant environ 60 jours. Mais l'assemblage a subi une défaillance mécanique critique à l'interface murale.
-
-- **Cause Racine** : Le substrat de montage utilisait un adhésif haute adhérence non adapté aux contraintes mécaniques cycliques induites par les intervalles de charge quotidiens.
-- **Résultat** : Séparation catastrophique de la surface verticale, entraînant la mise hors service totale du système.
-
-## Conclusion
-
-La logique électronique et chronométrique est restée fonctionnelle tout au long de sa vie opérationnelle. Les itérations suivantes utiliseront des fixations mécaniques et des supports rigides pour assurer la stabilité à long terme sous charge dynamique.
+## Leçons Apprises
+La prochaine fois, j'utiliserai des vis. Le ruban adhésif est super pour les capteurs, mais ce n'est pas fait pour les pièces mécaniques qui bougent réellement des objets. L'électronique et le code fonctionnaient bien, mais la "colle" était le point faible.

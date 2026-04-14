@@ -1,17 +1,17 @@
-# Multirotor FPV Sub-Micro : Analyse de Contrainte Volumétrique
+# Micro Drone FPV (Ultra Petit)
 
-## Objectif de Design
+## L'Objectif
+Je voulais voir à quel point je pouvais construire un drone FPV fonctionnel. L'objectif était de fabriquer un quadricoptère de la taille d'une figurine LEGO qui pourrait toujours voler dans la maison et transmettre de la vidéo.
 
-L'objectif était la fabrication d'une plateforme multirotor micro-scale approchant l'empreinte volumétrique minimale théorique pour le vol FPV fonctionnel. Le projet nécessitait des composants structurels custom pour atténuer les interférences mécaniques à cette échelle.
+## Protections Custom (Shrouds)
+Parce que les hélices sont si petites et fragiles, n'importe quel choc contre un mur les briserait. J'ai imprimé en 3D des "shrouds" (protections) personnalisés pour protéger les rotors.
+- **Design** : Protections en PLA super légères qui se clipsent sur le châssis.
+- **Pourquoi ?** : Cela m'a permis de percuter les murs et de continuer à voler, ce qui est essentiel pour le vol en intérieur.
 
-## Fabrication Matérielle
+## Spécifications
+- **Taille** : Environ 4cm de large.
+- **Caméra** : Une minuscule caméra FPV tout-en-un avec transmetteur.
+- **Vol** : Utilise un micro contrôleur de vol et des moteurs "brushed".
 
-Le châssis incorpore des carénages d'hélice FDM custom, conçus pour fournir une protection anti-collision à 360 degrés tout en ajoutant une masse négligeable au châssis sub-micro. À cette échelle, même un contact mineur hélice-sol résulte en une déformation catastrophique des pales; les carénages étaient critiques pour la fiabilité des cycles d'atterrissage.
-
-- **Analyse d'Échelle** : Dimensions comparables à une figurine 4cm standard.
-- **Intégrité Structurelle** : Carénages PLA légers custom pour la protection des rotors.
-- **Optiques** : Caméra micro-FPV intégrée et transmetteur vidéo haute bande passante.
-
-## Conclusion Opérationnelle
-
-Le système a validé des caractéristiques de vol stables dans des environnements de test intérieurs confinés. L'architecture des carénages d'hélice custom a fourni la protection nécessaire pour des cycles d'atterrissage répétés. En raison des indicateurs thermiques et de masse minimaux de l'unité micro, la plateforme a finalement été perdue lors d'une opération de terrain haute dynamique; cependant, les données initiales ont confirmé la viabilité des plateformes FPV sub-micro.
+## Résultat
+Ça a super bien fonctionné pour les "courses de bureau" en intérieur. C'était assez stable pour naviguer dans des espaces restreints. Malheureusement, je l'ai finalement perdu quand j'ai essayé de le faire voler à l'extérieur — il était si petit et léger qu'un coup de vent l'a emporté, et je n'ai pas pu le retrouver dans l'herbe. Mais cela a prouvé que le FPV ultra-micro est tout à fait possible.

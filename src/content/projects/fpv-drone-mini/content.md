@@ -1,14 +1,17 @@
-# Sub-Micro FPV Multirotor: Volumetric Constraint Analysis
+# Micro FPV Drone (Super Small)
 
-## Design Objective
-The objective was the fabrication of a micro-scale multirotor platform approaching the theoretical minimum volumetric footprint for functional FPV flight. The project necessitated custom structural components to mitigate mechanical interference at this scale.
+## The Goal
+I wanted to see how small I could build a functional FPV drone. The goal was to make a quadcopter about the size of a LEGO minifigure that could still fly around the house and transmit video.
 
-## Hardware Fabrication
-The chassis incorporates custom-engineered FDM propeller shrouds, designed to provide 360-degree rotor strike protection while adding negligible mass to the sub-micro frame. At this scale, even minor prop-ground contact results in catastrophic blade deformation; the shrouds were critical for achieving landing-cycle reliability.
+## Custom Shrouds
+Because the props are so tiny and fragile, any bump against a wall would break them. I 3D printed some custom "shrouds" (guards) to protect the rotors. 
+- **Design**: Super lightweight PLA guards that clip onto the frame.
+- **Why?**: These allowed me to crash into walls and keep flying, which is essential for indoor flying.
 
-- **Scale Analysis**: Dimensions comparable to a standard 4cm figurine.
-- **Structural Integrity**: Custom lightweight PLA shrouds for rotor protection.
-- **Optics**: Integrated micro-FPV camera and high-bandwidth video transmitter.
+## Specs
+- **Size**: About 4cm wide.
+- **Camera**: A tiny all-in-one FPV camera and transmitter.
+- **Flight**: Uses a micro flight controller and brushed motors.
 
-## Operational Conclusion
-The system successfully validated stable flight characteristics within confined indoor testing environments. The custom prop-shroud architecture provided the necessary protection for repeated landing cycles. Due to the minimal thermal and mass indicators of the micro-scale unit, the platform was eventually lost during a high-dynamic field operation; however, the initial data confirmed the viability of sub-micro FPV platforms.
+## Result
+It worked great for indoor "office racing." It was stable enough to navigate through tight spaces. Sadly, I lost it eventually when I tried to fly it outside—it was so small and light that a gust of wind carried it away, and I couldn't find it in the grass. But it proved that super-micro FPV is totally possible.

@@ -1,18 +1,18 @@
-# Cost-Optimized Propulsion Study: Pneumatic-Drive Skateboard
+# Propeller-Driven Skateboard
 
-## Technical Objective
-The objective was the engineering of a motorized skateboard platform utilizing a "zero-budget" procurement model. The project served as an exploratory study in non-mechanical propulsion (pneumatic drive) versus standard belt-driven architectures.
+## The Idea
+I wanted to build an electric skateboard for as cheap as possible. Instead of expensive belts or hub motors, I decided to see if I could move a skateboard using a drone motor and a propeller. It’s loud, inefficient, but very fun to build.
 
-## Propulsion Architecture
-The system deviates from traditional hub or belt-drive topologies in favor of a rear-mounted pneumatic propulsion node. 
-- **Power Node**: 3S Lithium-Polymer (LiPo) battery.
-- **Drivetrain**: High-KV brushless DC (BLDC) motor coupled with a multi-blade propeller.
-- **Aeronautical Integration**: A custom-engineered FDM shroud was fabricated to optimize airflow vectors and provide basic structural containment for the high-velocity propeller.
+## How it works
+The "engine" is just a high-speed brushless motor mounted to the back of the board.
+- **Power**: It runs on a 3S LiPo battery.
+- **Propulsion**: A multi-blade propeller pushes air backwards to move the board forward.
+- **Safety Shroud**: I 3D printed a cage (shroud) around the propeller so I wouldn't accidentally lose a finger if I fell off.
 
-## Hardware Specification
-- **Motor/ESC**: Entry-level brushless propulsion suite.
-- **Chassis**: Standard skateboard deck with modified rear-truck structural mounts.
-- **Control Interface**: 2.4GHz RC radio link.
+## Parts List
+- **Motor**: A basic brushless motor and ESC (Speed Controller).
+- **Board**: A standard skateboard deck I had lying around.
+- **Remote**: A standard 2.4GHz RC car remote.
 
-## Operational Assessment
-Initial testing validated the functional viability of the pneumatic propulsion model. While the system exhibited low volumetric efficiency and high acoustic output compared to mechanical drives, it successfully achieved self-propulsion under load. The project provides conclusive data regarding the power-to-weight tradeoffs involved in fan-propelled land vehicles and validates the "Proof-of-Concept" with minimal capital expenditure.
+## Does it actually work?
+Yes, it actually moves! It’s not going to win any races, and it sounds like a vacuum cleaner gone wrong, but it proved the concept. It was a great weekend experiment in unconventional propulsion and 3D printing structural parts.

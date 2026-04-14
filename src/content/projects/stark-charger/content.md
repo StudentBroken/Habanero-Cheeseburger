@@ -1,13 +1,16 @@
-# Aftermarket EV Charging Enclosure: Stark Varg
+# Stark Varg Charger Housing (The Failure)
 
-## Design Objective
-The objective was to reverse-engineer and fabricate a high-durability, compact replacement housing for the Stark Varg electric motorcycle charging unit. The design prioritized volumetric efficiency and improved field-ruggedness compared to the OEM enclosure.
+## The Idea
+The original charger for the Stark Varg electric motorcycle is a bit bulky. I wanted to design and 3D print a more compact, rugged case for it so it would be easier to take to the track.
 
-## CAD & Modeling
-The enclosure was modeled from scratch in Onshape. All dimensional criticalities were captured via direct measurement of the OEM unit, ensuring precise alignment for thermal ventilation and electrical interface ports.
+## The Design
+I modeled the new housing from scratch in Onshape. I carefully measured the original charger to make sure all the ports and vents lined up perfectly. On the screen, the design looked great.
 
-## Manufacturing Failure Analysis
-Despite the maturity of the CAD model, fabrication was unsuccessful during the initial prototyping phase.
-- **Root Cause**: The Ender 5 FDM platform utilized for the build exhibited significant dimensional inaccuracy and thermal warping during high-tolerance sections of the large-format print.
-- **Outcome**: The printed components failed to meet the required assembly tolerances, resulting in project suspension.
-- **Conclusion**: The digital architecture is sound; however, successful execution requires a manufacturing node capable of higher dimensional stability and better thermal environment control (enclosed build chamber).
+## What went wrong
+I tried to print the parts on my Ender 5, but they were just too big and complex for that printer.
+- **Warping**: Because the parts were so large, the corners started peeling off the bed (warping) during the long print.
+- **Fitment**: The dimensions were slightly off because of the plastic shrinking, so the internal parts wouldn't fit inside the new case.
+- **Result**: I had to stop the project. It turns out you need a much better, enclosed 3D printer to handle parts this large without them warping.
+
+## Lessons Learned
+CAD is the easy part—manufacturing is where things get real. I learned that for large, functional parts, you can't just hit "print" and expect it to work on a basic hobby printer. I’ve kept the 3D models, but I’ll wait until I have access to a pro-grade printer before I try this again.

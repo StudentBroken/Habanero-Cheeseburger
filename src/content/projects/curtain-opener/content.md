@@ -1,12 +1,12 @@
-# Automated Curtain Actuation System
+# DIY Smart Curtain Opener
 
-## Architecture
-The system utilizes a modified commercial smart-plug as the primary power distribution and timing node. The logic-controlled output was repurposed to drive an electromechanical assembly designed to provide the necessary torque for morning curtain deployment via standard pull-cord transitions.
+## How it works
+This was a quick hack to automate my curtains in the morning. I used a cheap smart plug as the "brain." I opened it up and re-wired the logic output to a motor assembly that pulls the curtain cord on a schedule.
 
-## Structural Analysis & Failure
-The system demonstrated flawless operational logic for a period of approximately 60 days. However, the assembly experienced a critical mechanical failure at the wall interface.
-- **Root Cause**: The mounting substrate utilized high-tack adhesive which was not rated for the cyclic mechanical stresses induced by daily load intervals. 
-- **Outcome**: Catastrophic separation from the vertical surface, resulting in total system decommission.
+## The Failure
+It worked perfectly for about two months until the whole thing fell off the wall. 
+- **What went wrong**: I used double-sided tape to mount the motor to the wall. The daily tugging on the cord was too much for the adhesive.
+- **Result**: The motor ripped the tape off, fell down, and broke.
 
-## Conclusion
-The electronic and chronometric logic remained functional throughout the operational lifespan. Subsequent iterations will utilize mechanical fasteners and rigid brackets to ensure long-term stability under dynamic loading.
+## Lessons Learned
+Next time, I'm using screws. Adhesive tape is great for sensors, but it’s not meant for mechanical parts that actually move things. The electronics and code worked fine, but the "glue" was the weak point.

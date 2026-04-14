@@ -1,10 +1,13 @@
-# DIY Electric Turbojet
+# DIY Electric Turbojet (The Failure)
 
-## Initial Design
-The objective was to engineer a functional turbojet using a hybrid electric-combustion approach. The design utilized a high-KV BLDC motor to drive a custom 3D-printed impeller, acting as a compressor to force high-velocity air into a steel combustion chamber, with fuel delivered via a single ceramic injector tube.
+## The Idea
+I tried to build a small jet engine using a mix of electric power and real fuel. I used a high-speed drone motor to spin a 3D-printed fan (impeller) to push air into a steel combustion chamber. The idea was to spray fuel in, light it, and get some thrust.
 
-## What Happened
-The system experienced rapid, catastrophic thermal failure during testing. The PLA outer casing could not withstand the ambient heat of the combustion cycle, and the ceramic injector tube fractured due to extreme thermal shock. Without precise sealing or an active cooling jacket, the hand-built chamber could not stabilize the pressure, resulting in uncontrolled combustion (heat, noise, and smoke) rather than sustained, directed thrust.
+## The Disaster
+It didn't work. At all.
+- **Meltdown**: The 3D-printed plastic parts melted almost instantly from the heat of the fire.
+- **Thermal Shock**: The ceramic tube I used to spray the fuel shattered because it got too hot too fast.
+- **No Thrust**: Instead of a roar of power, I just got a lot of smoke, some scary noises, and a fire that wouldn't stay inside the engine.
 
 ## Lessons Learned
-Hobby-grade thermoplastics and unsealed metal are fundamentally incompatible with jet engine thermal dynamics. This project highlighted the massive gap between theoretical fluid dynamics and the harsh realities of materials science. Achieving sustained thrust requires high-temperature alloys, precise machining for pressure sealing, and calculated thermal management. The project was successfully shelved after two test runs yielded conclusive failure data.
+Plastic and jet engines don't mix. It was a cool experiment, but it proved that building a real jet requires much better materials (like high-temp alloys) and much more precise machining than what I had in my garage. I’ve shelved this project until I have a better way to handle the heat.
