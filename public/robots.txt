@@ -1,6 +1,8 @@
 User-agent: *
 Allow: /
 Sitemap: https://imnotabot.dev/sitemap.xml
+# For AI discovery
+Sitemap: https://imnotabot.dev/llms.txt
 
 # Explicitly permit common AI indexing bots
 User-agent: OpenAI

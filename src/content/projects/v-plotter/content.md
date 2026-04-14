@@ -1,21 +1,21 @@
-# Kinematic Drawing Platform: V-Bot (V-Plotter)
+# V-Plotter: Drawing Robot with Suspended Carriage
 
 ## Technical Objective
-The objective was the rapid engineering of a portable, self-contained V-plotter robot for automated, large-scale vector drawing. The platform utilizes a dual-stepper suspended architecture to translate Cartesian coordinates into variable-length bipolar string movements based on real-time inverse kinematic calculations.
+I built a V-plotter that draws by hanging a pen carriage from two stepper motors on strings. The motors adjust string lengths to move the pen across a surface based on inverse kinematics calculations.
 
-## Development Context & Lifecycle
-This project was executed as a high-velocity build, progressing from conceptual design to a functional prototype in minimal time.
-- **3D Design**: The chassis and gondola were modeled during school hours (background tasking).
-- **Kinematic Logic**: The core inverse kinematic algorithms were planned and calculated manually on the reverse side of an exam page during a formal examination session.
-- **Fabrication**: The hardware assembly and software integration were completed in a single **9-hour post-school session**.
+## Development Timeline
+I built this over a few days using borrowed time between school and other projects.
+- **Design**: I modeled the frame and carriage during classes.
+- **Kinematics**: I worked out the math for the inverse kinematics by hand.
+- **Build**: I assembled everything and integrated the code in a single 9-hour session after school.
 
-## Hardware Architecture & Power Distribution
-The system operates on a dual-voltage rail powered via a **USB-C Power Delivery (PD)** interface, configured to pull a constant **12V** (2A peak) from the source.
-- **DC-DC Topology**: The 12V rail directly powers the stepper drivers. A **5V BEC** (Battery Eliminator Circuit) bucks the rail down for the logic controller and servo. The logic rail is further refined via the **ESP32's built-in 3.3V LDO**.
-- **Compute Node**: **ESP32-C3**, hosting a localized web-server for wireless G-code telemetry and system monitoring.
-- **Propulsion**: Dual NEMA 17 stepper motors, suspended via high-tensile string.
-- **Actuation**: Integrated **9g servo** for Z-axis pen engagement.
-- **Thermal Management**: Forced-air cooling (micro-fan) positioned over the driver array to mitigate thermal throttling.
+## Hardware Architecture and Power
+The system runs on 12V from a USB-C Power Delivery supply (2A maximum).
+- **Power Rails**: The 12V powers the stepper drivers directly. A 5V buck converter steps it down for the logic board and servo. The ESP32 uses its internal 3.3V regulator.
+- **Main Controller**: ESP32-C3 running a web server for wireless drawing commands and status monitoring.
+- **Motors**: Two NEMA 17 steppers suspended from the frame using high-tensile string.
+- **Pen Control**: A small servo motor raises and lowers the pen (Z-axis).
+- **Cooling**: A small fan blows over the stepper drivers to prevent overheating.
 
 ## Kinematic Theory & Mathematical Model
 The V-Bot's movement is governed by Inverse Kinematics, which maps standard $(x, y)$ Cartesian coordinates to the specific cable lengths required for the two propulsion motors.
@@ -71,6 +71,6 @@ The project prioritized aggressive cost-reduction through bulk sourcing and comp
 
 **Total System Cost**: ~$30.50
 
-## Post-Mortem: Failure Analysis
-The primary failure mode identified during testing was the **catastrophic failure of the A4988 stepper drivers**. Analysis determined the cause was the poor silicon quality of the drivers included in the $20 "entry-level" kit. While economically efficient for the initial prototype, the drivers exhibited high thermal instability and low current tolerances, leading to several blown units during high-torque vertical movements. Future iterations will require high-quality Trinamic drivers for enhanced reliability.
+## Failure Analysis
+The stepper drivers from the cheap kit failed during testing. They overheated and burned out under the high torque needed for vertical string movements. The drivers in that kit just aren't made to handle sustained current draws. Future versions will use better quality drivers like Trinamic units that can handle the load reliably.
 

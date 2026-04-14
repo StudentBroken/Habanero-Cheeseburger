@@ -22,24 +22,24 @@ On boot the device connects to WiFi and starts an HTTP server. The OLED shows th
 
 ## Bill of Materials
 
-Prices are AliExpress estimates; the ESP32-C3 was bought for $1.
+AliExpress pricing; ESP32-C3 was $1.
 
 | Component | Unit Cost |
 |---|---|
 | ESP32-C3 Super Mini | $1.00 |
-| SSD1306 0.96" OLED module (I2C) | $1.10 |
+| SSD1306 OLED display | $1.10 |
 | L7805CV 5V LDO regulator | $0.45 |
-| 5V single-channel relay module | $1.00 |
-| NPN transistor (2N5551) | $0.05 |
-| Resistors — 3× (2× voltage divider, 1× transistor base) | $0.02 |
-| Electrolytic capacitors — 2× | $1.00 |
-| 22AWG wire (short lengths) | $0.50 |
-| XT60 connector pair | $0.75 |
+| 5V relay module | $1.00 |
+| NPN transistor | $0.05 |
+| Resistors (3 total) | $0.02 |
+| Electrolytic capacitors (2 total) | $1.00 |
+| Wire (22AWG) | $0.50 |
+| XT60 connectors | $0.75 |
 | **Total** | **~$5.00** |
 
 ## State Machine
 
-The logic runs four checks in order each measurement cycle:
+The firmware runs four checks on each measurement cycle, in order:
 
 1. **No-load detection** — if voltage is above 26.0V the battery is not connected (open circuit). Relay off, no charging.
 2. **Under-voltage protection** — below 18.0V the pack is too discharged to charge safely. Relay off.

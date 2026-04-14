@@ -1,13 +1,13 @@
 # Atmospheric Monitoring Array
 
 ## Design Objective
-The objective was to engineer a localized environmental monitoring station for real-time telemetry of PM2.5 particulate matter, VOC concentrations, and atmospheric metrics (temperature/humidity). 
+I built an air quality monitor to track PM2.5 particles, volatile organic compounds (VOCs), and temperature and humidity in real time.
 
 ## Hardware Architecture
-The system is built on an ESP32-C3 microcontroller, selected for its integrated WiFi stack and minimal volumetric footprint. The sensor suite utilizes a multi-modal atmospheric module for VOC/eCO2 and a dedicated laser-based sensor for PM2.5 particulate detection. The assembly is housed in a cost-optimized hybrid enclosure—a commercial frame modified with a custom FDM-printed structural cover.
+The core is an ESP32-C3 microcontroller with built-in WiFi and a small footprint. I paired it with a gas sensor for VOC and CO2 readings, and a laser-based particle sensor for PM2.5. The sensors are mounted in a hybrid enclosure—a commercial frame with a custom 3D-printed cover.
 
 ## Telemetry & Data Management
-The firmware executes a periodic sensor polling sequence, transmitting telemetry packets to a centralized Adafruit MQTT broker. This architecture facilitates both local real-time visualization via an integrated OLED interface and long-term time-series analysis through a cloud-based dashboard.
+The firmware polls sensors on a schedule and sends the data to an Adafruit MQTT broker. This lets me watch the readings in real time on a small OLED screen or review longer trends on a cloud dashboard.
 
 ## Operational Findings
-Continuous deployment has yielded conclusive data regarding indoor air quality volatility. Visible spikes in PM2.5 particulate concentrations were directly correlated with thermal manufacturing (3D printing), aerosol activity, and culinary operations, validating the system's sensitivity and longitudinal monitoring capabilities.
+I've been running this for a while and can see clear patterns. PM2.5 spikes during 3D printing, cooking, and when using spray products. The sensor is sensitive enough to catch these changes reliably.

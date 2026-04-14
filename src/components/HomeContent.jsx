@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Link from 'next/link';
-import { Printer } from 'lucide-react';
+import { Printer, Bot } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 import LangToggle from './LangToggle';
 import { useLang } from './LangProvider';
@@ -702,6 +702,10 @@ export default function HomeContent({ projects }) {
               ? (isFr ? 'Chargement des images…' : 'Loading images…')
               : (isFr ? 'Télécharger en PDF' : 'Download as PDF')}
           </button>
+          <Link href="/global" className="mg-btn mg-btn--accent pdf-export-btn">
+            <Bot size={18} />
+            {isFr ? 'Pour LLMs' : 'For LLMs'}
+          </Link>
           <p className="pdf-export-hint">
             {isFr
               ? "Dans la boîte d'impression, sélectionne « Enregistrer en PDF »"

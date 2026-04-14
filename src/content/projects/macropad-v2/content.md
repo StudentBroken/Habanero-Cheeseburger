@@ -1,16 +1,16 @@
-# BLE Peripheral Architecture: Macropad v2 (Visual & Analog Integration)
+# Macropad v2: BLE Keyboard with Display and Knob
 
 ## Design Evolution
-The objective of the second iteration was the integration of a multi-modal interface, adding high-fidelity visual feedback and analog input control. The project focused on expanding the HID surface area while maintaining the core wireless architecture established in v1.
+The second iteration adds a display and analog knob to the v1 design. The goal was to expand the input surface while keeping the wireless architecture unchanged.
 
 ## Hardware Specification
-The system utilizes the same ESP32-S3 microprocessor but extends the I/O interface to support an I2C-based OLED display and an analog-to-digital (ADC) potentiometer.
-- **Visual Node**: 0.96" OLED (I2C), providing real-time layer status and dynamic key mapping telemetry.
-- **Analog Input**: Potentiometer knob with firmware-level debounce routines, mapped to variable HID parameters (system audio, scroll-indexing).
-- **Control Node**: ESP32-S3 with BLE HID stack.
+I kept the same ESP32-S3 but added an I2C OLED display and a potentiometer.
+- **Display**: 0.96" OLED (I2C) showing the current layer and key bindings.
+- **Analog Control**: Potentiometer knob for volume, scrolling, or other variable parameters. The firmware debounces the input in software.
+- **Main processor**: ESP32-S3 with BLE HID stack.
 
 ## System Integration
-The structural enclosure was радикальное re-engineered to accommodate the increased volumetric displacement of the potentiometer and display module. The firmware's web-based configuration engine was migrated successfully from v1, ensuring backward compatibility for non-volatile keymap storage.
+I redesigned the case to fit the potentiometer and display. The web configuration tool from v1 was reused without changes, so existing keymaps load automatically on startup.
 
 ## Operational Assessment
-The addition of analog control significantly improved the workflow efficiency for multi-media and timeline-based applications. The integrated OLED reduced cognitive load by providing immediate visual confirmation of the active HID profile. Macropad v2 successfully transitioned from a prototype to a primary operational daily driver.
+The knob makes it much easier to control volume or scroll through timelines without reaching for another device. The display gives instant feedback about which layer is active and what the keys do. The macropad is now my daily driver for text editing and media controls.

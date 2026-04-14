@@ -1,0 +1,49 @@
+{
+  "title": "RepGate — Exercise for Screen Time",
+  "titleFr": "RepGate — Exercice contre Temps d'Écran",
+  "date": "2026-04-13",
+  "category": "SOFTWARE",
+  "categoryFr": "LOGICIEL",
+  "subcategory": null,
+  "description": "A cross-platform parental control app where children earn screen time by completing verified exercise sessions. In App Store review as of April 2026.",
+  "descriptionFr": "Une application de contrôle parental multiplateforme où les enfants gagnent du temps d'écran en complétant des séances d'exercice vérifiées. En révision App Store en avril 2026.",
+  "githubLink": null,
+  "thumbnail": "/projects/repgate/repgate-icon.webp",
+  "thumbnailSmall": "/projects/repgate/repgate-icon-480.webp",
+  "modelFile": null,
+  "media": [
+    {
+      "type": "image",
+      "url": "/projects/repgate/repgate-landing.webp",
+      "alt": "RepGate landing page",
+      "altFr": "Page d'accueil RepGate",
+      "caption": "repgate.app — waitlist and early access.",
+      "captionFr": "repgate.app — liste d'attente et accès anticipé."
+    },
+    {
+      "type": "image",
+      "url": "/projects/repgate/repgate-exercise.webp",
+      "alt": "How exercise verification works",
+      "altFr": "Fonctionnement de la vérification d'exercice",
+      "caption": "On-device pose detection counts reps in real time.",
+      "captionFr": "La détection de pose sur l'appareil compte les répétitions en temps réel."
+    },
+    {
+      "type": "image",
+      "url": "/projects/repgate/repgate-icon.webp",
+      "alt": "RepGate app icon",
+      "altFr": "Icône de l'application RepGate",
+      "caption": "App icon.",
+      "captionFr": "Icône de l'application."
+    }
+  ],
+  "links": [
+    {
+      "label": "Waitlist",
+      "labelFr": "Liste d'attente",
+      "url": "https://repgate.app"
+    }
+  ],
+  "assets": [],
+  "tier": 1
+}

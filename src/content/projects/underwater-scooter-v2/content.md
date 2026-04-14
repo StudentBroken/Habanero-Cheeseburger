@@ -18,13 +18,13 @@ The button wiring uses the internal pull-up. A hold triggers the motor at the cu
 
 Holding the button at boot skips ESC arming and enters OTA (Over-The-Air) mode, indicated by a pulsing blue LED. This was a mandatory engineering requirement, not a convenience feature: because the ESP32 is permanently potted in liquid electrical tape, there is zero physical access to the debug or serial ports. Architecting a wireless fail-safe was the only way to ensure the hardware wouldn't become a "brick" the moment a software edge case was discovered.
 
-This rubberized potting technique effectively seals the board against water ingress without the bulk of a traditional enclosure, bringing the central unit's cost to roughly $5 including materials.
+Potting with liquid electrical tape seals the board against water without the weight of a plastic case, bringing the cost down to about $5 for materials.
 
-## Firmware & Architecture
+## Firmware and Control Logic
 
-The firmware was developed using a hybrid approach: I utilized AI to generate the boilerplate C++ classes and standard implementations, allowing me to shift my focus entirely toward higher-level system architecture. 
+I used AI to generate boilerplate code, which let me focus on the actual control logic. The core work was building a state machine that switches between power modes and handles safety interlocks correctly.
 
-The core engineering effort was spent defining a robust state machine to handle the transition between power modes and safety interlocks. I established strict requirements for a custom debounce class to filter noise from the underwater switch and designed the OTA boot path to ensure reliability in a sealed environment. The final phase involved a manual audit of the generated code to identify logic flaws and edge cases that could lead to motor runaway or thermal issues.
+I wrote a custom debounce routine to filter the underwater switch noise and designed the OTA boot sequence carefully so the firmware can be updated wirelessly—essential since the board is permanently sealed in potting and has no debug port. I also audited the generated code by hand to catch logic errors that could cause runaway motor or thermal issues.
 
 ## Mechanical Design
 
@@ -32,16 +32,14 @@ The chassis is PLA, designed in CAD and printed on an Ender 3. Getting everythin
 
 Plastic cost for the chassis was around $10 in filament across all iterations.
 
-## Bill of Materials (BOM) & Economic Optimization
+## Bill of Materials
 
-The redesign prioritized high-torque output while maintaining a low-cost profile by leveraging salvaged electric skateboard hardware and budget-conscious waterproofing techniques.
-
-- **Main Propulsion (Leafboard 5065 Brushless Outrunner)**: Free (Salvaged)
-- **Directional Control (60A Waterproof ESC)**: $25.00
-- **Compute Node (ESP32-C3 Super Mini + RGB LED)**: $4.00
-- **Chassis Architecture (3D Printed PLA - All Iterations)**: $10.00
-- **Energy Storage (2x 3S 21700 Li-Ion Packs)**: $15.00 (Bulk Sourcing)
-- **Environmental Sealing (Liquid Electrical Tape)**: $5.00
+- **Motor (Leafboard 5065 Brushless Outrunner)**: Free (salvaged)
+- **Speed Controller (60A Waterproof ESC)**: $25.00
+- **Controller Board (ESP32-C3 Super Mini + RGB LED)**: $4.00
+- **Chassis (3D Printed PLA)**: $10.00
+- **Battery (2x 3S 21700 Li-Ion)**: $15.00
+- **Potting (Liquid Electrical Tape)**: $5.00
 
 **Total Out-of-Pocket Cost**: ~$59.00
 

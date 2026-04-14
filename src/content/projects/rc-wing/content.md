@@ -11,4 +11,4 @@ I used an ESP32 to bridge the high-speed CRSF signal from my receiver to the old
 - **Servos**: Dual high-torque 2g micro-servos.
 
 ## Summary & Status
-Everything worked perfectly on the bench—the signals were clean and the custom board was solid. Although the plane is ready to fly, I've put the project on hold while I focus on my faster drone projects. It remains a successful test of building my own custom flight electronics.
+Everything worked on the bench—signal translation was clean and the custom board performed as expected. The plane is ready to fly, but I've put it on hold to focus on faster drone projects. It proved I could build custom flight electronics from scratch.

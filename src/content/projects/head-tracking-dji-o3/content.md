@@ -28,22 +28,22 @@ The DJI O3 Air Unit is not included — it's shared with the FPV drone builds.
 
 ## Transmitter Firmware
 
-The goggles-side ESP32 uses the MPU6050's onboard DMP (Digital Motion Processor) to compute quaternion-based yaw/pitch/roll, avoiding the drift that comes from integrating raw gyro data. On boot it runs an auto-calibration routine: it collects 200 DMP packets at rest and averages yaw and pitch to compute offsets, so the gimbal centers itself regardless of how the goggles are sitting when powered on.
+The goggles-side ESP32 uses the MPU6050's onboard motion processor to compute yaw and pitch, avoiding drift from integrating raw gyro data. On boot it collects 200 motion samples at rest and computes offsets, so the gimbal centers itself regardless of how the goggles are sitting when powered on.
 
-Only yaw and pitch are transmitted — roll is discarded since the gimbal has no roll axis. Each packet is a `secure_message` struct carrying the two angles, an incrementing sequence number, and a checksum. The receiver uses both to reject duplicate, out-of-order, and corrupted packets.
+Only yaw and pitch are transmitted — roll is discarded since the gimbal has no roll axis. Each packet carries the two angles, a sequence number, and a checksum. The receiver uses both to reject duplicate, out-of-order, and corrupted packets.
 
 ## Receiver Firmware
 
-The drone-side ESP32 receives ESP-NOW packets, validates the checksum and sequence number, then maps the angles to servo pulse widths. Yaw maps to ±90° pan, pitch maps to ±45° tilt. A 0.5° input deadzone prevents the servos from hunting around center when the head is still.
+The drone-side ESP32 receives packets, validates the checksum and sequence number, then maps the angles to servo pulse widths. Yaw maps to ±90° pan, pitch maps to ±45° tilt. A 0.5° input deadzone prevents the servos from drifting around center when the head is still.
 
-Servo movement is smoothed with an exponential filter (α = 0.07), which eliminates the jerkiness that comes from discrete angle steps and makes the gimbal motion feel proportional to head movement speed. If no valid packet arrives for 1.5 seconds, the servos automatically return to center — so a lost link doesn't leave the camera pointing at the ground.
+Servo movement is smoothed with an exponential filter to eliminate jerkiness from discrete angle steps. If no valid packet arrives for 1.5 seconds, the servos return to center automatically, so a lost link doesn't leave the camera pointing at the ground.
 
-The receiver drives the servos directly without going through the flight controller or MSP, keeping the control path short and the latency low.
+The receiver drives the servos directly without going through the flight controller, keeping latency low.
 
 ## Gyro Drift & Calibration
 
-The first approach used raw gyro data — integrating angular velocity over time to estimate orientation. The problem is that gyros accumulate small errors with every reading, and those errors add up. Over a few minutes of use the gimbal would slowly drift off center even with the head perfectly still, which makes the system unusable for any sustained flight.
+The first approach used raw gyro data, integrating angular velocity over time to estimate orientation. The problem is that gyros accumulate error with every reading, and over a few minutes the gimbal drifted off center even with the head still.
 
-The fix is the MPU6050's onboard DMP, which fuses gyro and accelerometer data into a quaternion representation of orientation. The accelerometer provides an absolute gravity reference that constantly corrects the gyro drift, so the angle estimate stays stable over time without wandering.
+The fix is the motion processor, which fuses gyro and accelerometer data. The accelerometer provides an absolute gravity reference that corrects gyro drift, so the angle estimate stays stable without drifting.
 
-Calibration is a separate problem. Every MPU6050 unit has its own factory bias on each axis — the "zero" reading at rest is never actually zero. The firmware handles this in two layers: hardware offsets baked into the code for the specific chip, and a software auto-calibration on every boot that measures the resting angle and subtracts it. This means the gimbal doesn't need to be in any particular position at power-on to center correctly.
+Calibration is separate. Every MPU6050 unit has its own factory bias on each axis. The firmware corrects this in two layers: hardware offsets coded for the specific chip, and a software calibration on every boot that measures the resting angle and subtracts it. This means the gimbal centers correctly regardless of power-on position.

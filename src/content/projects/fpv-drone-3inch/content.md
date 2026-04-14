@@ -1,10 +1,10 @@
-# 3-Inch FPV Drone: Build DJI O3 build
+# 3-Inch FPV Drone with DJI O3
 
 ## The Goal
-I wanted to put a high-definition DJI O3 digital system onto a tiny 3-inch drone frame while keeping it under 250g. I had to get creative with how I stacked the parts to get the best video quality in such a small space.
+I wanted to put a high-definition DJI O3 digital system onto a tiny 3-inch drone frame while keeping it under 250g. This required careful placement of components to achieve the best video quality in a tight physical space.
 
 ## Custom Adapters
-The flight controller I used didn't fit the DJI O3 unit's mounting holes. I 3D-printed some custom standoffs to bridge the gap and keep everything lined up perfectly. This also keeps the parts from moving around or getting damaged when I'm flying fast.
+The flight controller didn't fit the DJI O3 unit's mounting holes. I 3D-printed custom standoffs to bridge the gap and maintain proper alignment. This also prevents movement and vibration during high-speed flight.
 
 ## The Result
-I built the whole thing in under two hours. Even though it was a quick build, it flies really well. Having HD video on a tiny 3-inch drone makes it much easier to see where I'm going compared to old analog systems, all while staying in a very small package.
+I built the whole thing in under two hours. It flies well and maintains stable video. Having HD video on a 3-inch drone makes it much easier to navigate compared to analog systems, all while staying in a very small package.

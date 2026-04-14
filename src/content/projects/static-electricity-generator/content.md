@@ -9,13 +9,13 @@ I used a high-voltage multiplier to boost the power. This setup successfully cre
 - **Output**: High voltage (kV range), very low current.
 - **Insulation**: Heavy insulation to stop the spark from jumping where it shouldn't.
 
-## Testing it as a "Wearable"
+## Testing it as a Wearable
 I modified the setup to test it as a wearable ion generator.
-- **How it works**: My body becomes the high-voltage surface while I stay grounded to the floor.
+- **How it works**: I became the high-voltage electrode while standing on a conductive mat connected to ground.
 - **Results**: It creates negative ions that neutralize dust in the air.
 
 ## Safety & Results
 Because of the high voltage, I had to be careful with safety:
 - **Separation**: I kept all high-voltage parts separated or insulated.
-- **Current resistors**: I added large resistors to keep the energy at a safe, non-lethal level.
+- **Current limiting**: I added large resistors to keep the current at a safe level.
 - **Testing**: I confirmed it was working when my hair started standing up and I could smell the ozone.

@@ -1,7 +1,8 @@
 Habanero Cheeseburger - LLM Table of Contents
 
 Home
-/
+- /
+- /global
 
 Projects
 - /projects/3d-printer
@@ -9,10 +10,6 @@ Projects
 - /projects/curtain-opener
 - /projects/desk-setup
 - /projects/ebike
-- /projects/eraser-2026
-- /projects/eraser-v1
-- /projects/eraser-v2
-- /projects/eraser-v3
 - /projects/eskateboard
 - /projects/firework-detonator
 - /projects/fpv-drone-3inch
@@ -26,11 +23,12 @@ Projects
 - /projects/jet
 - /projects/macropad-v1
 - /projects/macropad-v2
-- /projects/mic
+- /projects/mbs-tool
 - /projects/night-vision-goggles
 - /projects/prank-devices
 - /projects/rc-f1-car
 - /projects/rc-wing
+- /projects/repgate
 - /projects/smart-charger
 - /projects/smart-glasses
 - /projects/smart-ski-goggles-v1
@@ -43,9 +41,8 @@ Projects
 - /projects/water-sprayer-fpv-drone
 
 Series
-- /series/esp-eraser
-- /series/fpv-drone
 - /series/ble-macropad
+- /series/fpv-drone
 - /series/underwater-scooter
 
 Notes

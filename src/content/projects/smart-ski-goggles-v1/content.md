@@ -8,7 +8,7 @@ I noticed that the inside of my goggles was slightly reflective. I found that if
 
 - **Screen**: High-brightness micro-display.
 - **Lens**: Standard internal anti-fog coating.
-- **Housing**: Rapidly prototyped case.
+- **Housing**: 3D-printed prototype case.
 
 ## The Result
 The test was a success. For this first version, I just displayed a clock to keep it simple. The image stayed aligned and was easy to see even against the bright white snow.

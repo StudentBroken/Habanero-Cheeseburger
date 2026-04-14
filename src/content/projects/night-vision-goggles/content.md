@@ -10,4 +10,4 @@ I used two Li-Ion batteries in parallel to make sure the bright IR lights had en
 - **Power**: Parallel batteries for extended runtime.
 
 ## What I Learned
-The goggles worked well—I could see clearly even in total darkness. The IR lights were bright enough to light up a whole room at short-to-medium range. The electronics were solid, but the frame could use some better ergonomics in the next version.
+The goggles worked well. I could see clearly in total darkness. The IR lights illuminated a room-sized area at short-to-medium range. The electronics were solid, but the frame design needs better ergonomics for the next version.

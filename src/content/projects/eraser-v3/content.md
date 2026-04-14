@@ -1,18 +1,18 @@
 # Covert Network Node: Iteration 3 (MQTT & Power Management)
 
 ## Design Evolution
-The third iteration focused on structural internal refinement and the implementation of advanced power-management protocols. The architecture abandoned the direct BLE link in favor of a centralized MQTT broker, allowing for multi-client telemetry and asynchronous processing.
+For the third version, I rebuilt the internals and switched from BLE to WiFi MQTT. This lets me monitor from multiple devices—phone or computer—instead of just one phone at a time.
 
 ## Power Optimization
-This iteration marked the first implementation of deep-sleep duty cycles between data transmissions. The processing logic was re-engineered to execute a "wake-capture-transmit-sleep" sequence, significantly extending the operational lifespan for a fixed battery capacity. 
+I added deep sleep so the device wakes up, captures data, sends it, and goes back to sleep. This stretches the battery life on the same cell.
 
 ## Structural Engineering
-The internal chassis was redesigned with rigid component separators to eliminate mechanical shifting and rattling during handling. The optical port and physical switches were precisely aligned with the external shell using higher-tolerance machining/printing.
+I added separators inside to keep components from shifting around and making noise. The sensors and buttons line up properly with the external shell now, with tighter tolerances.
 
-- **Centralized Logic**: ESP32-S3 Xiao Sense Cam.
-- **Protocol**: WiFi-based MQTT (Standardized telemetric publishing).
-- **Power Management**: Duty-cycled deep-sleep implementation.
-- **Charging Interface**: Upgraded to standardized USB-C.
+- **Microcontroller**: ESP32-S3 Xiao Sense Cam.
+- **Communication**: WiFi with MQTT protocol.
+- **Power**: Deep-sleep cycles between data sends.
+- **Charging**: USB-C.
 
-## Engineering Conclusion
-Iteration 3 successfully transitioned the platform from a prototyping prototype to a reliable operational tool. The move to MQTT provided superior flexibility in terminal selection (mobile vs. desktop monitoring), and the structural internal fixes eliminated the mechanical failures prevalent in previous builds.
+## Final Result
+This version is much more usable than the earlier prototypes. The switch to MQTT means I can check readings from anywhere, and the internal fixes stopped the rattling and mechanical issues from before.

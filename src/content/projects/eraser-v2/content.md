@@ -1,14 +1,14 @@
 # Covert Network Node: Iteration 2 (BLE Optimization)
 
 ## Architectural Revision
-The objective of the second iteration was the radical simplification of the communication topology. The multi-stage ESP-NOW/Serial relay chain was decommissioned in favor of a direct Bluetooth Low Energy (BLE) link between the primary node and the mobile processing unit.
+For the second version, I simplified the design by removing the ESP-NOW relay chain and connecting directly to my phone with Bluetooth Low Energy (BLE).
 
 ## System Enhancements
-The integration of BLE protocol eliminated two intermediary nodes, significantly reducing system latency and increasing operational reliability. The physical carrier (whiteboard eraser) was upgraded to a model with a more optimized volumetric profile—simultaneously thinner and wider—which facilitated more discrete manual handling.
+Dropping the relay nodes meant lower latency and fewer places for things to break. I also switched to a wider, thinner eraser—easier to hold and less obvious in a bag or pocket.
 
-- **Logic Node**: ESP32-S3 Xiao Sense.
-- **Protocol Stack**: Direct BLE HID/GATT for mobile interfacing.
-- **Physical Integration**: Custom-machined internal cavity for rigid component securement.
+- **Microcontroller**: ESP32-S3 Xiao Sense.
+- **Communication**: Direct BLE with HID and GATT profiles for mobile.
+- **Internal Structure**: Custom-machined cavity to hold components in place.
 
 ## Operational Conclusion
-The transition to a single-node wireless architecture reduced field-deployment complexity by approximately 60%. The redesigned physical housing successfully addressed the ergonomic issues identified in Iteration 1, confirming the viability of BLE as a primary transport layer for covert telemetry.
+This single-node architecture cut down complexity significantly. The new eraser shape fixed the ergonomic problems from the first version. BLE proved to be a reliable way to send data.

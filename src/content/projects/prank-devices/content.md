@@ -13,4 +13,4 @@ This was my first time really getting deep-sleep to work well. I set the devices
 - **Protocol**: ESP-NOW was chosen because it connects almost instantly.
 
 ## What I Learned
-The project worked perfectly. It proved that I could make reliable, battery-powered devices that stay connected for a long time. The code I wrote for saving power here became the foundation for my later projects, like the ESP Erasers.
+The project worked well. I successfully made battery-powered devices that stayed connected over 24 hours on minimal power. The power-saving code I developed here became the foundation for my later projects, like the ESP Erasers.

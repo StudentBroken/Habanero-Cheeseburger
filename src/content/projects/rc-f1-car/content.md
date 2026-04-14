@@ -6,8 +6,8 @@ I wanted to build a functional RC car that looked like a Formula 1 racer, using 
 ## Materials & Construction
 I used two different types of plastic to make the car both stiff and durable:
 - **Frame**: Printed in standard PLA for rigidity.
-- **Suspension & Tires**: Printed in TPU (a flexible, rubber-like plastic). This acts as a built-in suspension system to soak up bumps.
-- **Bearings**: I used real stainless steel bearings pressed directly into the plastic parts. It took a few test prints to get the "tightness" (tolerances) just right so they wouldn't fall out.
+- **Suspension & Tires**: Printed in TPU (a flexible, rubber-like plastic). The flexible material absorbs impacts and acts as a suspension system.
+- **Bearings**: I used real stainless steel bearings pressed directly into the plastic parts. It took a few test prints to dial in the tolerances so they wouldn't fall out.
 
 ## Electronics
 - **Motors**: Salvaged from an old RC car I no longer used.

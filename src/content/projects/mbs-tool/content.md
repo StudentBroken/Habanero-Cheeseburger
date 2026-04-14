@@ -1,8 +1,8 @@
 # MBS — Student Grade Tracker
 
-MBS (Moyenne, Bilan, Stratégie) is a web app for Quebec secondary school students to track, analyze, and rank their grades. It was the first project I built with a real collaborator — Howard — and the first time either of us used GitHub for anything beyond reading code.
+MBS (Moyenne, Bilan, Stratégie) is a web app for Quebec secondary school students to track, analyze, and rank their grades. It was my first project with a real collaborator — Howard — and the first time either of us used GitHub beyond reading code.
 
-Working with someone at a different pace taught me to scope cleanly. Howard connected the Google Sheets backend, built the grade projection tool, and helped polish the ticket system. I built everything else: the data formatter, the average calculator with competency weights, the leaderboard, the full frontend and backend communication layer, the onboarding flow, the opt-in system, the terms and conditions, the privacy policy, the FAQ, the localStorage architecture, and led the ticket system. We started by committing everything through GitHub's web interface. By 2026 I began migrating to a more modern architecture.
+Working with someone at a different pace taught me to scope cleanly. Howard connected the Google Sheets backend, built the grade projection tool, and helped refine the ticket system. I built everything else: the data formatter, the average calculator with competency weights, the leaderboard, the frontend and backend communication layer, the onboarding flow, the opt-in system, the terms and conditions, privacy policy, FAQ, the localStorage architecture, and led the ticket system. We started by committing through GitHub's web interface, then moved to a more modern workflow.
 
 ## Data Pipeline
 
