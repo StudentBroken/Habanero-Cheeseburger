@@ -58,8 +58,9 @@ export default function GlobalPage() {
   globalText += `Total Projects: ${fullProjects.length}\n\n`;
 
   const formatProject = (p) => {
+    const age = getAgeAtDate(p.date);
     let block = `### ${p.title}\n`;
-    block += `Date: ${p.date}\n`;
+    block += `Date: ${p.date} (Age: ${age})\n`;
     block += `Tier: ${p.tier}\n`;
     block += `Category: ${p.category}${p.subcategory ? ` | Series: ${p.subcategory}` : ''}\n`;
     block += `Description: ${p.description}\n`;
