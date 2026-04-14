@@ -1,21 +1,16 @@
-# Système de Gestion Thermique Active : Batterie FPV
+# Boîtier de Batterie FPV Chauffant
 
-## Objectif Technique
+## L'Objectif
+Je voulais garder mes batteries FPV au chaud pour pouvoir voler par temps glacial (jusqu'à -30°C). Quand les batteries LiPo deviennent trop froides, elles perdent de la puissance et la tension chute sous charge, j'ai donc construit un boîtier avec un chauffage intégré pour les maintenir à une bonne température.
 
-Ingénier une solution de gestion thermique active et régulée pour les batteries Lithium-Polymer (LiPo) opérant dans des environnements sous-zéro (-30°C). Le système vise à atténuer l'augmentation de résistance interne et l'affaissement de tension subséquent associés à la cinétique chimique à basse température.
+## L'Électronique
+J'ai utilisé deux régulateurs 5V : un pour le cerveau ESP32-C3 et un autre pour alimenter un fil chauffant en nichrome qui produit 5 watts de chaleur. J'ai utilisé une ancienne thermistance (capteur de température) pour surveiller la température de la batterie.
 
-## Architecture du Système
+## Performance
+Cela a très bien fonctionné. Même à -30°C, la température n'a chuté que de 0,1°C par minute lorsqu'elle n'était pas utilisée. Pendant le vol, le chauffage et la propre chaleur de la batterie ont tout maintenu à un stable 30°C, ce qui est parfait pour la performance.
 
-Le hardware utilise des régulateurs *buck* 5V doubles pour la gestion d'énergie. Un régulateur primaire alimente le microcontrôleur ESP32-C3, tandis qu'un régulateur secondaire commuté drive un élément chauffant résistif en nichrome discret capable d'une sortie thermique de 5 watts. Le retour thermique est fourni par une thermistance NTC salvagée montée en contact direct avec les cellules.
-
-## Résultats Opérationnels
-
-Le déploiement initial a validé l'algorithme de régulation *bang-bang*. Dans des conditions statiques à -30°C et 0% de charge, le système a démontré une décroissance thermique de seulement 0.1°C/min (depuis une baseline de 21°C). Pendant les opérations de vol, la combinaison du chauffage résistif et de la chaleur induite par la résistance interne a stabilisé la température de la batterie à un setpoint opérationnel précis de 30°C.
-
-## Analyse de Défaillance & Contrôles d'Ingénierie
-
-Le système a subi une défaillance logique catastrophique due à un événement d'inversion de polarité lors de la maintenance sur le terrain.
-
-- **Cause Racine** : Erreur humaine lors de la connexion de la batterie, facilitée par l'absence de connecteurs physiques polarisés et verrouillés.
-- **Résultat** : Défaillance instantanée par surtension de l'étage de régulation *buck*.
-- **Contrôles Futurs** : Implémentation de connecteurs polarisés standard (XT30/XT60) et circuits de protection contre l'inversion de polarité intégrés sont obligatoires pour les révisions suivantes.
+## Pourquoi ça a cassé & Comment réparer
+J'ai accidentellement branché la batterie à l'envers sur le terrain et j'ai grillé l'électronique.
+- **Erreur** : Je n'ai pas utilisé de connecteur qui ne se branche que dans un seul sens.
+- **Résultat** : Les régulateurs ont sauté immédiatement.
+- **La prochaine fois** : Je dois utiliser des connecteurs polarisés appropriés (comme XT30 ou XT60) et ajouter un circuit pour protéger contre l'inversion de polarité.

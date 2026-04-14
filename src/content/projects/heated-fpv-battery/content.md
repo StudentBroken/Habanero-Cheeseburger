@@ -1,16 +1,16 @@
-# Active Thermal Management System: FPV Battery
+# Heated FPV Battery Case
 
-## Technical Objective
-To engineer an active, regulated thermal management solution for Lithium-Polymer (LiPo) batteries operating in sub-zero environments (-30°C). The system aims to mitigate the increase in internal resistance and subsequent voltage sag associated with low-temperature chemical kinetics.
+## The Goal
+I wanted to keep my FPV batteries warm so I could fly in freezing cold weather (down to -30°C). When LiPo batteries get too cold, they lose power and "sag" under load, so I built a case with a built-in heater to keep them at a good temperature.
 
-## System Architecture
-The hardware utilizes dual 5V buck regulators for power management. A primary regulator supplies the ESP32-C3 microcontroller, while a secondary, switched regulator drives a discrete nichrome resistive heating element capable of a 5-watt thermal output. Thermal feedback is provided by a salvaged NTC thermistor mounted in direct contact with the cells.
+## The Electronics
+I used two 5V regulators: one for the ESP32-C3 brain and another to power a nichrome heating wire that puts out 5 watts of heat. I used an old thermistor (temperature sensor) to monitor the battery temperature.
 
-## Operational Results
-Initial deployment validated the "bang-bang" regulation algorithm. Under static conditions at -30°C and 0% load, the system demonstrated a thermal decay of only 0.1°C/min (from a 21°C baseline). During flight operations, the combination of resistive heating and internal IR-induced heat stabilized the battery temperature at a precise 30°C operational setpoint.
+## How it Performed
+It worked great. Even at -30°C, the temperature only dropped by 0.1°C per minute when not in use. While flying, the heater and the battery's own heat kept everything at a steady 30°C, which is perfect for performance.
 
-## Failure Analysis & Engineering Controls
-The system experienced a catastrophic logic failure due to a reverse-polarity event during field servicing.
-- **Root Cause**: Human error during battery connection, facilitated by the absence of keyed, polarized physical connectors.
-- **Outcome**: Instantaneous overvoltage failure of the buck regulation stage.
-- **Future Controls**: Implementation of industry-standard polarized connectors (XT30/XT60) and integrated reverse-polarity protection circuits are mandatory for subsequent revisions to ensure operational reliability in high-stress field envionments.
+## Why it Broke & How to Fix It
+I accidentally plugged the battery in backwards while out in the field and fried the electronics.
+- **Mistake**: I didn't use a connector that only plugs in one way.
+- **Result**: The regulators blew immediately.
+- **Next Time**: I need to use proper polarized connectors (like XT30 or XT60) and add a circuit to protect against reverse polarity.

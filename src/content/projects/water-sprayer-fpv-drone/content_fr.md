@@ -1,19 +1,18 @@
-# Système de Délivrance Hydraulique : Multirotor FPV
+# Drone FPV à Pulvérisateur d'Eau
 
-## Objectif Technique
+## Objectif
+Je voulais construire une petite pompe à eau et un système de pulvérisation pour mon drone FPV. Le but était de pouvoir pulvériser de l'eau avec précision tout en volant vite (pour un jeu de Senior Assassin).
 
-L'objectif était l'ingénierie d'une micro-pompe hydraulique et d'un système de délivrance intégrés dans une plateforme multirotor FPV. Le système a été conçu pour une délivrance aqueuse de précision lors d'opérations haute dynamique (déploiement Senior Assassin).
+## Construction de la Pompe
 
-## Ingénierie Hydraulique
+L'architecture de la pompe utilise un moteur brushed haute RPM entraînant une turbine personnalisée logée dans une seringue médicale modifiée. Les turbines initiales imprimées en 3D n'étaient pas assez précises à cette échelle, j'ai donc dû en fabriquer une à la main en plastique dur. La chambre a été scellée avec des composés étanches et alimentée par gravité pour assurer l'amorçage.
 
-L'architecture de la pompe utilise un moteur brushed haute RPM entraînant une turbine custom logée dans une seringue médicale modifiée. Les turbines initiales imprimées en FDM n'ont pas réussi à atteindre les exigences de précision dimensionnelle à cette échelle, nécessitant une transition vers une turbine en plastique haute module fabriquée à la main. La chambre a été hermétiquement scellée avec des composés étanches et alimentée via une entrée assistée par gravité pour assurer un amorçage constant.
+## Électronique & Contrôle
 
-## Électronique & Logique de Commande
+La pompe est alimentée par un petit ESC brushed 1S. Je l'ai connecté à la broche LED du contrôleur de vol et je l'ai remappé dans Betaflight pour qu'il fonctionne comme un servo. J'ai également ajouté un bouton à mon émetteur (LiteRadio 2 SE) pour déclencher la pompe indépendamment des commandes de vol.
 
-La propulsion pour la pompe hydraulique est gérée via un ESC brushed 1S dédié. L'ESC est interfacé avec la pin de strip LED du contrôleur de vol, qui a été remappée via le CLI de Betaflight pour fonctionner comme un nœud logique contrôlé par servo. L'émetteur physique (LiteRadio 2 SE) a été modifié avec un interrupteur tactile secondaire pour déclencher la séquence de pompe indépendamment des contrôles de vol primaires.
+## Ce que j'ai appris
 
-## Analyse de Défaillance & Leçons Opérationnelles
-
-- **Intégrité Structurelle** : Les composants imprimés FDM et les adhésifs standard (pistolet à colle) se sont avérés inadéquats pour les contraintes dynamiques du vol multirotor. Une séparation mécanique s'est produite lors d'un événement de crash unique.
-- **Atténuation Atmosphérique & Thermique** : Le contrôleur de vol de remplacement a été entièrement encapsulé dans un revêtement conforme à base de silicone pour assurer le durcissement environnemental contre l'exposition aqueuse localisée.
-- **Dynamique des Fluides** : La tubulure pneumatique choisie présentait une rigidité excessive, menant à un pincement de l'entrée. Les révisions futures nécessitent une tubulure silicone haute flexibilité et un mécanisme d'amorçage actif pour éliminer la dépendance à la gravité.
+- **Construction** : Les composants imprimés en FDM et le pistolet à colle n'étaient pas appropriés pour les contraintes, les vibrations et les facteurs environnementaux (eau, humidité et température) du vol de drone. Une pièce s'est détachée lors d'un crash, montrant que j'ai besoin d'époxy plus solide ou de vis la prochaine fois.
+- **Étanchéité** : J'ai recouvert le nouveau contrôleur de vol de silicone (revêtement conforme) pour m'assurer qu'il ne grillerait pas s'il était exposé à l'eau.
+- **Tuyauterie** : Les premiers tubes étaient trop rigides et se pinçaient. J'ai besoin d'utiliser des tubes en silicone flexibles la prochaine fois et peut-être un système d'amorçage actif pour ne plus dépendre de la gravité.

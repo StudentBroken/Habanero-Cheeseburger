@@ -1,16 +1,16 @@
-# Distributed Acoustic Network: Operational Testing
+# Remote-Controlled Prank Devices
 
-## Tactical Objective
-The objective was the deployment of a distributed network of low-power nodes to execute synchronized acoustic disruptions. The operation served as the primary validation for ultra-low-power deep-sleep implementations on the ESP32 platform.
+## The Goal
+I wanted to build a set of small, hidden devices that could make sounds on command. The main goal was to test how long I could keep an ESP32 running on a tiny battery using "deep sleep" mode.
 
-## Network Architecture
-The operation utilized multiple ESP32 nodes communicating via the ESP-NOW peer-to-peer protocol. This architecture allowed for complex, low-latency coordination without the need for infrastructure-based WiFi, ensuring high operational discretion. To maintain visual non-attribution, the electronics were concealed within custom-engineered 3D printed deceptive enclosures (imitating consumer electronics).
+## How They Communicate
+I used several ESP32 boards talking to each other through "ESP-NOW." This lets them coordinate without needing a WiFi router, making them easier to hide. I 3D-printed custom cases that look like normal electronics so they wouldn't be noticed.
 
-## Power Management System
-This project marked the first successful implementation of advanced duty-cycling on the ESP32 platform.
-- **Micro-Sleep Integration**: Nodes utilized deep-sleep wake timers to minimize quiescent current draw.
-- **Wake Interval Optimization**: The duty cycle was tuned to maintain acoustic efficacy while extending operational life to cover a full 24-hour deployment cycle on minimal LiPo capacity.
-- **Protocol Selection**: ESP-NOW was selected for its minimal handshake overhead compared to standard 802.11 stacks.
+## Saving Battery
+This was my first time really getting deep-sleep to work well. I set the devices to wake up only when needed, which let them run for a full 24 hours on a very small battery. I chose ESP-NOW because it's much faster and more efficient than regular WiFi.
+- **Deep Sleep**: Nodes wake up only at certain times to save power.
+- **Efficiency**: The timer was set to last 24 hours on a tiny battery.
+- **Protocol**: ESP-NOW was chosen because it connects almost instantly.
 
-## Operational Results
-The deployment was a comprehensive success, validating both the ESP-NOW communication reliability and the viability of long-term battery-powered ESP32 nodes. The core duty-cycling logic developed for this operation became the telemetric foundation for subsequent iterations of the covert network node series (Eraser v3+).
+## What I Learned
+The project worked perfectly. It proved that I could make reliable, battery-powered devices that stay connected for a long time. The code I wrote for saving power here became the foundation for my later projects, like the ESP Erasers.

@@ -1,13 +1,13 @@
-# BLE Peripheral Architecture: Macropad v1
+# Wireless Mechanical Macropad (v1)
 
-## Technical Objective
-The objective was the engineering of a custom Human Interface Device (HID) peripheral utilizing Bluetooth Low Energy (BLE). The project focused on the integration of mechanical tactile inputs with a low-latency wireless protocol stack and real-time remapping capabilities.
+## The Goal
+I wanted to build a custom wireless macro keypad that connects over Bluetooth. The goal was to have mechanical keys that respond quickly and can be remapped easily without having to write new code.
 
-## Hardware Specification
-The system is built on an ESP32-S3 microprocessor, leveraging its integrated BLE radio. The HID matrix is interfaced directly with GPIO pins, allowing for un-buffered, low-latency input capture. The platform is fully self-contained with an integrated LiPo power cell for mobile deployment.
+## The Parts
+I used an ESP32-S3 for its built-in Bluetooth and connected the mechanical switches directly to its pins for the fastest response. It runs on a small LiPo battery so I can use it anywhere.
 
-## Control Logic & Interface
-The firmware manages twin protocol stacks: a primary BLE HID stack for standard keyboard emulation and an auxiliary 802.11 web server for asynchronous configuration. Users can access a localized web interface to remap the keymap matrix; these configurations are committed to non-volatile storage (NVS), ensuring persistence across power cycles without necessitating firmware recompilation.
+## Software & Remapping
+The macropad acts like a standard Bluetooth keyboard, but it also hosts a small web server. You can connect to this website to change what each key does. The new settings are saved directly to the device so it remembers them even after being turned off.
 
-## Operational Assessment
-The prototype demonstrated significant utility in multi-application workflows (CAD/DCC software). The web-based reconfiguration layer successfully validated the "hardware-as-a-service" model for HID peripherals. The system remained in active "daily driver" status until its architectural evolution into the v2 platform approximately 96 hours post-deployment.
+## What I Learned
+This macropad was really useful for CAD work and other apps with a lot of shortcuts. Being able to change the keys through a browser worked well. I used this as my daily driver for a few days before I started working on Version 2.

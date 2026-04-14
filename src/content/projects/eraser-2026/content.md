@@ -1,18 +1,18 @@
-# Covert Network Node: 2026 Edition (Final Optimization)
+# ESP Eraser: 2026 Edition (Final version)
 
-## Technical Objective
-The 2026 iteration represents the theoretical limit of the domestic-form-factor covert node. The objective was a radical reduction in volumetric footprint while transitioning to a "fire-and-forget" asynchronous data model.
+## The Goal
+By 2026, I wanted to make the eraser system as small as possible. The goal was to make it much thinner and change how it sends data so it doesn't have to wait for a response.
 
-## Architectural Shift
-The system migrated from an MQTT-based broker to a Firebase backend. This allows for near-instantaneous data offloading: the node executes a packet transmit and enters a deep-sleep state immediately, delegating delivery confirmation and downstream distribution to the cloud infrastructure. This reduction in active-radio time facilitated a 70% decrease in required battery capacity without compromising operational endurance.
+## Software & Battery
+I switched from MQTT to Firebase to handle the data. This means the eraser can send a picture and immediately go to sleep, which saves a lot of power. This allowed me to use a battery that's 70% smaller while still lasting just as long.
 
-- **Volumetric Efficiency**: Slimmest profile currently achievable; undetectable in standard use environments.
-- **Data Model**: Firebase-integrated cloud offloading (fire-and-forget).
-- **Power Management**: Minimal duty cycle for maximum battery longevity.
-- **Indicator Suite**: Integrated SMD LED for discrete status monitoring.
+- **Smallest size yet**: Thin enough to be hidden in plain sight.
+- **Data Model**: Firebase cloud offloading (fire-and-forget).
+- **Power Management**: Short active time for maximum battery life.
+- **Status Monitoring**: Small LED for discrete status checks.
 
-## Design Refinement
-The internal chassis was radically re-engineered to maximize component density. All interfaces, including the USB-C charging port, are now fully accessible without structural disassembly. The only remaining detection vector is the micro-texture variance between the FDM-printed shell and the synthetic polymer of a commercial eraser.
+## Better Design
+I redesigned the inside to fit everything tighter. I also made the USB-C charging port accessible without having to take the whole thing apart. The only way you can tell it’s not a real eraser is if you look closely at the 3D-printed texture.
 
-## Conclusion
-The 2026 Edition validates the marriage of ultra-low-power duty cycling with cloud-based data offloading. It serves as the definitive architecture for high-discretion optical telemetry nodes.
+## Summary
+The 2026 version proves that you can make something this small and still have it work reliably with the cloud. It’s my best version yet.

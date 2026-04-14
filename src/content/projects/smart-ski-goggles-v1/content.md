@@ -1,19 +1,17 @@
-# Electro-Optical Reflection HUD: Ski Goggles v1
+# Smart Ski Goggles: HUD v1
 
-## Technical Objective
-The objective was the rapid prototyping of a head-up display (HUD) for alpine environments, utilizing existing internal lens coatings as a reflective substrate. The project served as a low-fidelity (Lo-Fi) functional verification for a subsequent high-dynamic speedometer platform.
+## The Goal
+I wanted to quickly build a head-up display (HUD) for skiing by using the goggles' own lens as a mirror. This first version was a test to see if I could project a speedometer in my field of vision later on.
 
-## Optical Discovery & Design
-The system architecture was derived from an empirical observation of the goggles' internal reflective properties. Analysis indicated that partial ambient light occlusion (simulated by hand-masking the external lens) significantly increased the visibility of internal-surface reflections. 
+## How it Works
+I noticed that the inside of my goggles was slightly reflective. I found that if I blocked some of the outside light, the reflection became much clearer. I used this trick by placing a bright screen facing the lens so the image reflects directly into my eye, making it look like the display is floating in the air.
 
-The design leverages this property by positioning a high-brightness micro-display facing an internal reflective coating. The image is reflected off the lens surface directly into the user's ocular field, creating a floating virtual image overlaid on the external environment.
+- **Screen**: High-brightness micro-display.
+- **Lens**: Standard internal anti-fog coating.
+- **Housing**: Rapidly prototyped case.
 
-- **Display Node**: Micro-OLED / High-brightness display.
-- **Optical Substrate**: OEM internal anti-fog/reflective lens coating.
-- **Form Factor**: Rapid-prototype integrated housing.
+## The Result
+The test was a success. For this first version, I just displayed a clock to keep it simple. The image stayed aligned and was easy to see even against the bright white snow.
 
-## Operational Results (POC)
-The Iteration 1 build successfully validated the reflective optical model. The firmware was limited to a chronometric (clock) display to minimize processing overhead during initial field testing. The system demonstrated stable image alignment and sufficient contrast for visibility against varied snow-loading conditions.
-
-## Engineering Roadmap
-Version 1 confirmed the viability of the "lens-as-reflector" architecture without necessitating complex waveguide optics. This data set provides the necessary baseline for the Version 2 integration, which will utilize the Android-BLE stack to project real-time GPS telemetry and speed-profile data.
+## What's Next
+Version 1 proved that I could use the lens as a reflector without needing expensive optics. This gives me everything I need to build Version 2, which will connect to my phone to show real-time speed and GPS data.

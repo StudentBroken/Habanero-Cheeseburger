@@ -1,13 +1,13 @@
-# Infrared Imaging Suite: Night Vision
+# Night Vision Goggles
 
-## Technical Objective
-The objective was the engineering of a wearable, active-illumination night vision system. The project focused on the integration of high-sensitivity infrared (IR) optics with a high-current illumination array for operation in zero-lux environments.
+## The Goal
+I wanted to build a pair of night vision goggles that could see in total darkness. The project used an IR camera and a bright IR light array to light up the area without being seen.
 
-## Hardware Specification
-The system utilizes a dual-parallel Li-Ion battery architecture to provide the necessary current for sustained high-intensity IR emission while maintaining operational endurance.
-- **Optics Node**: IR-sensitive CMOS camera module with a wide-angle lens.
-- **Illumination Array**: High-flux infrared emitter, providing active scene illumination in the near-infrared spectrum (invisible to the human eye).
-- **Power Management**: Parallel redundant battery configuration (extended runtime model).
+## The Parts
+I used two Li-Ion batteries in parallel to make sure the bright IR lights had enough power and would last a long time.
+- **Camera**: IR-sensitive camera module with a wide-angle lens.
+- **Lights**: High-power infrared emitter that lights up the scene in the near-infrared spectrum (invisible to the human eye).
+- **Power**: Parallel batteries for extended runtime.
 
-## Operational Assessment
-The platform successfully validated the active-IR illumination model, providing clear situational awareness in environments where passive lunar or stellar gain was insufficient. The high-current illuminator successfully saturated indoor environments at short-to-medium range. While functionally robust, the v1 prototype's structural ergonomics remain a primary candidate for future refinement.
+## What I Learned
+The goggles worked well—I could see clearly even in total darkness. The IR lights were bright enough to light up a whole room at short-to-medium range. The electronics were solid, but the frame could use some better ergonomics in the next version.

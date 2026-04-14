@@ -1,21 +1,21 @@
-# High-Voltage Electrostatic Discharge System: Ion Generator
+# Static Electricity Generator
 
-## Technical Objective
-The objective was the engineering of a high-voltage, low-current electrostatic generator utilizing a multi-stage voltage multiplier (Cockcroft-Walton) architecture. The project served as a study in high-potential field distribution and active ionization.
+## The Goal
+I wanted to build a high-voltage generator that can create sparks and ionize the air. I used a voltage multiplier circuit (Cockcroft-Walton) to turn low voltage into thousands of volts.
 
-## Hardware Specification
-The circuit utilizes an AC high-voltage primary stage feeding into a cascaded multiplier stack. This configuration successfully translates low-voltage inputs into potential differences sufficient for visible spark discharge and atmospheric ionization.
-- **Circuitry Node**: High-voltage multiplier stack.
-- **Output Metrics**: High potential difference (kV range), low-amperage current.
-- **Structural Integrity**: Heavily insulated conductors to prevent localized arcing and dielectric breakdown.
+## The Circuit
+I used a high-voltage multiplier to boost the power. This setup successfully creates sparks and ionizes the air.
+- **Circuit**: High-voltage multiplier stack.
+- **Output**: High voltage (kV range), very low current.
+- **Insulation**: Heavy insulation to stop the spark from jumping where it shouldn't.
 
-## Operational Deployment: Wearable Ionization Study
-The platform was transitioned into a experimental wearable configuration for negative ion emission.
-- **Mechanism**: The operator's body functions as the high-potential distribution surface, with a secondary ground plane maintained through physical contact with the floor.
-- **Effect**: Active atmospheric ionization, resulting in neutralized particulate matter (localized negative ion discharge).
+## Testing it as a "Wearable"
+I modified the setup to test it as a wearable ion generator.
+- **How it works**: My body becomes the high-voltage surface while I stay grounded to the floor.
+- **Results**: It creates negative ions that neutralize dust in the air.
 
-## Engineering Controls & Safety
-Due to the high-potential differentials, the project necessitated stringent engineering controls:
-- **Dielectric Integrity**: All high-voltage nodes were encapsulated or physically separated according to their dielectric strength limits.
-- **Current Limitation**: Implementation of high-value series resistors to ensure discharge energy remains within safe non-lethal thresholds.
-- **Validation**: Successful verification of active ionization effects (electrostatic hair displacement and localized ozone production).
+## Safety & Results
+Because of the high voltage, I had to be careful with safety:
+- **Separation**: I kept all high-voltage parts separated or insulated.
+- **Current resistors**: I added large resistors to keep the energy at a safe, non-lethal level.
+- **Testing**: I confirmed it was working when my hair started standing up and I could smell the ozone.

@@ -1,10 +1,10 @@
-# 3-Inch Multirotor Platform: DJI O3 Integration
+# 3-Inch FPV Drone: Build DJI O3 build
 
-## Technical Objective
-The objective was the integration of a high-definition DJI O3 digital transmission unit onto an ultra-compact sub-250g 3-inch carbon fiber chassis. The project required a non-standard component stack to achieve the desired visual fidelity in a micro-scale form factor.
+## The Goal
+I wanted to put a high-definition DJI O3 digital system onto a tiny 3-inch drone frame while keeping it under 250g. I had to get creative with how I stacked the parts to get the best video quality in such a small space.
 
-## Structural Interfacing
-The chosen flight controller (Cinelog 20 derivative) was physically incompatible with the DJI O3 air unit's mounting pattern. To resolve the geometric conflict, a series of custom FDM-printed structural standoffs were engineered. These standoffs functioned as a structural bridge, ensuring precise vertical alignment and mitigating mechanical stress on the components during high-G maneuvers.
+## Custom Adapters
+The flight controller I used didn't fit the DJI O3 unit's mounting holes. I 3D-printed some custom standoffs to bridge the gap and keep everything lined up perfectly. This also keeps the parts from moving around or getting damaged when I'm flying fast.
 
-## Operational Deployment
-The system was assembled within a constrained 120-minute operational window. Despite the rapid integration, the platform demonstrated stable flight characteristics. The integration of high-definition digital video onto a 3-inch chassis significantly improves situational awareness compared to legacy analog systems while maintaining a minimal operational footprint.
+## The Result
+I built the whole thing in under two hours. Even though it was a quick build, it flies really well. Having HD video on a tiny 3-inch drone makes it much easier to see where I'm going compared to old analog systems, all while staying in a very small package.

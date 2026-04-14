@@ -1,10 +1,10 @@
 # Electric Underwater Scooter (v1)
 
-A operational electric underwater scooter built in just two days on a tight budget. The primary goal was to create a functional, motorized propulsion device for under $50. Using a custom 3D-printed housing, it achieves speeds up to 3 km/h underwater and prioritizes absolute simplicity over complex electronics.
+A working electric underwater scooter built in just two days on a tight budget. The primary goal was to create a simple motorized scooter for under $50. Using a custom 3D-printed housing, it achieves speeds up to 3 km/h underwater and prioritizes simple parts over complex electronics.
 
 ## Design & Inspiration
 
-I wanted a quick propulsion device for the water without dropping hundreds of dollars on a commercial unit. The design phase focused entirely on rapid prototyping. I drafted the 3D models from scratch to hold the necessary batteries and fit the motors. The entire process proved that a functional underwater vehicle could be engineered over a single weekend.
+I wanted a quick way to move through the water without spending hundreds of dollars on a commercial unit. The design phase focused entirely on rapid prototyping. I drafted the 3D models from scratch to hold the batteries and fit the motors. The project proved that a working underwater vehicle could be built in a single weekend.
 
 ## Hardware & Electronics
 
@@ -17,11 +17,9 @@ To keep the costs strictly between $25 and $50, I eliminated the need for a dedi
 
 ## Software & Logic
 
-Because the thruster is driven directly via a hardware switch, there is virtually no complex logic required for propulsion. The software is limited entirely to the ESP32-C3 firmware. It acts as a rudimentary voltage monitor, polling the battery levels and mapping the reading to the external LED display. 
+Because the thruster is driven directly by a switch, there is no complex logic needed for it to move. The software is just for the ESP32-C3 firmware, which acts as a simple voltage monitor, checking the battery levels and showing them on the external LED. 
 
 ## Challenges & Lessons Learned
 
-Building a functional submersible in 48 hours came with expected compromises.
-
-- **Direct Drive Operation** — Running without an ESC makes the system rugged and simple, but lacks proportional speed control. It's an all-or-nothing power curve.
-- **Version 1 Constraints** — This first iteration proved the concept and power delivery, paving the way for future improvements in controls and sealing.
+- **Direct Drive** — Operating without an ESC makes the system rugged and simple, but it lacks speed control—it's either full speed or off.
+- **Version 1 Constraints** — This first version proved it could work and deliver power, paving the way for better controls and sealing in the next one.

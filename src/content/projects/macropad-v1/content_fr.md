@@ -1,17 +1,13 @@
-# Architecture Périphérique BLE : Macropad v1
+# Macropad Mécanique Sans Fil (v1)
 
-## Objectif Technique
+## L'Objectif
+Je voulais construire un macropad sans fil personnalisé qui se connecte en Bluetooth. Le but était d'avoir des touches mécaniques qui répondent rapidement et qui peuvent être remappées facilement sans avoir à réécrire de code.
 
-L'objectif était l'ingénierie d'un périphérique HID custom utilisant le Bluetooth Low Energy (BLE). Le projet s'est concentré sur l'intégration d'entrées tactiles mécaniques avec un stack de protocole sans fil à faible latence et des capacités de remapping en temps réel.
+## Les Composants
+J'ai utilisé un ESP32-S3 pour son Bluetooth intégré et j'ai connecté les interrupteurs mécaniques directement à ses broches pour une réponse ultra-rapide. Il fonctionne avec une petite batterie LiPo pour pouvoir l'utiliser n'importe où.
 
-## Spécification Matérielle
+## Logiciel & Remappage
+Le macropad agit comme un clavier Bluetooth standard, mais il héberge également un petit serveur Web. Vous pouvez vous connecter à ce site Web pour changer ce que fait chaque touche. Les nouveaux paramètres sont enregistrés directement sur l'appareil pour qu'il s'en souvienne même après avoir été éteint.
 
-Le système est bâti sur un microprocesseur ESP32-S3, exploitant son radio BLE intégré. La matrice HID est interfacée directement avec les pins GPIO, permettant une capture d'entrée sans tampon et à faible latence. La plateforme est entièrement autonome avec une cellule LiPo intégrée pour le déploiement mobile.
-
-## Logique de Contrôle & Interface
-
-Le firmware gère deux stacks de protocoles : un stack BLE HID primaire pour l'émulation clavier standard et un serveur web 802.11 auxiliaire pour la configuration asynchrone. Les utilisateurs peuvent accéder à une interface web localisée pour remapper la matrice de touches; ces configurations sont commitées dans le stockage non-volatile (NVS), assurant la persistance à travers les cycles d'alimentation sans nécessiter de recompilation firmware.
-
-## Évaluation Opérationnelle
-
-Le prototype a démontré une utilité significative dans les flux de travail multi-applications (logiciels CAD/DCC). La couche de reconfiguration web a validé avec succès le modèle "hardware-as-a-service" pour les périphériques HID. Le système est resté en statut *daily driver* actif jusqu'à son évolution architecturale en plateforme v2 environ 96 heures après le déploiement.
+## Ce que j'ai appris
+Ce macropad était vraiment utile pour le travail en CAO et d'autres applications avec beaucoup de raccourcis. Pouvoir changer les touches via un navigateur a bien fonctionné. Je l'ai utilisé comme clavier principal pendant quelques jours avant de commencer à travailler sur la version 2.

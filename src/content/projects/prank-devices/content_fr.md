@@ -1,21 +1,16 @@
-# Réseau Acoustique Distribué : Tests Opérationnels
+# Appareils de Farce Télécommandés
 
-## Objectif Tactique
+## L'Objectif
+Je voulais construire un ensemble de petits appareils cachés capables de faire des bruits sur commande. Le but principal était de tester combien de temps je pouvais faire fonctionner un ESP32 sur une minuscule batterie en utilisant le mode « deep sleep ».
 
-L'objectif était le déploiement d'un réseau distribué de nœuds basse consommation pour exécuter des perturbations acoustiques synchronisées. L'opération a servi de validation principale pour les implémentations de *deep sleep* ultra-basse consommation sur la plateforme ESP32.
+## Communication
+J'ai utilisé plusieurs cartes ESP32 communiquant entre elles via « ESP-NOW ». Cela leur permet de se coordonner sans avoir besoin de routeur WiFi, ce qui les rend plus faciles à cacher. J'ai imprimé en 3D des boîtiers personnalisés qui ressemblent à des appareils électroniques normaux pour qu'ils ne soient pas remarqués.
 
-## Architecture Réseau
+## Économie d'Énergie
+C'était la première fois que je réussissais vraiment à faire fonctionner le mode deep sleep aussi bien. J'ai réglé les appareils pour qu'ils ne se réveillent que lorsque c'est nécessaire, ce qui leur a permis de fonctionner pendant 24 heures complètes sur une très petite batterie. J'ai choisi ESP-NOW car c'est beaucoup plus rapide et efficace que le WiFi standard.
+- **Micro-Sleep** : Les nœuds ne se réveillent que par moments pour économiser de l'énergie.
+- **Efficacité** : Le cycle a été réglé pour durer 24 heures sur une batterie minuscule.
+- **Protocole** : ESP-NOW a été choisi car il se connecte presque instantanément.
 
-L'opération utilisait plusieurs nœuds ESP32 communiquant via le protocole peer-to-peer ESP-NOW. Cette architecture permettait une coordination complexe à faible latence sans besoin d'infrastructure WiFi, assurant une haute discrétion opérationnelle. Pour maintenir la non-attribution visuelle, les électroniques étaient dissimulées dans des boîtiers 3D imprimés trompe-l'œil (imitant l'électronique grand public).
-
-## Système de Gestion d'Énergie
-
-Ce projet marquait la première implémentation réussie du duty-cycling avancé sur la plateforme ESP32.
-
-- **Intégration Micro-Sleep** : Les nœuds utilisaient des minuteries de réveil *deep sleep* pour minimiser le courant quiescent.
-- **Optimisation du Cycle de Travail** : Le duty cycle a été ajusté pour maintenir l'efficacité acoustique tout en prolongeant la durée opérationnelle à un cycle complet de 24 heures sur capacité LiPo minimale.
-- **Sélection de Protocole** : ESP-NOW a été sélectionné pour sa surcharge de *handshake* minimale comparé aux stacks 802.11 standard.
-
-## Résultats Opérationnels
-
-Le déploiement a été un succès complet, validant la fiabilité de communication ESP-NOW et la viabilité des nœuds ESP32 alimentés par batterie à long terme. La logique de duty-cycling développée pour cette opération est devenue la fondation télémétrique pour les itérations suivantes de la série de nœuds réseau discrets (Eraser v3+).
+## Ce que j'ai appris
+Le projet a parfaitement fonctionné. Il a prouvé que je pouvais fabriquer des appareils fiables, alimentés par batterie, qui restent connectés pendant longtemps. Le code que j'ai écrit pour économiser l'énergie ici est devenu la base de mes projets ultérieurs, comme les ESP Erasers.

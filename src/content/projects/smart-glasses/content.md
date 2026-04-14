@@ -1,16 +1,16 @@
-# Assistive Spatial Awareness Platform: Ultrasonic Glasses
+# Ultrasonic Smart Glasses
 
-## Technical Objective
-The objective was the engineering of a low-latency assistive device to provide real-time spatial awareness for visually impaired users. The system leverages haptic or acoustic feedback to translate distance data into intuitive environmental telemetry.
+## The Goal
+I wanted to build a pair of glasses that helps you "see" obstacles using sound. The goal was to use an ultrasonic sensor to detect how far away things are and give real-time feedback.
 
-## Hardware Specification
-The platform utilizes an HC-SR04 ultrasonic transducer group mounted to a standard eyewear chassis. The sensor is interfaced with a microcontroller that executes high-frequency distance polling, calculating object proximity based on time-of-flight acoustic reflection.
-- **Sensor Suite**: Ultrasonic distance transducer.
-- **Physical Interface**: Integrated micro-acoustic driver.
-- **Feedback Protocol**: Pulse-frequency modulation (PFM) — beep frequency increases linearly as distance to the primary obstacle decreases.
+## The Parts
+I used an HC-SR04 ultrasonic sensor mounted on regular glasses frames. A small computer reads the sensor data and calculates the distance to the nearest object.
+- **Sensor**: Ultrasonic distance sensor.
+- **Speaker**: Small built-in audio driver.
+- **How it works**: The glasses beep faster as you get closer to something, making it easy to tell where obstacles are.
 
-## System Integration
-The electronics package was engineered for minimal volumetric displacement to maintain wearer ergonomics. The wiring harness was iterative, transitioning from loose-cable routing to a more rigid, integrated structural path along the frame arms to ensure long-term mechanical reliability.
+## Design
+I worked to keep the electronics small so the glasses stay comfortable to wear. I also refined the wiring along the arms of the frame so they don't get snagged or break during use.
 
-## Operational Assessment
-The PFM feedback loop successfully validated the "acoustic-haptic" transition model for spatial navigation. While the single-sensor configuration provided reliable axial detection, the platform's primary constraint is a limited field-of-view (FoV). Subsequent iterations would require a phased-array sensor topology to provide comprehensive peripheral awareness.
+## What I Learned
+The beeping system worked well for navigating around things. The main issue was that it only looks straight ahead — it doesn't see what's to the sides. To fix this in a future version, I'd need to add more sensors for a wider field of view.

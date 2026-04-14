@@ -1,14 +1,14 @@
-# Autonomous Avionics Suite: RC Flying Wing
+# RC Flying Wing: Custom Electronics
 
-## Design Objective
-The objective was the development of a centralized avionics and signal-translation subsystem for a high-performance fixed-wing platform. The project focused on the integration of disparate telemetry protocols (CRSF to SBUS) into a single, custom-fabricated PCB.
+## The Goal
+I wanted to build a custom control board for a small flying wing. The main goal was to make a single circuit board that could translate different radio signals (CRSF to SBUS) and handle all the electronics at once.
 
-## Avionics Architecture
-The system utilizes an ESP32 microprocessor as the primary signal-translation node, successfully bridging the high-speed CRSF stream from an ELRS receiver to the legacy SBUS protocol required by the flight controller. The dual-axis elevon configuration is driven by 2g micro-servos, with all telemetry, video transmission (VTX), and optics integrated directly into the custom-routed control board to minimize volumetric displacement and improve center-of-gravity management.
+## How it Works
+I used an ESP32 to bridge the high-speed CRSF signal from my receiver to the older SBUS protocol that the flight controller uses. I also integrated the servos, video transmitter, and camera into one custom PCB to keep the plane light and balanced.
 
-- **RF Protocol**: ELRS (ExpressLRS) via CRSF.
-- **Logic Node**: ESP32 (proprietary CRSF to SBUS translation).
-- **Actuation**: Dual high-torque 2g micro-servos.
+- **Radio**: ELRS (ExpressLRS) via CRSF.
+- **Brain**: ESP32 (custom CRSF to SBUS translation).
+- **Servos**: Dual high-torque 2g micro-servos.
 
-## Status & Conclusion
-The bench testing phase successfully validated the signal integrity of the custom-fabricated board and the reliability of the command-link translation logic. While the airframe construction was completed, the platform remains in a pre-flight "archived" state due to the prioritization of subsequent high-dynamic multirotor deployments. The project serves as a validated engineering model for custom fixed-wing avionics integration.
+## Summary & Status
+Everything worked perfectly on the bench—the signals were clean and the custom board was solid. Although the plane is ready to fly, I've put the project on hold while I focus on my faster drone projects. It remains a successful test of building my own custom flight electronics.
