@@ -4,7 +4,7 @@ RepGate is a cross-platform parental control app built in Flutter. The core mech
 
 ## Exercise Verification
 
-The exercise session flow uses ML Kit's pose detection to confirm that the child is actually moving. Each frame is passed through the pose landmark model; reps are counted by tracking joint angles across frames — a squat is registered when the hip-to-knee angle crosses a threshold going down and back up, a push-up by elbow flexion, a burpee by sequencing floor and stand phases. This runs entirely on-device; no video, images, or biometric data ever leave the device.
+The exercise session flow uses ML Kit's pose detection to confirm that the child is actually moving. Each frame is passed through the pose landmark model; reps are counted by tracking joint angles across frames — a squat is registered when the hip-to-knee angle crosses a threshold going down and back up, a push-up by elbow flexion, a burpee by sequencing floor and stand phases. The ML inference runs entirely on-device; no video, images, or biometric data leave the device during pose detection.
 
 To prevent cheating, the app captures an exercise snapshot at a random point during each set and stores a compressed frame alongside the rep count. Parents can review snapshots in the Coach Dashboard to verify the session was legitimate. The snapshot is processed locally before upload — only a low-resolution still is sent, not the full video stream.
 
@@ -24,17 +24,18 @@ Apps are only unblocked when three independent flags are all false. They stack:
 
 - **Usage limit** (`isBlockActive`) — set by the extension and ScreenTimeManager when the kid runs out of earned screen time.
 - **Sleep mode** (`isSleepBlocked`) — set by the extension when a bedtime schedule fires.
-- **Strict mode** (`isStrictBlocked`) — set from Dart via ScreenTimeManager when a calendar task is active.
+- **Calendar strict** (`isStrictBlocked` / `calendarStrictConfig`) — fires for scheduled activities (run, swim, cycle). The shield color varies by activity type: Crimson, Ocean, or Forest.
+- **Task strict** (`isStrictBlocked` / `strictActivityLabel`) — fires when a Coach assigns a remote task. Shield color: Deep Violet.
 
 The reason for three separate flags rather than one is that each mode has a different trigger and a different owner. If sleep mode turns on while the kid still has credit, the credit stays in the bank — it isn't consumed. When the bedtime window ends, the extension clears `isSleepBlocked`, checks whether the other two flags are also false, and only then removes the shields.
 
 ### The Bank and Ladder
 
-The DeviceActivity API imposes a hard cap: you cannot schedule a monitoring window longer than 30 minutes at a time. Managing longer sessions required building a chunking and rescheduling system I call the ladder.
+The DeviceActivity API tracks cumulative app usage within a daily schedule window — it has no concept of a countdown timer. To build one, I chunk sessions into 30-minute blocks, each with per-minute threshold events. When a chunk expires, the extension wakes, checks the bank balance, and schedules the next chunk without the main app running.
 
-When a kid earns time — say 90 minutes from a push-up session — Dart calls `addToBankBalance(5400)`, which writes `next_session_bank = 5400` to the shared UserDefaults. When `startMonitoring` is called, ScreenTimeManager checks whether the total exceeds the 30-minute cap. If it does, it schedules the first 30-minute chunk and writes the remaining 60 minutes back to `next_session_bank`. Shields are removed and the kid can use apps freely.
+When a kid earns time — say 90 minutes from a push-up session — Dart calls `addToBankBalance(5400)`, which writes `next_session_bank = 5400` to the shared UserDefaults. When `startMonitoring` is called, ScreenTimeManager checks whether the total exceeds 30 minutes. If it does, it schedules the first 30-minute chunk and writes the remaining 60 minutes back to `next_session_bank`. Shields are removed and the kid can use apps freely.
 
-Inside each 30-minute chunk, the system registers one DeviceActivity event per minute: `min_1` at 60 seconds, `min_2` at 120 seconds, through `final_rung` at 1800 seconds. As each minute fires, the extension wakes, updates `currentSessionDuration` in the shared container (so the UI countdown stays accurate), and sends warning notifications at 10 and 5 minutes remaining.
+Inside each 30-minute chunk, the system registers one DeviceActivity event per minute: `min_1` at 60 seconds, `min_2` at 120 seconds, through `final_rung` at 1800 seconds. As each minute fires, the extension wakes, updates `currentSessionDuration` in the shared container (so the UI countdown stays accurate), and sends warning notifications at 10, 5, and 1 minute remaining.
 
 When `final_rung` fires, the extension checks the bank. If time remains, it immediately schedules the next 30-minute chunk and removes the shields — no app process needed. If the bank is empty, it applies shields via ManagedSettingsStore, sets `isBlockActive = true`, and sends a "Time's Up" notification. When the kid exercises again, `extendCurrentSession()` credits new seconds and restarts the ladder from the current position.
 
@@ -54,9 +55,9 @@ Peer mode removes the hierarchy. All members are equal: anyone can set a shared 
 
 ## Firebase Architecture
 
-The backend runs entirely on Firebase. Firestore holds four main collections: users, families, exerciseSessions, and screenTimeCredits. Families link a parent account to one or more child accounts; each child has its own credit ledger and session history.
+The backend runs entirely on Firebase. The top-level Firestore collections are `users`, `families`, `pairing_codes`, and `strava_tokens`. Credit ledgers and session history live in subcollections under each user document. Families link a parent account to one or more child accounts.
 
-There are around 30 Cloud Functions handling: session validation, credit issuance, Strava webhook ingestion, RevenueCat webhook processing, scheduled daily credit resets, COPPA-compliant data deletion, and a family invite flow. Functions that touch financial or sensitive data run with tighter IAM scoping than the rest.
+There are 30 Cloud Functions handling: session validation, credit issuance, Strava webhook ingestion, RevenueCat webhook processing, scheduled daily credit resets, COPPA-compliant data deletion, and a family invite flow. Functions that touch financial or sensitive data run with tighter IAM scoping than the rest.
 
 ## Subscriptions
 

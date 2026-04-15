@@ -4,7 +4,7 @@ RepGate est une application de contrôle parental multiplateforme développée e
 
 ## Vérification de l'Exercice
 
-Le flux de séance d'exercice utilise la détection de pose de ML Kit pour confirmer que l'enfant bouge vraiment. Chaque image est passée dans le modèle de points de repère de pose ; les répétitions sont comptées en suivant les angles articulaires entre les images — un squat est enregistré quand l'angle hanche-genou descend sous un seuil et remonte, un push-up par la flexion du coude, un burpee en séquençant les phases sol et debout. Tout tourne sur l'appareil ; aucune vidéo, image ou donnée biométrique ne quitte jamais l'appareil.
+Le flux de séance d'exercice utilise la détection de pose de ML Kit pour confirmer que l'enfant bouge vraiment. Chaque image est passée dans le modèle de points de repère de pose ; les répétitions sont comptées en suivant les angles articulaires entre les images — un squat est enregistré quand l'angle hanche-genou descend sous un seuil et remonte, un push-up par la flexion du coude, un burpee en séquençant les phases sol et debout. L'inférence ML tourne entièrement sur l'appareil ; aucune vidéo, image ou donnée biométrique ne quitte l'appareil pendant la détection de pose.
 
 Pour prévenir la triche, l'application capture un snapshot d'exercice à un moment aléatoire pendant chaque série et stocke un frame compressé avec le compte de répétitions. Les parents peuvent consulter les snapshots dans le Coach Dashboard pour vérifier que la séance était légitime. Le snapshot est traité localement avant l'envoi — seule une image basse résolution est transmise, pas le flux vidéo complet.
 
@@ -24,17 +24,18 @@ Les applications ne sont débloquées que quand trois flags indépendants sont t
 
 - **Limite d'utilisation** (`isBlockActive`) — activé par l'extension et ScreenTimeManager quand le crédit de temps gagné est épuisé.
 - **Mode nuit** (`isSleepBlocked`) — activé par l'extension quand un horaire de nuit se déclenche.
-- **Mode strict** (`isStrictBlocked`) — activé depuis Dart via ScreenTimeManager quand une tâche calendrier est active.
+- **Strict calendrier** (`isStrictBlocked` / `calendarStrictConfig`) — se déclenche pour des activités planifiées (course, natation, vélo). La couleur du shield varie selon le type d'activité : Cramoisi, Océan ou Forêt.
+- **Strict tâche** (`isStrictBlocked` / `strictActivityLabel`) — se déclenche quand un Coach assigne une tâche à distance. Couleur du shield : Violet profond.
 
 La raison d'avoir trois flags séparés plutôt qu'un seul est que chaque mode a un déclencheur différent et un propriétaire différent. Si le mode nuit s'active pendant que l'enfant a encore des crédits, les crédits restent dans la banque — ils ne sont pas consommés. Quand la fenêtre de nuit se termine, l'extension efface `isSleepBlocked`, vérifie si les deux autres flags sont aussi à faux, et seulement alors retire les shields.
 
 ### La Banque et l'Échelle
 
-L'API DeviceActivity impose une limite stricte : on ne peut pas programmer une fenêtre de surveillance de plus de 30 minutes à la fois. Gérer des sessions plus longues a nécessité de construire un système de découpage et de replanification que j'appelle l'échelle.
+L'API DeviceActivity suit l'utilisation cumulative des applications dans une fenêtre de planification journalière — elle n'a pas de notion de compte à rebours. Pour en construire un, je découpe les sessions en blocs de 30 minutes, chacun avec des événements de seuil par minute. Quand un bloc expire, l'extension se réveille, vérifie le solde de la banque, et planifie le bloc suivant sans que l'application principale tourne.
 
-Quand un enfant gagne du temps — disons 90 minutes après une séance de push-ups — Dart appelle `addToBankBalance(5400)`, qui écrit `next_session_bank = 5400` dans les UserDefaults partagés. Quand `startMonitoring` est appelé, ScreenTimeManager vérifie si le total dépasse la limite de 30 minutes. Si c'est le cas, il programme le premier chunk de 30 minutes et écrit les 60 minutes restantes dans `next_session_bank`. Les shields sont retirés et l'enfant peut utiliser les applications librement.
+Quand un enfant gagne du temps — disons 90 minutes après une séance de push-ups — Dart appelle `addToBankBalance(5400)`, qui écrit `next_session_bank = 5400` dans les UserDefaults partagés. Quand `startMonitoring` est appelé, ScreenTimeManager vérifie si le total dépasse 30 minutes. Si c'est le cas, il programme le premier chunk de 30 minutes et écrit les 60 minutes restantes dans `next_session_bank`. Les shields sont retirés et l'enfant peut utiliser les applications librement.
 
-À l'intérieur de chaque chunk de 30 minutes, le système enregistre un événement DeviceActivity par minute : `min_1` à 60 secondes, `min_2` à 120 secondes, jusqu'à `final_rung` à 1800 secondes. À chaque minute, l'extension se réveille, met à jour `currentSessionDuration` dans le conteneur partagé (pour que le compte à rebours de l'UI reste précis), et envoie des notifications d'avertissement à 10 et 5 minutes restantes.
+À l'intérieur de chaque chunk de 30 minutes, le système enregistre un événement DeviceActivity par minute : `min_1` à 60 secondes, `min_2` à 120 secondes, jusqu'à `final_rung` à 1800 secondes. À chaque minute, l'extension se réveille, met à jour `currentSessionDuration` dans le conteneur partagé (pour que le compte à rebours de l'UI reste précis), et envoie des notifications d'avertissement à 10, 5 et 1 minute restante.
 
 Quand `final_rung` se déclenche, l'extension vérifie la banque. S'il reste du temps, elle programme immédiatement le prochain chunk de 30 minutes et retire les shields — sans besoin du processus de l'application. Si la banque est vide, elle applique les shields via ManagedSettingsStore, met `isBlockActive = true`, et envoie une notification "Temps écoulé". Quand l'enfant fait un nouvel exercice, `extendCurrentSession()` crédite de nouvelles secondes et redémarre l'échelle depuis la position actuelle.
 
@@ -54,9 +55,9 @@ Le mode Pairs supprime la hiérarchie. Tous les membres sont égaux : n'importe 
 
 ## Architecture Firebase
 
-Le backend tourne entièrement sur Firebase. Firestore contient quatre collections principales : users, families, exerciseSessions, et screenTimeCredits. Les familles lient un compte parent à un ou plusieurs comptes enfants ; chaque enfant a son propre ledger de crédits et son historique de séances.
+Le backend tourne entièrement sur Firebase. Les collections Firestore de premier niveau sont `users`, `families`, `pairing_codes` et `strava_tokens`. Les ledgers de crédits et l'historique des séances vivent dans des sous-collections sous chaque document utilisateur. Les familles lient un compte parent à un ou plusieurs comptes enfants.
 
-Il y a environ 30 Cloud Functions qui gèrent : la validation des séances, l'émission de crédits, l'ingestion des webhooks Strava, le traitement des webhooks RevenueCat, les remises à zéro quotidiennes programmées, la suppression de données conformes COPPA, et un flux d'invitation familiale. Les fonctions qui touchent des données financières ou sensibles tournent avec un scoping IAM plus strict que les autres.
+Il y a 30 Cloud Functions qui gèrent : la validation des séances, l'émission de crédits, l'ingestion des webhooks Strava, le traitement des webhooks RevenueCat, les remises à zéro quotidiennes programmées, la suppression de données conformes COPPA, et un flux d'invitation familiale. Les fonctions qui touchent des données financières ou sensibles tournent avec un scoping IAM plus strict que les autres.
 
 ## Abonnements
 
