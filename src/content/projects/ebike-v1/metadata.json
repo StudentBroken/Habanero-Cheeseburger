@@ -1,0 +1,81 @@
+{
+  "title": "Electric Bike (v1)",
+  "date": "2023-02-25",
+  "category": "HARDWARE",
+  "subcategory": "Electric Bike",
+  "description": "A friction-drive e-bike built at 13 from marketplace 18650 cells, a salvaged leafboard motor, a cheap RC ESC, and a hand-soldered 6S8P battery pack.",
+  "githubLink": null,
+  "thumbnail": "/projects/ebike-v1/assembly.webp",
+  "thumbnailSmall": "/projects/ebike-v1/assembly-480.webp",
+  "modelFile": null,
+  "media": [
+    {
+      "type": "image",
+      "url": "/projects/ebike-v1/assembly.webp",
+      "alt": "Battery pack and motor assembled in the bike frame",
+      "caption": "Full assembly — motor and 6S8P pack in the bike"
+    },
+    {
+      "type": "video",
+      "url": "/projects/ebike-v1/build-progress.mp4",
+      "caption": "Start-to-finish build and first test ride"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v1/motor-friction.webp",
+      "alt": "Motor friction drive contact point with sandpaper tape on the wheel",
+      "caption": "Friction drive — sandpaper tape on the motor for tire grip"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v1/battery-front.webp",
+      "alt": "Front view of the 6S8P battery pack wrapped in blue duct tape",
+      "caption": "6S8P pack — blue duct tape wrap with foam padding"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v1/battery-side.webp",
+      "alt": "Side view of the battery pack next to a ruler",
+      "caption": "Pack dimensions"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v1/battery-wiring.webp",
+      "alt": "Hand-soldered copper wire bus connecting the 18650 cells",
+      "caption": "Copper wire bus — salvaged from an extension cord"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v1/battery-wiring-close.webp",
+      "alt": "Close-up of the twisted copper wire bus on the cell pack",
+      "caption": "Close-up of the hand-soldered cell interconnects"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v1/battery-charging.webp",
+      "alt": "Battery pack being tested with a cheap power adapter and alligator clips",
+      "caption": "First charge test — power adapter and alligator clips"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v1/esc.webp",
+      "alt": "The cheap 40A RC plane ESC connected to battery, motor, and throttle",
+      "caption": "40A RC plane ESC — the component that failed first"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v1/throttle.webp",
+      "alt": "3D printed potentiometer throttle with index-finger lever",
+      "caption": "3D printed pot throttle — index finger trigger"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v1/arduino-translator.webp",
+      "alt": "Arduino Nano converting potentiometer signal to PWM for the ESC",
+      "caption": "Arduino Nano — analog pot to PWM translator, powered from ESC BEC"
+    }
+  ],
+  "links": [],
+  "assets": [],
+  "tier": 1
+}

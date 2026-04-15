@@ -39,6 +39,9 @@ Inside each 30-minute chunk, the system registers one DeviceActivity event per m
 
 When `final_rung` fires, the extension checks the bank. If time remains, it immediately schedules the next 30-minute chunk and removes the shields — no app process needed. If the bank is empty, it applies shields via ManagedSettingsStore, sets `isBlockActive = true`, and sends a "Time's Up" notification. When the kid exercises again, `extendCurrentSession()` credits new seconds and restarts the ladder from the current position.
 
+![Architecture sketch drawn on the back of an exam paper, December 19](/projects/repgate/repgate-exam-sketch.webp)
+*The full extension communication flow, sketched on the back of a midterm exam paper — December 19, right after the exam.*
+
 ### Sleep Mode
 
 Sleep runs on a completely separate DeviceActivitySchedule (`repgate.sleep`) with no per-minute ladder — just `intervalDidStart` and `intervalDidEnd`. When bedtime starts, the extension sets `isSleepBlocked = true` and applies shields. When morning comes, it sets `isSleepBlocked = false` and lifts shields if neither of the other two flags is active. Both fire without the app running.

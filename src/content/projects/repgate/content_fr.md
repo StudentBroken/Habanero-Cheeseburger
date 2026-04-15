@@ -39,6 +39,9 @@ Quand un enfant gagne du temps — disons 90 minutes après une séance de push-
 
 Quand `final_rung` se déclenche, l'extension vérifie la banque. S'il reste du temps, elle programme immédiatement le prochain chunk de 30 minutes et retire les shields — sans besoin du processus de l'application. Si la banque est vide, elle applique les shields via ManagedSettingsStore, met `isBlockActive = true`, et envoie une notification "Temps écoulé". Quand l'enfant fait un nouvel exercice, `extendCurrentSession()` crédite de nouvelles secondes et redémarre l'échelle depuis la position actuelle.
 
+![Esquisse d'architecture dessinée au dos d'une feuille d'examen, 19 décembre](/projects/repgate/repgate-exam-sketch.webp)
+*Le flux complet de communication entre extensions, esquissé au dos d'une feuille d'examen de mi-session — 19 décembre, juste après l'examen.*
+
 ### Mode Nuit
 
 Le mode nuit tourne sur un DeviceActivitySchedule complètement séparé (`repgate.sleep`) sans échelle par minute — juste `intervalDidStart` et `intervalDidEnd`. Quand la nuit commence, l'extension met `isSleepBlocked = true` et applique les shields. Le matin, elle met `isSleepBlocked = false` et lève les shields si aucun des deux autres flags n'est actif. Les deux se déclenchent sans que l'application tourne.
