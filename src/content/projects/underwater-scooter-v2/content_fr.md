@@ -20,7 +20,7 @@ Maintenir le bouton au démarrage saute l'armement de l'ESC et entre en mode OTA
 
 Cette technique de potting caoutchoutée scelle efficacement la carte contre les infiltrations d'eau sans l'encombrement d'un boîtier traditionnel, ramenant le coût de l'unité centrale à environ 5 $, matériel inclus.
 
-## Firmware & Architecture
+## Logique du Firmware
 
 Le firmware a été développé selon une approche hybride : j'ai utilisé l'IA pour générer les classes C++ de base et les implémentations standards, me permettant de concentrer mon attention entièrement sur l'architecture système de haut niveau.
 
@@ -40,7 +40,7 @@ Le redesign a privilégié une sortie de couple élevée tout en maintenant un p
 - **Propulsion Principale (Outrunner Brushless Leafboard 5065)** : Gratuit (Récupéré)
 - **Contrôleur de Vitesse (ESC Étanche 60A)** : 25.00 $
 - **Unité de Calcul (ESP32-C3 Super Mini + LED RGB)** : 4.00 $
-- **Architecture Châssis (PLA Imprimé en 3D - Toutes Itérations)** : 10.00 $
+- **Châssis (PLA Imprimé en 3D)** : 10.00 $
 - **Stockage d'Énergie (2x Packs Li-Ion 21700 3S)** : 15.00 $ (Achat en Vrac)
 - **Étanchéité Environnementale (Ruban Électrique Liquide)** : 5.00 $
 

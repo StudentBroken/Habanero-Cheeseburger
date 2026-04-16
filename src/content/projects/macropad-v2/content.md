@@ -12,5 +12,5 @@ I kept the same ESP32-S3 but added an I2C OLED display and a potentiometer.
 ## System Integration
 I redesigned the case to fit the potentiometer and display. The web configuration tool from v1 was reused without changes, so existing keymaps load automatically on startup.
 
-## Operational Assessment
+## Post-Mortem
 The knob makes it much easier to control volume or scroll through timelines without reaching for another device. The display gives instant feedback about which layer is active and what the keys do. The macropad is now my daily driver for text editing and media controls.

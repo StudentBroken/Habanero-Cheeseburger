@@ -2,9 +2,9 @@
 
 MBS (Moyenne, Bilan, Stratégie) est une application web pour les élèves du secondaire québécois pour suivre, analyser et comparer leurs notes. C'est le premier projet que j'ai bâti avec un vrai collaborateur — Howard — et la première fois qu'on utilisait GitHub pour autre chose que lire du code.
 
-Travailler avec quelqu'un à un rythme différent m'a appris à délimiter clairement les responsabilités. Howard a connecté le backend Google Sheets, construit l'outil de projection de notes et aidé à peaufiner le système de tickets. Moi j'ai tout bâti le reste : le formatter de données, le calculateur de moyennes avec pondérations par compétences, le leaderboard, toute la couche frontend et communication backend, le flux d'onboarding, le système d'opt-in, les conditions d'utilisation, la politique de confidentialité, la FAQ, l'architecture localStorage, et j'ai dirigé le système de tickets. On a commencé en committant tout via l'interface web de GitHub. En 2026, j'ai commencé à migrer vers une architecture plus moderne.
+Travailler avec quelqu'un à un rythme différent m'a appris à délimiter clairement les responsabilités. Howard a connecté le backend Google Sheets, construit l'outil de projection de notes et aidé à peaufiner le système de tickets. Moi j'ai tout bâti le reste : le formatter de données, le calculateur de moyennes avec pondérations par compétences, le leaderboard, toute la couche frontend et communication backend, le flux d'onboarding, le système d'opt-in, les conditions d'utilisation, la politique de confidentialité, la FAQ, la persistence localStorage, et j'ai dirigé le système de tickets. On a commencé en committant tout via l'interface web de GitHub. En 2026, j'ai commencé à migrer vers un workflow plus moderne.
 
-## Pipeline de Données
+## Ingestion de Données
 
 Les élèves collent les données brutes du portail dans la page de données. Le formatter que j'ai écrit normalise tous les formats de notation du système québécois — notes lettrées (A+, B−), pourcentages, décimales, fractions — sur une échelle 0–100 avant qu'un calcul tourne. Les notes sont ensuite pondérées par type d'évaluation et par étape sur les Étapes 1–3 pour le Secondaire 4 et 5.
 

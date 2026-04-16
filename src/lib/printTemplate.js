@@ -101,7 +101,7 @@ export function generatePrintHTML({ projects, isFr, imageCache = {} }) {
 
   // ── Project tiers ─────────────────────────────────────────────────
   const tiers = [
-    { tier: 1, label: isFr ? 'Systèmes Phares'          : 'Flagship Systems'        },
+    { tier: 1, label: isFr ? 'Intégrations Complexes'    : 'Complex Integrations'    },
     { tier: 2, label: isFr ? 'Prototypage Rapide & R&D' : 'Rapid Prototyping & R&D' },
     { tier: 3, label: isFr ? 'Hacks de Week-end'        : 'Weekend Hacks'           },
   ];

@@ -2,9 +2,9 @@
 
 MBS (Moyenne, Bilan, Stratégie) is a web app for Quebec secondary school students to track, analyze, and rank their grades. It was my first project with a real collaborator — Howard — and the first time either of us used GitHub beyond reading code.
 
-Working with someone at a different pace taught me to scope cleanly. Howard connected the Google Sheets backend, built the grade projection tool, and helped refine the ticket system. I built everything else: the data formatter, the average calculator with competency weights, the leaderboard, the frontend and backend communication layer, the onboarding flow, the opt-in system, the terms and conditions, privacy policy, FAQ, the localStorage architecture, and led the ticket system. We started by committing through GitHub's web interface, then moved to a more modern workflow.
+Working with someone at a different pace taught me to scope cleanly. Howard connected the Google Sheets backend, built the grade projection tool, and helped refine the ticket system. I built everything else: the data formatter, the average calculator with competency weights, the leaderboard, the frontend and backend communication layer, the onboarding flow, the opt-in system, the terms and conditions, privacy policy, FAQ, the localStorage persistence, and a basic ticket system. We started by committing through GitHub's web interface, then moved to a more modern workflow.
 
-## Data Pipeline
+## Data Ingestion
 
 Students paste raw portal output into the data page. The formatter I wrote normalizes every grading format the Quebec system uses — letter grades (A+, B−), percentages, decimals, fractions — to a 0–100 scale before any calculation runs. Grades are then weighted by assessment type and term across Étapes 1–3 for both Secondaire 4 and 5.
 

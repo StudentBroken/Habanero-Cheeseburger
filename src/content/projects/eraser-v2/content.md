@@ -10,5 +10,5 @@ Dropping the relay nodes meant lower latency and fewer places for things to brea
 - **Communication**: Direct BLE with HID and GATT profiles for mobile.
 - **Internal Structure**: Custom-machined cavity to hold components in place.
 
-## Operational Conclusion
+## Conclusion
 This single-node architecture cut down complexity significantly. The new eraser shape fixed the ergonomic problems from the first version. BLE proved to be a reliable way to send data.

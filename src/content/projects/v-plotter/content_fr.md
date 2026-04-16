@@ -9,7 +9,7 @@ Ce projet a été exécuté comme une construction à haute vélocité, progress
 - **Logique Cinématique** : Les algorithmes de cinématique inverse de base ont été planifiés et calculés manuellement au verso d'une page d'examen lors d'une session d'examen formelle.
 - **Fabrication** : L'assemblage du matériel et l'intégration logicielle ont été achevés en une seule **session postscolaire de 9 heures**.
 
-## Architecture Matérielle & Distribution de l'Énergie
+## Intégration Matérielle
 Le système fonctionne sur un rail à double tension alimenté via une interface **USB-C Power Delivery (PD)**, configurée pour tirer un courant constant de **12V** (pic de 2A) de la source.
 - **Topologie DC-DC** : Le rail 12V alimente directement les pilotes de moteurs pas à pas. Un **BEC 5V** (Battery Eliminator Circuit) abaisse la tension du rail pour le contrôleur logique et le servo. Le rail logique est ensuite affiné via le **LDO 3,3V intégré de l'ESP32**.
 - **Nœud de Calcul** : **ESP32-C3**, hébergeant un serveur web local pour la télémétrie sans fil du G-code et la surveillance du système.

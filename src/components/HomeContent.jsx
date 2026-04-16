@@ -549,8 +549,8 @@ export default function HomeContent({ projects }) {
           {[
             {
               tier: 1,
-              label:    isFr ? 'Systèmes Phares'              : 'Flagship Systems',
-              comment:  isFr ? '// INGÉNIERIE NIVEAU PRODUCTION' : '// PRODUCTION-GRADE ENGINEERING',
+              label:    isFr ? 'Intégrations Complexes'        : 'Complex Integrations',
+              comment:  isFr ? '// SYSTÈMES MULTI-COMPOSANTS'   : '// MULTI-COMPONENT SYSTEMS',
             },
             {
               tier: 2,

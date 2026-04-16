@@ -16,15 +16,15 @@ The central unit is an ESP32-C3 Super Mini. A resistor voltage divider scales th
 
 The button wiring uses the internal pull-up. A hold triggers the motor at the current power level; releasing stops it. A double-press (within 300 ms) cycles through three power modes: HIGH (full forward pulse), MEDIUM (66% of throttle range), and LOW (33%). During mode selection the RGB LED shows the selected mode — red for high, blue for medium, green for low — before returning to battery display.
 
-Holding the button at boot skips ESC arming and enters OTA (Over-The-Air) mode, indicated by a pulsing blue LED. This was a mandatory engineering requirement, not a convenience feature: because the ESP32 is permanently potted in liquid electrical tape, there is zero physical access to the debug or serial ports. Architecting a wireless fail-safe was the only way to ensure the hardware wouldn't become a "brick" the moment a software edge case was discovered.
+Holding the button at boot skips ESC arming and enters OTA (Over-The-Air) flash mode, indicated by a pulsing blue LED. I had to build this OTA routine from scratch because the ESP32 is permanently potted in liquid electrical tape, meaning there's zero physical access to the USB port. Without OTA, any software bug would brick the hardware forever.
 
 Potting with liquid electrical tape seals the board against water without the weight of a plastic case, bringing the cost down to about $5 for materials.
 
-## Firmware and Control Logic
+## Firmware Logic
 
-I used AI to generate boilerplate code, which let me focus on the actual control logic. The core work was building a state machine that switches between power modes and handles safety interlocks correctly.
+I used AI to build the boilerplate code, focusing my time on the actual control state machine and safety interlocks.
 
-I wrote a custom debounce routine to filter the underwater switch noise and designed the OTA boot sequence carefully so the firmware can be updated wirelessly—essential since the board is permanently sealed in potting and has no debug port. I also audited the generated code by hand to catch logic errors that could cause runaway motor or thermal issues.
+I wrote a custom debounce routine to filter underwater switch noise, and hand-audited the generated code to catch any logic errors that could cause a runaway motor.
 
 ## Mechanical Design
 

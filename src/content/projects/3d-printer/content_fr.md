@@ -8,7 +8,7 @@ C'est un overhaul complet d'une imprimante 3D cartésienne standard, optimisée 
 
 Le système d'extrusion Bowden original a été remplacé par un *direct drive*, ce qui élimine l'hystérésis du filament et améliore le contrôle volumétrique, surtout pour les élastomères comme le TPU. Le contrôleur de mouvement a été upgradé vers le firmware Klipper, qui permet la compensation de résonance (*input shaping*) et le *pressure advance*.
 
-## Architecture de Calcul
+## Système de Contrôle
 
 Les tests initiaux avec un Raspberry Pi Zero 2W donnaient des crashes aléatoires pendant l'exécution de G-code dense. Le CPU du Zero 2W manquait de ressources pour gérer simultanément les mouvements à haute vitesse et le *pressure advance* en temps réel. La migration vers un Raspberry Pi 4 (4GB) a réglé tous ces problèmes.
 

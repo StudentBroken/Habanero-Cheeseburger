@@ -9,5 +9,5 @@ The flight controller and video transmitter (DJI O3) are mounted on custom TPU r
 ## Assembly & Thermal Management
 I routed cables carefully and added shielding to keep power clean and prevent interference. Everything is packed tight in the carbon fiber frame.
 
-## Operational Results
+## Results
 Test flights showed the vibration isolation works—much cleaner video compared to a rigid mount. The O3 system delivers the video quality I need for freestyle flying and freestyle maneuvers.

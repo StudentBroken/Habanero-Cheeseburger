@@ -4,7 +4,7 @@
 
 L'objectif était d'ingénier une station de monitoring environnemental local pour la télémétrie en temps réel des particules PM2.5, des concentrations de COV et des métriques atmosphériques (température/humidité).
 
-## Architecture Matérielle
+## Intégration Matérielle
 
 Le système est bâti sur un microcontrôleur ESP32-C3, choisi pour son WiFi intégré et son empreinte volumétrique minimale. La suite de capteurs utilise un module atmosphérique multimodal pour les COV/eCO2 et un capteur laser dédié pour la détection des particules PM2.5. L'ensemble est logé dans un boîtier hybride : une structure commerciale modifiée avec un couvercle imprimé en 3D.
 

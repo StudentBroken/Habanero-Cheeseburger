@@ -1,4 +1,4 @@
-# Architecture Périphérique BLE : Macropad v2 (Intégration Visuelle & Analogique)
+# Macropad v2
 
 ## Évolution du Design
 

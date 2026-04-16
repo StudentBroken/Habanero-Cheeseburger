@@ -56,7 +56,7 @@ RepGate supports two team structures. In Family mode, a parent is the Coach and 
 
 Peer mode removes the hierarchy. All members are equal: anyone can set a shared goal, and everyone is accountable to the group. This is designed for friend groups or coworkers who want mutual accountability rather than parental control. The leaderboard in Peer mode is competitive, ranking members by total reps completed.
 
-## Firebase Architecture
+## Backend
 
 The backend runs entirely on Firebase. The top-level Firestore collections are `users`, `families`, `pairing_codes`, and `strava_tokens`. Credit ledgers and session history live in subcollections under each user document. Families link a parent account to one or more child accounts.
 

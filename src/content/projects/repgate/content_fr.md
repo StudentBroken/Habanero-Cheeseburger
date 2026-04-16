@@ -56,7 +56,7 @@ RepGate supporte deux structures d'équipe. En mode Famille, un parent est le Co
 
 Le mode Pairs supprime la hiérarchie. Tous les membres sont égaux : n'importe qui peut fixer un objectif commun, et tout le monde est responsable devant le groupe. Conçu pour les groupes d'amis ou les collègues qui veulent une responsabilité mutuelle plutôt qu'un contrôle parental. Le leaderboard en mode Pairs est compétitif, classant les membres par répétitions totales complétées.
 
-## Architecture Firebase
+## Backend
 
 Le backend tourne entièrement sur Firebase. Les collections Firestore de premier niveau sont `users`, `families`, `pairing_codes` et `strava_tokens`. Les ledgers de crédits et l'historique des séances vivent dans des sous-collections sous chaque document utilisateur. Les familles lient un compte parent à un ou plusieurs comptes enfants.
 

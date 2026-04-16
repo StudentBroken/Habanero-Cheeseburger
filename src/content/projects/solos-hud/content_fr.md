@@ -3,14 +3,14 @@
 ## Aperçu du Projet
 L'objectif était la rétro-ingénierie complète et la refonte structurelle d'une plateforme d'affichage tête haute (HUD) grand public. Le projet a progressé de l'analyse protocolaire de bas niveau au démontage physique agressif et à la fabrication d'un boîtier optique personnalisé à haute densité.
 
-## Phase 1 : Rétro-ingénierie du Protocole
+## Rétro-ingénierie
 La phase de recherche initiale s'est concentrée sur l'extraction et l'analyse de la couche de communication propriétaire entre le Solos HUD et son application compagnon.
 
 - **Méthodologie** : Analyse statique de l'APK extrait et écoute (sniffing) GATT Bluetooth en temps réel.
 - **Résultat** : Cartographie réussie des services HID du périphérique et découverte d'UUID de caractéristiques non standard pour la transmission de données d'affichage brutes.
 - **Logique Applicative** : Développement d'une suite logicielle personnalisée facilitant l'analyse des notifications en temps réel, la visualisation de la télémétrie GPS et la récolte de données VESC (Variable Electronic Speed Controller) pour les systèmes de propulsion électrique.
 
-## Phase 2 : Refonte du Matériel & Chirurgie de Nappe
+## Modification du Matériel
 L'objectif secondaire était la réduction radicale de l'empreinte volumétrique de la plateforme. Le boîtier d'origine moulé par injection a été mis hors service, et les composants internes — y compris le PCB de logique principale, les assemblages de nappes et le prisme du guide d'ondes optique — ont été extraits.
 
 Pour atteindre le format souhaité, des modifications drastiques du routage interne ont été nécessaires. Le câble flexible principal reliant les branches gauche et droite a été sectionné manuellement pour réduire sa longueur de moitié. Cela a été exécuté sous grossissement microscopique à l'aide de pinces de précision pour s'assurer que les pistes internes du PCB flexible multicouche ne soient pas court-circuitées pendant la coupe. Le bord brut de la nappe sectionnée a ensuite été scellé avec de la résine UV pour empêcher la délamination ou les infiltrations environnementales.
