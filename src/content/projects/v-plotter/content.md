@@ -18,7 +18,7 @@ The system runs on 12V from a USB-C Power Delivery supply (2A maximum).
 - **Cooling**: A small fan blows over the stepper drivers to prevent overheating.
 
 ## Inverse Kinematics
-Wrote a custom ESP32 firmware engine to calculate real-time Inverse Kinematics for a suspended cable system. The math translates standard (X,Y) cartesian coordinates into required line lengths for the left and right steppers. I used forward kinematics for "sensorless homing" — by fully retracting the cables to zero, then defined releasing a known length (e.g., 2000mm), the algorithm infers the bot's physical (X,Y) starting position. These linear measurements are converted into motor steps and run at high frequency to ensure smooth vectorized movements.
+Wrote a custom ESP32 firmware engine to calculate real-time Inverse Kinematics for a suspended cable system. The math translates standard (X,Y) cartesian coordinates into required line lengths for the left and right steppers. I used forward kinematics for Known-State Initialization — by fully retracting the cables to zero, then defined releasing a known length (e.g., 2000mm), the algorithm infers the bot's physical (X,Y) starting position. These linear measurements are converted into motor steps and run at high frequency to ensure smooth vectorized movements.
 
 ## Bill of Materials
 The project prioritized aggressive cost-reduction through bulk sourcing and component harvesting.
