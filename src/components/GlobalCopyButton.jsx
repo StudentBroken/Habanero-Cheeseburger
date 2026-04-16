@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Copy, Check } from 'lucide-react';
 
-export default function GlobalCopyButton({ text }) {
+export default function GlobalCopyButton({ text, label = "Copy all to clipboard", className = "mg-btn--accent" }) {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {
@@ -17,18 +17,11 @@ export default function GlobalCopyButton({ text }) {
 
   return (
     <button
-      className="mg-btn mg-btn--accent"
+      className={`mg-btn ${className}`}
       onClick={handleCopy}
-      style={{
-        position: 'fixed',
-        bottom: '2rem',
-        right: '2rem',
-        zIndex: 100,
-        boxShadow: 'var(--shadow-floating)',
-      }}
     >
       {copied ? <Check size={18} /> : <Copy size={18} />}
-      {copied ? 'Copied!' : 'Copy all to clipboard'}
+      {copied ? 'Copied!' : label}
     </button>
   );
 }

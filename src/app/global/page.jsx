@@ -52,11 +52,6 @@ export default function GlobalPage() {
   tier2.sort(sortByDate);
   tier3.sort(sortByDate);
 
-  // Formatting the big text
-  let globalText = `# HABANERO CHEESEBURGER PORTFOLIO\n`;
-  globalText += `Generated: ${new Date().toISOString()}\n`;
-  globalText += `Total Projects: ${fullProjects.length}\n\n`;
-
   const formatProject = (p) => {
     const age = getAgeAtDate(p.date);
     let block = `### ${p.title}\n`;
@@ -73,23 +68,34 @@ export default function GlobalPage() {
     return block;
   };
 
+  let globalHeader = `# HABANERO CHEESEBURGER PORTFOLIO\n`;
+  globalHeader += `Generated: ${new Date().toISOString()}\n`;
+  globalHeader += `Total Projects: ${fullProjects.length}\n\n`;
+
+  let ongoingText = "";
   if (ongoing.length > 0) {
-    globalText += `## ONGOING & ACTIVE BUILDS\n`;
-    globalText += `Current engineering focus and active development.\n\n`;
-    ongoing.forEach(p => { globalText += formatProject(p); });
+    ongoingText += `## ONGOING & ACTIVE BUILDS\n`;
+    ongoingText += `Current engineering focus and active development.\n\n`;
+    ongoing.forEach(p => { ongoingText += formatProject(p); });
   }
 
-  globalText += `## TIER 1: THE SPOTLIGHT\n`;
-  globalText += `Production-grade engineering and flagship systems.\n\n`;
-  tier1.forEach(p => { globalText += formatProject(p); });
+  let tier1Text = `## TIER 1: THE SPOTLIGHT\n`;
+  tier1Text += `Production-grade engineering and flagship systems.\n\n`;
+  tier1.forEach(p => { tier1Text += formatProject(p); });
 
-  globalText += `## TIER 2: SIMPLE PROJECTS\n`;
-  globalText += `Rapid prototyping, R&D, and proof-of-concept builds.\n\n`;
-  tier2.forEach(p => { globalText += formatProject(p); });
+  let tier2Text = `## TIER 2: SIMPLE PROJECTS\n`;
+  tier2Text += `Rapid prototyping, R&D, and proof-of-concept builds.\n\n`;
+  tier2.forEach(p => { tier2Text += formatProject(p); });
 
-  globalText += `## TIER 3: WEEKEND HACKS\n`;
-  globalText += `Single-digit hour hacks, small experiments, and scrapbook projects.\n\n`;
-  tier3.forEach(p => { globalText += formatProject(p); });
+  let tier3Text = `## TIER 3: WEEKEND HACKS\n`;
+  tier3Text += `Single-digit hour hacks, small experiments, and scrapbook projects.\n\n`;
+  tier3.forEach(p => { tier3Text += formatProject(p); });
+
+  const globalText = globalHeader + ongoingText + tier1Text + tier2Text + tier3Text;
+
+  const copyTier1 = globalHeader + tier1Text;
+  const copyTier2 = globalHeader + tier2Text;
+  const copyTier3 = globalHeader + tier3Text;
 
   return (
     <main className="container" style={{ padding: '2rem 1rem' }}>
@@ -126,7 +132,25 @@ export default function GlobalPage() {
         </div>
       </section>
 
-      <GlobalCopyButton text={globalText} />
+      <div 
+        style={{ 
+          position: 'fixed', 
+          bottom: '2rem', 
+          right: '2rem', 
+          zIndex: 100, 
+          display: 'flex', 
+          flexDirection: 'column', 
+          gap: '0.75rem', 
+          alignItems: 'flex-end',
+          boxShadow: 'var(--shadow-floating)',
+          borderRadius: '8px'
+        }}
+      >
+        <GlobalCopyButton text={copyTier1} label="Copy only Tier 1" className="" />
+        <GlobalCopyButton text={copyTier2} label="Copy only Tier 2" className="" />
+        <GlobalCopyButton text={copyTier3} label="Copy only Tier 3" className="" />
+        <GlobalCopyButton text={globalText} label="Copy all to clipboard" className="mg-btn--accent" />
+      </div>
     </main>
   );
 }
