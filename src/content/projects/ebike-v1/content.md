@@ -1,30 +1,24 @@
-# Electric Bike (v1)
+I built this bike when I was 13. I didn't have a lot of money, so I used a "friction drive" system. This means the motor sits directly on the tire and spins it using a piece of sandpaper tape.
 
-Built in late February 2023, a few weeks before turning 14. No mentor, no prior experience with anything electrical. Everything I needed to know about voltage, current, mAh, and cell chemistry came from YouTube and forum posts as I went.
+![Friction drive setup](/projects/ebike-v1/motor-friction.webp)
+*Sandpaper tape on the motor provides grip against the rubber tire.*
 
-## Battery Pack
+It wasn't very efficient and the tape wore out quickly, but it was the easiest way to make the bike move without a chain or gears.
 
-The cells came off Facebook Marketplace at $1.50 each — 1500 mAh 18650s. I built a 6S8P pack, and for the interconnects, I stripped a 110V extension cord, pulled out the copper strands, and twisted them into bus bars.
+## Hand-Soldered Battery
 
-I built this ebike battery at 13 with a $10 iron and salvaged copper. Looking back, this was a massive thermal runaway risk because I didn't understand spot-welding, proper nickel strips, or sizing a BMS for actual discharge current.
+The battery was my first big electronics challenge. I used 48 individual 18650 cells that I bought from the Facebook Marketplace. Since I didn't have a spot welder, I soldered thick copper wires directly to the cells.
 
-The pack was wrapped in a layer of foam and then blue duct tape.
+![Hand-soldered battery bus](/projects/ebike-v1/battery-wiring.webp)
+*I used thick copper wires from an old extension cord to connect the cells.*
 
-![Front view of the battery pack](/projects/ebike-v1/battery-front.webp)
-*The finished pack — foam layer underneath, duct tape over everything*
+This was a dangerous way to build a battery because the heat from the soldering iron can damage the cells. I wrapped the whole thing in foam and blue duct tape to keep it together.
 
-## Motor and Drive
 
-The motor came from a leafboard — the same one I later reused in the [underwater scooter v2](/projects/underwater-scooter-v2). I mounted it as a friction drive, pressing it directly against the tire with sandpaper grip tape wrapped around the motor can.
+## Conclusion
 
-![Motor friction drive contact point](/projects/ebike-v1/motor-friction.webp)
-*Motor pressed against the tire — the sandpaper tape was the only thing providing grip*
+The bike worked for a few weeks, reaching about 20km/h. Eventually, the cheap motor controller (ESC) burned out because it wasn't meant to handle the high current needed to start the bike from a stop.
 
-## ESC
-
-I bought a 40 A RC plane ESC from Amazon for about $30. I picked it because 40 A sounded like a lot. What I did not know then is that RC plane ESCs are designed for propellers, not hub motors, and handle back-EMF and stall conditions completely differently. It lasted about a week before it failed.
-
-That failure is what pushed me toward a VESC for v2.
 
 ## Throttle
 

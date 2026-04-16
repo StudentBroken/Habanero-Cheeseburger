@@ -4,19 +4,26 @@ RepGate is a cross-platform parental control app built in Flutter. The core mech
 
 ## Exercise Verification
 
-The exercise session flow uses ML Kit's pose detection to confirm that the child is actually moving. Each frame is passed through the pose landmark model; reps are counted by tracking joint angles across frames — a squat is registered when the hip-to-knee angle crosses a threshold going down and back up, a push-up by elbow flexion, a burpee by sequencing floor and stand phases. The ML inference runs entirely on-device; no video, images, or biometric data leave the device during pose detection.
+The app uses your phone's camera and AI to count reps in real time. It tracks your joints—like hips and knees for squats—to make sure you're doing the exercise correctly. All of this happens directly on your phone; no video or private data is ever sent to the internet.
 
-To prevent cheating, the app captures an exercise snapshot at a random point during each set and stores a compressed frame alongside the rep count. Parents can review snapshots in the Coach Dashboard to verify the session was legitimate. The snapshot is processed locally before upload — only a low-resolution still is sent, not the full video stream.
+![On-device pose detection](/projects/repgate/repgate-exercise.webp)
+*RepGate uses on-device AI to count reps without sending video to the cloud.*
 
-Alongside live pose detection, the app supports Strava integration. Users with a connected Strava account can import completed activities directly, and the backend validates the activity timestamp, duration, and type before issuing credits. Both paths — live detection and Strava import — write to the same exercise snapshot schema in Firestore, so the credit calculation is identical regardless of how the session was recorded.
+To prevent cheating, the app takes a random photo during each set. Parents can check these photos later to make sure the workout was real. The photos are low-resolution to keep things private.
+
+RepGate also works with Strava. If you already track your runs or bike rides there, the app can import them and give you screen time credits automatically.
 
 The app also supports Grease the Groove: short, frequent mini-sessions spread across the day rather than one long block. A Coach can schedule these at fixed intervals, and each mini-session awards a partial credit that accumulates toward a screen time unlock.
 
 ## Native Screen Time Integration
 
-Screen time enforcement requires dropping into platform-specific APIs that Flutter can't reach on its own. The iOS side is the most technically involved part of the whole project — I sketched the full architecture on the back of an exam paper mid-exam, because I couldn't stop working through how the pieces had to fit together.
+On iOS, RepGate uses Apple's official "FamilyControls" to block and unblock apps. This is the most complex part of the app. I even sketched out how the background processes would communicate on the back of a math exam because I couldn't stop thinking about it.
 
-There are two separate processes that must cooperate. The RepGate Flutter app talks to a native Swift layer via method channel. The DeviceActivityMonitor extension is a separate Apple-sandboxed process that the OS launches independently and that keeps running even when the main app is killed. They share state exclusively through `UserDefaults(suiteName: "group.com.isnotabot.repgate")` — an App Group container both sides can read and write.
+![Architecture sketch drawn on the back of an exam paper](/projects/repgate/repgate-exam-sketch.webp)
+*I sketched the entire background logic on the back of a math midterm—December 19.*
+
+The app has to talk to a separate, hidden "extension" that stays running even if you close the app. They share data through a secure container so they always know how much time is left.
+
 
 ### Three Blocking Modes
 

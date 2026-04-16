@@ -1,6 +1,8 @@
-# Electric Bike (v3)
+By age 15, I wanted the bike to have more torque. Instead of the motor spinning the tire directly, I built a "mid-drive" system that used a chain and sprocket. This meant the motor could help the bike climb hills much better.
 
-Built at 15, a few months after a trip to China — the first build where I actually did metalwork instead of just 3D printing brackets and hoping they'd hold. The core goal was moving from the tire-friction drive of v1/v2 to a mid-drive system with real mechanical advantage through a chain and sprocket reduction.
+![Completed mid-drive build](/projects/ebike-v3/the-completed-build.webp)
+*The finished v3 model. You can see the large motor and the chain drive system.*
+
 
 ## Drivetrain & Gearing
 
@@ -25,15 +27,15 @@ I also modeled up a 3D-printed PLA bracket for the battery tray from the frame f
 ![Frame fitment reference for the CAD model](/projects/ebike-v3/the-fitment-in-the-frame-referance-for-the-3d-model.webp)
 *Photo used as reference geometry for the 3D printed bracket.*
 
-## Battery
+## My First Spot Welder
 
-Same general construction as v1/v2 — salvage 18650 cells, foam and duct tape wrap. The difference was I now had a spot welder. These were my first spot welds ever. The cells were sourced for about $1 each and I skipped proper capacity testing, only checking voltage. I did not know at the time that voltage tells you nothing about actual capacity — these cells ranged from 2500 to 2900 mAh, which is weak for 18650s, and I had no idea.
+I also finally stopped soldering directly to battery cells. I bought a cheap battery spot welder from AliExpress. This uses high-current pulses to fuse a thin nickel strip to the cell without heating up the entire battery.
 
-![Raw 18650 cells before building the pack](/projects/ebike-v3/the-batteries-after-i-brought-them-home.webp)
-*Cells fresh from the source — voltage checked, capacity unknown.*
+![First spot welds](/projects/ebike-v3/the-batteries-spot-welding-them-the-first-spotwelds-of-my-life.webp)
+*Learning how to spot weld. It's much safer and more reliable than soldering.*
 
-![First ever spot welds on 18650 cells](/projects/ebike-v3/the-batteries-spot-welding-them-the-first-spotwelds-of-my-life.webp)
-*First spot welds of my life. The technique improved across the pack.*
+It took some practice to get it right, but this was a huge step toward building professional-quality battery packs.
+
 
 ![Battery pack interior with foam and duct tape](/projects/ebike-v3/the-battery-pack-with-the-foam-and-ducktape-this-is-the-inside-view.webp)
 *Pack interior — foam padding and duct tape, consistent with the v1/v2 build standard.*
@@ -71,12 +73,9 @@ This build killed two VESCs:
 | ESP32 + misc | ~$10.00 CAD |
 | **Total** | **~$325.00 CAD** |
 
-## Post-Mortem
+## The Cost of Failure
 
-The build worked but it was not good. The L-bracket mount was always borderline, the chain tension was never consistent, and the overall aesthetic was half-professional, half-improvised — because it was. The pedals were effectively useless dead weight since the chain was removed; pushing them felt like pedaling through air.
+This build was a hard lesson in power electronics. I managed to burn out two expensive VESCs. The second one failed when I tried to go up a steep hill while the motor was still cold. The sudden spike in current was too much for the controller.
 
-The two VESC failures were expensive. Cheap ESCs for high-current mid-drive applications are not a good deal when you factor in replacement cost. The lesson — buy from a reputable source once, not a cheap source twice — cost me $120 to learn.
+In the end, this version reached 45km/h, but it was often broken. It taught me that building a powerful bike is much harder than just making a fast one.
 
-The capacity issue with the cells was a knowledge gap. I only tested voltage, not capacity. A proper pull test under load would have revealed the weak cells before the pack was built. I learned to always pull-test cells after this build.
-
-The BLE telemetry was the one genuine upgrade. Riding with actual data — voltage, current, speed — on my phone changed my understanding of the system significantly. Watching the voltage sag under load in real time gave me a much better intuition for what the pack was and wasn't capable of.

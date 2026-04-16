@@ -18,18 +18,31 @@ Le système fonctionne sur 12V avec une alimentation USB-C Power Delivery (2A ma
 - **Refroidissement** : Un petit ventilateur refroidit les pilotes pour éviter la surchauffe.
 
 ## Cinématique Inverse
-J'ai écrit un moteur de firmware ESP32 personnalisé pour calculer la cinématique inverse en temps réel d'un système de câbles suspendus. Les mathématiques traduisent les coordonnées cartésiennes (X,Y) standard en longueurs de ligne requises pour les steppers gauches et droits. J'ai utilisé la cinématique directe pour l'Initialisation d'État Connu (Known-State Initialization) : en rétractant complètement les câbles à zéro, puis en relâchant une longueur connue définie (par exemple 2000 mm), l'algorithme déduit la position de départ (X,Y) physique du robot. Ces mesures linéaires sont converties en pas moteurs et exécutées à haute fréquence pour assurer des mouvements vectoriels fluides.
+
+Les mathématiques pour ce robot ont été la partie la plus difficile. J'ai dû écrire un logiciel personnalisé qui calcule exactement la longueur nécessaire pour chaque fil afin d'atteindre un point précis sur le tableau.
+
+![Alimenté via USB-C PD](/projects/v-plotter/on-the-whiteboard-close-up,-powered-on.webp)
+*Le robot suspendu sur un tableau blanc. Il utilise deux fils pour déplacer le stylo.*
+
+Au lieu de simples coordonnées X et Y, le robot pense en longueurs de fils. Je l'ai programmé pour qu'il se réinitialise en tirant les deux fils au maximum, ce qui lui donne un point de départ connu avant de commencer à dessiner.
+
 
 ## Nomenclature (BOM)
-Le projet a privilégié une réduction drastique des coûts grâce à l'achat en gros et à la récupération de composants.
+J'ai essayé de rendre ce projet aussi peu coûteux que possible en utilisant des pièces communes.
 
-- **Kit de mouvement (4x steppers, 4x A4988, shield RAMPS, Arduino Uno)** : 20,00 $
-- **Nœud logique (ESP32-C3)** : 1,00 $
-- **Logique de puissance (Carte USB-C PD, BEC 5V)** : 2,50 $
-- **Actionneur (Servo 9g)** : 2,00 $
-- **Châssis (PLA imprimé en 3D)** : 5,00 $
+- **Kit de mouvement** : 20,00 $
+- **Cerveau (ESP32-C3)** : 1,00 $
+- **Pièces de puissance** : 2,50 $
+- **Servomoteur** : 2,00 $
+- **Châssis imprimé en 3D** : 5,00 $
 
-**Coût Total du Système** : ~30,50 $
+**Coût Total** : ~30,50 $
+
 
 ## Post-Mortem
-Les pilotes de steppers du kit bon marché ont lâché pendant les tests. Ils ont surchauffé et grillé sous le couple élevé nécessaire pour les mouvements verticaux. Ces pilotes ne sont pas conçus pour supporter des tirages de courant continus. Les futures versions utiliseront des pilotes de meilleure qualité, type Trinamic, capables de gérer la charge de manière fiable.
+
+Un échec important est survenu pendant les tests : les pilotes de moteur bon marché que j'ai achetés ne pouvaient pas supporter la puissance nécessaire pour soulever le stylo. Ils ont surchauffé et ont littéralement grillé.
+
+![Pilote de moteur grillé](/projects/v-plotter/blown-a4988-driver.webp)
+*L'un des pilotes de moteur qui a lâché pendant les tests. La prochaine fois, j'utiliserai des pièces de meilleure qualité.*
+

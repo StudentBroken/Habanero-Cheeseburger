@@ -1,17 +1,17 @@
-# Vélo Électrique (v6)
+À 17 ans, j'ai construit ce vélo pour qu'il soit la version parfaite de tous mes builds précédents. Au lieu d'utiliser de vieilles cellules recyclées, j'ai acheté 100 cellules **EVE 33V** neuves. J'ai testé chacune d'entre elles pour m'assurer qu'elles étaient toutes identiques en termes de santé et de puissance.
 
-Construit à 17 ans, c'est l'état actuel de la série. Après cinq itérations à gérer des cellules recyclées, des déformations physiques des supports et le hack de charge série/parallèle, le v6 est une transition vers une exécution de qualité professionnelle. Les 100 cellules sont neuves, le support est une conception monocoque continue, et chaque composant a été validé par des tests 4 fils avant l'assemblage.
+![Cellules de batterie neuves](/projects/ebike-v6/the-box-the-brand-new-cells-came-in-100-to-be-exact.webp)
+*J'ai acheté 100 cellules de Grade-A pour garantir que la batterie durerait des années.*
 
-## Sélection & Validation des Cellules
+C'est le vélo le plus rapide et le plus fiable que j'aie jamais construit. Il peut atteindre 65 km/h et ne perd pas de puissance, même dans les montées raides.
 
-Le pack utilise 100x cellules EVE 33V Grade-A (3200mAh nominal) en configuration 20S5P. Contrairement aux builds précédents où la "santé des cellules" était estimée à l'usage, le v6 a utilisé un processus d'admission rigoureux :
+## Construction de Qualité Professionnelle
 
-1.  **Test de Capacité** : Chaque groupe a été échantillonné et testé pour sa capacité à 21°C. Une décharge de 1A de 4,15V à 2,95V a mesuré une moyenne de 3165mAh.
-2.  **Appairage RI** : J'ai utilisé un testeur de résistance interne AC 4 fils dédié. Chaque cellule a été mesurée à 3,495V. La dispersion du pack était de 29mΩ ±1mΩ avec un écart de tension de ±0,006V. Ce niveau d'appairage est pratiquement une erreur de arrondi, garantissant que le pack reste parfaitement équilibré sous forte charge.
+J'ai arrêté d'utiliser de la colle et du ruban adhésif pour faire tenir la batterie. À la place, j'ai conçu un support "monocoque" imprimé en 3D en plastique **PETG**. Le PETG est beaucoup plus solide que le PLA que j'utilisais auparavant et peut supporter les vibrations de la route sans se fissurer.
 
-## Ingénierie Mécanique & Monocoque PETG
+![Nouveau support de batterie en PETG](/projects/ebike-v6/the-test-fit-on-the-bike-with-new-petg-holder.webp)
+*La batterie s'intègre parfaitement dans le cadre. Le support en PETG maintient les 100 cellules en toute sécurité.*
 
-Le support de batterie est une conception monocoque en une seule pièce imprimée en PETG sur une Ender 5 Plus modifiée sous Klipper. Le passage au PETG était obligatoire ; le v4 et le v5 ont prouvé que le PLA est trop fragile pour des composants structurels de véhicule. Le PETG offre la résistance aux chocs et la tolérance thermique nécessaires pour une masse de 100 cellules se déchargeant à des taux élevés.
 
 ![Support de batterie monocoque PETG avec cellules](/projects/ebike-v6/the-battery-pack-all-sorted-and-aligned-in-the-petg-holder-with-painter-tape-covering-both-sides-temporarily.webp)
 *Support monocoque PETG — alignement 20S5P. Le PETG a été choisi pour sa résistance aux chocs supérieure au PLA.*
@@ -35,11 +35,10 @@ La stratégie d'isolation est multicouche :
 -   **Secondaire** : Ruban en fibre de verre multiaxial pour le renforcement structurel et une résistance accrue à la perforation.
 -   **Final** : Le pack est logé dans une coque rigide en PETG.
 
-## Post-Mortem (État Actuel)
+## Conclusion
 
-Le v6 est le premier build où je n'attends pas qu'une pièce spécifique lâche. La transmission est silencieuse, la batterie ne chute pas sous une charge complète de 2500W, et le vélo atteint une vitesse de pointe de 65 km/h. L'appairage de la résistance interne signifie que le BMS n'a presque aucun travail à faire lors de l'équilibrage.
+La plus grande leçon de cinq années de construction de vélos électriques est qu'on ne peut pas construire une machine professionnelle avec de mauvais matériaux. L'utilisation de cellules neuves et de calculs d'ingénierie appropriés a rendu ce vélo plus rapide, plus sûr et beaucoup plus agréable à conduire.
 
-La leçon des 5 dernières années est simple : on ne peut pas compenser des matériaux de mauvaise qualité par de l'ingénierie. Recycler des cellules et utiliser des équerres est bien pour apprendre comment les choses échouent, mais la fiabilité de niveau professionnel exige des cellules neuves, une validation 4 fils et des matériaux comme le PETG qui sont réellement adaptés à l'application.
 
 ## Nomenclature (BOM)
 

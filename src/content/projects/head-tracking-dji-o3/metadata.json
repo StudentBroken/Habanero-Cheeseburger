@@ -1,5 +1,6 @@
 {
   "title": "Head Tracking DJI O3 Air Unit",
+  "titleFr": "Suivi de Tête DJI O3",
   "date": "2024-10-18",
   "category": "HARDWARE & SOFTWARE",
   "description": "A 2-axis head tracking system for the DJI Goggles 3 and O3 air unit using an MPU module and ESP32 C3 Superminis.",

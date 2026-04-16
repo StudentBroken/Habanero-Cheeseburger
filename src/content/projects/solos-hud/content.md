@@ -4,16 +4,23 @@
 I reverse-engineered and physically redesigned the Solos HUD to make it smaller and lighter while keeping it functional. The work involved analyzing how it communicates, taking it apart, modifying the circuit boards, and redesigning the housing from scratch.
 
 ## Reverse Engineering
-I started by figuring out how the Solos HUD talks to its app and sends data to the display.
 
-- **Method**: I extracted the Android APK and used a Bluetooth sniffer to capture the protocol. I mapped out which services and UUIDs handle display data.
-- **Result**: I found the exact message format for display commands and battery telemetry.
-- **Custom App**: I wrote software to parse GPS data and read real-time speed and power information from the skateboard's ESC, sending it to the HUD display.
+I started by figuring out how the Solos HUD talks to its original app. I analyzed the Android app code and used Bluetooth sniffing to find the exact message format for the display.
+
+![Custom companion app interface](/projects/solos-hud/20260308_222410.webp)
+*I wrote a custom app to send real-time speed and battery data to the HUD.*
+
+Once I knew how the display worked, I wrote my own software. My custom app reads live speed and power details from my electric skateboard and sends them to the glasses.
 
 ## Hardware Modification
-I wanted to shrink the HUD enough to fit on normal glasses. The first step was disassembling it. I extracted the main PCB, flex cables, and the optical prism from the plastic housing.
 
-To shrink it, I had to cut the flex cable that runs between the left and right temples—in half. I used a microscope and precision clippers to cut through the plastic without shorting the internal traces. Then I sealed the cut edges with UV resin to keep moisture out.
+I wanted the HUD to fit on regular glasses, so I took it completely apart. I extracted the main circuit board and the glass prism from the original bulky housing.
+
+To make it even smaller, I had to cut the flat cable that connected the two sides. I used a microscope and tiny cutters to do this safely, then sealed everything with UV resin.
+
+![Fitting components into the new housing](/projects/solos-hud/20260321_233341.webp)
+*Fitting the extracted electronics into the new, compact 3D-printed case.*
+
 
 Cutting the cable disconnected the original battery, thermistor, and charging circuit, so I had to build a completely new power system.
 

@@ -1,15 +1,18 @@
 # ESP Eraser : Édition 2026 (Version finale)
 
-## L'Objectif
 En 2026, je voulais rendre le système de l'effaceur aussi petit que possible. Le but était de le rendre beaucoup plus mince et de changer la façon dont il envoie les données pour qu'il n'ait pas à attendre de réponse.
 
-## Logiciel & Batterie
-Je suis passé de MQTT à Firebase pour gérer les données. Cela signifie que l'effaceur peut envoyer une image et s'endormir immédiatement, ce qui économise beaucoup d'énergie. Cela m'a permis d'utiliser une batterie 70 % plus petite tout en durant aussi longtemps.
+![ESP Eraser assemblé](/projects/eraser-2026/assembled.webp)
+*La version finale de 2026. Elle ressemble à un effaceur ordinaire.*
 
 - **La plus petite taille à ce jour** : Assez mince pour être caché à la vue de tous.
-- **Modèle de Données** : Envoi de données sur le cloud Firebase (*fire-and-forget*).
-- **Gestion d'Énergie** : Temps d'activation court pour une durée de vie maximale de la batterie.
-- **Surveillance de l'État** : Petite LED pour des vérifications d'état discrètes.
+- **Modèle de données** : Envoi rapide vers Firebase (méthode *fire-and-forget*).
+- **Gestion d'énergie** : Envoie les données et s'endort immédiatement pour économiser la batterie.
+- **Surveillance de l'état** : Petite LED pour des vérifications discrètes.
+
+![Intérieur de l'effaceur 2026](/projects/eraser-2026/inside.webp)
+*L'intérieur a été redessiné pour tenir dans un boîtier beaucoup plus fin.*
+
 
 ## Meilleur Design
 J'ai redessiné l'intérieur pour que tout soit plus serré. J'ai aussi rendu le port de charge USB-C accessible sans avoir à tout démonter. La seule façon de dire que ce n'est pas un vrai effaceur est de regarder de près la texture imprimée en 3D.

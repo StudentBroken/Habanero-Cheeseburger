@@ -1,18 +1,17 @@
-# Vélo Électrique (v2)
+Après la panne du premier contrôleur de moteur, j'ai acheté un **VESC 6.7 Pro**. C'était la première fois que je dépensais une somme importante pour une seule pièce (120 $). Cela a rendu le moteur beaucoup plus fluide et a même permis au vélo de se recharger légèrement lors du freinage (freinage régénératif).
 
-Construit deux semaines après le v1, toujours à 13 ans. L'ESC RC venait de mourir, et mon père m'a offert un VESC 6.7 Pro — la première fois que je dépensais vraiment de l'argent sur une seule pièce, environ 120$ CAD. J'ai passé une journée entière à lire la documentation du VESC Tool et les forums pour comprendre comment le configurer. J'ai mis le courant moteur à 40A sur le même pack 6S8P en 18650 — 48 cellules au total, environ 5A par cellule. Gérable, mais la batterie était toujours le bricolage dangereux soudé au fer à souder du v1.
+## Le Bypass du BMS
 
-## Le Problème du BMS
+Dans la première version, la carte de sécurité de la batterie (BMS) brûlait constamment parce que je tirais trop de puissance. Pour corriger cela, j'ai reconstruit la batterie avec deux prises. Une prise passait par le BMS pour une charge sécurisée, mais l'autre prise allait directement au moteur, évitant toute sécurité.
 
-Le BMS du v1 était limité à 12A en continu. Je tirais manifestement bien plus que ça, et il a grillé. J'ai reconstruit le pack avec un deuxième connecteur de sortie qui bypass entièrement le BMS pour la décharge. Un connecteur passe par le BMS pour charger ; l'autre va directement au VESC.
+![Installation de batterie à double sortie](/projects/ebike-v2/battery-dual-output.webp)
+*Une prise est pour la charge, l'autre fournit une puissance brute directement au moteur.*
 
-Ce n'est pas la bonne solution. Bypasser le BMS supprime la seule protection contre les surintensités et les courts-circuits sur un pack construit avec des barres en cuivre et un fer à souder à 10$. Mais c'était soit ça, soit rester lent. Je connaissais le risque et j'ai roulé quand même.
+Ce n'était pas une bonne idée. Cela signifiait qu'il n'y avait aucune protection en cas de court-circuit. Je savais que c'était risqué, mais je voulais que le vélo soit rapide. J'ai aussi remarqué que le BMS d'origine avait des traces de brûlure là où il avait échoué.
 
-![Pack batterie avec deux connecteurs de sortie](/projects/ebike-v2/battery-dual-output.webp)
-*Connecteur gauche : via BMS, limite 12A. Connecteur droit : direct aux cellules, sans protection.*
+![Marques de brûlure sur le BMS d'origine](/projects/ebike-v2/battery-burned-bms.webp)
+*Le premier BMS ne pouvait pas supporter le courant et a commencé à fondre.*
 
-![Vue du dessus de la batterie montrant les marques de brûlure sur le BMS v1](/projects/ebike-v2/battery-burned-bms.webp)
-*Le BMS v1 grillé — marques de brûlure visibles là où il a lâché sous charge.*
 
 ## Configuration du VESC
 
@@ -20,17 +19,13 @@ Première utilisation d'un VESC. J'ai mis le courant batterie max à 40A, le cou
 
 J'ai passé une journée là-dessus. À la fin de la journée, je comprenais les limites de courant, le contrôle du rapport cyclique, les modes d'entrée ADC, et pourquoi les ESC RC échouent dans cette application.
 
-## Accélérateur
+## Accélérateur Magnétique
 
-L'ancien montage potentiomètre-plus-Arduino était abandonné. Le VESC a une entrée ADC native pour les signaux d'accélérateur analogiques. J'ai câblé directement la sortie analogique du module joystick à l'entrée ADC du VESC.
+J'ai aussi redessiné l'accélérateur. J'ai utilisé un petit module joystick et j'ai collé des aimants au bas. J'ai ensuite collé des aimants sur le guidon pour que le joystick puisse se fixer et s'enlever instantanément.
 
-Le joystick lui-même était un module de télécommande de skateboard filaire nu, sans boîtier. J'ai collé à chaud des aimants dessous et époxylé des aimants correspondants sur le guidon. Il se détache et se rattache par simple contact. Pousser le stick en avant entraînait le moteur ; le tirer en arrière activait le freinage regen. Je pouvais lâcher le guidon et diriger avec le poids du corps tout en gardant un pouce sur le joystick.
+![Joystick magnétique](/projects/ebike-v2/joystick.webp)
+*Le support magnétique permettait de retirer facilement l'accélérateur quand je stationnais le vélo.*
 
-![Connecteur d'entrée ADC VESC câblé au module joystick](/projects/ebike-v2/vesc-throttle.webp)
-*Connecteur ADC VESC — câblage analogique direct, pas de microcontrôleur dans la boucle.*
-
-![Module joystick avec aimants collés à chaud](/projects/ebike-v2/joystick.webp)
-*Module joystick nu — aimants collés à chaud en dessous, colle aux supports époxy sur le guidon.*
 
 ## Performance et l'Expo McGill
 

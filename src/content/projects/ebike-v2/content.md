@@ -1,18 +1,17 @@
-# Electric Bike (v2)
+After the first motor controller failed, I bought a **VESC 6.7 Pro**. This was the first time I spent real money on a single part ($120). It made the motor run much smoother and even allowed the bike to charge itself slightly when braking (regenerative braking).
 
-Built two weeks after v1, still 13. The RC plane ESC had just died, and my dad got me a VESC 6.7 Pro — the first time I ever spent real money on a single component, around $120 CAD. I spent a full day reading the VESC Tool documentation and forum posts to understand how to configure it. I set motor current to 40A on the same 6S8P 18650 pack — 48 cells total, roughly 5A per cell. Manageable, but the battery was still the hand-soldered fire hazard from v1.
+## The BMS Bypass
 
-## The BMS Problem
+In the first version, the battery safety board (BMS) kept burning out because I was pulling too much power. To fix this, I rebuilt the battery with two plugs. One plug went through the BMS for safe charging, but the other plug went straight to the motor, bypassing all safety.
 
-The v1 BMS was rated for 12A continuous. I was obviously pulling far more than that, and it burned. I rebuilt the pack with a second output connector that bypasses the BMS entirely for discharge. One connector goes through the BMS for charging; the other goes straight to the VESC.
+![Dual output battery setup](/projects/ebike-v2/battery-dual-output.webp)
+*One plug is for charging, the other provides raw power directly to the motor.*
 
-This is not the right solution. Bypassing the BMS removes the only over-current and short-circuit protection on a pack built with copper wire bus bars and a $10 soldering iron. But it was either that or stay slow. I knew the risk and rode it anyway.
+This was a bad idea. It meant there was no protection if something short-circuited. I knew it was risky, but I wanted the bike to be fast. I also saw that the original BMS had actual scorch marks from where it failed.
 
-![Battery pack with two output connectors — BMS port and direct bypass](/projects/ebike-v2/battery-dual-output.webp)
-*Left connector: through BMS, 12A limit. Right connector: direct to cells, no protection.*
+![Burn marks on the original BMS](/projects/ebike-v2/battery-burned-bms.webp)
+*The first BMS couldn't handle the current and started to melt.*
 
-![Top view of the battery showing burn marks on the v1 BMS](/projects/ebike-v2/battery-burned-bms.webp)
-*The burned v1 BMS — visible scorch marks where it failed under load.*
 
 ## VESC Configuration
 
@@ -20,17 +19,13 @@ First time using a VESC. I set battery max current to 40A, motor current to 40A,
 
 I spent a day on this. By end of day I understood current limits, duty cycle control, ADC input modes, and why RC ESCs fail in this application (they are tuned for propeller loads, not motors that stall, reverse, and experience high inertia).
 
-## Throttle
+## Magnetic Throttle
 
-The old potentiometer-plus-Arduino setup was gone. The VESC has a native ADC input for analog throttle signals. I wired the joystick module's analog output directly into the VESC ADC connector.
+I also redesigned the throttle. I used a small joystick module and hot-glued magnets to the bottom. I then glued magnets to the handlebars so the joystick could snap on and off instantly.
 
-The joystick itself was a bare wired skateboard remote module, no casing. I hot-glued magnets under it and epoxied corresponding magnets onto the handlebar. It detaches and reattaches by touch. Pushing the stick forward drove the motor; pulling it back engaged regen braking. I could let go of the handlebar and steer with body weight while keeping a thumb on the joystick — genuinely useful for posture on long rides.
+![Magnetic joystick throttle](/projects/ebike-v2/joystick.webp)
+*The magnetic mount made it easy to take the throttle off when I parked the bike.*
 
-![VESC ADC input connector wired to the joystick throttle module](/projects/ebike-v2/vesc-throttle.webp)
-*VESC ADC input connector — direct analog wiring, no microcontroller in the loop.*
-
-![Joystick module with hot-glued magnets](/projects/ebike-v2/joystick.webp)
-*Joystick bare module — magnets hot-glued underneath, sticks to epoxy mounts on the handlebar.*
 
 ## Performance and the McGill Expo Ride
 

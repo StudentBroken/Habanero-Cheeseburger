@@ -4,12 +4,19 @@ Ce projet est un système de suivi de tête à deux axes bâti pour les DJI Gogg
 
 Le design mécanique a été esquissé pendant un examen de maths. Le prof n'était pas content.
 
-## Quincaillerie
+## Matériel
 
-Le gimbal est conçu sur mesure et imprimé en 3D, logeant deux micro-servos pour le *pan* et le *tilt*. Un *buck converter* accepte une entrée de batterie 2S à 6S pour rouler sur ce qui alimente déjà l'aéronef.
+Le gimbal est conçu sur mesure et imprimé en 3D. Il utilise deux micro-servos pour déplacer la caméra vers le haut, le bas, la gauche et la droite. Il peut fonctionner avec presque n'importe quelle batterie de drone (2S à 6S) grâce à un régulateur de puissance intégré.
 
-- **Côté lunettes** — ESP32-C3 + IMU MPU6050
-- **Côté drone** — ESP32-C3 + deux micro-servos (*pan* sur pin 7, *tilt* sur pin 6)
+![Mécanisme à 2 axes terminé](/projects/head-tracking-dji-o3/close-up.webp)
+*Le gimbal terminé avec la caméra DJI O3 montée.*
+
+- **Sur les lunettes** : Un ESP32 et un capteur gyro pour suivre les mouvements de votre tête.
+- **Sur le drone** : Un ESP32 et deux servos pour déplacer la caméra.
+
+![Test sur banc et assemblage](/projects/head-tracking-dji-o3/close-up-table.webp)
+*Test des servos et de l'électronique sur l'établi avant le montage.*
+
 
 ## Liste des Composants (BOM)
 
@@ -42,8 +49,6 @@ Le receveur pilote les servos directement sans passer par le contrôleur de vol 
 
 ## Dérive du Gyroscope & Calibration
 
-La première approche utilisait les données brutes du gyroscope — intégrer la vitesse angulaire dans le temps pour estimer l'orientation. Le problème c'est que les gyroscopes accumulent de petites erreurs à chaque lecture, et ces erreurs s'additionnent. Après quelques minutes d'utilisation, le gimbal dérivait lentement de son centre même avec la tête parfaitement immobile, ce qui rend le système inutilisable pour un vol soutenu.
+Le plus gros défi était la "dérive". Tous les gyroscopes ont tendance à dériver avec le temps, ce qui fait que la caméra bouge lentement même si vous gardez la tête immobile. Pour corriger cela, j'utilise un processeur de mouvement qui combine les données du gyro avec un accéléromètre. L'accéléromètre utilise la gravité comme référence fixe pour garder le gimbal centré.
 
-La solution est le DMP intégré du MPU6050, qui fusionne les données du gyroscope et de l'accéléromètre en une représentation quaternion de l'orientation. L'accéléromètre fournit une référence gravitationnelle absolue qui corrige constamment la dérive du gyroscope, donc l'estimation de l'angle reste stable dans le temps sans dériver.
-
-La calibration est un problème à part. Chaque unité MPU6050 a son propre biais de fabrication sur chaque axe — la lecture "zéro" au repos n'est jamais vraiment zéro. Le firmware gère ça en deux couches : des offsets matériels codés en dur pour le chip spécifique, et une auto-calibration logicielle à chaque démarrage qui mesure l'angle au repos et le soustrait. Ça fait que le gimbal n'a pas besoin d'être dans une position particulière à l'allumage pour se centrer correctement.
+J'ai aussi ajouté une étape de calibration qui s'exécute à chaque démarrage. Elle mesure la position de repos de vos lunettes pour que la caméra commence toujours parfaitement centrée.

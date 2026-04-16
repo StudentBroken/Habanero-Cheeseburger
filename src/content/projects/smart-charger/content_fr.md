@@ -4,21 +4,24 @@ L'ebike roule sur un pack custom 12S bâti à partir de deux packs LiPo 6S en s�
 
 La solution était un contrôleur de coupure à relais qui intercepte la sortie du chargeur et la déconnecte au bon moment.
 
-## Le Problème de la Coupure
+## Conception de la Coupure
 
-Couper exactement à 25.2V (4.2V/cellule) sur la tension mesurée n'est pas assez précis. Pendant que le chargeur est actif, le courant qui circule à travers la résistance interne de la batterie gonfle la tension terminale mesurée au-dessus de la vraie tension des cellules. Si on coupe à 25.2V sous charge, les cellules n'ont atteint que ~4.0–4.1V — pas assez rechargées. Si on attend que la tension terminale descende à 25.2V, le chargeur a déjà dépassé.
+J'ai construit un contrôleur de coupure à relais simple pour un chargeur LiHV en utilisant un ESP32. J'ai ajouté une minuterie pour m'assurer qu'il ne s'éteigne pas trop tôt quand la tension chute sous la charge. Pour une version 2, je concevrais un vrai circuit de charge, car les relais mécaniques ne sont pas l'idéal pour couper de hautes puissances.
 
-L'approche ici est un **seuil de tension plus une minuterie de maintien**. Le relais reste activé jusqu'à ce que le pack atteigne 24.6V, puis maintient pendant 60 secondes. Pendant le maintien, le chargeur continue la phase d'absorption finale, complétant le remplissage des cellules. Quand la minuterie expire, le relais s'ouvre. Après la déconnexion du chargeur et la chute du courant à zéro, les cellules se stabilisent à environ 4.2V — juste à la limite sécuritaire. Le temps de maintien et la tension de coupure sont tous deux ajustables via l'interface web pour accommoder différentes résistances internes de cellules et courants de chargeur.
+## Matériel
 
-## Quincaillerie
+Le système utilise un petit ordinateur ESP32-C3 et un relais pour gérer la puissance. J'ai ajouté un écran OLED pour voir la progression de la charge et l'adresse IP de l'appareil d'un coup d'œil.
 
-Le diviseur de tension utilise R1 = 467 kΩ et R2 = 47.25 kΩ pour ramener la tension du pack à la plage ADC de l'ESP32-C3. La tension est calculée à partir de 50 échantillons ADC moyennés avec des coefficients de calibration linéaires (pente et décalage) pour corriger la non-linéarité de l'ADC. Un relais sur la pin 7 connecte et déconnecte la sortie du chargeur.
-
-L'écran OLED (128×64, SSD1306 via I2C) affiche une barre de progression de charge, la tension du pack, le pourcentage de charge, le statut actuel, le compte à rebours de la minuterie de maintien quand active, et l'adresse IP du dispositif sur la dernière ligne.
+![Écran OLED affichant le progrès](/projects/smart-charger/oled.webp)
+*L'écran OLED affiche la tension de la batterie et une barre de progression.*
 
 ## Interface Web
 
-Au démarrage, le dispositif se connecte au WiFi et démarre un serveur HTTP. L'OLED affiche l'IP pour que tu puisses y naviguer depuis n'importe quel appareil sur le réseau. Le tableau de bord se met à jour toutes les 2 secondes avec la tension en direct, le pourcentage, l'état du relais et la progression de la minuterie de maintien. Des boutons manuels ON/OFF du relais permettent de bypasser la logique automatique. Tous les paramètres — tension de coupure, tension minimale, seuil sans charge, temps de maintien, coefficients de calibration, valeurs R1/R2, nombre d'échantillons et nombre de cellules — sont configurables depuis le formulaire de paramètres et persistés dans la NVS pour survivre aux redémarrages.
+Au démarrage, le chargeur se connecte à votre WiFi. Vous pouvez ouvrir un tableau de bord sur votre téléphone ou votre ordinateur pour voir exactement ce qui se passe. J'ai ajouté des boutons pour allumer ou éteindre manuellement le chargeur, et une page de réglages pour changer des paramètres comme la tension de coupure sans avoir à réécrire le code.
+
+![Tableau de bord web](/projects/smart-charger/webapp-top.webp)
+*L'interface web permet de surveiller et de contrôler le chargeur depuis n'importe quel appareil.*
+
 
 ## Liste des Composants (BOM)
 

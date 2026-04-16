@@ -6,10 +6,17 @@ The mechanical design was sketched out during a math exam. The teacher was not p
 
 ## Hardware
 
-The gimbal assembly is custom-designed and FDM-printed, housing two micro-servos for pan and tilt. A buck regulator accepts 2S–6S battery input so it runs off whatever is powering the aircraft.
+The gimbal is custom-designed and 3D printed. It uses two micro-servos to move the camera up, down, left, and right. It can run on almost any drone battery (2S to 6S) thanks to a built-in power regulator.
 
-- **Goggles-side** — ESP32-C3 + MPU6050 IMU
-- **Drone-side** — ESP32-C3 + two micro-servos (pan on pin 7, tilt on pin 6)
+![Fully assembled 2-axis mechanism](/projects/head-tracking-dji-o3/close-up.webp)
+*The finished gimbal with the DJI O3 camera mounted.*
+
+- **On the Goggles**: An ESP32 and a gyro sensor to track your head.
+- **On the Drone**: An ESP32 and two servos to move the camera.
+
+![Bench test and assembly](/projects/head-tracking-dji-o3/close-up-table.webp)
+*Testing the servos and electronics on the workbench before mounting.*
+
 
 ## Bill of Materials
 
@@ -42,8 +49,6 @@ The receiver drives the servos directly without going through the flight control
 
 ## Gyro Drift & Calibration
 
-The first approach used raw gyro data, integrating angular velocity over time to estimate orientation. The problem is that gyros accumulate error with every reading, and over a few minutes the gimbal drifted off center even with the head still.
+The biggest challenge was drift. All gyros naturally "drift" over time, making the camera slowly move even if you keep your head still. To fix this, I used a motion processor that fuses gyro data with an accelerometer. The accelerometer uses gravity as a fixed reference to keep the gimbal centered.
 
-The fix is the motion processor, which fuses gyro and accelerometer data. The accelerometer provides an absolute gravity reference that corrects gyro drift, so the angle estimate stays stable without drifting.
-
-Calibration is separate. Every MPU6050 unit has its own factory bias on each axis. The firmware corrects this in two layers: hardware offsets coded for the specific chip, and a software calibration on every boot that measures the resting angle and subtracts it. This means the gimbal centers correctly regardless of power-on position.
+I also added a calibration step that runs every time you power it on. It measures the resting position of your goggles so the camera always starts perfectly centered.

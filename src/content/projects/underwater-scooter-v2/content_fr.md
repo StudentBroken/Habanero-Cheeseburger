@@ -2,21 +2,24 @@
 
 Un redesign brushless du scooter v1. L'objectif était simple : plus de vitesse, plus de poussée, et un système électrique plus propre — sans dépenser beaucoup plus que le build original. Le résultat est environ le double de la vitesse et plus du double de la puissance, en utilisant principalement des pièces récupérées.
 
-## Pourquoi Brushless
+## Pourquoi le Brushless
 
-La v1 utilisait des moteurs brushed pilotés directement par un interrupteur. Ça fonctionnait, mais la courbe de couple était plate et la vitesse maximale était limitée. Passer à un *outrunner* brushless déverrouille substantiellement plus de puissance de la même chimie de batterie, au coût d'avoir besoin d'un ESC et d'un firmware.
+La première version utilisait des moteurs simples qui n'étaient pas très puissants. Cette nouvelle version utilise un moteur brushless récupéré d'un vieux skateboard électrique. Il a beaucoup plus de couple et de puissance, ce qui rend le scooter deux fois plus rapide.
 
-Le moteur est un *outrunner* 5065 récupéré d'un skateboard électrique Leafboard Gen 1. Les équivalents génériques se vendent environ 40 $ neufs. L'ESC est une unité étanche adaptée pour le tirage de courant, sourçée pour 25 $.
+![Moteur brushless et ESC](/projects/underwater-scooter-v2/scooter-motor.webp)
+*J'ai utilisé un moteur 5065 de skateboard et un contrôleur de vitesse (ESC) étanche.*
 
-Une dure leçon de ce build : les ESC de drone ne sont pas adaptés pour la propulsion sous-marine. Ils sont optimisés pour des charges à haute RPM et faible couple. Les propulseurs sous-marins ont besoin de l'opposé — haute couple à basse RPM. Le rating KV sur les moteurs disponibles est aussi souvent non listé ou inconsistant, ce qui rend la sélection du bon moteur plus d'une expérience qu'un calcul.
+Une leçon apprise : les pièces de drone ne fonctionnent pas bien sous l'eau. Les drones ont besoin de vitesse, mais les hélices sous-marines ont besoin de couple. J'ai dû trouver un ESC spécifiquement conçu pour l'eau.
 
 ## Électronique & Potting
 
-L'unité centrale est un ESP32-C3 Super Mini. Un diviseur de tension résistif ramène la tension du pack 11.1 V (3S) à la plage ADC; le firmware lit ceci sur la pin 0 avec un facteur d'échelle de 8.78 et mappe la tension à un pourcentage de batterie. Une LED RGB (trois GPIOs séparés) affiche le résultat sous forme de dégradé de couleur — vert au-dessus de 80%, cyan à 60-80%, jaune-vert à 40-60%, jaune à 20-40%, et rouge en dessous.
+Le cerveau du scooter est un ESP32-C3. Il mesure la tension de la batterie et change la couleur d'une LED pour montrer l'énergie restante (vert pour plein, rouge pour vide). On peut aussi double-cliquer sur le bouton principal pour basculer entre les modes de puissance bas, moyen et haut.
 
-Le câblage du bouton utilise le pull-up interne. Un *hold* déclenche le moteur au niveau de puissance actuel; relâcher l'arrête. Un double-appui (dans un délai de 300 ms) cycle à travers trois modes de puissance : HIGH (impulsion *forward* complète), MEDIUM (66% de la plage de *throttle*), et LOW (33%). Pendant la sélection de mode, la LED RGB affiche le mode sélectionné — rouge pour high, bleu pour medium, vert pour low — avant de retourner à l'affichage de batterie.
+![Électronique scellée](/projects/underwater-scooter-v2/scooter-esp32.webp)
+*La carte de circuit est recouverte de ruban électrique liquide pour être 100 % étanche.*
 
-Maintenir le bouton au démarrage saute l'armement de l'ESC et entre en mode OTA (Over-The-Air), indiqué par une LED bleue qui pulse. C'était un impératif d'ingénierie, pas une fonctionnalité de confort : comme l'ESP32 est définitivement scellé dans du ruban électrique liquide, il y a zéro accès physique aux ports de debug ou série. Architecturer une sécurité OTA sans fil était le seul moyen de garantir que le matériel ne deviendrait pas une "brique" au moment où un cas limite logiciel serait découvert.
+Comme la carte est définitivement scellée, j'ai dû écrire un logiciel spécial qui me permet de mettre à jour le code sans fil. Si je n'avais pas ça, je devrais briser le sceau chaque fois que je voudrais changer quelque chose.
+
 
 Cette technique de potting caoutchoutée scelle efficacement la carte contre les infiltrations d'eau sans l'encombrement d'un boîtier traditionnel, ramenant le coût de l'unité centrale à environ 5 $, matériel inclus.
 

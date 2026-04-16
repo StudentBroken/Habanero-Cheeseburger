@@ -5,17 +5,23 @@ The ebike runs on a custom 12S pack built from two 6S LiPo packs in series. The 
 The solution was a relay-based cutoff controller that intercepts the charger output and disconnects it at the right moment.
 
 ## The Cutoff Design
-Built an emergency relay-cutoff for a LiHV charger using an ESP32. I used a timer to account for voltage sag, though for a V2, I would design a proper CC/CV (Constant Current / Constant Voltage) charging circuit, as mechanical relays are unsafe for breaking high DC loads.
+
+I built a simple relay-cutoff for a LiHV charger using an ESP32. I added a timer to make sure it doesn't shut off too early when the voltage drops under load. For a version 2, I would build a proper charging circuit, as mechanical relays aren't the best for cutting high power.
 
 ## Hardware
 
-The voltage divider uses R1 = 467 kΩ and R2 = 47.25 kΩ to scale the pack voltage down to the ESP32-C3's ADC range. Voltage is computed from 50 averaged ADC samples with linear calibration coefficients (slope and offset) to correct for ADC nonlinearity. A relay on pin 7 connects and disconnects the charger output.
+The system uses a small ESP32-C3 computer and a relay to handle the power. I added an OLED screen so I can see the charging progress and the device's IP address at a glance.
 
-The OLED (128×64, SSD1306 over I2C) shows a charge progress bar, pack voltage, charge percentage, current status, the hold timer countdown when active, and the device's IP address on the bottom line.
+![OLED screen showing progress](/projects/smart-charger/oled.webp)
+*The OLED screen shows the battery voltage and a progress bar.*
 
 ## Web Interface
 
-On boot the device connects to WiFi and starts an HTTP server. The OLED shows the IP so you can navigate to it from any device on the network. The dashboard updates every 2 seconds with live voltage, percentage, relay state, and hold timer progress. Manual relay ON/OFF buttons let you override the automatic logic. All parameters — cutoff voltage, minimum voltage, no-load threshold, hold time, calibration coefficients, R1/R2 values, number of samples, and cell count — are configurable from the settings form and persisted to NVS so they survive reboots.
+When you plug it in, the charger connects to your WiFi. You can open a dashboard on your phone or laptop to see exactly what's happening. I added buttons to manually turn the charger on or off, and a settings page to change things like the cutoff voltage without needing to rewrite the code.
+
+![Web dashboard](/projects/smart-charger/webapp-top.webp)
+*The web interface lets you monitor and control the charger from any device.*
+
 
 ## Bill of Materials
 

@@ -2,7 +2,11 @@
 
 MBS (Moyenne, Bilan, Stratégie) est une application web pour les élèves du secondaire québécois pour suivre, analyser et comparer leurs notes. L'outil a atteint 130 utilisateurs actifs, ce qui représente près de 50 % de l'ensemble du niveau Secondaire 5. C'est le premier projet que j'ai bâti avec un vrai collaborateur — Howard — et la première fois qu'on utilisait GitHub pour autre chose que lire du code.
 
-Travailler avec quelqu'un à un rythme différent m'a appris à délimiter clairement les responsabilités. Howard a connecté le backend Google Sheets, construit l'outil de projection de notes et aidé à peaufiner le système de tickets. Moi j'ai tout bâti le reste : le formatter de données, le calculateur de moyennes avec pondérations par compétences, le leaderboard, toute la couche frontend et communication backend, le flux d'onboarding, le système d'opt-in, les conditions d'utilisation, la politique de confidentialité, la FAQ, la persistence localStorage, et j'ai dirigé le système de tickets. On a commencé en committant tout via l'interface web de GitHub. En 2026, j'ai commencé à migrer vers un workflow plus moderne.
+Travailler avec quelqu'un à un rythme différent m'a appris à gérer un projet. Mon collaborateur Howard a connecté le backend Google Sheets et l'outil de projection. J'ai bâti tout le reste : le formateur de données, le calculateur de moyennes complexe, le classement (leaderboard) et l'interface utilisateur.
+
+![Moyenne de l'élève](/projects/mbs-tool/mbs-main-data.webp)
+*La page principale où les étudiants peuvent coller leurs données du portail scolaire.*
+
 
 ## Ingestion de Données
 
@@ -28,6 +32,10 @@ Les classements se trient par moyenne globale ou par matière. Un code couleur s
 
 Howard a bâti l'outil de projection : à partir des notes actuelles et des évaluations restantes, il modélise la moyenne finale nécessaire sur chaque prochaine évaluation pour atteindre une cible. Il tourne sur le même moteur de calcul pondéré.
 
-## Onboarding, Légal & Confidentialité
+## Le Résultat
 
-Parce que l'outil manipule de vraies données de notes d'élèves, le travail non-technique était substantiel. J'ai écrit le flux d'onboarding pour amener les nouveaux utilisateurs de zéro à un tableau de bord rempli sans friction, construit le système d'opt-in pour le leaderboard, rédigé les conditions d'utilisation, la politique de confidentialité et la FAQ, et assuré la conformité RGPD pour les données stockées dans la feuille. Le système de tickets — construit avec Howard — permet aux utilisateurs de soumettre une demande formelle de suppression et de la suivre jusqu'à son traitement. Ça a forcé un modèle clair de quelles données existaient exactement, où elles vivaient, et qui pouvait y toucher.
+L'outil est populaire parce qu'il est rapide et privé. Toutes les données sont traitées localement dans votre navigateur, donc personne d'autre ne voit vos notes à moins que vous ne choisissiez de rejoindre le classement. Ce projet a été une étape cruciale pour apprendre à gérer de vraies données utilisateurs et des systèmes de notation complexes.
+
+![Tableau de bord de performance](/projects/mbs-tool/mbs-performance.webp)
+*La page de statistiques montre vos tendances de performance dans différentes matières.*
+

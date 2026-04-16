@@ -4,19 +4,22 @@ A brushless redesign of the v1 scooter. The goal was straightforward: more speed
 
 ## Why Brushless
 
-The v1 used brushed motors driven directly by a switch. It worked, but the torque curve was flat and the top speed was limited. Switching to a brushless outrunner unlocks substantially more power from the same battery chemistry, at the cost of needing an ESC and firmware.
+The first version used simple motors that weren't very powerful. This new version uses a brushless motor salvaged from an old electric skateboard. It has much more torque and power, making the scooter twice as fast.
 
-The motor is a 5065 outrunner salvaged from a Leafboard Gen 1 electric skateboard. Generic equivalents run around 40\$ new. The ESC is a waterproof unit rated for the current draw, sourced for 25\$.
+![Brushless motor and ESC](/projects/underwater-scooter-v2/scooter-motor.webp)
+*I used a 5065 motor from a skateboard and a waterproof speed controller (ESC).*
 
-One hard lesson from this build: drone ESCs are not suitable for underwater propulsion. They are tuned for high-RPM, low-torque loads. Underwater thrusters need the opposite — high torque at low RPM. The KV rating on available motors is also often unlisted or inconsistent, which makes selecting the right motor more of an experiment than a calculation.
+One lesson I learned: drone parts don't work well underwater. Drones need high speed, but underwater propellers need high torque. I had to find an ESC specifically rated for water use.
 
 ## Electronics & Potting
 
-The central unit is an ESP32-C3 Super Mini. A resistor voltage divider scales the 11.1 V (3S) pack down to ADC range; the firmware reads this on pin 0 with a scale factor of 8.78 and maps the voltage to a battery percentage. An RGB LED (three separate GPIOs) displays the result as a color gradient — green above 80%, cyan at 60–80%, yellow-green at 40–60%, yellow at 20–40%, and red below that.
+The brain of the scooter is an ESP32-C3. It measures the battery voltage and changes the color of an LED to show how much power is left (green for full, red for empty). You can also double-click the main button to switch between low, medium, and high power modes.
 
-The button wiring uses the internal pull-up. A hold triggers the motor at the current power level; releasing stops it. A double-press (within 300 ms) cycles through three power modes: HIGH (full forward pulse), MEDIUM (66% of throttle range), and LOW (33%). During mode selection the RGB LED shows the selected mode — red for high, blue for medium, green for low — before returning to battery display.
+![Potted electronics](/projects/underwater-scooter-v2/scooter-esp32.webp)
+*The circuit board is covered in liquid electrical tape to keep it 100% waterproof.*
 
-Holding the button at boot skips ESC arming and enters OTA (Over-The-Air) flash mode, indicated by a pulsing blue LED. I had to build this OTA routine from scratch because the ESP32 is permanently potted in liquid electrical tape, meaning there's zero physical access to the USB port. Without OTA, any software bug would brick the hardware forever.
+Because the board is permanently sealed, I had to write special software that lets me update the code wirelessly. If I didn't have this, I would have to break the seal every time I wanted to change something.
+
 
 Potting with liquid electrical tape seals the board against water without the weight of a plastic case, bringing the cost down to about $5 for materials.
 

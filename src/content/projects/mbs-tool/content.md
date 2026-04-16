@@ -2,7 +2,11 @@
 
 MBS (Moyenne, Bilan, Stratégie) is a web app for Quebec secondary school students to track, analyze, and rank their grades. The tool has reached 130 active users, representing nearly 50% of the entire Secondary 5 grade level. It was my first project with a real collaborator — Howard — and the first time either of us used GitHub beyond reading code.
 
-Working with someone at a different pace taught me to scope cleanly. Howard connected the Google Sheets backend, built the grade projection tool, and helped refine the ticket system. I built everything else: the data formatter, the average calculator with competency weights, the leaderboard, the frontend and backend communication layer, the onboarding flow, the opt-in system, the terms and conditions, privacy policy, FAQ, the localStorage persistence, and a basic ticket system. We started by committing through GitHub's web interface, then moved to a more modern workflow.
+Working with someone at a different pace taught me how to manage a project. My collaborator Howard connected the Google Sheets backend and the projection tool. I built the rest: the data formatter, the grade calculator that handles complex weights, the leaderboard, and the user interface.
+
+![Moyenne de l'élève](/projects/mbs-tool/mbs-main-data.webp)
+*The main page where students can paste their data from the school portal.*
+
 
 ## Data Ingestion
 
@@ -28,6 +32,10 @@ Rankings can be sorted by overall average or by subject. Color coding flags the 
 
 Howard built the projection tool: given current grades and remaining assessments, it models the final average needed on each upcoming evaluation to hit a target. It runs on the same weighted calculation engine.
 
-## Onboarding, Legal & Privacy
+## The Result
 
-Because the tool handles real student grade data, the non-technical work was significant. I wrote the onboarding flow to get new users from zero to a populated dashboard without friction, built the opt-in system for the leaderboard, drafted the terms and conditions, privacy policy, and FAQ, and ensured GDPR compliance for data stored on the sheet. The ticket system — built together with Howard — lets users submit a formal deletion request and tracks it through to completion. That forced a clear model of exactly what data existed, where it lived, and who could touch it.
+The tool is popular because it's fast and private. It processes all data locally in your browser so no one else sees your grades unless you choose to join the leaderboard. This project was a huge step in learning how to handle real user data and complex scoring systems.
+
+![Tableau de bord de performance](/projects/mbs-tool/mbs-performance.webp)
+*The statistics page shows your performance trends across different subjects.*
+

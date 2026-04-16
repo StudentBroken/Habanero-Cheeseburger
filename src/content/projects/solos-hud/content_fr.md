@@ -4,16 +4,23 @@
 L'objectif était la rétro-ingénierie complète et la refonte structurelle d'une plateforme d'affichage tête haute (HUD) grand public. Le projet a progressé de l'analyse protocolaire de bas niveau au démontage physique agressif et à la fabrication d'un boîtier optique personnalisé à haute densité.
 
 ## Rétro-ingénierie
-La phase de recherche initiale s'est concentrée sur l'extraction et l'analyse de la couche de communication propriétaire entre le Solos HUD et son application compagnon.
 
-- **Méthodologie** : Analyse statique de l'APK extrait et écoute (sniffing) GATT Bluetooth en temps réel.
-- **Résultat** : Cartographie réussie des services HID du périphérique et découverte d'UUID de caractéristiques non standard pour la transmission de données d'affichage brutes.
-- **Logique Applicative** : Développement d'une suite logicielle personnalisée facilitant l'analyse des notifications en temps réel, la visualisation de la télémétrie GPS et la récolte de données VESC (Variable Electronic Speed Controller) pour les systèmes de propulsion électrique.
+J'ai commencé par comprendre comment le Solos HUD communique avec son application d'origine. J'ai analysé le code de l'application Android et utilisé le Bluetooth pour trouver le format exact des messages envoyés à l'écran.
+
+![Interface de l'application compagnon](/projects/solos-hud/20260308_222410.webp)
+*J'ai écrit une application personnalisée pour envoyer la vitesse et l'état de la batterie en temps réel au HUD.*
+
+Une fois que j'ai compris le fonctionnement de l'affichage, j'ai écrit mon propre logiciel. Mon application personnalisée lit la vitesse et la puissance en direct de mon skateboard électrique et les envoie aux lunettes.
 
 ## Modification du Matériel
-L'objectif secondaire était la réduction radicale de l'empreinte volumétrique de la plateforme. Le boîtier d'origine moulé par injection a été mis hors service, et les composants internes — y compris le PCB de logique principale, les assemblages de nappes et le prisme du guide d'ondes optique — ont été extraits.
 
-Pour atteindre le format souhaité, des modifications drastiques du routage interne ont été nécessaires. Le câble flexible principal reliant les branches gauche et droite a été sectionné manuellement pour réduire sa longueur de moitié. Cela a été exécuté sous grossissement microscopique à l'aide de pinces de précision pour s'assurer que les pistes internes du PCB flexible multicouche ne soient pas court-circuitées pendant la coupe. Le bord brut de la nappe sectionnée a ensuite été scellé avec de la résine UV pour empêcher la délamination ou les infiltrations environnementales.
+Je voulais que le HUD s'adapte à des lunettes normales, alors je l'ai complètement démonté. J'ai extrait la carte de circuit principal et le prisme optique du boîtier d'origine encombrant.
+
+Pour le rendre encore plus petit, j'ai dû couper le câble plat qui reliait les deux côtés. J'ai utilisé un microscope et des pinces de précision pour le faire en toute sécurité, puis j'ai tout scellé avec de la résine UV.
+
+![Installation des composants dans le nouveau boîtier](/projects/solos-hud/20260321_233341.webp)
+*Installation de l'électronique extraite dans le nouveau boîtier compact imprimé en 3D.*
+
 
 Le sectionnement de ce câble a inévitablement déconnecté la thermistance NTC de la batterie d'origine et le circuit de charge, nécessitant une architecture d'alimentation complètement personnalisée.
 

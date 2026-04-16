@@ -1,17 +1,21 @@
-# Vélo Électrique (v4)
+## Construction de la Roue
 
-Construit à 16 ans, début d'année. L'expérience mid-drive du v3 a été abandonnée — le saut de chaîne, la déformation des équerres et la re-tension constante le rendaient impraticable. Le v4 est passé à un moteur dans le moyeu de 2000W, le plus grand investissement en composant unique de la série à 300$, et a monté la tension à 12S pour pousser la vitesse maximale vers 50 km/h.
+Pour cette version, je suis passé à un système de "moteur dans le moyeu" (hub motor). Cela signifie que le moteur fait partie intégrante de la roue arrière. Comme j'ai acheté le moteur seul, j'ai dû apprendre à le "lacer" dans une jante à l'aide de rayons métalliques.
 
-## Montage de la Roue
+![Laçage du moteur](/projects/ebike-v4/lacing-my-own-2000w-hub-motor-using-a-26-inch-rim-by-myself-all-learning-from-scratch-how-to-lace-a-wheel-in-under-a-day-with-couple-failed-attempts.webp)
+*Apprentissage du laçage d'une roue. Il a fallu une journée entière et plusieurs essais pour obtenir la bonne tension.*
 
-Les moteurs dans le moyeu sont livrés sans jante — on les lace soi-même. Je n'avais jamais fait ça. J'ai appris le laçage de roue de zéro en moins d'une journée avec une jante de 26 pouces, avec quelques tentatives ratées avant d'obtenir une tension de rayon uniforme, et je l'ai trué à la main. Le process est entièrement manuel : schématiser les rayons, les passer dans le flasque, tensionner, vérifier le dish, recommencer.
+C'était un processus lent et frustrant, mais finalement, j'ai obtenu une roue de 2000W fonctionnelle qui pouvait propulser le vélo beaucoup plus vite.
 
-## Batterie : Le Hack Série/Parallèle
+## Le "Hack" de la Double Batterie
 
-Je n'avais qu'un chargeur LiPo 6S. Le moteur avait besoin de 12S. La solution : construire deux packs 6S identiques et basculer entre les topologies selon le mode :
+J'ai construit deux packs de batterie 22V (6S) séparés. Pour rouler, je les branchais ensemble en "série" pour obtenir 44V (12S). Pour charger, je les débranchais et les branchais en "parallèle" afin de pouvoir utiliser un chargeur 22V moins cher.
 
-- **Rouler** : Les deux packs câblés en série — 12S, 44,4V nominal, 50,4V peak.
-- **Charger** : Les mêmes deux packs câblés en parallèle — effectivement un seul pack 6S que mon chargeur existant pouvait gérer.
+![Vélo v4 terminé](/projects/ebike-v4/the-finished-battle-tested-ebike-with-better-support-and-a-remove-before-flifht-after-i-have-accidentally-shorted-the-bms-twice-and-i-conformal-coated-the-bms-to-be-water-resistant.webp)
+*Remarquez l'étiquette "Remove Before Flight" — je l'ai ajoutée après qu'une erreur de câblage ait presque causé un incendie pendant la charge.*
+
+Un jour, j'ai accidentellement branché les batteries dans le mauvais sens et j'ai vu de vraies étincelles. J'ai détruit deux cartes de sécurité (BMS) avant d'apprendre à être plus prudent.
+
 
 Cela nécessitait une étape de commutation manuelle entre les modes. Chaque pack avait son propre BMS à 6$ pour la protection de charge. Pour la décharge, j'ai utilisé le bypass du v2 : un deuxième connecteur de sortie qui court-circuite le BMS entièrement pour que le courant complet atteigne le VESC sans restriction.
 
@@ -36,15 +40,10 @@ J'ai imprimé des itérations de test de tolérance du support de batterie avant
 
 Le VESC a commencé dans un sac souple fixé au cadre. J'ai ensuite conçu et imprimé un couvercle avec des passages d'air pour le garder plus frais sous charge soutenue.
 
-## Post-Mortem
+## Conclusion
 
-Vitesse de pointe autour de 50 km/h en 12S. Le moteur dans le moyeu était une amélioration massive par rapport aux systèmes friction et mid-drive — silencieux, direct, pas de chaîne à entretenir, pas de glissement sous charge. Le laçage de la roue était une vraie compétence acquise et utilisée immédiatement.
+Ce vélo était très rapide mais le système de charge était trop compliqué. Chaque fois que je voulais charger, je devais manipuler de nombreux fils. C'était une excellente expérience d'apprentissage, mais cela a prouvé que j'avais besoin d'un meilleur moyen de gérer les batteries haute tension.
 
-Le hack série/parallèle fonctionnait mais demandait une charge cognitive pour fonctionner en sécurité. Le court-circuit qui a détruit les deux BMS a prouvé que tout système nécessitant que l'opérateur maintienne manuellement un invariant de sécurité finira par échouer. L'étiquette remove-before-flight était un palliatif, pas une solution.
-
-La chute de tension sous forte accélération était perceptible. Les cellules n'étaient pas à fort taux de décharge et la résistance interne du pack limitait la délivrance de courant crête.
-
-Le PLA pour les supports structurels est une question réglée. Il cède sous vibration et impact. Plus jamais.
 
 ## Nomenclature (BOM)
 

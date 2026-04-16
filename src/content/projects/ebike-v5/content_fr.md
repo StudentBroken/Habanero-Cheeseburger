@@ -1,17 +1,15 @@
-# Vélo Électrique (v5)
+Pour cette version, j'ai décidé de corriger une fois pour toutes le système de charge "dangereux". Je suis passé à un système haute tension de 72V (20S) et j'ai acheté un **BMS Daly** professionnel et un vrai chargeur. Plus besoin de brancher et débrancher des fils juste pour charger le vélo.
 
-Construit à 16 ans, octobre 2025. Chaque build précédent avait une variation des mêmes problèmes fondamentaux : cellules bon marché avec une résistance interne inconnue, bypass du BMS comme contournement d'un mauvais chargeur, ruban adhésif et mousse en guise de gestion thermique, et chemins de bandes de nickel tracés à l'œil. Le v5 a été construit pour fermer tous ces problèmes en même temps.
+## Planification du Pack
 
-## Sourcing des Cellules : Recycler le Pack v4
+Avec 120 cellules à organiser, j'ai utilisé **TinkerCAD** pour planifier la disposition. Cela m'a permis de coder les groupes par couleur et de m'assurer que chaque cellule s'intégrait parfaitement dans le cadre.
 
-Les cellules venaient du pack v4 — les mêmes 18650 qui avaient tourné sous le hack série/parallèle en 12S. J'ai retiré le ruban adhésif, la mousse et les deux BMS de l'ancien pack, puis désassemblé les cellules une par une.
+![Planification de batterie TinkerCAD](/projects/ebike-v5/the-tinkercad-model-where-i-organised-the-cells-adni-was-easily-able-to-sort-them-by-colour-using-tinkercad-coloring-tool.webp)
+*J'ai utilisé différentes couleurs pour chaque groupe de cellules afin d'éviter les erreurs lors de l'assemblage.*
 
-## Planification du Layout en TinkerCAD
+![Build v5 terminé](/projects/ebike-v5/the-finished-v5-looks-like-a-pretty-good-looking-bike.webp)
+*Le build final est beaucoup plus propre que les versions précédentes. C'est une machine fiable et puissante.*
 
-Avant de toucher la soudeuse par points, j'ai modélisé le layout complet des cellules dans TinkerCAD. La configuration 20S6P — 120 cellules, 20 groupes en série, 6 en parallèle — a été divisée en deux moitiés 10S6P pour la maniabilité physique. L'outil de couleur de TinkerCAD m'a permis d'assigner une couleur distincte à chaque groupe série, rendant la séquence de soudage non ambiguë et éliminant le système sharpie-sur-ruban du v4.
-
-![Modèle TinkerCAD du layout des cellules codé par couleur](/projects/ebike-v5/the-tinkercad-model-where-i-organised-the-cells-adni-was-easily-able-to-sort-them-by-colour-using-tinkercad-coloring-tool.webp)
-*Layout TinkerCAD — chaque couleur est un groupe série. Utilisé pour planifier la séquence de soudage avant de toucher les cellules.*
 
 ## Layout des Bandes de Nickel & Densité de Courant
 
@@ -34,15 +32,12 @@ J'ai acheté un BMS Daly passif 40A homologué 72V et un chargeur 72V 2A corresp
 
 Balance leads sur un pack 72V sont sous tension potentiellement mortelle sur toute la chaîne. J'ai porté des gants adaptés mais assez fins pour conserver le retour tactile pour souder les fils fins des nappes d'équilibrage.
 
-## La Réalisation sur la Résistance Interne
+## Leçons Apprises
 
-Chaque build précédent avait le même symptôme : chute de tension sous charge, mauvaise accélération en pointe, cellules qui lisent plein au repos mais meurent rapidement sous tirage. Le diagnostic était toujours « mauvaises cellules » sans comprendre précisément pourquoi.
+C'est lors de ce build que j'ai enfin compris la **Résistance Interne (RI)**. J'ai réalisé que la santé d'une batterie n'est pas seulement liée à l'énergie qu'elle peut stocker, mais à la facilité avec laquelle elle peut la libérer. Si une cellule a une RI élevée, elle chauffe et perd de la puissance.
 
-Le v5 est là où la résistance interne a cliqué. La tension d'une cellule au repos indique son état de charge. La tension d'une cellule sous charge indique sa résistance interne — la différence entre la tension au repos et la tension en charge, divisée par le courant, donne directement la RI. Les cellules à RI élevée chutent fortement sous courant. Elles peuvent être complètement chargées et livrer quand même de mauvaises performances parce qu'elles dissipent l'énergie en chaleur interne plutôt que de l'émettre en courant.
+J'ai aussi appris que les habitudes "amateur" comme l'utilisation de ruban adhésif (duct tape) étaient de mauvaises pratiques. Je suis passé au **ruban Kapton**, qui est le standard de l'industrie car il résiste à la chaleur et ne laisse pas de résidus collants.
 
-Les cellules recyclées du v4 avaient un écart de RI mesurable. Certaines étaient saines ; d'autres non. À 6P par groupe, les cellules à RI élevée tirent vers le bas leurs voisines parallèles et limitent la capacité en courant de tout le groupe. Comprendre ça a directement guidé la sélection des cellules pour les packs futurs — la tension est juste l'état de charge, la RI est la vraie métrique de qualité.
-
-De plus, le v5 a mis en évidence le caractère amateur de mes premières méthodes d'isolation. Appliquer du ruban adhésif (duct tape) directement sur le pack batterie sans couche intermédiaire est une mauvaise pratique. Le duct tape n'a pas de couche résistante à la température et a tendance à se dégrader sous les cycles de chaleur d'une batterie à fort courant. Passer au ruban Kapton — le standard de l'industrie pour la résistance électrique et thermique — est devenu une exigence obligatoire pour tous les builds futurs.
 
 ## Nomenclature (BOM)
 

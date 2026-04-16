@@ -1,17 +1,15 @@
-# Electric Bike (v5)
+For this version, I decided to fix the "dangerous" charging system once and for all. I moved to a high-voltage 72V system (20S) and bought a professional **Daly BMS** and a real charger. No more plugging and unplugging wires just to charge the bike.
 
-Built at 16, October 2025. Every previous build carried some variation of the same fundamental problems: cheap cells with unknown internal resistance, BMS bypass as a workaround for a charger mismatch, duct tape and foam as thermal management, and nickel strip paths laid out by eye. v5 was built to close all of those gaps at once.
+## Planning the Pack
 
-## Cell Sourcing: Recycling the v4 Pack
+With 120 cells to organize, I used **TinkerCAD** to plan the layout. It allowed me to color-code the groups and make sure every cell fit perfectly inside the frame.
 
-The cells came from the v4 pack — the same 18650s that had been running under the series/parallel hack at 12S. I stripped the duct tape, foam, and both BMS units off the old pack and pulled the cells apart individually.
+![TinkerCAD battery planning](/projects/ebike-v5/the-tinkercad-model-where-i-organised-the-cells-adni-was-easily-able-to-sort-them-by-colour-using-tinkercad-coloring-tool.webp)
+*I used different colors for each group of cells to avoid mistakes during assembly.*
 
-## Layout Planning in TinkerCAD
+![Finished v5 build](/projects/ebike-v5/the-finished-v5-looks-like-a-pretty-good-looking-bike.webp)
+*The final build looks much cleaner than the previous versions. It's a reliable, high-power machine.*
 
-Before touching the spot welder, I modeled the full cell layout in TinkerCAD. The 20S6P configuration — 120 cells, 20 groups in series, 6 in parallel — was split into two 10S6P halves for physical manageability. TinkerCAD's color tool let me assign each series group a distinct color, which made the weld sequence unambiguous and eliminated the Sharpie-on-tape system from v4.
-
-![TinkerCAD cell layout model colour-coded by series group](/projects/ebike-v5/the-tinkercad-model-where-i-organised-the-cells-adni-was-easily-able-to-sort-them-by-colour-using-tinkercad-coloring-tool.webp)
-*TinkerCAD layout — each colour is one series group. Used to plan the weld sequence before touching the cells.*
 
 ## Nickel Strip Layout & Current Density
 
@@ -34,15 +32,12 @@ I bought a 40A passive Daly BMS rated for 72V and a matching 2A 72V charger. The
 
 Balance leads on a 72V pack are live at potentially lethal voltage across the full string. I wore gloves rated for the work but thin enough to retain tactile feedback for soldering the fine-pitch balance wires.
 
-## The Internal Resistance Realization
+## Lessons Learned
 
-Every previous build had the same symptom: voltage sag under load, poor peak acceleration, cells that read full at rest but died quickly under draw. The diagnosis was always "bad cells" without a precise understanding of why.
+This was the build where I finally understood **Internal Resistance (IR)**. I realized that a battery's health isn't just about how much energy it can hold, but how easily it can give that energy out. If a cell has high IR, it gets hot and loses power.
 
-v5 is where internal resistance clicked. A cell's voltage at rest tells you its state of charge. A cell's voltage under load tells you its internal resistance — the difference between resting voltage and loaded voltage, divided by the current, gives you IR directly. High-IR cells sag badly under current. They can be fully charged and still deliver poor performance because they waste energy internally as heat instead of outputting it as current.
+I also learned that "amateur" habits like using duct tape were bad practice. I switched to **Kapton tape**, which is the industry standard because it's heat-resistant and doesn't leave a sticky mess.
 
-The recycled cells from v4 had measurable IR spread. Some were healthy; some were not. At 6P per group, high-IR cells pull down their parallel neighbors and limit the whole group's current capability. Understanding this directly informed how to select cells for future packs — voltage is just state of charge, IR is the actual quality metric.
-
-Additionally, v5 highlighted the amateur nature of my early insulation methods. Applying duct tape directly to the battery pack with no intermediate layer is poor practice. Duct tape lacks a temperature-resistant layer and is prone to degradation under the heat cycles of a high-current battery. Transitioning to Kapton tape—the industry standard for electrical and thermal resistance—became a mandatory requirement for all future builds.
 
 ## Bill of Materials
 

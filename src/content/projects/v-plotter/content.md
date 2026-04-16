@@ -18,19 +18,30 @@ The system runs on 12V from a USB-C Power Delivery supply (2A maximum).
 - **Cooling**: A small fan blows over the stepper drivers to prevent overheating.
 
 ## Inverse Kinematics
-Wrote a custom ESP32 firmware engine to calculate real-time Inverse Kinematics for a suspended cable system. The math translates standard (X,Y) cartesian coordinates into required line lengths for the left and right steppers. I used forward kinematics for Known-State Initialization — by fully retracting the cables to zero, then defined releasing a known length (e.g., 2000mm), the algorithm infers the bot's physical (X,Y) starting position. These linear measurements are converted into motor steps and run at high frequency to ensure smooth vectorized movements.
+
+The math for this robot was the hardest part. I had to write a custom engine that calculates exactly how long each string needs to be to reach a specific point on the whiteboard.
+
+![Powered on via USB-C PD](/projects/v-plotter/on-the-whiteboard-close-up,-powered-on.webp)
+*The robot hanging on a whiteboard. It uses two strings to move the pen.*
+
+Instead of simple X and Y coordinates, the robot thinks in string lengths. I programmed it to "home" itself by pulling both strings all the way in, giving it a known starting point before it begins to draw.
 
 ## Bill of Materials
-The project prioritized aggressive cost-reduction through bulk sourcing and component harvesting.
+I tried to make this as cheap as possible by using common parts.
 
-- **Motion Kit (4x Steppers, 4x A4988, RAMPS-style hat, Arduino Uno)**: $20.00
-- **Logic Node (ESP32-C3)**: $1.00
-- **Power Logic (USB-C PD Board, 5V BEC)**: $2.50
-- **Actuator (9g Servo)**: $2.00
-- **Frame (3D Printed PLA + electricity overhead)**: $5.00
+- **Motion Kit**: $20.00
+- **Brain (ESP32-C3)**: $1.00
+- **Power Parts**: $2.50
+- **Servo Motor**: $2.00
+- **3D Printed Frame**: $5.00
 
-**Total System Cost**: ~$30.50
+**Total Cost**: ~$30.50
 
 ## Post-Mortem
-The stepper drivers from the cheap kit failed during testing. They overheated and burned out under the high torque needed for vertical string movements. The drivers in that kit just aren't made to handle sustained current draws. Future versions will use better quality drivers like Trinamic units that can handle the load reliably.
+
+One big failure happened during testing: the cheap motor drivers I bought couldn't handle the power needed to lift the pen. They overheated and literally burned out.
+
+![Blown stepper driver](/projects/v-plotter/blown-a4988-driver.webp)
+*One of the motor drivers that failed during testing. Next time, I'll use higher-quality parts.*
+
 

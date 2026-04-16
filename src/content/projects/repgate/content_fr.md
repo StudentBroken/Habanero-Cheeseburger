@@ -4,19 +4,26 @@ RepGate est une application de contrôle parental multiplateforme développée e
 
 ## Vérification de l'Exercice
 
-Le flux de séance d'exercice utilise la détection de pose de ML Kit pour confirmer que l'enfant bouge vraiment. Chaque image est passée dans le modèle de points de repère de pose ; les répétitions sont comptées en suivant les angles articulaires entre les images — un squat est enregistré quand l'angle hanche-genou descend sous un seuil et remonte, un push-up par la flexion du coude, un burpee en séquençant les phases sol et debout. L'inférence ML tourne entièrement sur l'appareil ; aucune vidéo, image ou donnée biométrique ne quitte l'appareil pendant la détection de pose.
+L'application utilise la caméra de votre téléphone et l'IA pour compter les répétitions en temps réel. Elle suit vos articulations — comme les hanches et les genoux pour les squats — pour s'assurer que vous faites l'exercice correctement. Tout cela se passe directement sur votre téléphone ; aucune vidéo ou donnée privée n'est jamais envoyée sur Internet.
 
-Pour prévenir la triche, l'application capture un snapshot d'exercice à un moment aléatoire pendant chaque série et stocke un frame compressé avec le compte de répétitions. Les parents peuvent consulter les snapshots dans le Coach Dashboard pour vérifier que la séance était légitime. Le snapshot est traité localement avant l'envoi — seule une image basse résolution est transmise, pas le flux vidéo complet.
+![Détection de pose sur l'appareil](/projects/repgate/repgate-exercise.webp)
+*RepGate utilise l'IA locale pour compter les répétitions sans envoyer de vidéo dans le cloud.*
 
-L'application supporte aussi l'intégration Strava. Les utilisateurs avec un compte Strava connecté peuvent importer des activités complétées directement, et le backend valide l'horodatage, la durée et le type de l'activité avant d'émettre des crédits. Les deux chemins — détection en direct et importation Strava — écrivent dans le même schéma de snapshot dans Firestore, donc le calcul de crédit est identique dans les deux cas.
+Pour éviter la triche, l'application prend une photo au hasard pendant chaque série. Les parents peuvent vérifier ces photos plus tard pour s'assurer que l'entraînement était réel. Les photos sont en basse résolution pour protéger la vie privée.
+
+L'application supporte aussi l'intégration Strava. Si vous suivez déjà vos courses ou vos balades à vélo là-bas, l'application peut les importer et vous donner des crédits de temps d'écran automatiquement.
 
 L'application supporte aussi le Grease the Groove : de courtes mini-séances fréquentes réparties dans la journée plutôt qu'un long bloc. Un Coach peut les programmer à intervalles fixes, et chaque mini-séance attribue un crédit partiel qui s'accumule vers un déverrouillage du temps d'écran.
 
 ## Intégration Native du Temps d'Écran
 
-L'application du temps d'écran nécessite d'accéder à des API propres à chaque plateforme que Flutter ne peut pas atteindre seul. Le côté iOS est la partie la plus techniquement complexe de tout le projet — j'ai esquissé l'architecture complète au dos d'une feuille d'examen en plein milieu d'un exam, parce que je n'arrivais pas à m'arrêter de travailler sur comment les pièces devaient s'assembler.
+Sur iOS, RepGate utilise les "FamilyControls" officiels d'Apple pour bloquer et débloquer les applications. C'est la partie la plus complexe de l'application. J'ai même dessiné le fonctionnement des processus d'arrière-plan au dos d'une feuille d'examen parce que je ne pouvais pas m'empêcher d'y penser.
 
-Il y a deux processus séparés qui doivent coopérer. L'application Flutter RepGate parle à une couche Swift native via un method channel. L'extension DeviceActivityMonitor est un processus sandboxé Apple distinct que l'OS lance indépendamment et qui continue de tourner même quand l'application principale est tuée. Ils partagent l'état exclusivement via `UserDefaults(suiteName: "group.com.isnotabot.repgate")` — un conteneur App Group que les deux côtés peuvent lire et écrire.
+![Croquis d'architecture sur un examen](/projects/repgate/repgate-exam-sketch.webp)
+*J'ai dessiné toute la logique d'arrière-plan au dos d'une feuille d'examen de mi-session — 19 décembre.*
+
+L'application doit communiquer avec une "extension" séparée et cachée qui reste active même si vous fermez l'application. Elles partagent des données via un conteneur sécurisé pour toujours savoir combien de temps il reste.
+
 
 ### Trois Modes de Blocage
 

@@ -1,6 +1,8 @@
-# Vélo Électrique (v3)
+À 15 ans, je voulais que le vélo ait plus de couple. Au lieu que le moteur fasse tourner le pneu directement, j'ai construit un système "mid-drive" qui utilise une chaîne et un pignon. Cela permet au moteur d'aider beaucoup mieux le vélo à monter les collines.
 
-Construit à 15 ans, quelques mois après un voyage en Chine — le premier build où j'ai vraiment fait du travail métallique plutôt que d'imprimer des supports en 3D en espérant qu'ils tiendraient. L'objectif central était de passer de l'entraînement par friction des v1/v2 à un système mid-drive avec un vrai avantage mécanique via une chaîne et un pignon de réduction.
+![Build mid-drive terminé](/projects/ebike-v3/the-completed-build.webp)
+*Le modèle v3 terminé. On peut voir le gros moteur et le système d'entraînement par chaîne.*
+
 
 ## Transmission & Rapports
 
@@ -25,15 +27,15 @@ J'ai aussi modélisé un support de batterie en PLA imprimé en 3D à partir de 
 ![Photo de référence de montage dans le cadre pour le CAD](/projects/ebike-v3/the-fitment-in-the-frame-referance-for-the-3d-model.webp)
 *Photo utilisée comme géométrie de référence pour le support imprimé en 3D.*
 
-## Batterie
+## Ma Première Soudeuse par Points
 
-Même construction générale que les v1/v2 — cellules 18650 de récupération, mousse et ruban adhésif. La différence, c'est que j'avais maintenant un soudeuse par points. C'étaient mes premières soudures par points. Les cellules étaient sourcées à environ 1$ chacune et j'ai sauté le test de capacité, vérifiant uniquement la tension. Je ne savais pas à l'époque que la tension ne dit rien sur la capacité réelle — ces cellules allaient de 2500 à 2900 mAh, ce qui est faible pour de l'18650, et je n'en avais aucune idée.
+J'ai aussi enfin arrêté de souder directement sur les cellules de la batterie. J'ai acheté une soudeuse par points bon marché sur AliExpress. Elle utilise des impulsions à courant élevé pour fusionner une mince bande de nickel sur la cellule sans chauffer toute la batterie.
 
-![Cellules 18650 brutes avant la construction du pack](/projects/ebike-v3/the-batteries-after-i-brought-them-home.webp)
-*Cellules fraîches — tension vérifiée, capacité inconnue.*
+![Premières soudures par points](/projects/ebike-v3/the-batteries-spot-welding-them-the-first-spotwelds-of-my-life.webp)
+*Apprentissage de la soudure par points. C'est beaucoup plus sûr et fiable que la soudure au fer.*
 
-![Premières soudures par points sur cellules 18650](/projects/ebike-v3/the-batteries-spot-welding-them-the-first-spotwelds-of-my-life.webp)
-*Premières soudures par points de ma vie. La technique s'est améliorée au fil du pack.*
+Il a fallu un peu de pratique pour bien faire, mais c'était une étape importante vers la construction de batteries de qualité professionnelle.
+
 
 ![Intérieur du pack batterie avec mousse et ruban adhésif](/projects/ebike-v3/the-battery-pack-with-the-foam-and-ducktape-this-is-the-inside-view.webp)
 *Intérieur du pack — mousse et ruban, conforme au standard de build v1/v2.*
@@ -71,12 +73,9 @@ Ce build a tué deux VESCs :
 | ESP32 + divers | ~10,00 $ CAD |
 | **Total** | **~325,00 $ CAD** |
 
-## Post-Mortem
+## Le Coût de l'Échec
 
-Le build fonctionnait mais n'était pas bon. Le support en équerres était toujours limite, la tension de chaîne n'était jamais stable, et l'esthétique générale était à moitié professionnelle, à moitié improvisée — parce qu'elle l'était. Les pédales étaient du poids mort inutile puisque la chaîne était retirée ; les pousser ressemblait à pédaler dans l'air.
+Ce build a été une dure leçon en électronique de puissance. J'ai réussi à griller deux VESCs coûteux. Le deuxième a lâché quand j'ai essayé de monter une pente raide alors que le moteur était encore froid. Le pic soudain de courant était trop pour le contrôleur.
 
-Les deux pannes de VESC étaient coûteuses. Les ESC bon marché pour des applications mid-drive à fort courant ne sont pas une bonne affaire quand on inclut le coût de remplacement. La leçon — acheter une fois chez un fournisseur sérieux plutôt que deux fois chez un fournisseur cheap — m'a coûté 120$ à apprendre.
+Au final, cette version a atteint 45 km/h, mais elle était souvent en panne. Cela m'a appris qu'il est beaucoup plus difficile de construire un vélo puissant que simplement un vélo rapide.
 
-Le problème de capacité des cellules était une lacune de connaissance. J'ai seulement testé la tension, pas la capacité. Un vrai test de décharge sous charge aurait révélé les cellules faibles avant la construction du pack. J'ai appris à toujours tester les cellules sous charge après ce build.
-
-La télémétrie BLE était la vraie amélioration. Rouler avec des données réelles — tension, courant, vitesse — sur mon téléphone a changé ma compréhension du système. Voir la chute de tension sous charge en temps réel m'a donné une bien meilleure intuition de ce dont le pack était capable ou non.
