@@ -93,9 +93,16 @@ export default function GlobalPage() {
 
   const globalText = globalHeader + ongoingText + tier1Text + tier2Text + tier3Text;
 
-  const copyTier1 = globalHeader + tier1Text;
-  const copyTier2 = globalHeader + tier2Text;
-  const copyTier3 = globalHeader + tier3Text;
+  // Tier copy texts include ongoing projects of the same tier
+  const buildTierCopyText = (tierNum, heading, subtitle) => {
+    const all = fullProjects.filter(p => p.tier === tierNum).sort(sortByDate);
+    let text = `## ${heading}\n${subtitle}\n\n`;
+    all.forEach(p => { text += formatProject(p); });
+    return globalHeader + text;
+  };
+  const copyTier1 = buildTierCopyText(1, 'TIER 1: THE SPOTLIGHT', 'Production-grade engineering and flagship systems.');
+  const copyTier2 = buildTierCopyText(2, 'TIER 2: SIMPLE PROJECTS', 'Rapid prototyping, R&D, and proof-of-concept builds.');
+  const copyTier3 = buildTierCopyText(3, 'TIER 3: WEEKEND HACKS', 'Single-digit hour hacks, small experiments, and scrapbook projects.');
 
   return (
     <main className="container" style={{ padding: '2rem 1rem' }}>
