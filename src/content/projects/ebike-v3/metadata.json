@@ -1,0 +1,84 @@
+{
+  "title": "Electric Bike (v3)",
+  "titleFr": "Vélo Électrique (v3)",
+  "date": "2024-08-01",
+  "category": "HARDWARE",
+  "subcategory": "Electric Bike",
+  "description": "A mid-drive conversion using a 6384 outrunner motor mounted to the frame with hardware-store L-brackets, reaching 45 km/h. Built at 15, this was the first attempt at metal fabrication and proper gearing math — and the build that killed two VESCs.",
+  "descriptionFr": "Une conversion mid-drive avec un moteur outrunner 6384 monté au cadre avec des équerres de quincaillerie, atteignant 45 km/h. Construit à 15 ans, c'était le premier essai de fabrication métallique et de calcul de réduction — et le build qui a tué deux VESCs.",
+  "githubLink": null,
+  "thumbnail": "/projects/ebike-v3/the-fitment-in-the-frame-referance-for-the-3d-model.webp",
+  "thumbnailSmall": "/projects/ebike-v3/the-fitment-in-the-frame-referance-for-the-3d-model-480.webp",
+  "modelFile": null,
+  "media": [
+    {
+      "type": "image",
+      "url": "/projects/ebike-v3/the-completed-build.webp",
+      "alt": "Completed mid-drive ebike v3 build",
+      "altFr": "Build complet du vélo électrique mid-drive v3",
+      "caption": "Completed v3 — mid-drive, L-brackets, VESC up front",
+      "captionFr": "V3 terminé — mid-drive, équerres, VESC à l'avant"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v3/the-motor-mount-improvised-and-a-pla-bracket-for-the-battery-and-the-vesc-mounted-in-the-front.webp",
+      "alt": "Improvised motor mount with L-brackets, PLA battery bracket, and VESC mounted at the front",
+      "altFr": "Support moteur improvisé avec équerres, support batterie PLA et VESC monté à l'avant",
+      "caption": "Improvised mount — L-brackets, PLA battery tray, VESC at front",
+      "captionFr": "Support improvisé — équerres, plateau PLA, VESC à l'avant"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v3/the-gears-i-bought-chineese.webp",
+      "alt": "Chinese-sourced chainring and motor sprocket for the mid-drive system",
+      "altFr": "Couronne et pignon moteur d'origine chinoise pour le système mid-drive",
+      "caption": "10T motor sprocket → 33T rear sprocket — 3.3:1 reduction",
+      "captionFr": "Pignon moteur 10T → pignon arrière 33T — réduction 3,3:1"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v3/the-fitment-in-the-frame-referance-for-the-3d-model.webp",
+      "alt": "Motor fitment reference photo inside the frame for the 3D CAD model",
+      "altFr": "Photo de référence de montage dans le cadre pour le modèle 3D",
+      "caption": "Frame fitment reference for the CAD model",
+      "captionFr": "Référence de montage dans le cadre pour le CAD"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v3/the-batteries-after-i-brought-them-home.webp",
+      "alt": "Raw 18650 cells brought home before spot welding",
+      "altFr": "Cellules 18650 brutes ramenées avant le soudage par points",
+      "caption": "Raw cells — ~$1 each, capacity untested",
+      "captionFr": "Cellules brutes — ~1$ chacune, capacité non testée"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v3/the-batteries-spot-welding-them-the-first-spotwelds-of-my-life.webp",
+      "alt": "First ever spot welds on 18650 cells for the battery pack",
+      "altFr": "Premières soudures par points sur cellules 18650 pour le pack batterie",
+      "caption": "First spot welds — learning on the job",
+      "captionFr": "Premières soudures par points — apprentissage en direct"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v3/the-battery-pack-with-the-foam-and-ducktape-this-is-the-inside-view.webp",
+      "alt": "Battery pack interior with foam padding and duct tape wrap",
+      "altFr": "Intérieur du pack batterie avec mousse et ruban adhésif",
+      "caption": "Pack interior — foam and duct tape, same as v1",
+      "captionFr": "Intérieur du pack — mousse et ruban, identique au v1"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v3/the-battery-pack-inside-view-after-i-was-dissasembling-it.webp",
+      "alt": "Battery pack disassembled, showing the internal cell layout",
+      "altFr": "Pack batterie démonté, montrant la disposition interne des cellules",
+      "caption": "Pack disassembled — cell layout visible",
+      "captionFr": "Pack démonté — disposition des cellules visible"
+    }
+  ],
+  "links": [
+    { "label": "VescBLEBridge (GitHub)", "url": "https://github.com/A-Emile/VescBLEBridge" }
+  ],
+  "assets": [],
+  "tier": 1
+}

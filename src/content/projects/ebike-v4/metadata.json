@@ -1,0 +1,138 @@
+{
+  "title": "Electric Bike (v4)",
+  "titleFr": "Vélo Électrique (v4)",
+  "date": "2025-06-02",
+  "category": "HARDWARE",
+  "subcategory": "Electric Bike",
+  "description": "A 2000W hub motor build on 12S, constructed from two 6S packs wired in series for riding and in parallel for charging. A short circuit from a wiring mistake destroyed both BMS units — and led to conformal coating and a 'remove before flight' tag.",
+  "descriptionFr": "Un build avec un moteur dans le moyeu 2000W en 12S, construit à partir de deux packs 6S câblés en série pour rouler et en parallèle pour charger. Un court-circuit dû à une erreur de câblage a détruit les deux BMS — et a conduit à un revêtement conforme et une étiquette 'remove before flight'.",
+  "githubLink": null,
+  "thumbnail": "/projects/ebike-v4/the-both-packs-taped-together-this-time-on-the-bike-frame-for-a-test-fit.webp",
+  "thumbnailSmall": "/projects/ebike-v4/the-both-packs-taped-together-this-time-on-the-bike-frame-for-a-test-fit-480.webp",
+  "modelFile": null,
+  "media": [
+    {
+      "type": "image",
+      "url": "/projects/ebike-v4/the-finished-battle-tested-ebike-with-better-support-and-a-remove-before-flifht-after-i-have-accidentally-shorted-the-bms-twice-and-i-conformal-coated-the-bms-to-be-water-resistant.webp",
+      "alt": "Finished v4 ebike with remove-before-flight tag and conformal coated BMS",
+      "altFr": "Vélo électrique v4 terminé avec étiquette remove-before-flight et BMS conformal coaté",
+      "caption": "Final v4 — battle-tested, conformal coated, remove-before-flight tag",
+      "captionFr": "V4 final — éprouvé, conformal coaté, étiquette remove-before-flight"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v4/lacing-my-own-2000w-hub-motor-using-a-26-inch-rim-by-myself-all-learning-from-scratch-how-to-lace-a-wheel-in-under-a-day-with-couple-failed-attempts.webp",
+      "alt": "Lacing the 2000W hub motor into a 26-inch rim from scratch",
+      "altFr": "Montage du moteur dans le moyeu 2000W sur une jante 26 pouces de zéro",
+      "caption": "Lacing the 2000W hub motor — learned from scratch in under a day",
+      "captionFr": "Montage du moteur — appris de zéro en moins d'une journée"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v4/the-bike-and-its-battery-with-the-hub-motor-wired-to-the-vesc-the-battery-placed-and-the-3d-printed-mount-attached-to-it.webp",
+      "alt": "Full bike with hub motor wired to VESC, battery placed, 3D printed mount attached",
+      "altFr": "Vélo complet avec moteur dans le moyeu câblé au VESC, batterie placée et support imprimé fixé",
+      "caption": "Full assembly — hub motor, VESC wired, battery mounted",
+      "captionFr": "Assemblage complet — moteur, VESC câblé, batterie montée"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v4/the-finished-ebike-and-a-bag-holding-the-vesc.webp",
+      "alt": "Finished ebike with a bag holding the VESC controller",
+      "altFr": "Vélo électrique terminé avec un sac contenant le VESC",
+      "caption": "VESC in a bag mount — before the 3D printed cover",
+      "captionFr": "VESC dans un sac — avant le couvercle imprimé en 3D"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v4/an-upgrade-to-the-bag-holding-the-besc-a-3d-printed-cover-with-airflow-passages-to-keep-the-vesc-cool.webp",
+      "alt": "3D printed VESC cover with airflow passages for cooling",
+      "altFr": "Couvercle VESC imprimé en 3D avec passages d'air pour le refroidissement",
+      "caption": "3D printed VESC enclosure — airflow passages for cooling",
+      "captionFr": "Boîtier VESC imprimé en 3D — passages d'air pour le refroidissement"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v4/both-6s-batteries-together-on-the-floor.webp",
+      "alt": "Both 6S battery packs on the floor before assembly",
+      "altFr": "Les deux packs 6S sur le sol avant assemblage",
+      "caption": "Both 6S packs — wired in series for 12S discharge",
+      "captionFr": "Les deux packs 6S — câblés en série pour décharge 12S"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v4/the-both-packs-taped-together-this-time-on-the-bike-frame-for-a-test-fit.webp",
+      "alt": "Both packs taped together on the bike frame for a test fit",
+      "altFr": "Les deux packs scotchés ensemble sur le cadre pour un test d'ajustement",
+      "caption": "Test fit — both packs taped to the frame",
+      "captionFr": "Test d'ajustement — les deux packs scotchés au cadre"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v4/spot-welded-the-first-series-i-used-a-sharpie-to-draw-the-connections-i-was-supposed-to-make-on-green-painters-tape.webp",
+      "alt": "Spot welding with sharpie-marked connections on green painter's tape",
+      "altFr": "Soudage par points avec connexions marquées au sharpie sur ruban de peintre vert",
+      "caption": "Spot welding — sharpie on painter's tape as a wiring diagram",
+      "captionFr": "Soudage par points — sharpie sur ruban de peintre comme schéma"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v4/the-finished-spotwelding-job-beside-the-spotwelder.webp",
+      "alt": "Finished spot welding job next to the spot welder",
+      "altFr": "Travail de soudage par points terminé à côté de la soudeuse",
+      "caption": "Finished spot welds",
+      "captionFr": "Soudures par points terminées"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v4/the-cheap-bms-wired-up-and-ready-still-used-the-bypass-bms-trick.webp",
+      "alt": "Cheap BMS wired up with bypass discharge trick",
+      "altFr": "BMS bon marché câblé avec le bypass de décharge",
+      "caption": "Cheap BMS — bypass discharge connector still in use",
+      "captionFr": "BMS bon marché — bypass de décharge toujours utilisé"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v4/the-battery-but-standinng-up.webp",
+      "alt": "6S battery pack standing upright",
+      "altFr": "Pack batterie 6S en position verticale",
+      "caption": "One of the two 6S packs",
+      "captionFr": "Un des deux packs 6S"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v4/the-battery-but-on-its-side-with-the-connector.webp",
+      "alt": "Battery pack on its side showing the output connector",
+      "altFr": "Pack batterie sur le côté montrant le connecteur de sortie",
+      "caption": "Pack on its side — output connector visible",
+      "captionFr": "Pack sur le côté — connecteur de sortie visible"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v4/another-view-of-the-side-of-the-battery-in-the-ebike-frame.webp",
+      "alt": "Side view of the battery pack mounted in the ebike frame",
+      "altFr": "Vue latérale du pack batterie monté dans le cadre du vélo",
+      "caption": "Battery mounted in frame",
+      "captionFr": "Batterie montée dans le cadre"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v4/testing-the-3d-printed-tolerance-1.webp",
+      "alt": "Testing 3D printed part tolerance, first iteration",
+      "altFr": "Test de tolérance de pièce imprimée en 3D, première itération",
+      "caption": "3D print tolerance test — iteration 1",
+      "captionFr": "Test de tolérance d'impression — itération 1"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v4/testing-the-3d-printed-tolerance-2.webp",
+      "alt": "Testing 3D printed part tolerance, second iteration",
+      "altFr": "Test de tolérance de pièce imprimée en 3D, deuxième itération",
+      "caption": "3D print tolerance test — iteration 2",
+      "captionFr": "Test de tolérance d'impression — itération 2"
+    }
+  ],
+  "links": [],
+  "assets": [],
+  "tier": 1
+}

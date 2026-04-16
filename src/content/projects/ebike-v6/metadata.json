@@ -1,0 +1,88 @@
+{
+  "title": "Electric Bike (v6)",
+  "titleFr": "Vélo Électrique (v6)",
+  "date": "2026-04-16",
+  "category": "HARDWARE",
+  "subcategory": "Electric Bike",
+  "description": "The current pinnacle of the series: Grade-A EVE 33V cells, rigorous validation with 4-wire IR and capacity testing, and a unibody PETG battery holder. A professional-grade build with a 2500W peak output and a perfectly matched internal resistance spread.",
+  "descriptionFr": "Le summum actuel de la série : des cellules EVE 33V de grade A, une validation rigoureuse avec tests RI 4 fils et de capacité, et un support batterie monocoque en PETG. Un build de qualité professionnelle avec une puissance de crête de 2500W et une répartition de la résistance interne parfaitement équilibrée.",
+  "githubLink": null,
+  "thumbnail": "/projects/ebike-v6/the-test-fit-on-the-bike-with-new-petg-holder.webp",
+  "thumbnailSmall": "/projects/ebike-v6/the-test-fit-on-the-bike-with-new-petg-holder-480.webp",
+  "modelFile": null,
+  "media": [
+    {
+      "type": "video",
+      "url": "/projects/ebike-v6/spot-welding-workspace.mp4",
+      "caption": "Nighttime spot welding — organized workspace with nickel stencils and 4-wire testing",
+      "captionFr": "Soudage par points nocturne — espace de travail organisé avec stencils nickel et tests 4 fils"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v6/the-test-fit-on-the-bike-with-new-petg-holder.webp",
+      "alt": "Test fit of the new PETG unibody battery holder on the bike",
+      "altFr": "Test d'ajustement du nouveau support batterie monocoque en PETG sur le vélo",
+      "caption": "Test fit — PETG unibody holder integrated into the frame",
+      "captionFr": "Test d'ajustement — support monocoque PETG intégré au cadre"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v6/the-box-the-brand-new-cells-came-in-100-to-be-exact.webp",
+      "alt": "Box of 100 brand new EVE 33V Grade-A cells",
+      "altFr": "Boîte de 100 cellules EVE 33V Grade-A neuves",
+      "caption": "100x EVE 33V Grade-A cells — 3200mAh nominal",
+      "captionFr": "100x cellules EVE 33V Grade-A — 3200mAh nominal"
+    },
+    {
+       "type": "image",
+       "url": "/projects/ebike-v6/the-battery-pack-all-sorted-and-aligned-in-the-petg-holder-with-painter-tape-covering-both-sides-temporarily.webp",
+       "alt": "Cells aligned in the 3D-printed PETG holder",
+       "altFr": "Cellules alignées dans le support PETG imprimé en 3D",
+       "caption": "Unibody PETG holder — 20S5P alignment before welding",
+       "captionFr": "Support monocoque PETG — alignement 20S5P avant soudage"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v6/the-stencil-for-cutting-the-nickel-strips-to-the-perfect-size-for-a-faster-build-instead-of-cutting-on-the-site-i-cut-just-enough-and-extras-to-build-the-pack.webp",
+      "alt": "Custom stencil for precision-cutting nickel strips",
+      "altFr": "Stencil personnalisé pour la découpe de précision des bandes de nickel",
+      "caption": "Nickel strip stencil — precision cutting for consistent current density",
+      "captionFr": "Stencil de bandes de nickel — découpe de précision pour une densité de courant constante"
+    },
+    {
+       "type": "image",
+       "url": "/projects/ebike-v6/the-cad-i-used-to-referance-the-cells-layout.webp",
+       "alt": "CAD reference for the cell layout",
+       "altFr": "Référence CAO pour le layout des cellules",
+       "caption": "CAD reference — 20S5P layout optimization",
+       "captionFr": "Référence CAO — optimisation du layout 20S5P"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v6/the-magnificent-spot-wleded-battery-pack-bare-bones-no-bms-yet.webp",
+      "alt": "Bare spot-welded battery pack",
+      "altFr": "Pack batterie soudé par points, nu",
+      "caption": "Bare bone pack — precision welds complete",
+      "captionFr": "Pack nu — soudures de précision terminées"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v6/the-bare-bone-with-bms-and-kapton tape.webp",
+      "alt": "Battery with Daly BMS and Kapton tape insulation",
+      "altFr": "Batterie avec BMS Daly et isolation au ruban Kapton",
+      "caption": "Kapton and Fiberglass tape — multi-layer insulation",
+      "captionFr": "Ruban Kapton et fibre de verre — isolation multicouche"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v6/the-basement-fab-wirering-the-bms.webp",
+      "alt": "Wiring the BMS in the basement fab",
+      "altFr": "Câblage du BMS dans l'atelier du sous-sol",
+      "caption": "Basement fab — final BMS wiring",
+      "captionFr": "Atelier — câblage final du BMS"
+    }
+  ],
+  "links": [],
+  "assets": [],
+  "tier": 1
+}

@@ -1,6 +1,6 @@
 # MBS — Outil de Suivi de Notes
 
-MBS (Moyenne, Bilan, Stratégie) est une application web pour les élèves du secondaire québécois pour suivre, analyser et comparer leurs notes. C'est le premier projet que j'ai bâti avec un vrai collaborateur — Howard — et la première fois qu'on utilisait GitHub pour autre chose que lire du code.
+MBS (Moyenne, Bilan, Stratégie) est une application web pour les élèves du secondaire québécois pour suivre, analyser et comparer leurs notes. L'outil a atteint 130 utilisateurs actifs, ce qui représente près de 50 % de l'ensemble du niveau Secondaire 5. C'est le premier projet que j'ai bâti avec un vrai collaborateur — Howard — et la première fois qu'on utilisait GitHub pour autre chose que lire du code.
 
 Travailler avec quelqu'un à un rythme différent m'a appris à délimiter clairement les responsabilités. Howard a connecté le backend Google Sheets, construit l'outil de projection de notes et aidé à peaufiner le système de tickets. Moi j'ai tout bâti le reste : le formatter de données, le calculateur de moyennes avec pondérations par compétences, le leaderboard, toute la couche frontend et communication backend, le flux d'onboarding, le système d'opt-in, les conditions d'utilisation, la politique de confidentialité, la FAQ, la persistence localStorage, et j'ai dirigé le système de tickets. On a commencé en committant tout via l'interface web de GitHub. En 2026, j'ai commencé à migrer vers un workflow plus moderne.
 

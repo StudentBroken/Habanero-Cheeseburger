@@ -1,0 +1,58 @@
+{
+  "title": "Electric Bike (v2)",
+  "titleFr": "Vélo Électrique (v2)",
+  "date": "2023-03-11",
+  "category": "HARDWARE",
+  "subcategory": "Electric Bike",
+  "description": "A VESC-powered upgrade of the v1 friction-drive ebike, reaching 40 km/h on the same dangerous hand-soldered 6S8P pack — now with a BMS bypass and a detachable magnetic joystick throttle.",
+  "descriptionFr": "Une mise à niveau avec VESC du v1, atteignant 40 km/h sur le même dangereux pack 6S8P soudé à la main — avec un bypass du BMS et un joystick magnétique détachable.",
+  "githubLink": null,
+  "thumbnail": "/projects/ebike-v2/motor-mount.webp",
+  "thumbnailSmall": "/projects/ebike-v2/motor-mount-480.webp",
+  "modelFile": null,
+  "media": [
+    {
+      "type": "image",
+      "url": "/projects/ebike-v2/motor-mount.webp",
+      "alt": "Leafboard motor mounted on the spray-painted black bike frame",
+      "altFr": "Moteur Leafboard monté sur le cadre de vélo peint en noir",
+      "caption": "Same friction drive motor — new black frame",
+      "captionFr": "Même entraînement par friction — nouveau cadre noir"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v2/battery-dual-output.webp",
+      "alt": "Battery pack with two output connectors — one through BMS, one bypassing it",
+      "altFr": "Pack batterie avec deux connecteurs de sortie — un via BMS, un en bypass",
+      "caption": "Dual output: BMS-limited (12A) and direct bypass",
+      "captionFr": "Double sortie : limitée par BMS (12A) et bypass direct"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v2/battery-burned-bms.webp",
+      "alt": "Top view of the battery showing burned BMS from the v1 build",
+      "altFr": "Vue du dessus de la batterie montrant le BMS brûlé du v1",
+      "caption": "Burned v1 BMS — pulled too many amps",
+      "captionFr": "BMS v1 grillé — trop d'ampères tirés"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v2/vesc-throttle.webp",
+      "alt": "VESC ADC input connector soldered to the magnetic joystick throttle",
+      "altFr": "Connecteur d'entrée ADC VESC soudé au joystick magnétique",
+      "caption": "VESC ADC input wired to the joystick throttle module",
+      "captionFr": "Entrée ADC VESC câblée au module joystick"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v2/joystick.webp",
+      "alt": "Bare joystick module with hot-glued magnets for handlebar mounting",
+      "altFr": "Module joystick nu avec aimants collés à chaud pour fixation au guidon",
+      "caption": "Joystick — magnets hot-glued, sticks to handlebar epoxy mounts",
+      "captionFr": "Joystick — aimants collés à chaud, fixé aux supports époxy du guidon"
+    }
+  ],
+  "links": [],
+  "assets": [],
+  "tier": 1
+}

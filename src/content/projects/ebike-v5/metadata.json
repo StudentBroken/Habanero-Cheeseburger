@@ -1,0 +1,130 @@
+{
+  "title": "Electric Bike (v5)",
+  "titleFr": "Vélo Électrique (v5)",
+  "date": "2025-10-14",
+  "category": "HARDWARE",
+  "subcategory": "Electric Bike",
+  "description": "A 72V 20S6P rebuild from recycled cells with a dedicated Daly BMS and a real charger — ending the series/parallel charging hack. The build where internal resistance finally clicked as the real measure of cell health.",
+  "descriptionFr": "Un rebuild 72V 20S6P à partir de cellules recyclées avec un vrai BMS Daly et un vrai chargeur — mettant fin au hack de charge série/parallèle. Le build où la résistance interne a enfin été comprise comme la vraie mesure de la santé d'une cellule.",
+  "githubLink": null,
+  "thumbnail": "/projects/ebike-v5/the-finished-v5-looks-like-a-pretty-good-looking-bike.webp",
+  "thumbnailSmall": "/projects/ebike-v5/the-finished-v5-looks-like-a-pretty-good-looking-bike-480.webp",
+  "modelFile": null,
+  "media": [
+    {
+      "type": "image",
+      "url": "/projects/ebike-v5/the-finished-v5-looks-like-a-pretty-good-looking-bike.webp",
+      "alt": "Finished v5 ebike — clean, complete build",
+      "altFr": "Vélo électrique v5 terminé — build propre et complet",
+      "caption": "Finished v5 — the cleanest build yet",
+      "captionFr": "V5 terminé — le build le plus propre à ce jour"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v5/the-48v-old-pack-stripped-from-the-bmss-and-duck-tape.webp",
+      "alt": "Old 48V v4 pack stripped of BMS and duct tape, ready for disassembly",
+      "altFr": "Ancien pack 48V v4 déshabillé de son BMS et ruban adhésif, prêt pour le démontage",
+      "caption": "v4 pack stripped — BMS and tape removed",
+      "captionFr": "Pack v4 déshabillé — BMS et ruban retirés"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v5/the-dissasembly.webp",
+      "alt": "Disassembly of the old battery pack",
+      "altFr": "Démontage de l'ancien pack batterie",
+      "caption": "Disassembly underway",
+      "captionFr": "Démontage en cours"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v5/the-individual-cells-dissasembled-from-the-old-48v-pack.webp",
+      "alt": "Individual 18650 cells freed from the old 48V pack",
+      "altFr": "Cellules 18650 individuelles libérées de l'ancien pack 48V",
+      "caption": "120 cells freed from the v4 pack",
+      "captionFr": "120 cellules libérées du pack v4"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v5/the-tinkercad-model-where-i-organised-the-cells-adni-was-easily-able-to-sort-them-by-colour-using-tinkercad-coloring-tool.webp",
+      "alt": "TinkerCAD model used to plan and colour-code the cell layout",
+      "altFr": "Modèle TinkerCAD utilisé pour planifier et coder par couleur la disposition des cellules",
+      "caption": "TinkerCAD cell layout — colour-coded by series group",
+      "captionFr": "Disposition des cellules en TinkerCAD — codée par couleur par groupe série"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v5/aranging-the-cells.webp",
+      "alt": "Arranging the 120 cells into the 20S6P layout before spot welding",
+      "altFr": "Arrangement des 120 cellules en configuration 20S6P avant soudage par points",
+      "caption": "Arranging 120 cells into 20S6P layout",
+      "captionFr": "Arrangement de 120 cellules en 20S6P"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v5/the-arranged-one-half-out-of-two.webp",
+      "alt": "One of the two 10S6P half-packs fully arranged",
+      "altFr": "Un des deux demi-packs 10S6P entièrement arrangé",
+      "caption": "One 10S6P half — arranged, ready to weld",
+      "captionFr": "Un demi-pack 10S6P — arrangé, prêt à souder"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v5/spot-welding.webp",
+      "alt": "Spot welding the nickel strips onto the cell array",
+      "altFr": "Soudage par points des bandes de nickel sur le réseau de cellules",
+      "caption": "Spot welding — nickel paths CAD-planned for current density",
+      "captionFr": "Soudage par points — chemins nickel planifiés en CAD pour la densité de courant"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v5/the-spot-welding-of-the-new-battery-packs.webp",
+      "alt": "Spot welding the new battery packs",
+      "altFr": "Soudage par points des nouveaux packs batterie",
+      "caption": "Spot welding in progress",
+      "captionFr": "Soudage par points en cours"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v5/the-spot-welsing-of-the-battery.webp",
+      "alt": "Another view of the spot welding process on the battery",
+      "altFr": "Autre vue du processus de soudage par points sur la batterie",
+      "caption": "Spot welding — second half",
+      "captionFr": "Soudage par points — deuxième moitié"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v5/wirering-the-positive-side-of-one-half-where-the-battery-pack-is-basically-2x-12s-bstteries-in-series-but-pernemantly-and-connected-together-with-12awg-wires-instead-of-long-fragile-strips-of-nickel-strips.webp",
+      "alt": "Wiring the positive side of one half-pack — 12AWG inter-pack connections",
+      "altFr": "Câblage du côté positif d'un demi-pack — connexions inter-packs en 12AWG",
+      "caption": "Inter-pack wiring — 12AWG wire, not nickel strips",
+      "captionFr": "Câblage inter-packs — fil 12AWG, pas de bandes de nickel"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v5/wirering-the-bms-before-almost-done.webp",
+      "alt": "BMS wiring in progress — balance leads being soldered",
+      "altFr": "Câblage du BMS en cours — nappes d'équilibrage en cours de soudage",
+      "caption": "BMS wiring — balance leads in progress",
+      "captionFr": "Câblage BMS — nappes d'équilibrage en cours"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v5/wirering-the-bms-almost-done.webp",
+      "alt": "BMS nearly fully wired",
+      "altFr": "BMS presque entièrement câblé",
+      "caption": "BMS almost done",
+      "captionFr": "BMS presque terminé"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v5/me-with-gloves-to-prevent-shocks-just-when-im-careful-and-i-can-still-feel-the-metal-so-i-can-feel-properly-and-solder-the-delicate-balance-leads.webp",
+      "alt": "Wearing gloves when careful — thin enough to feel the metal while soldering balance leads on a 72V pack",
+      "altFr": "Port de gants quand prudent — assez fins pour sentir le métal en soudant les nappes d'équilibrage sur un pack 72V",
+      "caption": "Gloves for balance lead soldering on a live 72V pack",
+      "captionFr": "Gants pour souder les nappes d'équilibrage sur un pack 72V sous tension"
+    }
+  ],
+  "links": [],
+  "assets": [],
+  "tier": 1
+}
