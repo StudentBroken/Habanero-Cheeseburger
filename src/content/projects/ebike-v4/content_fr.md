@@ -1,3 +1,5 @@
+# Vélo Électrique (v4)
+
 ## Construction de la Roue
 
 Pour cette version, je suis passé à un système de "moteur dans le moyeu" (hub motor). Cela signifie que le moteur fait partie intégrante de la roue arrière. Comme j'ai acheté le moteur seul, j'ai dû apprendre à le "lacer" dans une jante à l'aide de rayons métalliques.

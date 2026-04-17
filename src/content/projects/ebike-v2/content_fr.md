@@ -1,3 +1,5 @@
+# Vélo Électrique (v2)
+
 Après la panne du premier contrôleur de moteur, j'ai acheté un **VESC 6.7 Pro**. C'était la première fois que je dépensais une somme importante pour une seule pièce (120 $). Cela a rendu le moteur beaucoup plus fluide et a même permis au vélo de se recharger légèrement lors du freinage (freinage régénératif).
 
 ## Le Bypass du BMS

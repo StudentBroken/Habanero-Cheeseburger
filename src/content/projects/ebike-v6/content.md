@@ -1,3 +1,5 @@
+# Electric Bike (v6)
+
 At age 17, I built this bike to be the perfect version of all my previous builds. Instead of using old, recycled cells, I bought 100 brand-new **EVE 33V** cells. I tested every single one to make sure they were all identical in health and power.
 
 ![Brand new battery cells](/projects/ebike-v6/the-box-the-brand-new-cells-came-in-100-to-be-exact.webp)
@@ -8,9 +10,6 @@ This is the fastest and most reliable bike I've ever built. It can reach 65km/h 
 ## Professional Grade Construction
 
 I stopped using glue and tape to hold the battery together. Instead, I designed a "unibody" holder that was 3D printed in **PETG** plastic. PETG is much stronger than the PLA I used before and can handle the vibrations of the road without cracking.
-
-![New PETG battery holder](/projects/ebike-v6/the-test-fit-on-the-bike-with-new-petg-holder.webp)
-*The battery fits perfectly into the frame. The PETG holder keeps all 100 cells safe and secure.*
 
 
 ![3D printed PETG battery holder with cells aligned](/projects/ebike-v6/the-battery-pack-all-sorted-and-aligned-in-the-petg-holder-with-painter-tape-covering-both-sides-temporarily.webp)

@@ -45,7 +45,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/ebike-v5/the-tinkercad-model-where-i-organised-the-cells-adni-was-easily-able-to-sort-them-by-colour-using-tinkercad-coloring-tool.webp",
+      "url": "/projects/ebike-v5/tinkercad-layout.webp",
       "alt": "TinkerCAD model used to plan and colour-code the cell layout",
       "altFr": "Modèle TinkerCAD utilisé pour planifier et coder par couleur la disposition des cellules",
       "caption": "TinkerCAD cell layout — colour-coded by series group",
@@ -93,7 +93,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/ebike-v5/wirering-the-positive-side-of-one-half-where-the-battery-pack-is-basically-2x-12s-bstteries-in-series-but-pernemantly-and-connected-together-with-12awg-wires-instead-of-long-fragile-strips-of-nickel-strips.webp",
+      "url": "/projects/ebike-v5/inter-pack-wiring.webp",
       "alt": "Wiring the positive side of one half-pack — 12AWG inter-pack connections",
       "altFr": "Câblage du côté positif d'un demi-pack — connexions inter-packs en 12AWG",
       "caption": "Inter-pack wiring — 12AWG wire, not nickel strips",
@@ -117,7 +117,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/ebike-v5/me-with-gloves-to-prevent-shocks-just-when-im-careful-and-i-can-still-feel-the-metal-so-i-can-feel-properly-and-solder-the-delicate-balance-leads.webp",
+      "url": "/projects/ebike-v5/soldering-gloves.webp",
       "alt": "Wearing gloves when careful — thin enough to feel the metal while soldering balance leads on a 72V pack",
       "altFr": "Port de gants quand prudent — assez fins pour sentir le métal en soudant les nappes d'équilibrage sur un pack 72V",
       "caption": "Gloves for balance lead soldering on a live 72V pack",

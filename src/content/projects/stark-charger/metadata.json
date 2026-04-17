@@ -4,8 +4,8 @@
   "date": "2025-08-28",
   "category": "3D PRINT",
   "categoryFr": "IMPRESSION 3D",
-  "description": "Compact 3D printed enclosure for the Stark Varg electric motorbike charger, designed from scratch in Onshape by measuring the original unit. Abandoned — the Ender 5 available at the time couldn't print it reliably.",
-  "descriptionFr": "Boîtier compact imprimé en 3D pour le chargeur de la moto électrique Stark Varg, conçu de zéro sur Onshape en mesurant l'unité d'origine. Abandonné — l'Ender 5 disponible à l'époque ne pouvait pas l'imprimer de manière fiable.",
+  "description": "Compact 3D-printed enclosure for the Stark Varg electric motorbike charger, designed in Onshape as a multi-part assembly with final detailing in Tinkercad. Abandoned — the Ender 5 couldn't print it reliably.",
+  "descriptionFr": "Boîtier compact imprimé en 3D pour le chargeur de la moto électrique Stark Varg, conçu sur Onshape en tant qu'assemblage multi-pièces avec des finitions dans Tinkercad. Abandonné — l'Ender 5 ne pouvait pas l'imprimer de manière fiable.",
   "githubLink": "",
   "thumbnail": "/projects/stark-charger/measuring.webp",
   "media": [

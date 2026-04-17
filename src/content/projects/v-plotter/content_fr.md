@@ -21,7 +21,7 @@ Le système fonctionne sur 12V avec une alimentation USB-C Power Delivery (2A ma
 
 Les mathématiques pour ce robot ont été la partie la plus difficile. J'ai dû écrire un logiciel personnalisé qui calcule exactement la longueur nécessaire pour chaque fil afin d'atteindre un point précis sur le tableau.
 
-![Alimenté via USB-C PD](/projects/v-plotter/on-the-whiteboard-close-up,-powered-on.webp)
+![Alimenté via USB-C PD](/projects/v-plotter/on-whiteboard-front.webp)
 *Le robot suspendu sur un tableau blanc. Il utilise deux fils pour déplacer le stylo.*
 
 Au lieu de simples coordonnées X et Y, le robot pense en longueurs de fils. Je l'ai programmé pour qu'il se réinitialise en tirant les deux fils au maximum, ce qui lui donne un point de départ connu avant de commencer à dessiner.

@@ -1,3 +1,5 @@
+# Electric Bike (v4)
+
 ## Building the Wheel
 
 For this version, I moved to a "hub motor" system. This means the motor is actually part of the rear wheel itself. Since I bought just the motor, I had to learn how to "lace" it into a rim using metal spokes.

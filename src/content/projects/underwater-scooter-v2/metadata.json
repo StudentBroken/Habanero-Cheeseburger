@@ -11,6 +11,7 @@
   "thumbnail": "/projects/underwater-scooter-v2/scooter-overview.webp",
   "githubLink": null,
   "modelFile": "/projects/underwater-scooter-v2/underwater-scooter-v2.stl",
+  "modelRotation": [0, 0, 0],
   "media": [
     {
       "type": "image",

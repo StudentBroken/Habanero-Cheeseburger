@@ -1,14 +1,13 @@
+# Vélo Électrique (v5)
+
 Pour cette version, j'ai décidé de corriger une fois pour toutes le système de charge "dangereux". Je suis passé à un système haute tension de 72V (20S) et j'ai acheté un **BMS Daly** professionnel et un vrai chargeur. Plus besoin de brancher et débrancher des fils juste pour charger le vélo.
 
 ## Planification du Pack
 
 Avec 120 cellules à organiser, j'ai utilisé **TinkerCAD** pour planifier la disposition. Cela m'a permis de coder les groupes par couleur et de m'assurer que chaque cellule s'intégrait parfaitement dans le cadre.
 
-![Planification de batterie TinkerCAD](/projects/ebike-v5/the-tinkercad-model-where-i-organised-the-cells-adni-was-easily-able-to-sort-them-by-colour-using-tinkercad-coloring-tool.webp)
+![Planification de batterie TinkerCAD](/projects/ebike-v5/tinkercad-layout.webp)
 *J'ai utilisé différentes couleurs pour chaque groupe de cellules afin d'éviter les erreurs lors de l'assemblage.*
-
-![Build v5 terminé](/projects/ebike-v5/the-finished-v5-looks-like-a-pretty-good-looking-bike.webp)
-*Le build final est beaucoup plus propre que les versions précédentes. C'est une machine fiable et puissante.*
 
 
 ## Layout des Bandes de Nickel & Densité de Courant
@@ -17,7 +16,7 @@ C'était la deuxième fois que j'utilisais CAD pour planifier les chemins de ban
 
 Les deux moitiés 10S6P ont été connectées entre elles avec du fil silicone 12AWG plutôt qu'un long passage de bande de nickel. Les connexions inter-packs en bande de nickel longue ont une résistance plus élevée et sont mécaniquement fragiles ; le 12AWG est plus faible en résistance, dimensionné pour le courant, et flexible.
 
-![Câblage inter-packs en 12AWG](/projects/ebike-v5/wirering-the-positive-side-of-one-half-where-the-battery-pack-is-basically-2x-12s-bstteries-in-series-but-pernemantly-and-connected-together-with-12awg-wires-instead-of-long-fragile-strips-of-nickel-strips.webp)
+![Câblage inter-packs en 12AWG](/projects/ebike-v5/inter-pack-wiring.webp)
 *Connexions inter-packs en fil silicone 12AWG — résistance plus faible et robustesse mécanique.*
 
 ## Gestion Thermique

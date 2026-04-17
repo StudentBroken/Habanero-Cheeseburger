@@ -1,3 +1,5 @@
+# Vélo Électrique (v6)
+
 À 17 ans, j'ai construit ce vélo pour qu'il soit la version parfaite de tous mes builds précédents. Au lieu d'utiliser de vieilles cellules recyclées, j'ai acheté 100 cellules **EVE 33V** neuves. J'ai testé chacune d'entre elles pour m'assurer qu'elles étaient toutes identiques en termes de santé et de puissance.
 
 ![Cellules de batterie neuves](/projects/ebike-v6/the-box-the-brand-new-cells-came-in-100-to-be-exact.webp)
@@ -8,9 +10,6 @@ C'est le vélo le plus rapide et le plus fiable que j'aie jamais construit. Il p
 ## Construction de Qualité Professionnelle
 
 J'ai arrêté d'utiliser de la colle et du ruban adhésif pour faire tenir la batterie. À la place, j'ai conçu un support "monocoque" imprimé en 3D en plastique **PETG**. Le PETG est beaucoup plus solide que le PLA que j'utilisais auparavant et peut supporter les vibrations de la route sans se fissurer.
-
-![Nouveau support de batterie en PETG](/projects/ebike-v6/the-test-fit-on-the-bike-with-new-petg-holder.webp)
-*La batterie s'intègre parfaitement dans le cadre. Le support en PETG maintient les 100 cellules en toute sécurité.*
 
 
 ![Support de batterie monocoque PETG avec cellules](/projects/ebike-v6/the-battery-pack-all-sorted-and-aligned-in-the-petg-holder-with-painter-tape-covering-both-sides-temporarily.webp)

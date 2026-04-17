@@ -1,3 +1,5 @@
+# Vélo Électrique (v3)
+
 À 15 ans, je voulais que le vélo ait plus de couple. Au lieu que le moteur fasse tourner le pneu directement, j'ai construit un système "mid-drive" qui utilise une chaîne et un pignon. Cela permet au moteur d'aider beaucoup mieux le vélo à monter les collines.
 
 ![Build mid-drive terminé](/projects/ebike-v3/the-completed-build.webp)

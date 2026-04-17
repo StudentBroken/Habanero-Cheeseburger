@@ -7,6 +7,7 @@
   "githubLink": "",
   "thumbnail": "/projects/head-tracking-dji-o3/close-up.webp",
   "modelFile": "/projects/head-tracking-dji-o3/o3-gimbal-full-set.stl",
+  "modelRotation": [0, 0, 0],
   "media": [
     {
       "type": "image",

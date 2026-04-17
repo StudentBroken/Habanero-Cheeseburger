@@ -1,3 +1,5 @@
+# Electric Bike (v3)
+
 By age 15, I wanted the bike to have more torque. Instead of the motor spinning the tire directly, I built a "mid-drive" system that used a chain and sprocket. This meant the motor could help the bike climb hills much better.
 
 ![Completed mid-drive build](/projects/ebike-v3/the-completed-build.webp)

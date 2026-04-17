@@ -64,7 +64,7 @@ export default function ProjectContent({ projectData }) {
                 <h2 style={{ fontSize: '1.4rem', marginBottom: '1rem', color: 'var(--text-primary)' }}>
                   {isFr ? "Modèle 3D" : "3D Model"}
                 </h2>
-                <STLViewer url={modelFilePath} />
+                <STLViewer url={modelFilePath} rotation={projectData.modelRotation} />
               </>
             )}
 

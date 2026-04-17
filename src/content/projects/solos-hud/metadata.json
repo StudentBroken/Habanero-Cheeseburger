@@ -9,6 +9,7 @@
   "thumbnail": "/projects/solos-hud/20260326_235103.webp",
   "githubLink": "https://github.com/StudentBroken/solos-hud",
   "modelFile": "/projects/solos-hud/solos_upgrade_kit_complete.stl",
+  "modelRotation": [0, 0, 0],
   "media": [
     {
       "type": "video",
@@ -74,7 +75,7 @@
     },
     {
       "type": "image",
-      "url": "/projects/solos-hud/Scan20260321162306 _001 (1).webp",
+      "url": "/projects/solos-hud/solos-frame-scan.webp",
       "alt": "2D scan of original frame for reference",
       "altFr": "Scan 2D du cadre d'origine pour référence",
       "caption": "2D scan for CAD reference",

@@ -1,14 +1,13 @@
+# Electric Bike (v5)
+
 For this version, I decided to fix the "dangerous" charging system once and for all. I moved to a high-voltage 72V system (20S) and bought a professional **Daly BMS** and a real charger. No more plugging and unplugging wires just to charge the bike.
 
 ## Planning the Pack
 
 With 120 cells to organize, I used **TinkerCAD** to plan the layout. It allowed me to color-code the groups and make sure every cell fit perfectly inside the frame.
 
-![TinkerCAD battery planning](/projects/ebike-v5/the-tinkercad-model-where-i-organised-the-cells-adni-was-easily-able-to-sort-them-by-colour-using-tinkercad-coloring-tool.webp)
+![TinkerCAD battery planning](/projects/ebike-v5/tinkercad-layout.webp)
 *I used different colors for each group of cells to avoid mistakes during assembly.*
-
-![Finished v5 build](/projects/ebike-v5/the-finished-v5-looks-like-a-pretty-good-looking-bike.webp)
-*The final build looks much cleaner than the previous versions. It's a reliable, high-power machine.*
 
 
 ## Nickel Strip Layout & Current Density
@@ -17,7 +16,7 @@ This was the second time I used CAD to plan nickel strip paths, and the first ti
 
 The two 10S6P halves were connected to each other using 12AWG silicone wire rather than a long run of nickel strip. Long nickel strip inter-pack connections have higher resistance and are mechanically fragile; 12AWG wire is lower resistance, rated for the current, and flexible.
 
-![Inter-pack wiring — 12AWG, not nickel strips](/projects/ebike-v5/wirering-the-positive-side-of-one-half-where-the-battery-pack-is-basically-2x-12s-bstteries-in-series-but-pernemantly-and-connected-together-with-12awg-wires-instead-of-long-fragile-strips-of-nickel-strips.webp)
+![Inter-pack wiring — 12AWG, not nickel strips](/projects/ebike-v5/inter-pack-wiring.webp)
 *Inter-pack connections in 12AWG silicone wire — lower resistance and mechanically robust.*
 
 ## Thermal Management

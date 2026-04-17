@@ -1,3 +1,5 @@
+# Electric Bike (v2)
+
 After the first motor controller failed, I bought a **VESC 6.7 Pro**. This was the first time I spent real money on a single part ($120). It made the motor run much smoother and even allowed the bike to charge itself slightly when braking (regenerative braking).
 
 ## The BMS Bypass

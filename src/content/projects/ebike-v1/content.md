@@ -1,3 +1,5 @@
+# Electric Bike (v1)
+
 I built this bike when I was 13. I didn't have a lot of money, so I used a "friction drive" system. This means the motor sits directly on the tire and spins it using a piece of sandpaper tape.
 
 ![Friction drive setup](/projects/ebike-v1/motor-friction.webp)

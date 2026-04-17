@@ -21,7 +21,7 @@ The system runs on 12V from a USB-C Power Delivery supply (2A maximum).
 
 The math for this robot was the hardest part. I had to write a custom engine that calculates exactly how long each string needs to be to reach a specific point on the whiteboard.
 
-![Powered on via USB-C PD](/projects/v-plotter/on-the-whiteboard-close-up,-powered-on.webp)
+![Powered on via USB-C PD](/projects/v-plotter/on-whiteboard-front.webp)
 *The robot hanging on a whiteboard. It uses two strings to move the pen.*
 
 Instead of simple X and Y coordinates, the robot thinks in string lengths. I programmed it to "home" itself by pulling both strings all the way in, giving it a known starting point before it begins to draw.
