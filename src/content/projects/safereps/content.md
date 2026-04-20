@@ -1,33 +1,50 @@
-## Overview
-SafeReps is a dual-stream coaching ecosystem that bridges the gap between following a workout video and having a personal trainer standing in the room. By fusing phone-based computer vision with a high-fidelity wearable sensor, SafeReps ensures every repetition is safe, effective, and counted with precision.
+# SafeReps — Movement Intelligence
 
-When you work out alone at home, you're "training blind." Workout videos can't see you, and static apps can't correct your form. SafeReps solves this by building a **Digital Twin** of your performance.
+SafeReps is a dual-stream coaching system built for home strength training. A Flutter app tracks 33 skeletal landmarks via Google ML Kit at 30 FPS, while a custom wrist wearable samples a 6-axis IMU at 100 Hz and streams the data over BLE. The two feeds are timestamp-aligned on-device, feeding a rep state machine that classifies every repetition for range of motion, momentum cheating, and neuromuscular fatigue. When a violation is detected, a priority-gated voice coach fires the relevant correction in real time. Built as a hackathon prototype at MariHacks IX.
 
-It detects the "invisible" physics of a rep—muscle tremors and momentum cheating—that no camera can catch alone. The moment your form degrades, the AI voice coach fires immediately to correct you mid-set.
+## Tech Stack
 
-## Key Features
-- **Dual-Stream Sensor Fusion**: Merges 30 FPS vision landmarks with 100Hz high-fidelity IMU data.
-- **Invisible Fatigue Detection**: Catch neuromuscular tremors before you feel them to prevent injury.
-- **Cheat Detection**: Distinguishes between clean muscle contraction and momentum-based swinging.
-- **AI Voice Coach**: Priority-gated audio feedback that provides corrections exactly when they happen.
-- **T-Pose Auto-Calibration**: 1-second routine that aligns the wearable to your specific limb geometry.
+| Layer | Technology |
+|---|---|
+| Mobile app | Flutter + Google ML Kit (pose landmarks at 30 FPS) |
+| Wearable MCU | ESP32-C3 with BLE |
+| Motion sensor | MPU6050 6-axis IMU at 100 Hz |
+| DSP | On-chip high-pass filter + angular/linear velocity ratio |
+| State machine | 5-stage FSM: Idle → Top → Descending → Bottom → Ascending |
+| Voice coach | Priority-gated audio engine with Fisher-Yates shuffled cue pools |
+| Calibration | 1-second T-Pose routine for automatic sensor-to-limb alignment |
 
-## Hardware Architecture
-SafeReps is designed for extreme accessibility. The prototype costs under $5 in components, proving that coaching-grade hardware doesn't have to be a luxury product.
+## Hardware
 
-- **ESP32-C3**: Logic & Bluetooth connectivity.
-- **MPU6050**: 6-axis inertial measurement unit.
-- **400mAh LiPo**: Portable power for 12+ hours of active training.
-- **USB-C Module**: Integrated charging.
+The prototype BOM comes in under $5, with a custom PCB at volume projected to drop it to ~$3.
+
+- **ESP32-C3** — logic and low-latency BLE connectivity
+- **MPU6050** — 6-axis IMU, sampled at 100 Hz
+- **400 mAh LiPo** — runtime of 12+ hours of active use
+- **USB-C charge module** — integrated charging
+- **Protection circuit** — 100 kΩ voltage divider for battery monitoring; diode and capacitor for transient protection
 
 ## Core Intelligence
-### 1. The Rep State Machine
-SafeReps manages a Finite State Machine (FSM) for every set to ensure movement is anatomically complete. Transitions are triggered by joint angles crossing calibrated thresholds, ensuring reps are only counted when they reach full range.
 
-### 2. High-Speed DSP
-The ESP32-C3 wearable performs real-time Digital Signal Processing (DSP) before data hit the app:
-- **Tremor Analysis**: A 100Hz high-pass filter isolates neuromuscular jitter from intentional movement.
-- **Cheat Detection**: Calculates the ratio of Angular Velocity to Linear Acceleration to catch momentum-based swings.
+### Rep State Machine
 
-### 3. T-Pose Calibration
-Accuracy starts with alignment. SafeReps requires a 1-second T-Pose before every set. This enables **Sensor Zeroing** and **Scaption Alignment** (correcting for mounting tilt).
+A 5-stage FSM governs every set: Idle → Top → Descending → Bottom → Ascending. State transitions are gated on joint angles crossing calibrated thresholds derived from the T-Pose calibration, so a rep is only counted when it reaches anatomically complete range of motion.
+
+### On-Chip DSP
+
+The ESP32-C3 runs two signal processing routines before sending data to the phone:
+
+- **Tremor analysis** — a 100 Hz high-pass filter isolates neuromuscular jitter from intentional movement. Persistent jitter above threshold is flagged as a fatigue indicator before the user consciously feels it.
+- **Cheat detection** — the ratio of angular velocity to linear acceleration distinguishes clean muscle contraction from momentum-driven swinging.
+
+### T-Pose Calibration
+
+A 1-second T-Pose at the start of each set performs two alignment steps: sensor zeroing (synchronizing wearable orientation to the skeletal model) and scaption alignment (correcting for mounting tilt against the user's specific limb geometry). This eliminates the need for any manual setup.
+
+### Voice Coach
+
+The audio engine uses priority gating so corrections always interrupt encouragement, never the other way around. Cue pools are shuffled with Fisher-Yates so the same phrase does not repeat until the entire pool has played through.
+
+## Latency
+
+The most significant engineering constraint was coaching latency. A cue that arrives 500 ms after a form violation is too late to be useful. The sensor-to-coach pipeline — BLE transfer, timestamp alignment, FSM evaluation, and audio dispatch — was optimized to fire corrections within milliseconds of detection.
