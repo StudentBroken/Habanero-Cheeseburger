@@ -1,6 +1,8 @@
 # SafeReps — Movement Intelligence
 
-SafeReps is a dual-stream coaching system built for home strength training. A Flutter app tracks 33 skeletal landmarks via Google ML Kit at 30 FPS, while a custom wrist wearable samples a 6-axis IMU at 100 Hz and streams the data over BLE. The two feeds are timestamp-aligned on-device, feeding a rep state machine that classifies every repetition for range of motion, momentum cheating, and neuromuscular fatigue. When a violation is detected, a priority-gated voice coach fires the relevant correction in real time. Built as a hackathon prototype at MariHacks IX.
+SafeReps is a dual-stream coaching system built for home strength training. A Flutter app tracks 33 skeletal landmarks via Google ML Kit at 30 FPS, while a custom wrist wearable samples a 6-axis IMU at 100 Hz and streams the data over BLE. The two feeds are timestamp-aligned on-device, feeding a rep state machine that classifies every repetition for range of motion, momentum cheating, and neuromuscular fatigue. When a violation is detected, a priority-gated voice coach fires the relevant correction in real time.
+
+Built at MariHacks IX in approximately 15 hours — hardware assembly, firmware, app, and pitch deck included. The team was two people; my partner was relatively new to both hardware and software, so a significant portion of the build time also involved teaching and pair programming rather than just heads-down development.
 
 ## Tech Stack
 
@@ -16,7 +18,7 @@ SafeReps is a dual-stream coaching system built for home strength training. A Fl
 
 ## Hardware
 
-The prototype BOM comes in under $5, with a custom PCB at volume projected to drop it to ~$3.
+The prototype BOM comes in under \$5, with a custom PCB at volume projected to drop it to ~\$3.
 
 - **ESP32-C3** — logic and low-latency BLE connectivity
 - **MPU6050** — 6-axis IMU, sampled at 100 Hz
