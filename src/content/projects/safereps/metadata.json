@@ -1,0 +1,37 @@
+{
+  "title": "SafeReps — Movement Intelligence",
+  "titleFr": "SafeReps — Intelligence du Mouvement",
+  "date": "2026-04-18",
+  "category": "HARDWARE & SOFTWARE",
+  "categoryFr": "MATÉRIEL ET LOGICIEL",
+  "subcategory": null,
+  "description": "SafeReps fuses smartphone computer vision with a high-fidelity wearable sensor to catch 'invisible' movement errors and tremors during strength training.",
+  "descriptionFr": "SafeReps fusionne la vision par ordinateur des smartphones avec un capteur portable haute fidélité pour détecter les erreurs de mouvement 'invisibles' et les tremblements.",
+  "githubLink": "https://github.com/StudentBroken/SafeReps",
+  "thumbnail": "/projects/safereps/cover.png",
+  "thumbnailSmall": "/projects/safereps/cover-480.png",
+  "modelFile": null,
+  "media": [
+    {
+      "type": "image",
+      "url": "/projects/safereps/cover.png",
+      "alt": "SafeReps App — Real-time form tracking and AI skeletal overlay",
+      "altFr": "Application SafeReps — Suivi de forme en temps réel et superposition de squelette IA"
+    },
+    {
+      "type": "image",
+      "url": "/projects/safereps/report.png",
+      "alt": "SafeReps App — Detailed post-workout exercise report",
+      "altFr": "Application SafeReps — Rapport d'exercice détaillé après l'entraînement"
+    }
+  ],
+  "links": [
+    {
+      "label": "View on Devpost",
+      "labelFr": "Voir sur Devpost",
+      "url": "https://devpost.com/software/safereps"
+    }
+  ],
+  "assets": [],
+  "tier": 3
+}
