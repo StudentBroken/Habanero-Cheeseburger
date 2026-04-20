@@ -8,23 +8,65 @@
   "description": "A dual-stream coaching system that fuses phone-based computer vision with a custom wrist wearable to detect form breakdown, momentum cheating, and neuromuscular fatigue in real time. Built for MariHacks IX.",
   "descriptionFr": "Un système de coaching à double flux qui fusionne la vision par ordinateur du téléphone avec un bracelet personnalisé pour détecter les erreurs de forme, la triche par élan et la fatigue neuromusculaire en temps réel. Construit pour MariHacks IX.",
   "githubLink": "https://github.com/StudentBroken/SafeReps",
-  "thumbnail": "/projects/safereps/cover.webp",
-  "thumbnailSmall": "/projects/safereps/cover-480.webp",
+  "thumbnail": "/projects/safereps/wrist-hardware.webp",
+  "thumbnailSmall": "/projects/safereps/wrist-hardware-480.webp",
   "modelFile": null,
   "media": [
     {
       "type": "image",
-      "url": "/projects/safereps/cover.webp",
-      "alt": "SafeReps app showing real-time skeletal overlay and form tracking",
-      "altFr": "Application SafeReps avec superposition squelettique en temps réel",
-      "caption": "Live form tracking — ML Kit skeletal overlay"
+      "url": "/projects/safereps/wrist-hardware.webp",
+      "alt": "Finished wrist wearable worn on arm with ESP32-C3 and MPU6050 integrated",
+      "altFr": "Bracelet fini porté au poignet avec ESP32-C3 et MPU6050 intégrés",
+      "caption": "Wrist wearable — fully integrated prototype"
     },
     {
       "type": "image",
-      "url": "/projects/safereps/report.webp",
-      "alt": "SafeReps post-workout report with rep quality breakdown",
-      "altFr": "Rapport post-entraînement SafeReps avec analyse de qualité des répétitions",
-      "caption": "Post-workout report — rep quality and tremor log"
+      "url": "/projects/safereps/prototype.webp",
+      "alt": "Early hardware prototype on desk before battery integration",
+      "altFr": "Prototype matériel précoce sur le bureau avant l'intégration de la batterie",
+      "caption": "Hardware prototype — pre-battery integration"
+    },
+    {
+      "type": "image",
+      "url": "/projects/safereps/dashboard.webp",
+      "alt": "SafeReps main dashboard screen",
+      "altFr": "Écran principal du tableau de bord SafeReps",
+      "caption": "Main dashboard"
+    },
+    {
+      "type": "image",
+      "url": "/projects/safereps/session-active.webp",
+      "alt": "SafeReps active session with live skeletal overlay and form tracking",
+      "altFr": "Session active SafeReps avec superposition squelettique en temps réel",
+      "caption": "Active session — live form tracking"
+    },
+    {
+      "type": "image",
+      "url": "/projects/safereps/session-end.webp",
+      "alt": "SafeReps session end screen with rep quality summary",
+      "altFr": "Écran de fin de session SafeReps avec résumé de la qualité des répétitions",
+      "caption": "Session end — rep quality summary"
+    },
+    {
+      "type": "image",
+      "url": "/projects/safereps/goals.webp",
+      "alt": "SafeReps goals configuration screen",
+      "altFr": "Écran de configuration des objectifs SafeReps",
+      "caption": "Goals page"
+    },
+    {
+      "type": "image",
+      "url": "/projects/safereps/app-settings.webp",
+      "alt": "SafeReps app settings screen",
+      "altFr": "Écran des paramètres de l'application SafeReps",
+      "caption": "App settings"
+    },
+    {
+      "type": "image",
+      "url": "/projects/safereps/ble-debug.webp",
+      "alt": "SafeReps BLE IMU debug page showing live sensor data",
+      "altFr": "Page de débogage BLE IMU SafeReps affichant les données de capteur en direct",
+      "caption": "BLE IMU debug view — live sensor stream"
     }
   ],
   "links": [
