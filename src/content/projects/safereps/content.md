@@ -1,4 +1,4 @@
-# SafeReps — Movement Intelligence
+# SafeReps — Marihacks IX
 
 SafeReps is a dual-stream coaching system built for home strength training. A Flutter app tracks 33 skeletal landmarks via Google ML Kit at 30 FPS, while a custom wrist wearable samples a 6-axis IMU at 100 Hz and streams the data over BLE. The two feeds are timestamp-aligned on-device, feeding a rep state machine that classifies every repetition for range of motion, momentum cheating, and neuromuscular fatigue. When a violation is detected, a priority-gated voice coach fires the relevant correction in real time.
 
