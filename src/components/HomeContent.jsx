@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Link from 'next/link';
-import { Printer, Bot } from 'lucide-react';
+import { Printer, Bot, Github, Linkedin, Instagram } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 import LangToggle from './LangToggle';
 import { useLang } from './LangProvider';
@@ -424,6 +424,7 @@ export default function HomeContent({ projects }) {
         <button className="float-nav-btn" onClick={() => scrollTo('anchor-top')}>TOP</button>
         <button className="float-nav-btn float-nav-btn--tml" onClick={() => scrollTo('section-timeline')}>TML</button>
         <button className="float-nav-btn" onClick={() => scrollTo('section-projects')}>PRJ</button>
+        <button className="float-nav-btn" onClick={() => scrollTo('section-connect')}>CON</button>
         <button className="float-nav-btn" onClick={() => scrollTo('section-pdf')}>PDF</button>
       </nav>
 
@@ -687,6 +688,25 @@ export default function HomeContent({ projects }) {
               </div>
             );
           })}
+        </section>
+
+        {/* ── Connect Section ── */}
+        <section id="section-connect" className="no-print" style={{ marginBottom: '4rem' }}>
+          <div className="section-header">
+            <h2>{isFr ? 'Contact' : 'Connect'}</h2>
+            <span className="section-header__comment">{isFr ? '// LE CONSTRUCTEUR' : '// THE CONSTRUCTOR'}</span>
+          </div>
+          <div className="glass-panel" style={{ padding: '2rem', display: 'flex', justifyContent: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
+            <a href="https://github.com/StudentBroken" target="_blank" rel="noopener noreferrer" className="mg-btn">
+              <Github size={20} /> GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/michael-xu-74a16b3b0/" target="_blank" rel="noopener noreferrer" className="mg-btn">
+              <Linkedin size={20} /> LinkedIn
+            </a>
+            <a href="https://www.instagram.com/michael.xuz/" target="_blank" rel="noopener noreferrer" className="mg-btn">
+              <Instagram size={20} /> Instagram
+            </a>
+          </div>
         </section>
 
         {/* ── PDF / Print export button ── */}
