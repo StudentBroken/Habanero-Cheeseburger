@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Link from 'next/link';
-import { Printer, Bot, Github, Linkedin, Instagram } from 'lucide-react';
+import { Printer, Bot, Code, Globe, Camera } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 import LangToggle from './LangToggle';
 import { useLang } from './LangProvider';
@@ -698,13 +698,13 @@ export default function HomeContent({ projects }) {
           </div>
           <div className="glass-panel" style={{ padding: '2rem', display: 'flex', justifyContent: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
             <a href="https://github.com/StudentBroken" target="_blank" rel="noopener noreferrer" className="mg-btn">
-              <Github size={20} /> GitHub
+              <Code size={20} /> GitHub
             </a>
             <a href="https://www.linkedin.com/in/michael-xu-74a16b3b0/" target="_blank" rel="noopener noreferrer" className="mg-btn">
-              <Linkedin size={20} /> LinkedIn
+              <Globe size={20} /> LinkedIn
             </a>
             <a href="https://www.instagram.com/michael.xuz/" target="_blank" rel="noopener noreferrer" className="mg-btn">
-              <Instagram size={20} /> Instagram
+              <Camera size={20} /> Instagram
             </a>
           </div>
         </section>
