@@ -1,6 +1,6 @@
 # RepGate — Exercice contre Temps d'Écran
 
-RepGate est une application de contrôle parental multiplateforme développée en Flutter. Le principe est simple : un enfant complète une séance d'exercice vérifiée, et l'application déverrouille un certain temps d'écran. Les parents configurent les règles — type d'exercice, durée, ratio de crédit — et RepGate les applique via les API natives du système sur les deux plateformes. En développement actif depuis novembre 2025, l'application est actuellement en attente d'approbation de l'App Store Apple.
+RepGate est une application de contrôle parental multiplateforme développée en Flutter. Le principe est simple : un enfant complète une séance d'exercice vérifiée, et l'application déverrouille un certain temps d'écran. Les parents configurent les règles — type d'exercice, durée, ratio de crédit — et RepGate les applique via les API natives du système sur les deux plateformes. En développement actif depuis novembre 2025, l'application a été approuvée par Apple le 2 mai 2026, dès la première version soumise.
 
 ## Vérification de l'Exercice
 
@@ -81,4 +81,4 @@ L'application est localisée en quatre langues : anglais, français, espagnol et
 
 ## Statut
 
-En avril 2026, l'application est en révision App Store. La version Android est fonctionnelle et en test interne. La structure légale et fiscale est finalisée en parallèle. repgate.app est en ligne avec une liste d'attente et un formulaire d'accès anticipé.
+Le 2 mai 2026, l'application a été approuvée par Apple en tant que première version soumise. La version Android est fonctionnelle et en test interne. La structure légale et fiscale est finalisée en parallèle. repgate.app est en ligne avec une liste d'attente et un formulaire d'accès anticipé.

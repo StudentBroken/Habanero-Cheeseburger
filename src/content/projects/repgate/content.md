@@ -1,6 +1,6 @@
 # RepGate — Exercise for Screen Time
 
-RepGate is a cross-platform parental control app built in Flutter. The core mechanic is simple: a child completes a verified exercise session, and the app unlocks a set amount of screen time. Parents configure the rules — exercise type, duration, credit ratio — and RepGate enforces them through native OS APIs on both platforms. It has been in active development since November 2025 and is currently awaiting Apple App Store approval.
+RepGate is a cross-platform parental control app built in Flutter. The core mechanic is simple: a child completes a verified exercise session, and the app unlocks a set amount of screen time. Parents configure the rules — exercise type, duration, credit ratio — and RepGate enforces them through native OS APIs on both platforms. It has been in active development since November 2025 and was approved by Apple as of May 2, 2026, as the first app version submitted to them.
 
 ## Exercise Verification
 
@@ -81,4 +81,4 @@ The app is localized into four languages: English, French, Spanish, and Chinese 
 
 ## Status
 
-As of April 2026 the app is in App Store review. The Android build is functional and in internal testing. Legal and tax structures are being finalized in parallel. repgate.app is live with a waitlist and early-access form.
+As of May 2, 2026, the app has been approved by Apple as the first app version submitted to them. The Android build is functional and in internal testing. Legal and tax structures are being finalized in parallel. repgate.app is live with a waitlist and early-access form.
