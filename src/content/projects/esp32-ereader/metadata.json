@@ -1,0 +1,83 @@
+{
+  "title": "ESP32 E-Reader",
+  "titleFr": "Liseuse ESP32",
+  "date": "2026-10-21",
+  "category": "HARDWARE & SOFTWARE",
+  "categoryFr": "MATÉRIEL & LOGICIEL",
+  "subcategory": null,
+  "description": "A compact e-reader built from a repurposed e-ink price tag and a XIAO ESP32-S3, with chapter-aware book references, touch navigation, and wireless library management.",
+  "descriptionFr": "Une liseuse compacte construite à partir d'une étiquette électronique réutilisée et d'un XIAO ESP32-S3, avec des repères de lecture par chapitre, une navigation tactile et la gestion sans fil des livres.",
+  "githubLink": "https://github.com/StudentBroken/esp32-s3-ereader",
+  "thumbnail": "/projects/esp32-ereader/reader-in-hand.webp",
+  "modelFile": null,
+  "media": [
+    {
+      "type": "image",
+      "url": "/projects/esp32-ereader/reader-in-hand.webp",
+      "alt": "The assembled e-reader held in one hand",
+      "altFr": "La liseuse assemblée tenue dans une main",
+      "caption": "The finished reader",
+      "captionFr": "La liseuse terminée"
+    },
+    {
+      "type": "image",
+      "url": "/projects/esp32-ereader/reader-screen-test.webp",
+      "alt": "Text displayed on the e-paper screen",
+      "altFr": "Texte affiché sur l'écran à encre électronique",
+      "caption": "Testing the reading display",
+      "captionFr": "Essai de l'écran de lecture"
+    },
+    {
+      "type": "image",
+      "url": "/projects/esp32-ereader/electronics-back.webp",
+      "alt": "The electronics mounted inside the reader case",
+      "altFr": "L'électronique montée dans le boîtier de la liseuse",
+      "caption": "Electronics inside the case",
+      "captionFr": "Électronique dans le boîtier"
+    },
+    {
+      "type": "image",
+      "url": "/projects/esp32-ereader/first-internal-layout.webp",
+      "alt": "The first internal component layout",
+      "altFr": "Première disposition des composants à l'intérieur",
+      "caption": "First internal layout",
+      "captionFr": "Première disposition interne"
+    },
+    {
+      "type": "image",
+      "url": "/projects/esp32-ereader/pcb-trace-repair.webp",
+      "alt": "The price tag PCB after its display traces were cut and repaired",
+      "altFr": "Circuit imprimé de l'étiquette après la coupure et la réparation des pistes de l'écran",
+      "caption": "Repairing the display traces",
+      "captionFr": "Réparation des pistes de l'écran"
+    },
+    {
+      "type": "image",
+      "url": "/projects/esp32-ereader/trace-jumper-wires.webp",
+      "alt": "Fine enamel jumper wires connecting the display to the ESP32-S3",
+      "altFr": "Fins fils de cuivre émaillé reliant l'écran à l'ESP32-S3",
+      "caption": "0.25 mm enamel jumper wires",
+      "captionFr": "Fils de cuivre émaillé de 0,25 mm"
+    },
+    {
+      "type": "image",
+      "url": "/projects/esp32-ereader/sleep-screen.webp",
+      "alt": "The reader's e-paper sleep screen",
+      "altFr": "Écran de veille à encre électronique de la liseuse",
+      "caption": "Low-power sleep screen",
+      "captionFr": "Écran de veille basse consommation"
+    }
+  ],
+  "links": [
+    {
+      "label": "Firmware on GitHub",
+      "url": "https://github.com/StudentBroken/esp32-s3-ereader"
+    },
+    {
+      "label": "View the Onshape CAD",
+      "url": "https://cad.onshape.com/documents/ce5ecd23e52d1bf90355e702/w/8f04ea02aba0e58308206f0e/e/3b148ed9661aaba986672e79"
+    }
+  ],
+  "assets": [],
+  "tier": 2
+}
