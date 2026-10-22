@@ -95,14 +95,17 @@
   "links": [
     {
       "label": "Motor and bike mount assembly (Onshape)",
+      "labelFr": "Assemblage du moteur et de son support de vélo (Onshape)",
       "url": "https://cad.onshape.com/documents/43a36b803df7f960ccbf3225/w/f83945b127c58a7edd1f96e2/e/9a1b8c6414a9327d8c2855df?renderMode=0&uiState=6ad95942a941be13c57fe6f1"
     }
   ],
   "assets": [
     {
       "name": "Download throttle slider STL",
+      "nameFr": "Télécharger le fichier STL du curseur",
       "url": "/projects/ebike-v7/full-throttle-slider.stl",
-      "description": "3D model of the sliding Hall-effect throttle"
+      "description": "3D model of the sliding Hall-effect throttle",
+      "descriptionFr": "Modèle 3D de la gâchette coulissante à effet Hall"
     }
   ],
   "tier": 1

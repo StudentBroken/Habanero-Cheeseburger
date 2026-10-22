@@ -4,7 +4,11 @@ A 2-axis head-tracking gimbal system built for the DJI Goggles 3 and O3 Air Unit
 
 The mechanical design was sketched out during a math exam. The teacher was not pleased.
 
-## Hardware
+## System Architecture
+
+Two ESP32-C3 boards communicate over ESP-NOW: one on the goggles reads head orientation, and one on the drone drives the pan-and-tilt servos.
+
+## Mechanical Design & Fabrication
 
 The gimbal is custom-designed and 3D printed. It uses two micro-servos to move the camera up, down, left, and right. It can run on almost any drone battery (2S to 6S) thanks to a built-in power regulator.
 
@@ -24,22 +28,22 @@ The DJI O3 Air Unit is not included — it's shared with the FPV drone builds.
 
 | Component | Cost |
 |---|---|
-| ESP32-C3 Super Mini × 2 | $2.00 |
-| MPU6050 gyro/accelerometer module | $3.00 |
-| Micro-servos × 2 (pan + tilt) | $5.00 |
-| Switching buck converter | $1.00 |
-| Cooling fan (small) | $2.00 |
-| 3D printed parts (PLA) | $3.00 |
-| Misc (wire, connectors, hardware) | $1.00 |
-| **Total** | **$17.00** |
+| ESP32-C3 Super Mini × 2 | $2.00 CAD |
+| MPU6050 gyro/accelerometer module | $3.00 CAD |
+| Micro-servos × 2 (pan + tilt) | $5.00 CAD |
+| Switching buck converter | $1.00 CAD |
+| Cooling fan (small) | $2.00 CAD |
+| 3D printed parts (PLA) | $3.00 CAD |
+| Misc (wire, connectors, hardware) | $1.00 CAD |
+| **Total** | **$17.00 CAD** |
 
-## Transmitter Firmware
+## Electrical & Firmware Implementation
 
 The goggles-side ESP32 uses the MPU6050's onboard motion processor to compute yaw and pitch, avoiding drift from integrating raw gyro data. On boot it collects 200 motion samples at rest and computes offsets, so the gimbal centers itself regardless of how the goggles are sitting when powered on.
 
 Only yaw and pitch are transmitted — roll is discarded since the gimbal has no roll axis. Each packet carries the two angles, a sequence number, and a checksum. The receiver uses both to reject duplicate, out-of-order, and corrupted packets.
 
-## Receiver Firmware
+### Receiver Firmware
 
 The drone-side ESP32 receives packets, validates the checksum and sequence number, then maps the angles to servo pulse widths. Yaw maps to ±90° pan, pitch maps to ±45° tilt. A 0.5° input deadzone prevents the servos from drifting around center when the head is still.
 
@@ -47,7 +51,7 @@ Servo movement is smoothed with an exponential filter to eliminate jerkiness fro
 
 The receiver drives the servos directly without going through the flight controller, keeping latency low.
 
-## Gyro Drift & Calibration
+## Validation & Calibration
 
 The biggest challenge was drift. All gyros naturally "drift" over time, making the camera slowly move even if you keep your head still. To fix this, I used a motion processor that fuses gyro data with an accelerometer. The accelerometer uses gravity as a fixed reference to keep the gimbal centered.
 

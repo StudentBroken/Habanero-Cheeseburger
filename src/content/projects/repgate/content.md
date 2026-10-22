@@ -2,7 +2,7 @@
 
 RepGate is a cross-platform parental control app built in Flutter. The core mechanic is simple: a child completes a verified exercise session, and the app unlocks a set amount of screen time. Parents configure the rules — exercise type, duration, credit ratio — and RepGate enforces them through native OS APIs on both platforms. It has been in active development since November 2025 and was approved by Apple as of May 2, 2026, as the first app version submitted to them.
 
-## Exercise Verification
+## System Architecture & Exercise Verification
 
 The app uses your phone's camera and AI to count reps in real time. It tracks your joints—like hips and knees for squats—to make sure you're doing the exercise correctly. All of this happens directly on your phone; no video or private data is ever sent to the internet.
 
@@ -15,7 +15,7 @@ RepGate also works with Strava. If you already track your runs or bike rides the
 
 The app also supports Grease the Groove: short, frequent mini-sessions spread across the day rather than one long block. A Coach can schedule these at fixed intervals, and each mini-session awards a partial credit that accumulates toward a screen time unlock.
 
-## Native Screen Time Integration
+## Software & Platform Implementation
 
 On iOS, RepGate uses Apple's official "FamilyControls" to block and unblock apps. This is the most complex part of the app. I even sketched out how the background processes would communicate on the back of a math exam because I couldn't stop thinking about it.
 
@@ -57,28 +57,28 @@ On Android, screen time is tracked through UsageStats. The app reads per-app for
 
 Beyond session-level credits, Coaches can set bedtime schedules (a nightly window where all gated apps are locked regardless of credits) and permanently ban specific apps from ever being unlocked.
 
-## Teams: Family and Peer Modes
+## Product Design: Family and Peer Modes
 
 RepGate supports two team structures. In Family mode, a parent is the Coach and one or more children are Players. The Coach sets all rules — which apps are gated, how many reps unlock how much time, bedtime schedules — and monitors activity through the dashboard. Players can't change their own rules.
 
 Peer mode removes the hierarchy. All members are equal: anyone can set a shared goal, and everyone is accountable to the group. This is designed for friend groups or coworkers who want mutual accountability rather than parental control. The leaderboard in Peer mode is competitive, ranking members by total reps completed.
 
-## Backend
+## Backend Architecture
 
 The backend runs entirely on Firebase. The top-level Firestore collections are `users`, `families`, `pairing_codes`, and `strava_tokens`. Credit ledgers and session history live in subcollections under each user document. Families link a parent account to one or more child accounts.
 
 There are 30 Cloud Functions handling: session validation, credit issuance, Strava webhook ingestion, RevenueCat webhook processing, scheduled daily credit resets, COPPA-compliant data deletion, and a family invite flow. Functions that touch financial or sensitive data run with tighter IAM scoping than the rest.
 
-## Subscriptions
+## Subscription Implementation
 
 Monetization runs through RevenueCat with two products: `pro_repgate` (single-family subscription) and `family_repgate` (extended family plan). RevenueCat webhooks hit a Cloud Function that updates the user's entitlement record in Firestore. The app reads entitlement state at startup and gates features accordingly — multi-child support, Strava import, and advanced scheduling are paywalled.
 
-## Compliance
+## Privacy & Compliance
 
 Because RepGate handles data for children under 13, COPPA applies. The app routes child accounts through a parent-consent flow before any data is collected. The Firestore schema keeps child data namespaced under the family document, and the deletion function removes all child records when a parent deletes the account. GDPR deletion requests follow the same path. The privacy policy and terms were written to reflect exactly what data is collected, where it goes, and how long it is retained.
 
 The app is localized into four languages: English, French, Spanish, and Chinese (Simplified).
 
-## Status
+## Validation & Status
 
 As of May 2, 2026, the app has been approved by Apple as the first app version submitted to them. The Android build is functional and in internal testing. Legal and tax structures are being finalized in parallel. repgate.app is live with a waitlist and early-access form.

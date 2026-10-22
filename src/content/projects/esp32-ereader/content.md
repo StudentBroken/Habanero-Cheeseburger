@@ -6,7 +6,7 @@ I had an e-ink display from an electronic price tag and wanted to turn it into s
 
 The book format is designed to preserve useful references between the ebook and the physical book. Instead of relying only on screen-specific page numbers, it keeps chapter and within-chapter location cues, so a reader can find the corresponding passage in the printed copy. The same book reference can be used across different screen sizes and orientations, while the device lays out text for its current display.
 
-The firmware supports landscape and portrait reading, saved per-book progress, a library menu, and a low-power sleep state. Three capacitive touch pads navigate the interface: previous, next, and menu/select. I plan to replace the touch controls with physical push buttons in a later revision.
+The firmware supports landscape and portrait reading, saved per-book progress, a library menu, and a low-power sleep state. Three capacitive touch pads navigate the interface: previous, next, and menu/select. I have also designed a separate case with physical buttons, but I am testing the touch version first before deciding whether to switch.
 
 ![The assembled e-reader held in one hand](/projects/esp32-ereader/reader-in-hand.webp)
 *The finished reader in its printed case*
@@ -23,7 +23,9 @@ The firmware also supports changing orientation, a reading view that hides parts
 
 ## Case Design
 
-I designed the case in Onshape around the salvaged display and XIAO board, then printed it in PETG. The enclosure packages the screen, board, wiring, and touch pads into a handheld reader.
+I designed the case in Onshape around the salvaged display and XIAO board, then printed it in PETG. The touch version uses a snap-on casing. I also modeled an alternate buttoned case, but will test the touch controls before using that version.
+
+The fine display jump wires are delicate, so I added UV-curing epoxy around their connections to help keep them from peeling away. I routed the touch-pad wires through the pad and used hot glue to hold them away from the pad's faces and nearby PCBs. The glue provides a flexible support that holds the wire routing in shape; for this prototype I chose it because I can remove it with 99% isopropyl alcohol if I need to rework the layout.
 
 ## Cost
 

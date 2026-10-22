@@ -71,10 +71,12 @@
   "links": [
     {
       "label": "Firmware on GitHub",
+      "labelFr": "Micrologiciel sur GitHub",
       "url": "https://github.com/StudentBroken/esp32-s3-ereader"
     },
     {
       "label": "View the Onshape CAD",
+      "labelFr": "Voir le modèle CAO dans Onshape",
       "url": "https://cad.onshape.com/documents/ce5ecd23e52d1bf90355e702/w/8f04ea02aba0e58308206f0e/e/3b148ed9661aaba986672e79"
     }
   ],
