@@ -1,0 +1,109 @@
+{
+  "title": "Electric Bike (v7)",
+  "titleFr": "Vélo électrique (v7)",
+  "date": "2026-10-22",
+  "category": "HARDWARE & SOFTWARE",
+  "subcategory": "Electric Bike",
+  "description": "A 350W, pedal-friendly evolution of the electric bike series, balancing a removable drive, 60km range, discreet setup, and only 16kg with the battery mounted.",
+  "descriptionFr": "Une évolution de la série de vélos électriques de 350 W, facile à pédaler, qui équilibre motorisation amovible, autonomie de 60 km, discrétion et seulement 16 kg avec la batterie installée.",
+  "githubLink": "https://github.com/StudentBroken/VescBLEBridge",
+  "thumbnail": "/projects/ebike-v7/complete-bike.webp",
+  "thumbnailSmall": "/projects/ebike-v7/complete-bike-480.webp",
+  "modelFile": "/projects/ebike-v7/full-throttle-slider.stl",
+  "media": [
+    {
+      "type": "image",
+      "url": "/projects/ebike-v7/complete-bike.webp",
+      "alt": "Road bike with the removable motor assembly detached",
+      "altFr": "Vélo de route avec le moteur amovible détaché",
+      "caption": "A discreet bike with the motor removed",
+      "captionFr": "Un vélo discret avec le moteur retiré"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v7/backpack-battery.webp",
+      "alt": "Electric bike beside the battery carried in a backpack",
+      "altFr": "Vélo électrique avec la batterie transportée dans un sac à dos",
+      "caption": "Backpack battery setup — 12.3kg bike",
+      "captionFr": "Batterie dans le sac à dos — vélo de 12,3 kg"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v7/frame-battery.webp",
+      "alt": "Electric bike with the battery mounted in its frame bag",
+      "altFr": "Vélo électrique avec la batterie installée dans sa sacoche de cadre",
+      "caption": "Battery mounted on the frame",
+      "captionFr": "Batterie installée sur le cadre"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v7/ride-logging-test.webp",
+      "alt": "Controller, battery, and electronics laid out during testing",
+      "altFr": "Contrôleur, batterie et électronique disposés pendant les tests",
+      "caption": "Controller and BLE ride-logging setup",
+      "captionFr": "Contrôleur et système d'enregistrement BLE"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v7/motor-mount-install.webp",
+      "alt": "Motor and its removable printed mount being positioned on the bike",
+      "altFr": "Moteur et support imprimé amovible positionnés sur le vélo",
+      "caption": "Fitting the removable motor assembly",
+      "captionFr": "Installation du moteur amovible"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v7/motor-mount-assembly.webp",
+      "alt": "Onshape assembly view of the removable motor and bike mount",
+      "altFr": "Vue de l'assemblage du moteur amovible et de son support de vélo dans Onshape",
+      "caption": "CAD assembly of the motor mount",
+      "captionFr": "Assemblage CAO du support moteur"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v7/failed-motor-mount.webp",
+      "alt": "Broken section of the first 3D-printed motor mount",
+      "altFr": "Partie cassée du premier support moteur imprimé en 3D",
+      "caption": "The first mount failed after a pothole impact",
+      "captionFr": "Le premier support a cédé après un choc dans un nid-de-poule"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v7/throttle.webp",
+      "alt": "Close-up of the sliding Hall-effect throttle on the handlebar",
+      "altFr": "Gros plan sur la gâchette coulissante à effet Hall sur le guidon",
+      "caption": "Sliding Hall-effect throttle",
+      "captionFr": "Gâchette coulissante à effet Hall"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v7/early-sketch.webp",
+      "alt": "Early handwritten sketch for the electric bike design",
+      "altFr": "Premier croquis manuscrit du vélo électrique",
+      "caption": "An early design sketch",
+      "captionFr": "Un premier croquis de conception"
+    },
+    {
+      "type": "image",
+      "url": "/projects/ebike-v7/throttle-demo.webp",
+      "alt": "Animated demonstration of the sliding throttle",
+      "altFr": "Démonstration animée de la gâchette coulissante",
+      "caption": "Sliding throttle demonstration",
+      "captionFr": "Démonstration de la gâchette coulissante"
+    }
+  ],
+  "links": [
+    {
+      "label": "Motor and bike mount assembly (Onshape)",
+      "url": "https://cad.onshape.com/documents/43a36b803df7f960ccbf3225/w/f83945b127c58a7edd1f96e2/e/9a1b8c6414a9327d8c2855df?renderMode=0&uiState=6ad95942a941be13c57fe6f1"
+    }
+  ],
+  "assets": [
+    {
+      "name": "Download throttle slider STL",
+      "url": "/projects/ebike-v7/full-throttle-slider.stl",
+      "description": "3D model of the sliding Hall-effect throttle"
+    }
+  ],
+  "tier": 1
+}
