@@ -53,6 +53,8 @@ L'[assemblage complet du moteur et de son support de vélo est disponible dans O
 
 Le premier support moteur a cassé après un impact dans un nid-de-poule. J'ai épaissi ses parois et adouci la transition vers la structure en nid d'abeille. Le support révisé a tenu un mois d'utilisation intensive sans casser.
 
+La conception CAO a pris environ 2 jours, puis la construction a pris 2 autres jours — 4 jours en tout.
+
 ## Matériel et coûts
 
 | Composant | Coût |

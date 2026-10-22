@@ -53,6 +53,8 @@ The [full motor and bike mount assembly is available in Onshape](https://cad.ons
 
 The first motor mount failed after a pothole impact. I revised it with thicker walls and a more gradual transition into the honeycomb structure. The updated mount lasted a full month of hard use without failing.
 
+CAD took about 2 days, and building took another 2 days — 4 days total.
+
 ## Bill of Materials
 
 | Component | Cost |
@@ -64,6 +66,8 @@ The first motor mount failed after a pothole impact. I revised it with thicker w
 | Charger | $15.00 CAD |
 | 3D printing | $6.70 CAD |
 | **Total** | **$106.70 CAD** |
+
+
 
 ![Sliding Hall-effect throttle](/projects/ebike-v7/throttle.webp)
 *The sliding Hall-effect throttle mounted on the handlebar.*

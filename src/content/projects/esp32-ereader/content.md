@@ -32,8 +32,9 @@ The fine display jump wires are delicate, so I added UV-curing epoxy around thei
 - **E-ink price tag**: about $12
 - **Seeed Studio XIAO ESP32-S3**: about $8
 - **Wires, PETG case, and miscellaneous materials**: about $3
+- **Time**: about 1 day first atempt and 2 days final attempt
 
-**Total: about $23**
+**Total: about $23 and 3 days**
 
 ## Trace Repair and Next Revision
 
