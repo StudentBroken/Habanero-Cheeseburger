@@ -53,7 +53,7 @@ The [full motor and bike mount assembly is available in Onshape](https://cad.ons
 
 The first motor mount failed after a pothole impact. I revised it with thicker walls and a more gradual transition into the honeycomb structure. The updated mount lasted a full month of hard use without failing.
 
-CAD took about 2 days, and building took another 2 days — 4 days total.
+CAD took about 2 days and building another 2 — 4 days total, spread around school.
 
 ## Bill of Materials
 

@@ -32,7 +32,7 @@ Les petits fils de liaison de l'écran sont fragiles. J'ai ajouté de l'époxy �
 - **Étiquette à encre électronique** — environ 12 $
 - **Seeed Studio XIAO ESP32-S3** — environ 8 $
 - **Fils, boîtier en PETG et matériel divers** — environ 3 $
-- **Temps** — environ une journée pour le premier essai, puis deux jours pour la version finale
+- **Temps** — environ une journée au premier essai, puis deux pour la version finale, répartis autour de l'école
 
 **Total : environ 23 $ et 3 jours**
 
